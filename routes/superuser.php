@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\SupUser\SupUserDashController;
+use App\Http\Controllers\SupUser\Catagory\SupCatagoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,10 +27,15 @@ Route::prefix('Administrator/SuperUser')->middleware('auth:web','supUser','PreBa
 
     Route::get('Dashboard/Users', [App\Http\Controllers\SupUser\User\ListUserController::class, 'index'])->name('supuser.listuser');
 
+    //catagory
+    Route::get('Dashboard/Catagory/SuperCatagory', [App\Http\Controllers\SupUser\Catagory\SupCatagoryController::class, 'index'])->name('supuser.cata.super');
+    Route::get('Dashboard/Catagory/SuperCatagory/Insert', [App\Http\Controllers\SupUser\Catagory\SupCatagoryController::class, 'insert'])->name('supuser.cata.super.insert');
+    
+
     
 
 
-
+    //blank
     Route::get('/BlankPage', [App\Http\Controllers\SupUser\SupUserDashController::class, 'blank'])->name('supuser.blank');
 
 

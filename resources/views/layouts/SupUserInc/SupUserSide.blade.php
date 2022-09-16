@@ -202,23 +202,23 @@
         </li><!-- End Charts Nav -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
-            <i class="bi bi-gem"></i><span>Icons</span><i class="bi bi-chevron-down ms-auto"></i>
+            <a class="nav-link collapsed" data-bs-target="#catagory-nav" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-gem"></i><span>Super Catagory</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
-            <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <ul id="catagory-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
             <li>
-                <a href="icons-bootstrap.html">
-                <i class="bi bi-circle"></i><span>Bootstrap Icons</span>
+                <a href="{{ route('supuser.cata.super') }}">
+                <i class="bi bi-circle"></i><span>List Catagory</span>
                 </a>
             </li>
             <li>
-                <a href="icons-remix.html">
-                <i class="bi bi-circle"></i><span>Remix Icons</span>
+                <a href="{{ route('supuser.cata.super.insert') }}">
+                <i class="bi bi-circle"></i><span>Insert Catagory</span>
                 </a>
             </li>
             <li>
                 <a href="icons-boxicons.html">
-                <i class="bi bi-circle"></i><span>Boxicons</span>
+                <i class="bi bi-circle"></i><span>Trash Catagory</span>
                 </a>
             </li>
             </ul>
