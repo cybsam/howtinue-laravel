@@ -41,14 +41,14 @@
     {{-- end super-user --}}
 </head>
 <body>
-    @include('layouts.BlogUsrInc.SupUserNav')
-    @include('layouts.BlogUsrInc.SupUserSide')
+    @include('layouts.BlogUsrInc.BlogUserNav')
+    @include('layouts.BlogUsrInc.BlogUserSide')
     <main id="main" class="main">
 
         @yield('BlogUserContent')
 
     </main>
-    @include('layouts.BlogUsrInc.SupUserFooter')
+    @include('layouts.BlogUsrInc.BlogUserFooter')
 
 
 

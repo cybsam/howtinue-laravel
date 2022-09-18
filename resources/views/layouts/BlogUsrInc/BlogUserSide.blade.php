@@ -4,9 +4,9 @@
         <ul class="sidebar-nav" id="sidebar-nav">
 
         <li class="nav-item">
-            <a class="nav-link " href="{{ url('/Blogger/Dashboard') }}">
+            <a class="nav-link " href="{{ route('blogusr.dashboard') }}">
             <i class="bi bi-grid"></i>
-            <span>Blogger Dashboard</span>
+            <span>Moderator Dashboard</span>
             </a>
         </li><!-- End Dashboard Nav -->
 
@@ -20,7 +20,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#">
+            <a class="nav-link collapsed" href="{{ route('blogusr.users.allteam') }}">
             <i class="bi bi-people-fill"></i>
             <span>Team</span>
             </a>
@@ -227,11 +227,11 @@
         <li class="nav-heading">Users</li>
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#users-nav" data-bs-toggle="collapse" href="#">
-            <i class="bi bi-gem"></i><span>Icons</span><i class="bi bi-chevron-down ms-auto"></i>
+            <i class="bi bi-person-lines-fill"></i><span>Users</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="users-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
             <li>
-                <a href="#">
+                <a href="{{ route('blogusr.users') }}">
                 <i class="bi bi-circle"></i><span>List Users</span>
                 </a>
             </li>
