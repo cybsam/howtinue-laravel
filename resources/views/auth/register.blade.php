@@ -87,24 +87,49 @@
                     </div>
                     <div class="col-12">
                         <label for="inputAddress5" class="form-label">Address</label>
-                        <input type="text" class="form-control" id="inputAddres5s" placeholder="1234 Main St">
+                        <input type="text" class="form-control @error('userAddress') is-invalid @enderror" name="userAddress" id="userAddress" value="{{ old('userAddress') }}" placeholder="1234 Main St">
+                        @error('userAddress')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
                     </div>
 
                     <div class="col-md-6">
-                    <label for="inputCity" class="form-label">City</label>
-                    <input type="text" class="form-control" id="inputCity">
+                        <label for="inputCity" class="form-label">City</label>
+                        <input type="text" class="form-control @error('userCity') is-invalid @enderror" name="userCity" placeholder="newyork, kolkata, dhaka" id="userCity">
+                        @error('userCity')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
                     </div>
                     <div class="col-md-4">
                     <label for="inputState" class="form-label">State</label>
-                    <select id="inputState" class="form-select">
+                    <select id="userstate" name="userstate" class="form-select @error('userstate') is-invalid @enderror">
                         <option selected>Choose...</option>
-                        <option>...</option>
+                        <option value="dhaka">Dhaka</option>
+                        <option value="khulna">khulna</option>
+                        <option value="barisal">Barisal</option>
+                        <option value="jessore">Jerrore</option>
+                        <option value="chittagonj">Chittagong</option>
+                        <option value="rongpur">Rongpur</option>
+                        
                     </select>
-
+                    @error('userstate')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
                     </div>
                     <div class="col-md-2">
                     <label for="inputZip" class="form-label">Zip</label>
-                    <input type="text" class="form-control" id="inputZip">
+                    <input type="text" name="userzip" class="form-control @error('userzip') is-invalid @enderror" id="userzip">
+                    @error('userzip')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
                     </div>
                     <div class="col-12">
                     <div class="form-check">

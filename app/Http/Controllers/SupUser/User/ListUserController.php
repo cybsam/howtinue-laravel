@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
+use App\Models\usersteam;
 
 
 
@@ -26,6 +27,8 @@ class ListUserController extends Controller
         $basusers = User::where('role','0')->latest()->get();
         $basUsrCount = $basusers->count();
 
+        //$userTeam = usersteam::all();
+
 
         return view('SupUserDash.users.index', compact('SupUsers','blogUsers','basusers','SupUsersCount','blogUsersCount','basUsrCount'));
 
@@ -38,6 +41,7 @@ class ListUserController extends Controller
         // return view('SupUserDash.users.index', compact('blogUsers','basusers'));
 
     }
+
 
     // public function SupUser(Request $request){
 

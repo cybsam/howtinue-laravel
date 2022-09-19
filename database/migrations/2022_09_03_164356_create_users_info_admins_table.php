@@ -20,6 +20,8 @@ class CreateUsersInfoAdminsTable extends Migration
             $table->string('company');
             $table->string('jobtitle');
             $table->string('country');
+            $table->string('city');
+            $table->string('zip');
             $table->string('address');
             $table->string('phone');
             $table->string('twitter');

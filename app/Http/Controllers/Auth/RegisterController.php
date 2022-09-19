@@ -91,10 +91,17 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'proimage' =>['required','mimes:jpg,png,jpeg,gif','max:3000'],
+            'userAddress' => ['required','string','min:5'],
+            'userCity' => ['required','string','min:3'],
+            'userstate' => ['required','string'],
+            'userzip' => ['required'],
             'check' => ['required'],
         ],[
             'proimage.required'=>'Please upload your image',
             'proimage.mimes'=>'We accept: JPG, JPEG, PNG, GIF. Please Upload again',
+            'userAddress.required' => 'Address can not be empty.',
+            'userCity.required'=>'City can not be empty',
+            'userstate.required'=>'State required',
         ]);
 
         $users_image = $request->file('proimage');
@@ -111,15 +118,17 @@ class RegisterController extends Controller
         $save = $user->save();
         $last_id = $user->id;
 
-
+        
         $userContent = "#";
         $userInfo = new UsersInfoAdmin();
         $userInfo->user_id = $last_id;
         $userInfo->about = $userContent;
         $userInfo->company = $userContent;
         $userInfo->jobtitle = $userContent;
-        $userInfo->country = $userContent;
-        $userInfo->address = $userContent;
+        $userInfo->country = $request->userstate;
+        $userInfo->city = $request->userCity;
+        $userInfo->zip = $request->userzip;
+        $userInfo->address = $request->userAddress;
         $userInfo->phone = $userContent;
         $userInfo->twitter = $userContent;
         $userInfo->facebook = $userContent;

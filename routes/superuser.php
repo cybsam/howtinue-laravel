@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\SupUser\SupUserDashController;
 use App\Http\Controllers\SupUser\Catagory\SupCatagoryController;
+use App\Http\Controllers\SupUser\Team\ListTeamController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,8 @@ Route::prefix('Administrator/SuperUser')->middleware('auth:web','supUser','PreBa
     Route::post('/Dashboard/Profile/Update/Pass', [App\Http\Controllers\SupUser\SupUserDashController::class, 'UserProfileUpdatePass'])->name('supuser.profileupdate.pass.dashboard');
 
     Route::get('Dashboard/Users', [App\Http\Controllers\SupUser\User\ListUserController::class, 'index'])->name('supuser.listuser');
+    //team
+    Route::get('Dashboard/Users/Team/List',[App\Http\Controllers\SupUser\Team\ListTeamController::class,'index'])->name('supuser.users.team');
 
     //catagory
     Route::get('Dashboard/Catagory/SuperCatagory', [App\Http\Controllers\SupUser\Catagory\SupCatagoryController::class, 'index'])->name('supuser.cata.super');

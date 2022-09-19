@@ -24,7 +24,8 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('proimage');
             $table->integer('team')->default(0);
-            // $table->string('usraddress');
+            $table->string('teamname')->nullable();
+            
             $table->integer('block')->default(0);
             $table->rememberToken();
             $table->timestamps();

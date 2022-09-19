@@ -55,7 +55,7 @@ class SupUserDashController extends Controller
                 'UserAbout' => ['required','string','min:20'],
                 'company' => ['required'],
                 'jobTitle' => ['required'],
-                'country' => ['required'],
+                'country' => ['required','string'],
                 'address' => ['required', 'min:7'],
                 'phone' => ['required'],
                 'twitter' => ['required'],

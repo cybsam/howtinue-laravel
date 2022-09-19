@@ -25,6 +25,7 @@
             <th scope="col">Email</th>
             <th scope="col">Verified</th>
             <th scope="col">Status</th>
+            <th scope="col">Team</th>
             <th >Register</th>
             <th scope="col">Action</th>
           </tr>
@@ -38,9 +39,14 @@
             <td><a class="" href=""><span>@</span>{{ $basuser->username }}</a></td>
             <td>{{ Str::limit($basuser->email, 6) }}</td>
             <td>@if ($basuser->email_verified == 1) <i class="bi bi-patch-check-fill text-primary"></i> @else <i class="bi bi-patch-exclamation text-danger"></i> @endif</td>
+
             <td><a href="" class="badge rounded-pill bg-{{ $basuser->block == 0 ? 'success':'danger' }}"> @if ($basuser->block == 0) <span class="text-white"><i class="bi bi-person-check-fill"></i></span> @else <span class="text-white"><i class="bi bi-person-x-fill"></i></span>  @endif</a></td>
+            <td><span class="badge rounded-pill bg-info">{{ $basuser->teamname }}</span></td>
             <td>{{ $basuser->created_at->diffForHumans() }}</td>
-            <td><a class="text-success" href=""><i class="bi bi-pencil-square"></i></a><span>&nbsp;&nbsp;</span><a class="text-danger" href=""><i class="bi bi-trash"></i></a></td>
+            @php
+              $name_user = $basuser->username
+            @endphp
+            <td><a class="text-success" href="{{ route('blogusr.users.allteam.users.add',$name_user)  }}"><i class="bi bi-pencil-square"></i></a><span>&nbsp;&nbsp;</span><a class="text-danger" href=""><i class="bi bi-trash"></i></a></td>
           </tr>
           @endforeach
 

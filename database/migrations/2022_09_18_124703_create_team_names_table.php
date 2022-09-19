@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsersteamsTable extends Migration
+class CreateTeamNamesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CreateUsersteamsTable extends Migration
      */
     public function up()
     {
-        Schema::create('usersteams', function (Blueprint $table) {
+        Schema::create('team_names', function (Blueprint $table) {
             $table->id();
-            $table->string('teamname');
+            $table->string('teamname')->unique();
             
             $table->string('admin_name');
-            $table->string('user_name');
-            $table->string('user_email');
-            $table->string('user_post_id');
+            $table->integer('admin_id');
+            $table->string('admin_email');
             $table->integer('teamstatus')->default(0);
             $table->timestamps();
         });
@@ -33,6 +32,6 @@ class CreateUsersteamsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('usersteams');
+        Schema::dropIfExists('team_names');
     }
 }
