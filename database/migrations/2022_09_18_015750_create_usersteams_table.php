@@ -20,8 +20,8 @@ class CreateUsersteamsTable extends Migration
             $table->string('admin_name');
             $table->string('user_name');
             $table->string('user_email');
-            $table->string('user_post_id');
-            $table->integer('teamstatus')->default(0);
+            $table->string('user_post_id')->nullable();
+            $table->integer('user_activity')->nullable();
             $table->timestamps();
         });
     }

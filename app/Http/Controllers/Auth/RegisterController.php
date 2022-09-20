@@ -144,6 +144,7 @@ class RegisterController extends Controller
 
         VerifyUser::create([
             'user_id'=>$last_id,
+            'user_email'=>$request->email,
             'token'=>$token,
         ]);
         $formEmail = 'howtiuneautomatedmail@howtiune.com';

@@ -3,7 +3,7 @@
 @section('BlogUserContent')
 
 <div class="pagetitle">
-    <h1>Team Management</h1>
+    <h1> Team Management</h1>
     <nav>
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{{ route('blogusr.dashboard') }}">Home</a></li>

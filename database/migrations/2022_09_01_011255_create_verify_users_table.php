@@ -16,6 +16,7 @@ class CreateVerifyUsersTable extends Migration
         Schema::create('verify_users', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
+            $table->string('user_email');
             $table->string('token');
             $table->timestamps();
         });
