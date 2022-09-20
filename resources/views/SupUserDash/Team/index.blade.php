@@ -31,7 +31,7 @@
             <h5 class="card-title">{{ $teamin->teamname }}</h5>
 
             <div class="btn-group" role="group" aria-label="Basic example">
-                <a href="{{ route('blogusr.users.allteam.users') }}" class="btn btn-outline-primary ">Users</a>
+                <a href="" class="btn btn-outline-primary ">Users</a>
                 <a href="" class="btn btn-outline-warning ">Information</a>
                 <a href="" class="btn btn-outline-secondary">Right</a>
               </div>

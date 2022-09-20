@@ -24,7 +24,7 @@ class ListUserController extends Controller
         // echo $team_name;
         $teamNameI = TeamName::where('teamname',$nameteam)->get();
         // echo $teamNameI;
-        echo $nameteam;
+        //echo $nameteam;
         return view('BlogUserDash.Users.TeamUserList',compact('teamNameI'));
     }
 

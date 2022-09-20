@@ -37,6 +37,9 @@ Route::prefix('Administrator/Blogger')->middleware('auth:web','blogUser','PreBac
     Route::post('/Dashboard/Users/Team/New/TeamInsert',[App\Http\Controllers\Blogger\AllPartUser\TeamUserController::class, 'NewTeamInsert'])->name('blogusr.users.allteam.newteam.insert');
     Route::get('/Dashboard/Users/Team/List/{nameteam}',[App\Http\Controllers\Blogger\AllPartUser\ListUserController::class, 'TeamUserList'])->name('blogusr.users.allteam.users');
     Route::get('/Dashboard/Users/Team/List/AddUser/{name_user}',[App\Http\Controllers\Blogger\AllPartUser\ListUserController::class, 'TeamAddUser'])->name('blogusr.users.allteam.users.add');
+    // Route::get('/Dashboard/Users/Team/List/AddUser/{name_user}/UserList',[App\Http\Controllers\Blogger\AllPartUser\ListUserController::class, 'TeamAddUser'])->name('blogusr.users.allteam.users.add.userlist');
+    
+    
 
 
 });

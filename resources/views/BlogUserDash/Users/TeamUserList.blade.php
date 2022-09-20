@@ -3,7 +3,7 @@
 @section('BlogUserContent')
 
 <div class="pagetitle">
-    <h1>Team Users List</h1>
+    <h1>{{ Session::get('team_name') }} Team Users List</h1>
     <nav>
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{{ route('blogusr.dashboard') }}">Home</a></li>
@@ -50,6 +50,7 @@
             
                         @foreach ($teamNameI as $userTeam)
                       {{-- <tr class="table-{{ $basuser->block == 0 ? 'light':'danger' }}"> --}}
+                        
                         <th scope="row"><a href="#">#{{  $userTeam->id  }}</a></td>
                         <td>{{ $userTeam->name }}</td>
                         <td><a class="" href=""><span>@</span>{{ $userTeam->username }}</a></td>
