@@ -16,7 +16,7 @@ use App\Http\Controllers\BasUser\BasUsrDashController;
 */
 
 
-Route::get('/user/verify', [App\Http\Controllers\Auth\RegisterController::class, 'verify'])->name('email.verify');
+Route::get('/User/Verify', [App\Http\Controllers\Auth\RegisterController::class, 'verify'])->name('email.verify');
 //dashboard
 // Route::prefix('User')->middleware('auth:web','basUser','PreBackHistory','is_user_verify_email')->group(function(){
 //     Route::get('/Dashboard', [App\Http\Controllers\BasUser\BasUsrDashController::class, 'index'])->name('basUser.dashboard');
