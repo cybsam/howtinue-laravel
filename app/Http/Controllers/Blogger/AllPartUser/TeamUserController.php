@@ -65,4 +65,7 @@ class TeamUserController extends Controller
             return back()->withErrors('wronginfo','moderator information wrong');
         }
     }
+    public function showData(){
+        return 'sam';
+    }
 }
