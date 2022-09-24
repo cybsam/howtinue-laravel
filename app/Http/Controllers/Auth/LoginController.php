@@ -75,7 +75,7 @@ class LoginController extends Controller
                 return redirect()->route('basUser.dashboard');
             }
         }else {
-            return redirect()->route('login')->with('logfaild','incorrect email or password');
+            return redirect()->route('login')->with('logfaild','Wrong Credentials, try again...');
         }
 
         // $user = Auth()->user()->where('email','=', $request->email)->first();
