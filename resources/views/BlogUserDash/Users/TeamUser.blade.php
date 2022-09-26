@@ -39,9 +39,10 @@
       
                     <div class="btn-group" role="group" aria-label="Basic example">
                       @php
-                        $teamname = $teamin->teamname
+                        $teamname = $teamin->teamname;
+                        $teamId = $teamin->id;
                       @endphp
-                      <a href="{{ route('blogusr.users.allteam.users',$teamname) }}" class="btn btn-outline-primary ">Users</a>
+                      <a href="{{ route('blogusr.users.allteam.users',['teamId' => $teamId,'nameteam'=>$teamname]) }}" class="btn btn-outline-primary ">Users</a>
                       <a href="" class="btn btn-outline-warning ">Check Post</a>
                       <a href="" class="btn btn-outline-primary">Right</a>
                       </div>

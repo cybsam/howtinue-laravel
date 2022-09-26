@@ -105,7 +105,7 @@ class RegisterController extends Controller
         ]);
 
         $users_image = $request->file('proimage');
-        $randstr = Str::random('60');
+        $randstr = Str::random('80');
         $new_image_name = $randstr.'.'.$users_image->getClientOriginalExtension();
 
 

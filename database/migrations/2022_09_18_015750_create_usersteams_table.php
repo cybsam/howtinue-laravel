@@ -16,8 +16,9 @@ class CreateUsersteamsTable extends Migration
         Schema::create('usersteams', function (Blueprint $table) {
             $table->id();
             $table->string('teamname');
-            
+            $table->integer('team_id');
             $table->string('admin_name');
+            $table->integer('user_id');
             $table->string('user_name');
             $table->string('user_email');
             $table->string('user_post_id')->nullable();
