@@ -21,7 +21,7 @@
 </head>
 
 @include('layouts.FrontEndInc.nav')
-@include('layouts.FrontEndInc.preload')
+{{-- @include('layouts.FrontEndInc.preload') --}}
 
 
 

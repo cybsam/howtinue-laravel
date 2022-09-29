@@ -90,6 +90,7 @@ class RegisterController extends Controller
             'username' => ['required', 'string','min:5' ,'max:15','unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'gender' => ['required'],
             'proimage' =>['required','mimes:jpg,png,jpeg,gif','max:3000'],
             'userAddress' => ['required','string','min:5'],
             'userCity' => ['required','string','min:3'],
@@ -112,6 +113,7 @@ class RegisterController extends Controller
         $user = new User();
         $user->name = $request->name;
         $user->username = Str::lower($request->username);
+        $user->gender = $request->gender;
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
         $user->proimage = $new_image_name;
@@ -160,14 +162,16 @@ class RegisterController extends Controller
             'actionLink'=>$verifyURL,
         ];
 
+        $new_upload_loca = base_path('public/SupUser/uploads/usersimage/'.$new_image_name);
+        Image::make($users_image)->save($new_upload_loca);
+
         \Mail::send('mail.register-usr',$mail_data, function($message) use($mail_data){
             $message->to($mail_data['recipient'])
                     ->from($mail_data['fromEmail'], $mail_data['fromName'])
                     ->subject($mail_data['subject']);
         });
 
-        $new_upload_loca = base_path('public/SupUser/uploads/usersimage/'.$new_image_name);
-        Image::make($users_image)->save($new_upload_loca);
+        
 
         if( $save && $saveInfo ){
             return redirect()->back()->with('regSucc','You need to verify your account, we have sent you an activition link, please check your email.');
