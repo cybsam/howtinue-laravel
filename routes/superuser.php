@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\SupUser\SupUserDashController;
 use App\Http\Controllers\SupUser\Catagory\SupCatagoryController;
 use App\Http\Controllers\SupUser\Team\ListTeamController;
+use App\Http\Controllers\SupUser\Settings\MainSettingsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,13 +32,23 @@ Route::prefix('Administrator/SuperUser')->middleware('auth:web','supUser','PreBa
     Route::get('Dashboard/Users/Team/List',[App\Http\Controllers\SupUser\Team\ListTeamController::class,'index'])->name('supuser.users.team');
 
     //catagory
+
+    Route::get('Dashboard/Catagory/SubCatagory',[App\Http\Controllers\SupUser\Catagory\SubCatagoryController::class, 'index'])->name('subcatagory.index');
+    Route::get('Dashboard/Catagory/SubCatagory/Insert',[App\Http\Controllers\SupUser\Catagory\SubCatagoryController::class, 'Insert'])->name('subcatagory.insert');
+    Route::post('Dashboard/Catagory/SubCatagory/Insert/Check',[App\Http\Controllers\SupUser\Catagory\SubCatagoryController::class, 'InsertCheck'])->name('subcatagory.insert.check');
+    
+    
+
+    //sup catagory
     Route::get('Dashboard/Catagory/SuperCatagory', [App\Http\Controllers\SupUser\Catagory\SupCatagoryController::class, 'index'])->name('supuser.cata.super');
     Route::get('Dashboard/Catagory/SuperCatagory/Insert', [App\Http\Controllers\SupUser\Catagory\SupCatagoryController::class, 'insert'])->name('supuser.cata.super.insert');
-    
+    Route::post('Dashboard/Catagory/SuperCatagory/Insert/Check', [App\Http\Controllers\SupUser\Catagory\SupCatagoryController::class, 'insertCheck'])->name('supuser.cata.super.insert.chk');
+    Route::get('Dashboard/Catagory/SuperCatagory/Update/{cataId}',[App\Http\Controllers\SupUser\Catagory\SupCatagoryController::class, 'catagoryUpdate'])->name('supuser.cata.super.update');
+    Route::get('Dashboard/Catagory/SuperCatagory/Archive',[App\Http\Controllers\SupUser\Catagory\SupCatagoryController::class, 'Archive'])->name('supuser.cata.super.archive');
+    Route::get('Dashboard/Catagory/SuperCatagory/Archive/{cataId}',[App\Http\Controllers\SupUser\Catagory\SupCatagoryController::class, 'catagoryArchive'])->name('supuser.cata.super.goarchive');
 
-    
-
-
+    //settings
+    Route::get('Dashboard/Settings/Main', [App\Http\Controllers\SupUser\Settings\MainSettingsController::class, 'mainSett'])->name('supuser.settings.main');
     //blank
     Route::get('/BlankPage', [App\Http\Controllers\SupUser\SupUserDashController::class, 'blank'])->name('supuser.blank');
 

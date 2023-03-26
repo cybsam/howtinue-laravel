@@ -1,116 +1,165 @@
-<footer class="footer-area">
+<div class="wrapper__footer bg__footer-dark pb-0">
     <div class="container">
         <div class="row">
-            <!-- Footer Widget Area -->
-            <div class="col-12 col-sm-6 col-xl-3">
-                <div class="footer-widget mb-70">
-                    <!-- Logo -->
-                    <a href="{{ route('FrontEnd.Index') }}" class="foo-logo d-block mb-4"><img src="{{ asset('FrontEnd/img/core-img/logo2.png') }}" alt=""></a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
-                    <!-- Footer Newsletter Area -->
-                    <div class="footer-nl-area">
-                        <form action="#" method="post">
-                            <input type="email" name="nl-email" class="form-control" id="nlEmail" placeholder="Your email">
-                            <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
-                        </form>
+            <div class="col-md-3">
+                <div class="widget__footer">
+                    <div class="dropdown-footer">
+                        <h4 class="footer-title">
+                            world
+                            <span class="fa fa-angle-down"></span>
+                        </h4>
                     </div>
+
+                    <ul class="list-unstyled option-content is-hidden">
+                        <li>
+                            <a href="#">global economy</a>
+                        </li>
+                        <li>
+                            <a href="#">religion</a>
+                        </li>
+                        <li>
+                            <a href="#">bitcoin</a>
+                        </li>
+                        <li>
+                            <a href="#">conflict</a>
+                        </li>
+                        <li>
+                            <a href="#">sports</a>
+                        </li>
+                        <li>
+                            <a href="#">scandals</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-
-            <!-- Footer Widget Area -->
-            <div class="col-12 col-sm-6 col-xl-3">
-                <div class="footer-widget mb-70">
-                    <h6 class="widget-title">Latest Twister</h6>
-                    <!-- Twitter Slides -->
-                    <div class="twitter-slides owl-carousel">
-
-                        <!-- Single Twitter Slide -->
-                        <div class="single--twitter-slide">
-                            <!-- Single Twit -->
-                            <div class="single-twit">
-                                <p><i class="fa fa-twitter"></i> <span>@Leonard</span> I am so happy because I found this magazine, and it just made Vizeweasier. Thanks for sharing</p>
-                            </div>
-                            <!-- Single Twit -->
-                            <div class="single-twit">
-                                <p><i class="fa fa-twitter"></i> <span>@Leonard</span> I am so happy because I found this magazine, and it just made Vizeweasier. Thanks for sharing</p>
-                            </div>
-                        </div>
-
-                        <!-- Single Twitter Slide -->
-                        <div class="single--twitter-slide">
-                            <!-- Single Twit -->
-                            <div class="single-twit">
-                                <p><i class="fa fa-twitter"></i> <span>@Colorlib</span> I am so happy because I found this magazine, and it just made Vizeweasier. Thanks for sharing</p>
-                            </div>
-                            <!-- Single Twit -->
-                            <div class="single-twit">
-                                <p><i class="fa fa-twitter"></i> <span>@Colorlib</span> I am so happy because I found this magazine, and it just made Vizeweasier. Thanks for sharing</p>
-                            </div>
-                        </div>
-
+            <div class="col-md-3">
+                <div class="widget__footer">
+                    <div class="dropdown-footer">
+                        <h4 class="footer-title">
+                            entertainment
+                            <span class="fa fa-angle-down"></span>
+                        </h4>
                     </div>
+
+                    <ul class="list-unstyled option-content is-hidden">
+                        <li>
+                            <a href="#">celebity news</a>
+                        </li>
+                        <li>
+                            <a href="#">movies</a>
+                        </li>
+                        <li>
+                            <a href="#">tv news</a>
+                        </li>
+                        <li>
+                            <a href="#">music news</a>
+                        </li>
+                        <li>
+                            <a href="#">life style</a>
+                        </li>
+                        <li>
+                            <a href="#">entertainment video</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-
-            <!-- Footer Widget Area -->
-            <div class="col-12 col-sm-6 col-xl-3">
-                <div class="footer-widget mb-70">
-                    <h6 class="widget-title">Sport Videos</h6>
-
-                    <!-- Single Blog Post -->
-                    <div class="single-blog-post d-flex">
-                        <div class="post-thumbnail">
-                            <img src="img/bg-img/1.jpg" alt="">
-                        </div>
-                        <div class="post-content">
-                            <a href="single-post.html" class="post-title">DC Shoes: gymkhana the</a>
-                            <div class="post-meta d-flex justify-content-between">
-                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
-                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
-                            </div>
-                        </div>
+            <div class="col-md-3">
+                <div class="widget__footer">
+                    <div class="dropdown-footer">
+                        <h4 class="footer-title">
+                            health
+                            <span class="fa fa-angle-down"></span>
+                        </h4>
                     </div>
-
-                    <!-- Single Blog Post -->
-                    <div class="single-blog-post d-flex">
-                        <div class="post-thumbnail">
-                            <img src="img/bg-img/2.jpg" alt="">
-                        </div>
-                        <div class="post-content">
-                            <a href="single-post.html" class="post-title">Sweet Yummy Chocolatea Tea</a>
-                            <div class="post-meta d-flex justify-content-between">
-                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
-                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
-                            </div>
-                        </div>
-                    </div>
-
+                    <ul class="list-unstyled option-content is-hidden">
+                        <li>
+                            <a href="#">medical research</a>
+                        </li>
+                        <li>
+                            <a href="#">healthy living</a>
+                        </li>
+                        <li>
+                            <a href="#">mental health</a>
+                        </li>
+                        <li>
+                            <a href="#">virus corona</a>
+                        </li>
+                        <li>
+                            <a href="#">children's health</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-
-            <!-- Footer Widget Area -->
-            <div class="col-12 col-sm-6 col-xl-3">
-                <div class="footer-widget mb-70">
-                    <h6 class="widget-title">Our Address</h6>
-                    <!-- Contact Address -->
-                    <div class="contact-address">
-                        <p>101 E 129th St, East Chicago, <br>IN 46312, US</p>
-                        <p>Phone: 001-1234-88888</p>
-                        <p>Email: info.administrator@howtuine.com</p>
+            <div class="col-md-3">
+                <div class="widget__footer">
+                    <div class="dropdown-footer">
+                        <h4 class="footer-title">
+                            business
+                            <span class="fa fa-angle-down"></span>
+                        </h4>
                     </div>
-                    <!-- Footer Social Area -->
-                    <div class="footer-social-area">
-                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                        <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-                        <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+
+                    <ul class="list-unstyled option-content is-hidden">
+                        <li>
+                            <a href="#">merkets</a>
+                        </li>
+                        <li>
+                            <a href="#">technology</a>
+                        </li>
+                        <li>
+                            <a href="#">features</a>
+                        </li>
+                        <li>
+                            <a href="#">property</a>
+                        </li>
+                        <li>
+                            <a href="#">business leaders</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <figure class="image-logo">
+                        <img src="images/placeholder/logo.jpg" alt="" class="logo-footer" />
+                    </figure>
+                </div>
+                <div class="col-md-8 my-auto">
+                    <div class="social__media">
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <a href="#" class="btn btn-social rounded text-white facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn btn-social rounded text-white twitter">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn btn-social rounded text-white whatsapp">
+                                    <i class="fa fa-whatsapp"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn btn-social rounded text-white telegram">
+                                    <i class="fa fa-telegram"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn btn-social rounded text-white linkedin">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    
+</div>

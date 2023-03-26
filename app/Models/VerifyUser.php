@@ -17,6 +17,7 @@ class VerifyUser extends Model
         'user_email',
         'token',
     ];
+    
 
     public function user(){
         return $this->belongsTo(User::class);

@@ -19,12 +19,12 @@
             </a>
         </li>
 
-        <li class="nav-item">
+        {{-- <li class="nav-item">
             <a class="nav-link collapsed" href="{{ route('blogusr.users.allteam') }}">
             <i class="bi bi-people-fill"></i>
             <span>Team</span>
             </a>
-        </li>
+        </li> --}}
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#email-nav" data-bs-toggle="collapse" href="#">
             <i class="bi bi-envelope"></i><span>Emails</span><i class="bi bi-chevron-down ms-auto"></i>

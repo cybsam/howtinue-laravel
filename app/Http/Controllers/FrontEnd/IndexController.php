@@ -14,4 +14,8 @@ class IndexController extends Controller
     public function blank(){
         return view('FrontEnd.blank');
     }
+
+    public function contact(){
+        return view('FrontEnd.contact.contact');
+    }
 }

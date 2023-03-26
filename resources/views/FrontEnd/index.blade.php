@@ -1,1129 +1,1678 @@
 @extends('layouts.FrontEndMaster')
-@section('FrontTitle','Howtinue')
+@section('FrontTitle', 'Howtinue')
 @section('FrontEnd')
-    <!-- ##### Hero Area Start ##### -->
-    <section class="hero--area section-padding-80">
+
+    <!-- Tranding news  carousel-->
+    <section class="bg-light">
         <div class="container">
-            <div class="row no-gutters">
-                <div class="col-12 col-md-7 col-lg-8">
-                    <div class="tab-content">
-                        <div class="tab-pane fade show {{ Route::is('FrontEnd.Index') ? 'active':' ' }}" id="post-1" role="tabpanel" aria-labelledby="post-1-tab">
-                            <!-- Single Feature Post -->
-                            <div class="single-feature-post video-post bg-img" style="background-image: url(img/bg-img/7.jpg);">
-                                <!-- Play Button -->
-                                <a href="video-post.html" class="btn play-btn"><i class="fa fa-play" aria-hidden="true"></i></a>
-
-                                <!-- Post Content -->
-                                <div class="post-content">
-                                    <a href="#" class="post-cata">Sports</a>
-                                    <a href="single-post.html" class="post-title">Reunification of migrant toddlers, parents should be completed Thursday</a>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 25</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 25</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 25</a>
-                                    </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="wrapp__list__article-responsive wrapp__list__article-responsive-carousel">
+                        <div class="item">
+                            <!-- Post Article -->
+                            <div class="card__post card__post-list">
+                                <div class="image-sm">
+                                    <a href="./card-article-detail-v1.html">
+                                        <img src="images/placeholder/500x400.jpg" class="img-fluid" alt="" />
+                                    </a>
                                 </div>
 
-                                <!-- Video Duration -->
-                                <span class="video-duration">05.03</span>
+                                <div class="card__post__body">
+                                    <div class="card__post__content">
+                                        <div class="card__post__author-info mb-2">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                    <span class="text-primary"> by david hall </span>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <span class="text-dark text-capitalize">
+                                                        descember 09, 2016
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="card__post__title">
+                                            <h6>
+                                                <a href="./card-article-detail-v1.html">
+                                                    6 Best Tips for Building a Good Shipping Boat
+                                                </a>
+                                            </h6>
+                                            <!-- <p class="d-none d-lg-block d-xl-block">
+                                  Maecenas accumsan tortor ut velit pharetra mollis. Proin eu nisl et arcu iaculis placerat
+                                  sollicitudin ut est. In fringilla dui dui.
+                              </p> -->
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="post-2" role="tabpanel" aria-labelledby="post-2-tab">
-                            <!-- Single Feature Post -->
-                            <div class="single-feature-post video-post bg-img" style="background-image: url(img/bg-img/8.jpg);">
-                                <!-- Play Button -->
-                                <a href="video-post.html" class="btn play-btn"><i class="fa fa-play" aria-hidden="true"></i></a>
-
-                                <!-- Post Content -->
-                                <div class="post-content">
-                                    <a href="#" class="post-cata">Sports</a>
-                                    <a href="single-post.html" class="post-title">Reunification of migrant toddlers, parents should be completed Thursday</a>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 25</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 25</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 25</a>
-                                    </div>
+                        <div class="item">
+                            <!-- Post Article -->
+                            <div class="card__post card__post-list">
+                                <div class="image-sm">
+                                    <a href="./card-article-detail-v1.html">
+                                        <img src="images/placeholder/500x400.jpg" class="img-fluid" alt="" />
+                                    </a>
                                 </div>
 
-                                <!-- Video Duration -->
-                                <span class="video-duration">05.03</span>
+                                <div class="card__post__body">
+                                    <div class="card__post__content">
+                                        <div class="card__post__author-info mb-2">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                    <span class="text-primary"> by david hall </span>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <span class="text-dark text-capitalize">
+                                                        descember 09, 2016
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="card__post__title">
+                                            <h6>
+                                                <a href="./card-article-detail-v1.html">
+                                                    6 Best Tips for Building a Good Shipping Boat
+                                                </a>
+                                            </h6>
+                                            <!-- <p class="d-none d-lg-block d-xl-block">
+                                  Maecenas accumsan tortor ut velit pharetra mollis. Proin eu nisl et arcu iaculis placerat
+                                  sollicitudin ut est. In fringilla dui dui.
+                              </p> -->
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="post-3" role="tabpanel" aria-labelledby="post-3-tab">
-                            <!-- Single Feature Post -->
-                            <div class="single-feature-post video-post bg-img" style="background-image: url(img/bg-img/9.jpg);">
-                                <!-- Play Button -->
-                                <a href="video-post.html" class="btn play-btn"><i class="fa fa-play" aria-hidden="true"></i></a>
-
-                                <!-- Post Content -->
-                                <div class="post-content">
-                                    <a href="#" class="post-cata">Sports</a>
-                                    <a href="single-post.html" class="post-title">Reunification of migrant toddlers, parents should be completed Thursday</a>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 25</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 25</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 25</a>
-                                    </div>
+                        <div class="item">
+                            <!-- Post Article -->
+                            <div class="card__post card__post-list">
+                                <div class="image-sm">
+                                    <a href="./card-article-detail-v1.html">
+                                        <img src="images/placeholder/500x400.jpg" class="img-fluid" alt="" />
+                                    </a>
                                 </div>
 
-                                <!-- Video Duration -->
-                                <span class="video-duration">05.03</span>
+                                <div class="card__post__body">
+                                    <div class="card__post__content">
+                                        <div class="card__post__author-info mb-2">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                    <span class="text-primary"> by david hall </span>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <span class="text-dark text-capitalize">
+                                                        descember 09, 2016
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="card__post__title">
+                                            <h6>
+                                                <a href="./card-article-detail-v1.html">
+                                                    6 Best Tips for Building a Good Shipping Boat
+                                                </a>
+                                            </h6>
+                                            <!-- <p class="d-none d-lg-block d-xl-block">
+                                  Maecenas accumsan tortor ut velit pharetra mollis. Proin eu nisl et arcu iaculis placerat
+                                  sollicitudin ut est. In fringilla dui dui.
+                              </p> -->
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="tab-pane fade" id="post-4" role="tabpanel" aria-labelledby="post-4-tab">
-                            <!-- Single Feature Post -->
-                            <div class="single-feature-post video-post bg-img" style="background-image: url(img/bg-img/10.jpg);">
-                                <!-- Play Button -->
-                                <a href="video-post.html" class="btn play-btn"><i class="fa fa-play" aria-hidden="true"></i></a>
-
-                                <!-- Post Content -->
-                                <div class="post-content">
-                                    <a href="#" class="post-cata">Sports</a>
-                                    <a href="single-post.html" class="post-title">Reunification of migrant toddlers, parents should be completed Thursday</a>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 25</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 25</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 25</a>
-                                    </div>
+                        <div class="item">
+                            <!-- Post Article -->
+                            <div class="card__post card__post-list">
+                                <div class="image-sm">
+                                    <a href="./card-article-detail-v1.html">
+                                        <img src="images/placeholder/500x400.jpg" class="img-fluid" alt="" />
+                                    </a>
                                 </div>
 
-                                <!-- Video Duration -->
-                                <span class="video-duration">05.03</span>
+                                <div class="card__post__body">
+                                    <div class="card__post__content">
+                                        <div class="card__post__author-info mb-2">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                    <span class="text-primary"> by david hall </span>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <span class="text-dark text-capitalize">
+                                                        descember 09, 2016
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="card__post__title">
+                                            <h6>
+                                                <a href="./card-article-detail-v1.html">
+                                                    6 Best Tips for Building a Good Shipping Boat
+                                                </a>
+                                            </h6>
+                                            <!-- <p class="d-none d-lg-block d-xl-block">
+                                  Maecenas accumsan tortor ut velit pharetra mollis. Proin eu nisl et arcu iaculis placerat
+                                  sollicitudin ut est. In fringilla dui dui.
+                              </p> -->
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="tab-pane fade" id="post-5" role="tabpanel" aria-labelledby="post-5-tab">
-                            <!-- Single Feature Post -->
-                            <div class="single-feature-post video-post bg-img" style="background-image: url(img/bg-img/7.jpg);">
-                                <!-- Play Button -->
-                                <a href="video-post.html" class="btn play-btn"><i class="fa fa-play" aria-hidden="true"></i></a>
-
-                                <!-- Post Content -->
-                                <div class="post-content">
-                                    <a href="#" class="post-cata">Sports</a>
-                                    <a href="single-post.html" class="post-title">Reunification of migrant toddlers, parents should be completed Thursday</a>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 25</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 25</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 25</a>
-                                    </div>
+                        <div class="item">
+                            <!-- Post Article -->
+                            <div class="card__post card__post-list">
+                                <div class="image-sm">
+                                    <a href="./card-article-detail-v1.html">
+                                        <img src="images/placeholder/500x400.jpg" class="img-fluid" alt="" />
+                                    </a>
                                 </div>
 
-                                <!-- Video Duration -->
-                                <span class="video-duration">05.03</span>
+                                <div class="card__post__body">
+                                    <div class="card__post__content">
+                                        <div class="card__post__author-info mb-2">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                    <span class="text-primary"> by david hall </span>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <span class="text-dark text-capitalize">
+                                                        descember 09, 2016
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="card__post__title">
+                                            <h6>
+                                                <a href="./card-article-detail-v1.html">
+                                                    6 Best Tips for Building a Good Shipping Boat
+                                                </a>
+                                            </h6>
+                                            <!-- <p class="d-none d-lg-block d-xl-block">
+                                  Maecenas accumsan tortor ut velit pharetra mollis. Proin eu nisl et arcu iaculis placerat
+                                  sollicitudin ut est. In fringilla dui dui.
+                              </p> -->
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="tab-pane fade" id="post-6" role="tabpanel" aria-labelledby="post-6-tab">
-                            <!-- Single Feature Post -->
-                            <div class="single-feature-post video-post bg-img" style="background-image: url(img/bg-img/10.jpg);">
-                                <!-- Play Button -->
-                                <a href="video-post.html" class="btn play-btn"><i class="fa fa-play" aria-hidden="true"></i></a>
-
-                                <!-- Post Content -->
-                                <div class="post-content">
-                                    <a href="#" class="post-cata">Sports</a>
-                                    <a href="single-post.html" class="post-title">Reunification of migrant toddlers, parents should be completed Thursday</a>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 25</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 25</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 25</a>
-                                    </div>
+                        <div class="item">
+                            <!-- Post Article -->
+                            <div class="card__post card__post-list">
+                                <div class="image-sm">
+                                    <a href="./card-article-detail-v1.html">
+                                        <img src="images/placeholder/500x400.jpg" class="img-fluid" alt="" />
+                                    </a>
                                 </div>
 
-                                <!-- Video Duration -->
-                                <span class="video-duration">05.03</span>
-                            </div>
-                        </div>
-
-                        <div class="tab-pane fade" id="post-7" role="tabpanel" aria-labelledby="post-7-tab">
-                            <!-- Single Feature Post -->
-                            <div class="single-feature-post video-post bg-img" style="background-image: url(img/bg-img/7.jpg);">
-                                <!-- Play Button -->
-                                <a href="video-post.html" class="btn play-btn"><i class="fa fa-play" aria-hidden="true"></i></a>
-
-                                <!-- Post Content -->
-                                <div class="post-content">
-                                    <a href="#" class="post-cata">Sports</a>
-                                    <a href="single-post.html" class="post-title">Reunification of migrant toddlers, parents should be completed Thursday</a>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 25</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 25</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 25</a>
+                                <div class="card__post__body">
+                                    <div class="card__post__content">
+                                        <div class="card__post__author-info mb-2">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                    <span class="text-primary"> by david hall </span>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <span class="text-dark text-capitalize">
+                                                        descember 09, 2016
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="card__post__title">
+                                            <h6>
+                                                <a href="./card-article-detail-v1.html">
+                                                    6 Best Tips for Building a Good Shipping Boat
+                                                </a>
+                                            </h6>
+                                            <!-- <p class="d-none d-lg-block d-xl-block">
+                                  Maecenas accumsan tortor ut velit pharetra mollis. Proin eu nisl et arcu iaculis placerat
+                                  sollicitudin ut est. In fringilla dui dui.
+                              </p> -->
+                                        </div>
                                     </div>
                                 </div>
-
-                                <!-- Video Duration -->
-                                <span class="video-duration">05.03</span>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Tranding news carousel -->
 
-                <div class="col-12 col-md-5 col-lg-4">
-                    <ul class="nav vizew-nav-tab" role="tablist">
-
-                        <li class="nav-item">
-                            <a class="nav-link active" id="post-1-tab" data-toggle="pill" href="#post-1" role="tab" aria-controls="post-1" aria-selected="true">
-                                <!-- Single Blog Post -->
-                                <div class="single-blog-post style-2 d-flex align-items-center">
-                                    <div class="post-thumbnail">
-                                        <img src="img/bg-img/3.jpg" alt="">
-                                    </div>
-                                    <div class="post-content">
-                                        <h6 class="post-title">Boys 'doing well' after Thai cave rescue</h6>
-                                        <div class="post-meta d-flex justify-content-between">
-                                            <span><i class="fa fa-comments-o" aria-hidden="true"></i> 25</span>
-                                            <span><i class="fa fa-eye" aria-hidden="true"></i> 11</span>
-                                            <span><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 19</span>
+    <!-- Popular news -->
+    <section>
+        <!-- Popular news  header-->
+        <div class="popular__news-header">
+            <div class="container">
+                <div class="row no-gutters">
+                    <div class="col-md-8">
+                        <div class="card__post-carousel">
+                            <div class="item">
+                                <!-- Post Article -->
+                                <div class="card__post">
+                                    <div class="card__post__body">
+                                        <a href="./card-article-detail-v1.html">
+                                            <img src="images/placeholder/800x600.jpg" class="img-fluid" alt="" />
+                                        </a>
+                                        <div class="card__post__content bg__post-cover">
+                                            <div class="card__post__category">covid-19</div>
+                                            <div class="card__post__title">
+                                                <h2>
+                                                    <a href="#">
+                                                        Global solidarity to fight COVID-19, and indonesia
+                                                        stay safe and health
+                                                    </a>
+                                                </h2>
+                                            </div>
+                                            <div class="card__post__author-info">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item">
+                                                        <a href="#"> by david hall </a>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <span> Descember 09, 2016 </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" id="post-2-tab" data-toggle="pill" href="#post-2" role="tab" aria-controls="post-2" aria-selected="false">
-                                <!-- Single Blog Post -->
-                                <div class="single-blog-post style-2 d-flex align-items-center">
-                                    <div class="post-thumbnail">
-                                        <img src="img/bg-img/4.jpg" alt="">
-                                    </div>
-                                    <div class="post-content">
-                                        <h6 class="post-title">Meet the 12 boys rescued from cave</h6>
-                                        <div class="post-meta d-flex justify-content-between">
-                                            <span><i class="fa fa-comments-o" aria-hidden="true"></i> 14</span>
-                                            <span><i class="fa fa-eye" aria-hidden="true"></i> 34</span>
-                                            <span><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</span>
+                            </div>
+                            <div class="item">
+                                <!-- Post Article -->
+                                <div class="card__post">
+                                    <div class="card__post__body">
+                                        <a href="./card-article-detail-v1.html">
+                                            <img src="images/placeholder/800x600.jpg" class="img-fluid" alt="" />
+                                        </a>
+                                        <div class="card__post__content bg__post-cover">
+                                            <div class="card__post__category">covid-19</div>
+                                            <div class="card__post__title">
+                                                <h2>
+                                                    <a href="#">
+                                                        Global solidarity to fight COVID-19, and indonesia
+                                                        stay safe and health
+                                                    </a>
+                                                </h2>
+                                            </div>
+                                            <div class="card__post__author-info">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item">
+                                                        <a href="#"> by david hall </a>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <span> Descember 09, 2016 </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" id="post-3-tab" data-toggle="pill" href="#post-3" role="tab" aria-controls="post-3" aria-selected="false">
-                                <!-- Single Blog Post -->
-                                <div class="single-blog-post style-2 d-flex align-items-center">
-                                    <div class="post-thumbnail">
-                                        <img src="img/bg-img/5.jpg" alt="">
-                                    </div>
-                                    <div class="post-content">
-                                        <h6 class="post-title">Pogba dedicates France win to Thai cave boys</h6>
-                                        <div class="post-meta d-flex justify-content-between">
-                                            <span><i class="fa fa-comments-o" aria-hidden="true"></i> 14</span>
-                                            <span><i class="fa fa-eye" aria-hidden="true"></i> 34</span>
-                                            <span><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="popular__news-right">
+                            <!-- Post Article -->
+                            <div class="card__post">
+                                <div class="card__post__body card__post__transition">
+                                    <a href="./card-article-detail-v1.html">
+                                        <img src="images/placeholder/600x400.jpg" class="img-fluid" alt="" />
+                                    </a>
+                                    <div class="card__post__content bg__post-cover">
+                                        <div class="card__post__category">politics</div>
+                                        <div class="card__post__title">
+                                            <h5>
+                                                <a href="./card-article-detail-v1.html">
+                                                    Barack Obama and Family Visit borobudur temple enjoy
+                                                    holiday indonesia.</a>
+                                            </h5>
+                                        </div>
+                                        <div class="card__post__author-info">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                    <a href="./card-article-detail-v1.html">
+                                                        by david hall
+                                                    </a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <span> Descember 09, 2016 </span>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" id="post-4-tab" data-toggle="pill" href="#post-4" role="tab" aria-controls="post-4" aria-selected="false">
-                                <!-- Single Blog Post -->
-                                <div class="single-blog-post style-2 d-flex align-items-center">
-                                    <div class="post-thumbnail">
-                                        <img src="img/bg-img/6.jpg" alt="">
-                                    </div>
-                                    <div class="post-content">
-                                        <h6 class="post-title">How the world reacted to PM's Brexit crisis</h6>
-                                        <div class="post-meta d-flex justify-content-between">
-                                            <span><i class="fa fa-comments-o" aria-hidden="true"></i> 24</span>
-                                            <span><i class="fa fa-eye" aria-hidden="true"></i> 98</span>
-                                            <span><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 63</span>
+                            </div>
+                            <!-- Post Article -->
+                            <div class="card__post">
+                                <div class="card__post__body card__post__transition">
+                                    <a href="./card-article-detail-v1.html">
+                                        <img src="images/placeholder/600x400.jpg" class="img-fluid" alt="" />
+                                    </a>
+                                    <div class="card__post__content bg__post-cover">
+                                        <div class="card__post__category">politics</div>
+                                        <div class="card__post__title">
+                                            <h5>
+                                                <a href="./card-article-detail-v1.html">
+                                                    Barack Obama and Family Visit borobudur temple enjoy
+                                                    holiday indonesia.</a>
+                                            </h5>
+                                        </div>
+                                        <div class="card__post__author-info">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                    <a href="./card-article-detail-v1.html">
+                                                        by david hall
+                                                    </a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <span> Descember 09, 2016 </span>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" id="post-5-tab" data-toggle="pill" href="#post-5" role="tab" aria-controls="post-5" aria-selected="false">
-                                <!-- Single Blog Post -->
-                                <div class="single-blog-post style-2 d-flex align-items-center">
-                                    <div class="post-thumbnail">
-                                        <img src="img/bg-img/4.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Popular news header-->
+        <!-- Popular news carousel -->
+        <div class="popular__news-header-carousel">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="top__news__slider">
+                            <div class="item">
+                                <!-- Post Article -->
+                                <div class="article__entry">
+                                    <div class="article__image">
+                                        <a href="#">
+                                            <img src="images/placeholder/500x400.jpg" alt="" class="img-fluid" />
+                                        </a>
                                     </div>
-                                    <div class="post-content">
-                                        <h6 class="post-title">Meet the 12 boys rescued from cave</h6>
-                                        <div class="post-meta d-flex justify-content-between">
-                                            <span><i class="fa fa-comments-o" aria-hidden="true"></i> 14</span>
-                                            <span><i class="fa fa-eye" aria-hidden="true"></i> 34</span>
-                                            <span><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</span>
-                                        </div>
+                                    <div class="article__content">
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <span class="text-primary"> by david hall </span>,
+                                            </li>
+
+                                            <li class="list-inline-item">
+                                                <span> descember 09, 2016 </span>
+                                            </li>
+                                        </ul>
+                                        <h5>
+                                            <a href="#">
+                                                Proin eu nisl et arcu iaculis placerat sollicitudin ut
+                                                est.
+                                            </a>
+                                        </h5>
                                     </div>
                                 </div>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" id="post-6-tab" data-toggle="pill" href="#post-6" role="tab" aria-controls="post-6" aria-selected="false">
-                                <!-- Single Blog Post -->
-                                <div class="single-blog-post style-2 d-flex align-items-center">
-                                    <div class="post-thumbnail">
-                                        <img src="img/bg-img/6.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <!-- Post Article -->
+                                <div class="article__entry">
+                                    <div class="article__image">
+                                        <a href="#">
+                                            <img src="images/placeholder/500x400.jpg" alt="" class="img-fluid" />
+                                        </a>
                                     </div>
-                                    <div class="post-content">
-                                        <h6 class="post-title">How the world reacted to PM's Brexit crisis</h6>
-                                        <div class="post-meta d-flex justify-content-between">
-                                            <span><i class="fa fa-comments-o" aria-hidden="true"></i> 24</span>
-                                            <span><i class="fa fa-eye" aria-hidden="true"></i> 98</span>
-                                            <span><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 63</span>
-                                        </div>
+                                    <div class="article__content">
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <span class="text-primary"> by david hall </span>,
+                                            </li>
+
+                                            <li class="list-inline-item">
+                                                <span> descember 09, 2016 </span>
+                                            </li>
+                                        </ul>
+                                        <h5>
+                                            <a href="#">
+                                                Proin eu nisl et arcu iaculis placerat sollicitudin ut
+                                                est.
+                                            </a>
+                                        </h5>
                                     </div>
                                 </div>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" id="post-7-tab" data-toggle="pill" href="#post-7" role="tab" aria-controls="post-7" aria-selected="false">
-                                <!-- Single Blog Post -->
-                                <div class="single-blog-post style-2 d-flex align-items-center">
-                                    <div class="post-thumbnail">
-                                        <img src="img/bg-img/4.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <!-- Post Article -->
+                                <div class="article__entry">
+                                    <div class="article__image">
+                                        <a href="#">
+                                            <img src="images/placeholder/500x400.jpg" alt="" class="img-fluid" />
+                                        </a>
                                     </div>
-                                    <div class="post-content">
-                                        <h6 class="post-title">Meet the 12 boys rescued from cave</h6>
-                                        <div class="post-meta d-flex justify-content-between">
-                                            <span><i class="fa fa-comments-o" aria-hidden="true"></i> 14</span>
-                                            <span><i class="fa fa-eye" aria-hidden="true"></i> 34</span>
-                                            <span><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</span>
-                                        </div>
+                                    <div class="article__content">
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <span class="text-primary"> by david hall </span>,
+                                            </li>
+
+                                            <li class="list-inline-item">
+                                                <span> descember 09, 2016 </span>
+                                            </li>
+                                        </ul>
+                                        <h5>
+                                            <a href="#">
+                                                Proin eu nisl et arcu iaculis placerat sollicitudin ut
+                                                est.
+                                            </a>
+                                        </h5>
                                     </div>
                                 </div>
-                            </a>
-                        </li>
+                            </div>
+                            <div class="item">
+                                <!-- Post Article -->
+                                <div class="article__entry">
+                                    <div class="article__image">
+                                        <a href="#">
+                                            <img src="images/placeholder/500x400.jpg" alt="" class="img-fluid" />
+                                        </a>
+                                    </div>
+                                    <div class="article__content">
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <span class="text-primary"> by david hall </span>,
+                                            </li>
 
-                    </ul>
+                                            <li class="list-inline-item">
+                                                <span> descember 09, 2016 </span>
+                                            </li>
+                                        </ul>
+                                        <h5>
+                                            <a href="#">
+                                                Proin eu nisl et arcu iaculis placerat sollicitudin ut
+                                                est.
+                                            </a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <!-- Post Article -->
+                                <div class="article__entry">
+                                    <div class="article__image">
+                                        <a href="#">
+                                            <img src="images/placeholder/500x400.jpg" alt="" class="img-fluid" />
+                                        </a>
+                                    </div>
+                                    <div class="article__content">
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <span class="text-primary"> by david hall </span>,
+                                            </li>
+
+                                            <li class="list-inline-item">
+                                                <span> descember 09, 2016 </span>
+                                            </li>
+                                        </ul>
+                                        <h5>
+                                            <a href="#">
+                                                Proin eu nisl et arcu iaculis placerat sollicitudin ut
+                                                est.
+                                            </a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- End Popular news carousel -->
     </section>
-    <!-- ##### Hero Area End ##### -->
-     <!-- ##### Trending Posts Area Start ##### -->
-     <section class="trending-posts-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <!-- Section Heading -->
-                    <div class="section-heading">
-                        <h4>Trending Videos</h4>
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </div>
+    <!-- End Popular news -->
 
-            <div class="row">
-                <!-- Single Blog Post -->
-                <div class="col-12 col-md-4">
-                    <div class="single-post-area mb-80">
-                        <!-- Post Thumbnail -->
-                        <div class="post-thumbnail">
-                            <img src="img/bg-img/11.jpg" alt="">
-
-                            <!-- Video Duration -->
-                            <span class="video-duration">05.03</span>
+    <!-- Popular news category -->
+    <section class="pt-0">
+        <div class="popular__section-news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-8">
+                        <div class="wrapper__list__article">
+                            <h4 class="border_section">recent post</h4>
                         </div>
-
-                        <!-- Post Content -->
-                        <div class="post-content">
-                            <a href="#" class="post-cata cata-sm cata-success">Sports</a>
-                            <a href="single-post.html" class="post-title">Warner Bros. Developing ‘The accountant’ Sequel</a>
-                            <div class="post-meta d-flex">
-                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 22</a>
-                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 16</a>
-                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 15</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Blog Post -->
-                <div class="col-12 col-md-4">
-                    <div class="single-post-area mb-80">
-                        <!-- Post Thumbnail -->
-                        <div class="post-thumbnail">
-                            <img src="img/bg-img/12.jpg" alt="">
-
-                            <!-- Video Duration -->
-                            <span class="video-duration">05.03</span>
-                        </div>
-
-                        <!-- Post Content -->
-                        <div class="post-content">
-                            <a href="#" class="post-cata cata-sm cata-danger">Game</a>
-                            <a href="single-post.html" class="post-title">Searching for the 'angel' who held me on Westminste Bridge</a>
-                            <div class="post-meta d-flex">
-                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 28</a>
-                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 17</a>
-                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Blog Post -->
-                <div class="col-12 col-md-4">
-                    <div class="single-post-area mb-80">
-                        <!-- Post Thumbnail -->
-                        <div class="post-thumbnail">
-                            <img src="img/bg-img/13.jpg" alt="">
-
-                            <!-- Video Duration -->
-                            <span class="video-duration">05.03</span>
-                        </div>
-
-                        <!-- Post Content -->
-                        <div class="post-content">
-                            <a href="#" class="post-cata cata-sm cata-primary">Business</a>
-                            <a href="single-post.html" class="post-title">Love Island star's boyfriend found dead after her funeral</a>
-                            <div class="post-meta d-flex">
-                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 38</a>
-                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!-- ##### Trending Posts Area End ##### -->
-    <!-- ##### Vizew Post Area Start ##### -->
-    <section class="vizew-post-area mb-50">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-7 col-lg-8">
-                    <div class="all-posts-area">
-                        <!-- Section Heading -->
-                        <div class="section-heading style-2">
-                            <h4>Featured Videos</h4>
-                            <div class="line"></div>
-                        </div>
-
-                        <!-- Featured Post Slides -->
-                        <div class="featured-post-slides owl-carousel mb-30">
-                            <!-- Single Feature Post -->
-                            <div class="single-feature-post video-post bg-img" style="background-image: url(img/bg-img/14.jpg);">
-                                <!-- Play Button -->
-                                <a href="video-post.html" class="btn play-btn"><i class="fa fa-play" aria-hidden="true"></i></a>
-
-                                <!-- Post Content -->
-                                <div class="post-content">
-                                    <a href="#" class="post-cata">Sports</a>
-                                    <a href="single-post.html" class="post-title">Reunification of migrant toddlers, parents should be completed Thursday</a>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 25</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 25</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 25</a>
-                                    </div>
-                                </div>
-
-                                <!-- Video Duration -->
-                                <span class="video-duration">05.03</span>
-                            </div>
-
-                            <!-- Single Feature Post -->
-                            <div class="single-feature-post video-post bg-img" style="background-image: url(img/bg-img/7.jpg);">
-                                <!-- Play Button -->
-                                <a href="video-post.html" class="btn play-btn"><i class="fa fa-play" aria-hidden="true"></i></a>
-
-                                <!-- Post Content -->
-                                <div class="post-content">
-                                    <a href="#" class="post-cata">Sports</a>
-                                    <a href="single-post.html" class="post-title">Reunification of migrant toddlers, parents should be completed Thursday</a>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 25</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 25</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 25</a>
-                                    </div>
-                                </div>
-
-                                <!-- Video Duration -->
-                                <span class="video-duration">05.03</span>
-                            </div>
-                        </div>
-
                         <div class="row">
-                            <!-- Single Blog Post -->
-                            <div class="col-12 col-md-6">
-                                <div class="single-post-area mb-80">
-                                    <!-- Post Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <img src="img/bg-img/12.jpg" alt="">
-
-                                        <!-- Video Duration -->
-                                        <span class="video-duration">05.03</span>
-                                    </div>
-
-                                    <!-- Post Content -->
-                                    <div class="post-content">
-                                        <a href="#" class="post-cata cata-sm cata-danger">Game</a>
-                                        <a href="single-post.html" class="post-title">Searching for the 'angel' who held me on Westminste Bridge</a>
-                                        <div class="post-meta d-flex">
-                                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 28</a>
-                                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 17</a>
-                                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
+                            <div class="col-sm-12 col-md-6 mb-4">
+                                <!-- Post Article -->
+                                <div class="card__post">
+                                    <div class="card__post__body card__post__transition">
+                                        <a href="./card-article-detail-v1.html">
+                                            <img src="images/placeholder/600x400.jpg" class="img-fluid" alt="" />
+                                        </a>
+                                        <div class="card__post__content bg__post-cover">
+                                            <div class="card__post__category">politics</div>
+                                            <div class="card__post__title">
+                                                <h5>
+                                                    <a href="./card-article-detail-v1.html">
+                                                        Barack Obama and Family Visit borobudur temple
+                                                        enjoy holiday indonesia.</a>
+                                                </h5>
+                                            </div>
+                                            <div class="card__post__author-info">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item">
+                                                        <a href="./card-article-detail-v1.html">
+                                                            by david hall
+                                                        </a>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <span> Descember 09, 2016 </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Single Blog Post -->
-                            <div class="col-12 col-md-6">
-                                <div class="single-post-area mb-80">
-                                    <!-- Post Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <img src="img/bg-img/13.jpg" alt="">
-
-                                        <!-- Video Duration -->
-                                        <span class="video-duration">05.03</span>
-                                    </div>
-
-                                    <!-- Post Content -->
-                                    <div class="post-content">
-                                        <a href="#" class="post-cata cata-sm cata-primary">Business</a>
-                                        <a href="single-post.html" class="post-title">Love Island star's boyfriend found dead after her funeral</a>
-                                        <div class="post-meta d-flex">
-                                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 38</a>
-                                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
+                            <div class="col-sm-12 col-md-6 mb-4">
+                                <!-- Post Article -->
+                                <div class="card__post">
+                                    <div class="card__post__body card__post__transition">
+                                        <a href="./card-article-detail-v1.html">
+                                            <img src="images/placeholder/600x400.jpg" class="img-fluid" alt="" />
+                                        </a>
+                                        <div class="card__post__content bg__post-cover">
+                                            <div class="card__post__category">politics</div>
+                                            <div class="card__post__title">
+                                                <h5>
+                                                    <a href="./card-article-detail-v1.html">
+                                                        Barack Obama and Family Visit borobudur temple
+                                                        enjoy holiday indonesia.</a>
+                                                </h5>
+                                            </div>
+                                            <div class="card__post__author-info">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item">
+                                                        <a href="./card-article-detail-v1.html">
+                                                            by david hall
+                                                        </a>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <span> Descember 09, 2016 </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                         <div class="row">
-                            <div class="col-12 col-lg-6">
-                                <!-- Section Heading -->
-                                <div class="section-heading style-2">
-                                    <h4>Sport Videos</h4>
-                                    <div class="line"></div>
-                                </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div class="wrapp__list__article-responsive">
+                                    <div class="mb-3">
+                                        <!-- Post Article -->
+                                        <div class="card__post card__post-list">
+                                            <div class="image-sm">
+                                                <a href="./card-article-detail-v1.html">
+                                                    <img src="images/placeholder/500x400.jpg" class="img-fluid"
+                                                        alt="" />
+                                                </a>
+                                            </div>
 
-                                <!-- Sports Video Slides -->
-                                <div class="sport-video-slides owl-carousel mb-50">
-                                    <!-- Single Blog Post -->
-                                    <div class="single-post-area">
-                                        <!-- Post Thumbnail -->
-                                        <div class="post-thumbnail">
-                                            <img src="img/bg-img/15.jpg" alt="">
-
-                                            <!-- Video Duration -->
-                                            <span class="video-duration">05.03</span>
-                                        </div>
-
-                                        <!-- Post Content -->
-                                        <div class="post-content">
-                                            <a href="#" class="post-cata cata-sm cata-success">Sports</a>
-                                            <a href="single-post.html" class="post-title">Searching for the 'angel' who held me on Westminster Bridge</a>
-                                            <div class="post-meta d-flex">
-                                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 38</a>
-                                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
+                                            <div class="card__post__body">
+                                                <div class="card__post__content">
+                                                    <div class="card__post__author-info mb-2">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item">
+                                                                <span class="text-primary">
+                                                                    by david hall
+                                                                </span>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                <span class="text-dark text-capitalize">
+                                                                    descember 09, 2016
+                                                                </span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card__post__title">
+                                                        <h6>
+                                                            <a href="./card-article-detail-v1.html">
+                                                                6 Best Tips for Building a Good Shipping Boat
+                                                            </a>
+                                                        </h6>
+                                                        <!-- <p class="d-none d-lg-block d-xl-block">
+                          Maecenas accumsan tortor ut velit pharetra mollis. Proin eu nisl et arcu iaculis placerat
+                          sollicitudin ut est. In fringilla dui dui.
+                      </p> -->
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <!-- Single Blog Post -->
-                                    <div class="single-post-area">
-                                        <!-- Post Thumbnail -->
-                                        <div class="post-thumbnail">
-                                            <img src="img/bg-img/13.jpg" alt="">
-
-                                            <!-- Video Duration -->
-                                            <span class="video-duration">05.03</span>
-                                        </div>
-
-                                        <!-- Post Content -->
-                                        <div class="post-content">
-                                            <a href="#" class="post-cata cata-sm cata-success">Sports</a>
-                                            <a href="single-post.html" class="post-title">Searching for the 'angel' who held me on Westminster Bridge</a>
-                                            <div class="post-meta d-flex">
-                                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 38</a>
-                                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
+                                    <div class="mb-3">
+                                        <!-- Post Article -->
+                                        <div class="card__post card__post-list">
+                                            <div class="image-sm">
+                                                <a href="./card-article-detail-v1.html">
+                                                    <img src="images/placeholder/500x400.jpg" class="img-fluid"
+                                                        alt="" />
+                                                </a>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="col-12 col-lg-6">
-                                <!-- Section Heading -->
-                                <div class="section-heading style-2">
-                                    <h4>Business Videos</h4>
-                                    <div class="line"></div>
-                                </div>
-
-                                <!-- Business Video Slides -->
-                                <div class="business-video-slides owl-carousel mb-50">
-                                    <!-- Single Blog Post -->
-                                    <div class="single-post-area">
-                                        <!-- Post Thumbnail -->
-                                        <div class="post-thumbnail">
-                                            <img src="img/bg-img/17.jpg" alt="">
-
-                                            <!-- Video Duration -->
-                                            <span class="video-duration">05.03</span>
-                                        </div>
-
-                                        <!-- Post Content -->
-                                        <div class="post-content">
-                                            <a href="#" class="post-cata cata-sm cata-primary">Business</a>
-                                            <a href="single-post.html" class="post-title">Full article Prince Charles's 'urgent' global research</a>
-                                            <div class="post-meta d-flex">
-                                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 38</a>
-                                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Single Blog Post -->
-                                    <div class="single-post-area">
-                                        <!-- Post Thumbnail -->
-                                        <div class="post-thumbnail">
-                                            <img src="img/bg-img/13.jpg" alt="">
-
-                                            <!-- Video Duration -->
-                                            <span class="video-duration">05.03</span>
-                                        </div>
-
-                                        <!-- Post Content -->
-                                        <div class="post-content">
-                                            <a href="#" class="post-cata cata-sm cata-primary">Business</a>
-                                            <a href="single-post.html" class="post-title">Full article Prince Charles's 'urgent' global research</a>
-                                            <div class="post-meta d-flex">
-                                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 38</a>
-                                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
+                                            <div class="card__post__body">
+                                                <div class="card__post__content">
+                                                    <div class="card__post__author-info mb-2">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item">
+                                                                <span class="text-primary">
+                                                                    by david hall
+                                                                </span>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                <span class="text-dark text-capitalize">
+                                                                    descember 09, 2016
+                                                                </span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card__post__title">
+                                                        <h6>
+                                                            <a href="./card-article-detail-v1.html">
+                                                                6 Best Tips for Building a Good Shipping Boat
+                                                            </a>
+                                                        </h6>
+                                                        <!-- <p class="d-none d-lg-block d-xl-block">
+                          Maecenas accumsan tortor ut velit pharetra mollis. Proin eu nisl et arcu iaculis placerat
+                          sollicitudin ut est. In fringilla dui dui.
+                      </p> -->
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div class="wrapp__list__article-responsive">
+                                    <div class="mb-3">
+                                        <!-- Post Article -->
+                                        <div class="card__post card__post-list">
+                                            <div class="image-sm">
+                                                <a href="./card-article-detail-v1.html">
+                                                    <img src="images/placeholder/500x400.jpg" class="img-fluid"
+                                                        alt="" />
+                                                </a>
+                                            </div>
 
-                        <div class="row mb-30">
-                            <!-- Single Blog Post -->
-                            <div class="col-12 col-lg-6">
-                                <div class="single-blog-post style-3 d-flex mb-50">
-                                    <div class="post-thumbnail">
-                                        <img src="img/bg-img/16.jpg" alt="">
-                                    </div>
-                                    <div class="post-content">
-                                        <a href="single-post.html" class="post-title">Epileptic boy's cannabis let through border</a>
-                                        <div class="post-meta d-flex justify-content-between">
-                                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 16</a>
-                                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 26</a>
-                                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 17</a>
+                                            <div class="card__post__body">
+                                                <div class="card__post__content">
+                                                    <div class="card__post__author-info mb-2">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item">
+                                                                <span class="text-primary">
+                                                                    by david hall
+                                                                </span>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                <span class="text-dark text-capitalize">
+                                                                    descember 09, 2016
+                                                                </span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card__post__title">
+                                                        <h6>
+                                                            <a href="./card-article-detail-v1.html">
+                                                                6 Best Tips for Building a Good Shipping Boat
+                                                            </a>
+                                                        </h6>
+                                                        <!-- <p class="d-none d-lg-block d-xl-block">
+                          Maecenas accumsan tortor ut velit pharetra mollis. Proin eu nisl et arcu iaculis placerat
+                          sollicitudin ut est. In fringilla dui dui.
+                      </p> -->
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+                                    <div class="mb-3">
+                                        <!-- Post Article -->
+                                        <div class="card__post card__post-list">
+                                            <div class="image-sm">
+                                                <a href="./card-article-detail-v1.html">
+                                                    <img src="images/placeholder/500x400.jpg" class="img-fluid"
+                                                        alt="" />
+                                                </a>
+                                            </div>
 
-                            <!-- Single Blog Post -->
-                            <div class="col-12 col-lg-6">
-                                <div class="single-blog-post style-3 d-flex mb-50">
-                                    <div class="post-thumbnail">
-                                        <img src="img/bg-img/18.jpg" alt="">
-                                    </div>
-                                    <div class="post-content">
-                                        <a href="single-post.html" class="post-title">Paramedics 'drilled into boat death woman'</a>
-                                        <div class="post-meta d-flex justify-content-between">
-                                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 16</a>
-                                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 26</a>
-                                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 17</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Single Blog Post -->
-                            <div class="col-12 col-lg-6">
-                                <div class="single-blog-post style-3 d-flex mb-50">
-                                    <div class="post-thumbnail">
-                                        <img src="img/bg-img/19.jpg" alt="">
-                                    </div>
-                                    <div class="post-content">
-                                        <a href="single-post.html" class="post-title">Tory vice-chairs quit over PM's Brexit plan</a>
-                                        <div class="post-meta d-flex justify-content-between">
-                                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 16</a>
-                                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 26</a>
-                                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 17</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Single Blog Post -->
-                            <div class="col-12 col-lg-6">
-                                <div class="single-blog-post style-3 d-flex mb-50">
-                                    <div class="post-thumbnail">
-                                        <img src="img/bg-img/20.jpg" alt="">
-                                    </div>
-                                    <div class="post-content">
-                                        <a href="single-post.html" class="post-title">Do This One Simple Action for an Absolutely</a>
-                                        <div class="post-meta d-flex justify-content-between">
-                                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 16</a>
-                                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 26</a>
-                                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 17</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Section Heading -->
-                        <div class="section-heading style-2">
-                            <h4>Latest News</h4>
-                            <div class="line"></div>
-                        </div>
-
-                        <!-- Featured Post Slides -->
-                        <div class="featured-post-slides owl-carousel mb-30">
-                            <!-- Single Feature Post -->
-                            <div class="single-feature-post video-post bg-img" style="background-image: url(img/bg-img/14.jpg);">
-                                <!-- Play Button -->
-                                <a href="video-post.html" class="btn play-btn"><i class="fa fa-play" aria-hidden="true"></i></a>
-
-                                <!-- Post Content -->
-                                <div class="post-content">
-                                    <a href="#" class="post-cata">Sports</a>
-                                    <a href="single-post.html" class="post-title">Reunification of migrant toddlers, parents should be completed Thursday</a>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 25</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 25</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 25</a>
-                                    </div>
-                                </div>
-
-                                <!-- Video Duration -->
-                                <span class="video-duration">05.03</span>
-                            </div>
-
-                            <!-- Single Feature Post -->
-                            <div class="single-feature-post video-post bg-img" style="background-image: url(img/bg-img/7.jpg);">
-                                <!-- Play Button -->
-                                <a href="video-post.html" class="btn play-btn"><i class="fa fa-play" aria-hidden="true"></i></a>
-
-                                <!-- Post Content -->
-                                <div class="post-content">
-                                    <a href="#" class="post-cata">Sports</a>
-                                    <a href="single-post.html" class="post-title">Reunification of migrant toddlers, parents should be completed Thursday</a>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 25</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 25</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 25</a>
-                                    </div>
-                                </div>
-
-                                <!-- Video Duration -->
-                                <span class="video-duration">05.03</span>
-                            </div>
-                        </div>
-
-                        <!-- Single Post Area -->
-                        <div class="single-post-area mb-30">
-                            <div class="row align-items-center">
-                                <div class="col-12 col-lg-6">
-                                    <!-- Post Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <img src="img/bg-img/21.jpg" alt="">
-
-                                        <!-- Video Duration -->
-                                        <span class="video-duration">05.03</span>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-6">
-                                    <!-- Post Content -->
-                                    <div class="post-content mt-0">
-                                        <a href="#" class="post-cata cata-sm cata-success">Sports</a>
-                                        <a href="single-post.html" class="post-title mb-2">May fights on after Johnson savages Brexit approach</a>
-                                        <div class="post-meta d-flex align-items-center mb-2">
-                                            <a href="#" class="post-author">By Jane</a>
-                                            <i class="fa fa-circle" aria-hidden="true"></i>
-                                            <a href="#" class="post-date">Sep 08, 2018</a>
-                                        </div>
-                                        <p class="mb-2">Quisque mollis tristique ante. Proin ligula eros, varius id tristique sit amet, rutrum non ligula.</p>
-                                        <div class="post-meta d-flex">
-                                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 32</a>
-                                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 42</a>
-                                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 7</a>
+                                            <div class="card__post__body">
+                                                <div class="card__post__content">
+                                                    <div class="card__post__author-info mb-2">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item">
+                                                                <span class="text-primary">
+                                                                    by david hall
+                                                                </span>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                <span class="text-dark text-capitalize">
+                                                                    descember 09, 2016
+                                                                </span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card__post__title">
+                                                        <h6>
+                                                            <a href="./card-article-detail-v1.html">
+                                                                6 Best Tips for Building a Good Shipping Boat
+                                                            </a>
+                                                        </h6>
+                                                        <!-- <p class="d-none d-lg-block d-xl-block">
+                          Maecenas accumsan tortor ut velit pharetra mollis. Proin eu nisl et arcu iaculis placerat
+                          sollicitudin ut est. In fringilla dui dui.
+                      </p> -->
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Single Post Area -->
-                        <div class="single-post-area mb-30">
-                            <div class="row align-items-center">
-                                <div class="col-12 col-lg-6">
-                                    <!-- Post Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <img src="img/bg-img/22.jpg" alt="">
-
-                                        <!-- Video Duration -->
-                                        <span class="video-duration">05.03</span>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-6">
-                                    <!-- Post Content -->
-                                    <div class="post-content mt-0">
-                                        <a href="#" class="post-cata cata-sm cata-danger">Game</a>
-                                        <a href="single-post.html" class="post-title mb-2">Thailand cave rescue: Boys 'doing well' after spending night</a>
-                                        <div class="post-meta d-flex align-items-center mb-2">
-                                            <a href="#" class="post-author">By Jane</a>
-                                            <i class="fa fa-circle" aria-hidden="true"></i>
-                                            <a href="#" class="post-date">Sep 08, 2018</a>
-                                        </div>
-                                        <p class="mb-2">Quisque mollis tristique ante. Proin ligula eros, varius id tristique sit amet, rutrum non ligula.</p>
-                                        <div class="post-meta d-flex">
-                                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 32</a>
-                                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 42</a>
-                                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 7</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Post Area -->
-                        <div class="single-post-area mb-30">
-                            <div class="row align-items-center">
-                                <div class="col-12 col-lg-6">
-                                    <!-- Post Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <img src="img/bg-img/23.jpg" alt="">
-
-                                        <!-- Video Duration -->
-                                        <span class="video-duration">05.03</span>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-6">
-                                    <!-- Post Content -->
-                                    <div class="post-content mt-0">
-                                        <a href="#" class="post-cata cata-sm cata-primary">Business</a>
-                                        <a href="single-post.html" class="post-title mb-2">Theresa May battles Brexiteer backlash amid disquiet</a>
-                                        <div class="post-meta d-flex align-items-center mb-2">
-                                            <a href="#" class="post-author">By Jane</a>
-                                            <i class="fa fa-circle" aria-hidden="true"></i>
-                                            <a href="#" class="post-date">Sep 08, 2018</a>
-                                        </div>
-                                        <p class="mb-2">Quisque mollis tristique ante. Proin ligula eros, varius id tristique sit amet, rutrum non ligula.</p>
-                                        <div class="post-meta d-flex">
-                                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 32</a>
-                                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 42</a>
-                                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 7</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Post Area -->
-                        <div class="single-post-area mb-30">
-                            <div class="row align-items-center">
-                                <div class="col-12 col-lg-6">
-                                    <!-- Post Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <img src="img/bg-img/24.jpg" alt="">
-
-                                        <!-- Video Duration -->
-                                        <span class="video-duration">05.03</span>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-6">
-                                    <!-- Post Content -->
-                                    <div class="post-content mt-0">
-                                        <a href="#" class="post-cata cata-sm cata-danger">Game</a>
-                                        <a href="single-post.html" class="post-title mb-2">Theresa May warned Brexit strategy 'risks putting Jeremy Corbyn</a>
-                                        <div class="post-meta d-flex align-items-center mb-2">
-                                            <a href="#" class="post-author">By Jane</a>
-                                            <i class="fa fa-circle" aria-hidden="true"></i>
-                                            <a href="#" class="post-date">Sep 08, 2018</a>
-                                        </div>
-                                        <p class="mb-2">Quisque mollis tristique ante. Proin ligula eros, varius id tristique sit amet, rutrum non ligula.</p>
-                                        <div class="post-meta d-flex">
-                                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 32</a>
-                                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 42</a>
-                                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 7</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
-                </div>
 
-                <div class="col-12 col-md-5 col-lg-4">
-                    <div class="sidebar-area">
-
-                        <!-- ***** Single Widget ***** -->
-                        <div class="single-widget followers-widget mb-50">
-                            <a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i><span class="counter">198</span><span>Fan</span></a>
-                            <a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i><span class="counter">220</span><span>Followers</span></a>
-                            <a href="#" class="google"><i class="fa fa-google" aria-hidden="true"></i><span class="counter">140</span><span>Subscribe</span></a>
-                        </div>
-
-                        <!-- ***** Single Widget ***** -->
-                        <div class="single-widget latest-video-widget mb-50">
-                            <!-- Section Heading -->
-                            <div class="section-heading style-2 mb-30">
-                                <h4>Latest Video</h4>
-                                <div class="line"></div>
-                            </div>
-
-                            <!-- Single Blog Post -->
-                            <div class="single-post-area mb-30">
-                                <!-- Post Thumbnail -->
-                                <div class="post-thumbnail">
-                                    <img src="img/bg-img/13.jpg" alt="">
-
-                                    <!-- Video Duration -->
-                                    <span class="video-duration">05.03</span>
-                                </div>
-
-                                <!-- Post Content -->
-                                <div class="post-content">
-                                    <a href="#" class="post-cata cata-sm cata-success">Sports</a>
-                                    <a href="single-post.html" class="post-title">Full article Prince Charles's 'urgent' global research</a>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 38</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 22</a>
+                    <div class="col-md-12 col-lg-4">
+                        <aside class="wrapper__list__article">
+                            <h4 class="border_section">popular post</h4>
+                            <div class="wrapper__list-number">
+                                <!-- List Article -->
+                                <div class="card__post__list">
+                                    <div class="list-number">
+                                        <span> 1 </span>
                                     </div>
+                                    <a href="#" class="category"> covid-19 </a>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <h5>
+                                                <a href="#">
+                                                    Gegera Corona, Kekayaan Bos Zoom Nambah Rp 64 T
+                                                    dalam 3 Bulan - CNBC Indonesia
+                                                </a>
+                                            </h5>
+                                        </li>
+                                    </ul>
                                 </div>
-                            </div>
 
-                            <!-- Single Blog Post -->
-                            <div class="single-blog-post d-flex">
-                                <div class="post-thumbnail">
-                                    <img src="img/bg-img/1.jpg" alt="">
-                                </div>
-                                <div class="post-content">
-                                    <a href="single-post.html" class="post-title">DC Shoes: gymkhana five; the making of</a>
-                                    <div class="post-meta d-flex justify-content-between">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 29</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 08</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 23</a>
+                                <div class="card__post__list">
+                                    <div class="list-number">
+                                        <span> 2 </span>
                                     </div>
+                                    <a href="#" class="category"> Startup </a>
+                                    <ul class="list-inline">
+                                        <!-- <li class="list-inline-item">
+                  <a href="#" class="author-info">
+                      by david hall
+                  </a>
+      
+              </li>
+              <li class="list-inline-item">
+                  <span>
+                      <i class="fa fa-calendar"></i>
+                      march 01, 2020
+                  </span>
+      
+              </li> -->
+                                        <li class="list-inline-item">
+                                            <h5>
+                                                <a href="#">
+                                                    Gegera Corona, Kekayaan Bos Zoom Nambah Rp 64 T
+                                                    dalam 3 Bulan - CNBC Indonesia
+                                                </a>
+                                            </h5>
+                                        </li>
+                                    </ul>
                                 </div>
-                            </div>
-
-                            <!-- Single Blog Post -->
-                            <div class="single-blog-post d-flex">
-                                <div class="post-thumbnail">
-                                    <img src="img/bg-img/2.jpg" alt="">
-                                </div>
-                                <div class="post-content">
-                                    <a href="single-post.html" class="post-title">Sweet Yummy Chocolatea Tea</a>
-                                    <div class="post-meta d-flex justify-content-between">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 17</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 33</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 26</a>
+                                <!-- List Article -->
+                                <div class="card__post__list">
+                                    <div class="list-number">
+                                        <span> 1 </span>
                                     </div>
+                                    <a href="#" class="category"> covid-19 </a>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <h5>
+                                                <a href="#">
+                                                    Gegera Corona, Kekayaan Bos Zoom Nambah Rp 64 T
+                                                    dalam 3 Bulan - CNBC Indonesia
+                                                </a>
+                                            </h5>
+                                        </li>
+                                    </ul>
                                 </div>
-                            </div>
 
-                            <!-- Single Blog Post -->
-                            <div class="single-blog-post d-flex">
-                                <div class="post-thumbnail">
-                                    <img src="img/bg-img/35.jpg" alt="">
-                                </div>
-                                <div class="post-content">
-                                    <a href="single-post.html" class="post-title">How To Make Orange Chicken Recipe?</a>
-                                    <div class="post-meta d-flex justify-content-between">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 11</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 42</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 21</a>
+                                <div class="card__post__list">
+                                    <div class="list-number">
+                                        <span> 2 </span>
                                     </div>
+                                    <a href="#" class="category"> Startup </a>
+                                    <ul class="list-inline">
+                                        <!-- <li class="list-inline-item">
+                  <a href="#" class="author-info">
+                      by david hall
+                  </a>
+      
+              </li>
+              <li class="list-inline-item">
+                  <span>
+                      <i class="fa fa-calendar"></i>
+                      march 01, 2020
+                  </span>
+      
+              </li> -->
+                                        <li class="list-inline-item">
+                                            <h5>
+                                                <a href="#">
+                                                    Gegera Corona, Kekayaan Bos Zoom Nambah Rp 64 T
+                                                    dalam 3 Bulan - CNBC Indonesia
+                                                </a>
+                                            </h5>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                        </div>
-
-                        <!-- ***** Single Widget ***** -->
-                        <div class="single-widget add-widget mb-50">
-                            <a href="#"><img src="img/bg-img/add.png" alt=""></a>
-                        </div>
-
-                        <!-- ***** Sidebar Widget ***** -->
-                        <div class="single-widget youtube-channel-widget mb-50">
-                            <!-- Section Heading -->
-                            <div class="section-heading style-2 mb-30">
-                                <h4>Hot Channels</h4>
-                                <div class="line"></div>
-                            </div>
-
-                            <!-- Single YouTube Channel -->
-                            <div class="single-youtube-channel d-flex align-items-center">
-                                <div class="youtube-channel-thumbnail">
-                                    <img src="img/bg-img/25.jpg" alt="">
-                                </div>
-                                <div class="youtube-channel-content">
-                                    <a href="single-post.html" class="channel-title">Music Channel</a>
-                                    <a href="#" class="btn subscribe-btn"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Subscribe</a>
-                                </div>
-                            </div>
-
-                            <!-- Single YouTube Channel -->
-                            <div class="single-youtube-channel d-flex align-items-center">
-                                <div class="youtube-channel-thumbnail">
-                                    <img src="img/bg-img/26.jpg" alt="">
-                                </div>
-                                <div class="youtube-channel-content">
-                                    <a href="single-post.html" class="channel-title">Trending Channel</a>
-                                    <a href="#" class="btn subscribe-btn"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Subscribe</a>
-                                </div>
-                            </div>
-
-                            <!-- Single YouTube Channel -->
-                            <div class="single-youtube-channel d-flex align-items-center">
-                                <div class="youtube-channel-thumbnail">
-                                    <img src="img/bg-img/27.jpg" alt="">
-                                </div>
-                                <div class="youtube-channel-content">
-                                    <a href="single-post.html" class="channel-title">Travel Channel</a>
-                                    <a href="#" class="btn subscribe-btn"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Subscribe</a>
-                                </div>
-                            </div>
-
-                            <!-- Single YouTube Channel -->
-                            <div class="single-youtube-channel d-flex align-items-center">
-                                <div class="youtube-channel-thumbnail">
-                                    <img src="img/bg-img/28.jpg" alt="">
-                                </div>
-                                <div class="youtube-channel-content">
-                                    <a href="single-post.html" class="channel-title">Sport Channel</a>
-                                    <a href="#" class="btn subscribe-btn"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Subscribe</a>
-                                </div>
-                            </div>
-
-                            <!-- Single YouTube Channel -->
-                            <div class="single-youtube-channel d-flex align-items-center">
-                                <div class="youtube-channel-thumbnail">
-                                    <img src="img/bg-img/29.jpg" alt="">
-                                </div>
-                                <div class="youtube-channel-content">
-                                    <a href="single-post.html" class="channel-title">TV Show Channel</a>
-                                    <a href="#" class="btn subscribe-btn"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Subscribe</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- ***** Single Widget ***** -->
-                        <div class="single-widget newsletter-widget mb-50">
-                            <!-- Section Heading -->
-                            <div class="section-heading style-2 mb-30">
-                                <h4>Newsletter</h4>
-                                <div class="line"></div>
-                            </div>
-                            <p>Subscribe our newsletter gor get notification about new updates, information discount, etc.</p>
-                            <!-- Newsletter Form -->
-                            <div class="newsletter-form">
-                                <form action="#" method="post">
-                                    <input type="email" name="nl-email" class="form-control mb-15" id="emailnl" placeholder="Enter your email">
-                                    <button type="submit" class="btn vizew-btn w-100">Subscribe</button>
-                                </form>
-                            </div>
-                        </div>
-
-                        <!-- ***** Single Widget ***** -->
-                        <div class="single-widget mb-50">
-                            <!-- Section Heading -->
-                            <div class="section-heading style-2 mb-30">
-                                <h4>Most Viewed Playlist</h4>
-                                <div class="line"></div>
-                            </div>
-
-                            <!-- Single Blog Post -->
-                            <div class="single-blog-post d-flex">
-                                <div class="post-thumbnail">
-                                    <img src="img/bg-img/1.jpg" alt="">
-                                </div>
-                                <div class="post-content">
-                                    <a href="single-post.html" class="post-title">DC Shoes: gymkhana five; the making of</a>
-                                    <div class="post-meta d-flex justify-content-between">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Single Blog Post -->
-                            <div class="single-blog-post d-flex">
-                                <div class="post-thumbnail">
-                                    <img src="img/bg-img/2.jpg" alt="">
-                                </div>
-                                <div class="post-content">
-                                    <a href="single-post.html" class="post-title">How To Make Orange Chicken Recipe?</a>
-                                    <div class="post-meta d-flex justify-content-between">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Single Blog Post -->
-                            <div class="single-blog-post d-flex">
-                                <div class="post-thumbnail">
-                                    <img src="img/bg-img/36.jpg" alt="">
-                                </div>
-                                <div class="post-content">
-                                    <a href="single-post.html" class="post-title">Sweet Yummy Chocolate in the</a>
-                                    <div class="post-meta d-flex justify-content-between">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Single Blog Post -->
-                            <div class="single-blog-post d-flex">
-                                <div class="post-thumbnail">
-                                    <img src="img/bg-img/37.jpg" alt="">
-                                </div>
-                                <div class="post-content">
-                                    <a href="single-post.html" class="post-title">DC Shoes: gymkhana five; the making of</a>
-                                    <div class="post-meta d-flex justify-content-between">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Single Blog Post -->
-                            <div class="single-blog-post d-flex">
-                                <div class="post-thumbnail">
-                                    <img src="img/bg-img/38.jpg" alt="">
-                                </div>
-                                <div class="post-content">
-                                    <a href="single-post.html" class="post-title">How To Make Orange Chicken Recipe?</a>
-                                    <div class="post-meta d-flex justify-content-between">
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                        </aside>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Post news carousel -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <aside class="wrapper__list__article">
+                        <h4 class="border_section">technology</h4>
+                    </aside>
+                </div>
+                <div class="col-md-12">
+                    <div class="article__entry-carousel">
+                        <div class="item">
+                            <!-- Post Article -->
+                            <div class="article__entry">
+                                <div class="article__image">
+                                    <a href="#">
+                                        <img src="images/placeholder/500x400.jpg" alt="" class="img-fluid" />
+                                    </a>
+                                </div>
+                                <div class="article__content">
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <span class="text-primary"> by david hall </span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span> descember 09, 2016 </span>
+                                        </li>
+                                    </ul>
+                                    <h5>
+                                        <a href="#">
+                                            Maecenas accumsan tortor ut velit pharetra mollis.
+                                        </a>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <!-- Post Article -->
+                            <div class="article__entry">
+                                <div class="article__image">
+                                    <a href="#">
+                                        <img src="images/placeholder/500x400.jpg" alt="" class="img-fluid" />
+                                    </a>
+                                </div>
+                                <div class="article__content">
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <span class="text-primary"> by david hall </span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span> descember 09, 2016 </span>
+                                        </li>
+                                    </ul>
+                                    <h5>
+                                        <a href="#">
+                                            Maecenas accumsan tortor ut velit pharetra mollis.
+                                        </a>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <!-- Post Article -->
+                            <div class="article__entry">
+                                <div class="article__image">
+                                    <a href="#">
+                                        <img src="images/placeholder/500x400.jpg" alt="" class="img-fluid" />
+                                    </a>
+                                </div>
+                                <div class="article__content">
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <span class="text-primary"> by david hall </span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span> descember 09, 2016 </span>
+                                        </li>
+                                    </ul>
+                                    <h5>
+                                        <a href="#">
+                                            Maecenas accumsan tortor ut velit pharetra mollis.
+                                        </a>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <!-- Post Article -->
+                            <div class="article__entry">
+                                <div class="article__image">
+                                    <a href="#">
+                                        <img src="images/placeholder/500x400.jpg" alt="" class="img-fluid" />
+                                    </a>
+                                </div>
+                                <div class="article__content">
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <span class="text-primary"> by david hall </span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span> descember 09, 2016 </span>
+                                        </li>
+                                    </ul>
+                                    <h5>
+                                        <a href="#">
+                                            Maecenas accumsan tortor ut velit pharetra mollis.
+                                        </a>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <!-- Post Article -->
+                            <div class="article__entry">
+                                <div class="article__image">
+                                    <a href="#">
+                                        <img src="images/placeholder/500x400.jpg" alt="" class="img-fluid" />
+                                    </a>
+                                </div>
+                                <div class="article__content">
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <span class="text-primary"> by david hall </span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span> descember 09, 2016 </span>
+                                        </li>
+                                    </ul>
+                                    <h5>
+                                        <a href="#">
+                                            Maecenas accumsan tortor ut velit pharetra mollis.
+                                        </a>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Popular news category -->
+
+        <!-- Popular news category -->
+        <div class="mt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <aside class="wrapper__list__article mb-0">
+                            <h4 class="border_section">lifestyle</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-4">
+                                        <!-- Post Article -->
+                                        <div class="article__entry">
+                                            <div class="article__image">
+                                                <a href="#">
+                                                    <img src="images/placeholder/500x400.jpg" alt=""
+                                                        class="img-fluid" />
+                                                </a>
+                                            </div>
+                                            <div class="article__content">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item">
+                                                        <span class="text-primary"> by david hall </span>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <span> descember 09, 2016 </span>
+                                                    </li>
+                                                </ul>
+                                                <h5>
+                                                    <a href="#">
+                                                        Maecenas accumsan tortor ut velit pharetra mollis.
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <!-- Post Article -->
+                                        <div class="article__entry">
+                                            <div class="article__image">
+                                                <a href="#">
+                                                    <img src="images/placeholder/500x400.jpg" alt=""
+                                                        class="img-fluid" />
+                                                </a>
+                                            </div>
+                                            <div class="article__content">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item">
+                                                        <span class="text-primary"> by david hall </span>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <span> descember 09, 2016 </span>
+                                                    </li>
+                                                </ul>
+                                                <h5>
+                                                    <a href="#">
+                                                        Maecenas accumsan tortor ut velit pharetra mollis.
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <!-- Post Article -->
+                                        <div class="article__entry">
+                                            <div class="article__image">
+                                                <a href="#">
+                                                    <img src="images/placeholder/500x400.jpg" alt=""
+                                                        class="img-fluid" />
+                                                </a>
+                                            </div>
+                                            <div class="article__content">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item">
+                                                        <span class="text-primary"> by david hall </span>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <span> descember 09, 2016 </span>
+                                                    </li>
+                                                </ul>
+                                                <h5>
+                                                    <a href="#">
+                                                        Maecenas accumsan tortor ut velit pharetra mollis.
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-4">
+                                        <!-- Post Article -->
+                                        <div class="article__entry">
+                                            <div class="article__image">
+                                                <a href="#">
+                                                    <img src="images/placeholder/500x400.jpg" alt=""
+                                                        class="img-fluid" />
+                                                </a>
+                                            </div>
+                                            <div class="article__content">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item">
+                                                        <span class="text-primary"> by david hall </span>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <span> descember 09, 2016 </span>
+                                                    </li>
+                                                </ul>
+                                                <h5>
+                                                    <a href="#">
+                                                        Maecenas accumsan tortor ut velit pharetra mollis.
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <!-- Post Article -->
+                                        <div class="article__entry">
+                                            <div class="article__image">
+                                                <a href="#">
+                                                    <img src="images/placeholder/500x400.jpg" alt=""
+                                                        class="img-fluid" />
+                                                </a>
+                                            </div>
+                                            <div class="article__content">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item">
+                                                        <span class="text-primary"> by david hall </span>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <span> descember 09, 2016 </span>
+                                                    </li>
+                                                </ul>
+                                                <h5>
+                                                    <a href="#">
+                                                        Maecenas accumsan tortor ut velit pharetra mollis.
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <!-- Post Article -->
+                                        <div class="article__entry">
+                                            <div class="article__image">
+                                                <a href="#">
+                                                    <img src="images/placeholder/500x400.jpg" alt=""
+                                                        class="img-fluid" />
+                                                </a>
+                                            </div>
+                                            <div class="article__content">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item">
+                                                        <span class="text-primary"> by david hall </span>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <span> descember 09, 2016 </span>
+                                                    </li>
+                                                </ul>
+                                                <h5>
+                                                    <a href="#">
+                                                        Maecenas accumsan tortor ut velit pharetra mollis.
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                        <aside class="wrapper__list__article">
+                            <h4 class="border_section">technology</h4>
+
+                            <div class="wrapp__list__article-responsive">
+                                <!-- Post Article List -->
+                                <div class="card__post card__post-list card__post__transition mt-30">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="card__post__transition">
+                                                <a href="#">
+                                                    <img src="images/placeholder/500x400.jpg" class="img-fluid w-100"
+                                                        alt="" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7 my-auto pl-0">
+                                            <div class="card__post__body">
+                                                <div class="card__post__content">
+                                                    <div class="card__post__category">travel</div>
+                                                    <div class="card__post__author-info mb-2">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item">
+                                                                <span class="text-primary">
+                                                                    by david hall
+                                                                </span>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                <span class="text-dark text-capitalize">
+                                                                    descember 09, 2016
+                                                                </span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card__post__title">
+                                                        <h5>
+                                                            <a href="#">
+                                                                Exercitation Ullamco Laboris Nisi Ut Aliquip
+                                                            </a>
+                                                        </h5>
+                                                        <p class="d-none d-lg-block d-xl-block mb-0">
+                                                            Maecenas accumsan tortor ut velit pharetra
+                                                            mollis. Proin eu nisl et arcu iaculis placerat
+                                                            sollicitudin ut est. In fringilla dui dui.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Post Article List -->
+                                <div class="card__post card__post-list card__post__transition mt-30">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="card__post__transition">
+                                                <a href="#">
+                                                    <img src="images/placeholder/500x400.jpg" class="img-fluid w-100"
+                                                        alt="" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7 my-auto pl-0">
+                                            <div class="card__post__body">
+                                                <div class="card__post__content">
+                                                    <div class="card__post__category">travel</div>
+                                                    <div class="card__post__author-info mb-2">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item">
+                                                                <span class="text-primary">
+                                                                    by david hall
+                                                                </span>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                <span class="text-dark text-capitalize">
+                                                                    descember 09, 2016
+                                                                </span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card__post__title">
+                                                        <h5>
+                                                            <a href="#">
+                                                                Exercitation Ullamco Laboris Nisi Ut Aliquip
+                                                            </a>
+                                                        </h5>
+                                                        <p class="d-none d-lg-block d-xl-block mb-0">
+                                                            Maecenas accumsan tortor ut velit pharetra
+                                                            mollis. Proin eu nisl et arcu iaculis placerat
+                                                            sollicitudin ut est. In fringilla dui dui.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Post Article List -->
+                                <div class="card__post card__post-list card__post__transition mt-30">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="card__post__transition">
+                                                <a href="#">
+                                                    <img src="images/placeholder/500x400.jpg" class="img-fluid w-100"
+                                                        alt="" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7 my-auto pl-0">
+                                            <div class="card__post__body">
+                                                <div class="card__post__content">
+                                                    <div class="card__post__category">travel</div>
+                                                    <div class="card__post__author-info mb-2">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item">
+                                                                <span class="text-primary">
+                                                                    by david hall
+                                                                </span>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                <span class="text-dark text-capitalize">
+                                                                    descember 09, 2016
+                                                                </span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card__post__title">
+                                                        <h5>
+                                                            <a href="#">
+                                                                Exercitation Ullamco Laboris Nisi Ut Aliquip
+                                                            </a>
+                                                        </h5>
+                                                        <p class="d-none d-lg-block d-xl-block mb-0">
+                                                            Maecenas accumsan tortor ut velit pharetra
+                                                            mollis. Proin eu nisl et arcu iaculis placerat
+                                                            sollicitudin ut est. In fringilla dui dui.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Post Article List -->
+                                <div class="card__post card__post-list card__post__transition mt-30">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="card__post__transition">
+                                                <a href="#">
+                                                    <img src="images/placeholder/500x400.jpg" class="img-fluid w-100"
+                                                        alt="" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7 my-auto pl-0">
+                                            <div class="card__post__body">
+                                                <div class="card__post__content">
+                                                    <div class="card__post__category">travel</div>
+                                                    <div class="card__post__author-info mb-2">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item">
+                                                                <span class="text-primary">
+                                                                    by david hall
+                                                                </span>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                <span class="text-dark text-capitalize">
+                                                                    descember 09, 2016
+                                                                </span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card__post__title">
+                                                        <h5>
+                                                            <a href="#">
+                                                                Exercitation Ullamco Laboris Nisi Ut Aliquip
+                                                            </a>
+                                                        </h5>
+                                                        <p class="d-none d-lg-block d-xl-block mb-0">
+                                                            Maecenas accumsan tortor ut velit pharetra
+                                                            mollis. Proin eu nisl et arcu iaculis placerat
+                                                            sollicitudin ut est. In fringilla dui dui.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="sticky-top">
+                            <aside class="wrapper__list__article">
+                                <h4 class="border_section">Latest post</h4>
+                                <div class="wrapper__list__article-small">
+                                    <!-- Post Article -->
+                                    <div class="article__entry">
+                                        <div class="article__image">
+                                            <a href="#">
+                                                <img src="images/placeholder/500x400.jpg" alt=""
+                                                    class="img-fluid" />
+                                            </a>
+                                        </div>
+                                        <div class="article__content">
+                                            <div class="article__category">travel</div>
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                    <span class="text-primary"> by david hall </span>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <span class="text-dark text-capitalize">
+                                                        descember 09, 2016
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                            <h5>
+                                                <a href="#">
+                                                    Proin eu nisl et arcu iaculis placerat sollicitudin
+                                                    ut est
+                                                </a>
+                                            </h5>
+                                            <p>
+                                                Maecenas accumsan tortor ut velit pharetra mollis.
+                                                Proin eu nisl et arcu iaculis placerat sollicitudin ut
+                                                est. In fringilla dui dui.
+                                            </p>
+                                            <a href="#" class="btn btn-outline-primary mb-4 text-capitalize">
+                                                read more</a>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <!-- Post Article -->
+                                        <div class="card__post card__post-list">
+                                            <div class="image-sm">
+                                                <a href="./card-article-detail-v1.html">
+                                                    <img src="images/placeholder/500x400.jpg" class="img-fluid"
+                                                        alt="" />
+                                                </a>
+                                            </div>
+
+                                            <div class="card__post__body">
+                                                <div class="card__post__content">
+                                                    <div class="card__post__author-info mb-2">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item">
+                                                                <span class="text-primary">
+                                                                    by david hall
+                                                                </span>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                <span class="text-dark text-capitalize">
+                                                                    descember 09, 2016
+                                                                </span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card__post__title">
+                                                        <h6>
+                                                            <a href="./card-article-detail-v1.html">
+                                                                6 Best Tips for Building a Good Shipping Boat
+                                                            </a>
+                                                        </h6>
+                                                        <!-- <p class="d-none d-lg-block d-xl-block">
+                          Maecenas accumsan tortor ut velit pharetra mollis. Proin eu nisl et arcu iaculis placerat
+                          sollicitudin ut est. In fringilla dui dui.
+                      </p> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <!-- Post Article -->
+                                        <div class="card__post card__post-list">
+                                            <div class="image-sm">
+                                                <a href="./card-article-detail-v1.html">
+                                                    <img src="images/placeholder/500x400.jpg" class="img-fluid"
+                                                        alt="" />
+                                                </a>
+                                            </div>
+
+                                            <div class="card__post__body">
+                                                <div class="card__post__content">
+                                                    <div class="card__post__author-info mb-2">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item">
+                                                                <span class="text-primary">
+                                                                    by david hall
+                                                                </span>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                <span class="text-dark text-capitalize">
+                                                                    descember 09, 2016
+                                                                </span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card__post__title">
+                                                        <h6>
+                                                            <a href="./card-article-detail-v1.html">
+                                                                6 Best Tips for Building a Good Shipping Boat
+                                                            </a>
+                                                        </h6>
+                                                        <!-- <p class="d-none d-lg-block d-xl-block">
+                          Maecenas accumsan tortor ut velit pharetra mollis. Proin eu nisl et arcu iaculis placerat
+                          sollicitudin ut est. In fringilla dui dui.
+                      </p> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </aside>
+
+                            <aside class="wrapper__list__article">
+                                <h4 class="border_section">stay conected</h4>
+                                <!-- widget Social media -->
+                                <div class="wrap__social__media">
+                                    <a href="#" target="_blank">
+                                        <div class="social__media__widget facebook">
+                                            <span class="social__media__widget-icon">
+                                                <i class="fa fa-facebook"></i>
+                                            </span>
+                                            <span class="social__media__widget-counter">
+                                                19,243 fans
+                                            </span>
+                                            <span class="social__media__widget-name"> like </span>
+                                        </div>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <div class="social__media__widget twitter">
+                                            <span class="social__media__widget-icon">
+                                                <i class="fa fa-twitter"></i>
+                                            </span>
+                                            <span class="social__media__widget-counter">
+                                                2.076 followers
+                                            </span>
+                                            <span class="social__media__widget-name"> follow </span>
+                                        </div>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <div class="social__media__widget youtube">
+                                            <span class="social__media__widget-icon">
+                                                <i class="fa fa-youtube"></i>
+                                            </span>
+                                            <span class="social__media__widget-counter">
+                                                15,200 followers
+                                            </span>
+                                            <span class="social__media__widget-name">
+                                                subscribe
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </aside>
+
+                            <aside class="wrapper__list__article">
+                                <h4 class="border_section">tags</h4>
+                                <div class="blog-tags p-0">
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a href="#"> #property </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#"> #sea </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#"> #programming </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#"> #sea </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#"> #property </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#"> #life style </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#"> #technology </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#"> #framework </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#"> #sport </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#"> #game </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#"> #wfh </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#"> #sport </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#"> #game </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#"> #wfh </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#"> #framework </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </aside>
+
+                            <aside class="wrapper__list__article">
+                                <h4 class="border_section">Advertise</h4>
+                                <a href="#">
+                                    <figure>
+                                        <img src="images/placeholder/600x400.jpg" alt="" class="img-fluid" />
+                                    </figure>
+                                </a>
+                            </aside>
+
+                            <aside class="wrapper__list__article">
+                                <h4 class="border_section">newsletter</h4>
+                                <!-- Form Subscribe -->
+                                <div class="widget__form-subscribe bg__card-shadow">
+                                    <h6>
+                                        The most important world news and events of the day.
+                                    </h6>
+                                    <p>
+                                        <small>Get magzrenvi daily newsletter on your inbox.</small>
+                                    </p>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Your email address" />
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                sign up
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                    <div class="mx-auto">
+                        <!-- Pagination -->
+                        <div class="pagination-area">
+                            <div class="pagination wow fadeIn animated" data-wow-duration="2s" data-wow-delay="0.5s"
+                                style="
+                      visibility: visible;
+                      animation-duration: 2s;
+                      animation-delay: 0.5s;
+                      animation-name: fadeIn;
+                    ">
+                                <a href="#"> « </a>
+                                <a href="#"> 1 </a>
+                                <a class="active" href="#"> 2 </a>
+                                <a href="#"> 3 </a>
+                                <a href="#"> 4 </a>
+                                <a href="#"> 5 </a>
+
+                                <a href="#"> » </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
     </section>
-    <!-- ##### Vizew Psot Area End ##### -->
+    <!-- End Popular news category -->
+
+
+
+
 @endsection

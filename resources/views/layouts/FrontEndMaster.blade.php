@@ -1,44 +1,47 @@
 {{-- @include('layouts.FrontEndInc.header') --}}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-    <!-- Title -->
+    <meta charset="utf-8">
     <title>@yield('FrontTitle')</title>
-
-    <!-- Favicon -->
-    <link rel="icon" href="{{ asset('FrontEnd/img/core-img/favicon.ico') }}">
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="{{ asset('FrontEnd/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('FrontEnd/css/cus.css') }}">
-
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <!-- favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" href="icon.png">
+    <meta name="theme-color" content="#030303">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,700;1,300;1,500&family=Poppins:ital,wght@0,300;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="{{ asset('FrontEnd/css/styles.css?537a1bbd0e5129401d28') }}" rel="stylesheet">
 </head>
+    <body>
+        @include('layouts.FrontEndInc.preload')
+        <header class="bg-light">
+            @include('layouts.FrontEndInc.nav-top')
+            @include('layouts.FrontEndInc.nav-menu')
+            @include('layouts.FrontEndInc.nav-side-menu')
+        </header>
+        <!-- End Header news -->
+        {{-- @include('layouts.FrontEndInc.preload') --}}
 
-@include('layouts.FrontEndInc.nav')
-{{-- @include('layouts.FrontEndInc.preload') --}}
+        @yield('FrontEnd')
 
-
-
-
-       @yield('FrontEnd')
-
-</section>
-    @include('layouts.FrontEndInc.footer')
-    @include('layouts.FrontEndInc.copywrite')
-    <script src="{{ asset('FrontEnd/js/jquery/jquery-2.2.4.min.js') }}"></script>
-    <script src="{{ asset('FrontEnd/js/bootstrap/popper.min.js') }}"></script>
-    <script src="{{ asset('FrontEnd/js/bootstrap/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('FrontEnd/js/plugins/plugins.js') }}"></script>
-    <!-- Active js -->
-    <script src="{{ asset('FrontEnd/js/active.js') }}"></script>
-</body>
+        <section class="wrapper__section p-0">
+            <div class="wrapper__section__components">
+                <!-- Footer -->
+                <footer>
+                    @include('layouts.FrontEndInc.footer')
+                    @include('layouts.FrontEndInc.copyright')
+                </footer>
+            </div>
+          </section>
+ 
+    <a href="javascript:" id="return-to-top">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+    <script type="text/javascript" src="{{ asset('FrontEnd/js/index.bundle.js?537a1bbd0e5129401d28') }}"></script>
+  </body>
 </html>
-
 
 

@@ -92,7 +92,7 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'gender' => ['required'],
             'proimage' =>['required','mimes:jpg,png,jpeg,gif','max:3000'],
-            'userAddress' => ['required','string','min:5'],
+            //'userAddress' => ['required','string','min:5'],
             'userCity' => ['required','string','min:3'],
             'userstate' => ['required','string'],
             'userzip' => ['required'],
@@ -100,7 +100,7 @@ class RegisterController extends Controller
         ],[
             'proimage.required'=>'Please upload your image',
             'proimage.mimes'=>'We accept: JPG, JPEG, PNG, GIF. Please Upload again',
-            'userAddress.required' => 'Address can not be empty.',
+            //'userAddress.required' => 'Address can not be empty.',
             'userCity.required'=>'City can not be empty',
             'userstate.required'=>'State required',
         ]);
@@ -130,7 +130,7 @@ class RegisterController extends Controller
         $userInfo->country = $request->userstate;
         $userInfo->city = $request->userCity;
         $userInfo->zip = $request->userzip;
-        $userInfo->address = $request->userAddress;
+        $userInfo->address = $userContent;
         $userInfo->phone = $userContent;
         $userInfo->twitter = $userContent;
         $userInfo->facebook = $userContent;

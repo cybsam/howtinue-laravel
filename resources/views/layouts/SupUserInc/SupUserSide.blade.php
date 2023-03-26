@@ -19,12 +19,12 @@
             </a>
         </li>
 
-        <li class="nav-item">
+        {{-- <li class="nav-item">
             <a class="nav-link collapsed" href="{{ route('supuser.users.team') }}">
             <i class="bi bi-people-fill"></i>
             <span>Team</span>
             </a>
-        </li>
+        </li> --}}
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#email-nav" data-bs-toggle="collapse" href="#">
             <i class="bi bi-envelope"></i><span>Emails</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -180,17 +180,17 @@
 
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
-            <i class="bi bi-bar-chart"></i><span>Charts</span><i class="bi bi-chevron-down ms-auto"></i>
+            <i class="bi bi-bar-chart"></i><span>Catagory</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
             <li>
-                <a href="charts-chartjs.html">
-                <i class="bi bi-circle"></i><span>Chart.js</span>
+                <a href="{{ route('subcatagory.index') }}">
+                <i class="bi bi-circle"></i><span>List Catagory</span>
                 </a>
             </li>
             <li>
-                <a href="charts-apexcharts.html">
-                <i class="bi bi-circle"></i><span>ApexCharts</span>
+                <a href="{{ route('subcatagory.insert') }}">
+                <i class="bi bi-circle"></i><span>Insert Sub Catagory</span>
                 </a>
             </li>
             <li>
@@ -208,7 +208,7 @@
             <ul id="catagory-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
             <li>
                 <a href="{{ route('supuser.cata.super') }}">
-                <i class="bi bi-circle"></i><span>List Catagory</span>
+                <i class="bi bi-circle"></i><span>Active Catagory</span>
                 </a>
             </li>
             <li>
@@ -217,8 +217,8 @@
                 </a>
             </li>
             <li>
-                <a href="icons-boxicons.html">
-                <i class="bi bi-circle"></i><span>Trash Catagory</span>
+                <a href="{{ route('supuser.cata.super.archive') }}">
+                <i class="bi bi-circle"></i><span>Archived</span>
                 </a>
             </li>
             </ul>
@@ -251,7 +251,7 @@
         <li class="nav-heading">Pages</li>
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="users-profile.html">
+            <a class="nav-link collapsed" href="{{ route('supuser.settings.main') }}">
             <i class="bi bi-gear"></i>
             <span>Settings</span>
             </a>
