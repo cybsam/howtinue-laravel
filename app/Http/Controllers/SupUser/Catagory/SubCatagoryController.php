@@ -91,6 +91,10 @@ class SubCatagoryController extends Controller
 
     }
 
+    public function archived(){
+        return "ok";
+    }
+
 
 
 }

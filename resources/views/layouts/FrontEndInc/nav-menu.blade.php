@@ -305,7 +305,7 @@
                         <!-- dropdown-mega-menu.// -->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> Category </a>
+                        <a class="nav-link" href="{{ route('frontEnd.catagory.show') }}"> Category </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('frontend.contact') }}"> contact </a>
