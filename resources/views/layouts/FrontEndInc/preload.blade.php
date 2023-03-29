@@ -3,7 +3,7 @@
     <div class="h-100 d-flex align-items-center justify-content-center">
         <ul class="list-unstyled">
             <li>
-                <img src="images/placeholder/loading.png" alt="Alternate Text" height="100" />
+                <img src="{{ asset('FrontEnd/images/placeholder/loading.png') }}" alt="Alternate Text" height="100" />
             </li>
             <li>
                 <div class="spinner">

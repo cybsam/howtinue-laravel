@@ -5,6 +5,8 @@ namespace App\Http\Controllers\SupUser\Blog;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Models\SuperCatagory;
+use App\Models\SubCatagory;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
@@ -21,6 +23,7 @@ class SupUserBlogController extends Controller
 
     //insert Blog
     public function insert(){
-        return view('SupUserDash.blog.insert');
+        $listCate = SubCatagory::where('catagory_status','0')->get();
+        return view('SupUserDash.blog.insert', compact('listCate'));
     }
 }

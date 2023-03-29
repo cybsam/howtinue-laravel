@@ -26,106 +26,55 @@
                             <div class="row mb-3">
                                 <label for="inputText" class="col-sm-2 col-form-label">Blog Name</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" placeholder="Type Your Blog Name." name="blogName" id="blogName">
+                                    <input type="text" class="form-control" style="background: rgb(15, 238, 115);" placeholder="Type Your Blog Name." name="blogName" id="blogName">
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <label for="inputEmail" class="col-sm-2 col-form-label">Blog Meta</label>
+                                <label for="inputText" class="col-sm-2 col-form-label">Blog Short desc</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="short description" name="blogShortDesc" id="blogShortDesc">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="inputText" class="col-sm-2 col-form-label">Blog Meta</label>
                                 <div class="col-sm-10">
                                     <input type="text" id="blogMeta" class="form-control" name="blogMeta" placeholder="Blog Meta Tag">
                                     <span>Seperate by ( , )</span>
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                                <label class="col-sm-2 col-form-label">Category</label>
                                 <div class="col-sm-10">
-                                    <input type="password" class="form-control">
+                                    <select class="form-select bg-danger" aria-label="Default select example">
+                                        <option selected>Open this select menu</option>
+                                        @foreach ($listCate as $cateList)
+                                            <option value="{{ $cateList->id }}">{{ $cateList->subcatagoryname }}</option>
+                                       
+                                        @endforeach
+                                    </select>
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <label for="inputNumber" class="col-sm-2 col-form-label">Number</label>
-                                <div class="col-sm-10">
-                                    <input type="number" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <label for="inputNumber" class="col-sm-2 col-form-label">File Upload</label>
+                                <label for="inputNumber" class="col-sm-2 col-form-label">Blog Image</label>
                                 <div class="col-sm-10">
                                     <input class="form-control" type="file" id="formFile">
                                 </div>
                             </div>
-                            <div class="row mb-3">
-                                <label for="inputDate" class="col-sm-2 col-form-label">Date</label>
-                                <div class="col-sm-10">
-                                    <input type="date" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <label for="inputTime" class="col-sm-2 col-form-label">Time</label>
-                                <div class="col-sm-10">
-                                    <input type="time" class="form-control">
-                                </div>
-                            </div>
+                            
 
-                            <div class="row mb-3">
-                                <label for="inputColor" class="col-sm-2 col-form-label">Color Picker</label>
-                                <div class="col-sm-10">
-                                    <input type="color" class="form-control form-control-color" id="exampleColorInput"
-                                        value="#4154f1" title="Choose your color">
-                                </div>
-                            </div>
+                            
                             <div class="row mb-3">
                                 <label for="inputPassword" class="col-sm-2 col-form-label">Textarea</label>
-                                <div class="col-sm-10">
-                                    <textarea class="form-control" style="height: 100px"></textarea>
+                                <div class="col-sm-10 ">
+                                    
+                                    <div class="quill-editor-full">
+                                        <input type="text" class="" name="" id="">
+                                        {{-- <textarea class="form-control" style="height: 100px"></textarea> --}}
+                                    </div>
                                 </div>
                             </div>
-                            <fieldset class="row mb-3">
-                                <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
-                                <div class="col-sm-10">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
-                                            value="option1" checked>
-                                        <label class="form-check-label" for="gridRadios1">
-                                            First radio
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
-                                            value="option2">
-                                        <label class="form-check-label" for="gridRadios2">
-                                            Second radio
-                                        </label>
-                                    </div>
-                                    <div class="form-check disabled">
-                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios"
-                                            value="option" disabled>
-                                        <label class="form-check-label" for="gridRadios3">
-                                            Third disabled radio
-                                        </label>
-                                    </div>
-                                </div>
-                            </fieldset>
-                            <div class="row mb-3">
-                                <legend class="col-form-label col-sm-2 pt-0">Checkboxes</legend>
-                                <div class="col-sm-10">
-
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                        <label class="form-check-label" for="gridCheck1">
-                                            Example checkbox
-                                        </label>
-                                    </div>
-
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
-                                        <label class="form-check-label" for="gridCheck2">
-                                            Example checkbox 2
-                                        </label>
-                                    </div>
-
-                                </div>
-                            </div>
+                            
+                            
 
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label">Disabled</label>
@@ -134,17 +83,7 @@
                                 </div>
                             </div>
 
-                            <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label">Select</label>
-                                <div class="col-sm-10">
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>Open this select menu</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                    </select>
-                                </div>
-                            </div>
+                            
 
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label">Multi Select</label>
@@ -157,7 +96,7 @@
                                     </select>
                                 </div>
                             </div>
-
+ 
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label">Submit Button</label>
                                 <div class="col-sm-10">

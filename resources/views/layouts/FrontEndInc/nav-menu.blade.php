@@ -305,7 +305,24 @@
                         <!-- dropdown-mega-menu.// -->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('frontEnd.catagory.show') }}"> Category </a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle" href="#" data-toggle="dropdown">
+                                Category
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-left">
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('frontEnd.catagory.show') }}">
+                                        Category
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('frontEnd.catagory.parent') }}">
+                                        Parent Category
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('frontend.contact') }}"> contact </a>

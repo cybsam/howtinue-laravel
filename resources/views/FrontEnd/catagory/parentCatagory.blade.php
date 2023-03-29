@@ -1,5 +1,5 @@
 @extends('layouts.FrontEndMaster')
-@section('FrontTitle', 'Category - Howtinue')
+@section('FrontTitle', ' Parent Catagory - Howtinue')
 @section('FrontEnd')
 
     <section>
@@ -12,12 +12,10 @@
                             <a href="{{ route('FrontEnd.Index') }}" class="breadcrumbs__url">
                                 <i class="fa fa-home"></i> Home</a>
                         </li>
-                        <li class="breadcrumbs__item">
-                            <a href="{{ route('frontEnd.catagory.parent') }}" class="breadcrumbs__url">
-                                Parent Category
-                        </li>
+                        
+
                         <li class="breadcrumbs__item breadcrumbs__item--current">
-                            Category
+                            Pategory Category
                         </li>
                     </ul>
                 </div>
@@ -35,15 +33,15 @@
                     
 
                         <h3 class="border_section">Category</h3>
-                        @foreach ($listCata as $CateGor)
+                        @foreach ($parent as $CateGor)
                         <div class="row">
                             <div class="col-md-8">
                                 <div class="card__post card__post-list">
 
                                     <div class="image-sm">
                                         <a href="#">
-                                            <img src="{{ asset('SupUser/uploads/subCatagoryImages') }}/{{ $CateGor->subcataimage }}" class="img-fluid" alt="{{ $CateGor->subcatagorymetatag }}">
-                                        </a>
+                                            <img src="{{ asset('SupUser/uploads/superCatagoryImage') }}/{{ $CateGor->supcatagoryimage }}" class="img-fluid" alt="{{ $CateGor->supcatagory_meta_tag  }}">
+                                            </a>
                                     </div>
 
 
@@ -59,7 +57,7 @@
                                                     </li>
                                                     <li class="list-inline-item">
                                                         <span class="text-dark text-capitalize">
-                                                            {{ $CateGor->created_at }}
+                                                            descember 09, 2016
                                                         </span>
                                                     </li>
 
@@ -68,7 +66,7 @@
                                             <div class="card__post__title">
                                                 <h4>
                                                     <a href="">
-                                                        {{ $CateGor->subcatagoryname }}
+                                                        {{ $CateGor->supcatagoryname  }}
                                                     </a>
                                                 </h4>
 
