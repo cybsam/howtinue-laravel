@@ -64,13 +64,11 @@
 
                             
                             <div class="row mb-3">
-                                <label for="inputPassword" class="col-sm-2 col-form-label">Textarea</label>
+                                <label for="inputText" class="col-sm-2 col-form-label">Description</label>
                                 <div class="col-sm-10 ">
-                                    
-                                    <div class="quill-editor-full">
-                                        <input type="text" class="" name="" id="">
-                                        {{-- <textarea class="form-control" style="height: 100px"></textarea> --}}
-                                    </div>
+                                    <div class="form-control">
+                                    <textarea name="description" class="quill-editor-full" id="" cols="" rows=""></textarea>
+                                </div>
                                 </div>
                             </div>
                             
@@ -85,7 +83,7 @@
 
                             
 
-                            <div class="row mb-3">
+                            {{-- <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label">Multi Select</label>
                                 <div class="col-sm-10">
                                     <select class="form-select" multiple aria-label="multiple select example">
@@ -95,7 +93,7 @@
                                         <option value="3">Three</option>
                                     </select>
                                 </div>
-                            </div>
+                            </div> --}}
  
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label">Submit Button</label>
