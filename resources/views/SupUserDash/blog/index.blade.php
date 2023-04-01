@@ -11,7 +11,7 @@
         <li class="breadcrumb-item active">List Blog</li>
       </ol>
     </nav>
-  </div><!-- End Page Title -->
+  </div>
 
   
 
