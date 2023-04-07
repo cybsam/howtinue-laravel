@@ -1,4 +1,5 @@
 @extends('layouts.SupUserMaster')
+@extends('summernote.summernote')
 @section('title', 'Insert Blog - HowTinue')
 @section('SupUserContent')
 
@@ -22,7 +23,8 @@
                         <h5 class="card-title">Press key fell free :)</h5>
 
                         <!-- General Form Elements -->
-                        <form>
+                        <form action="{{ route('supuser.blog.insert.save') }}" method="POST" enctype="multipart/form-data">
+                            @csrf
                             <div class="row mb-3">
                                 <label for="inputText" class="col-sm-2 col-form-label">Blog Name</label>
                                 <div class="col-sm-10">
@@ -45,10 +47,10 @@
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label">Category</label>
                                 <div class="col-sm-10">
-                                    <select class="form-select bg-danger" aria-label="Default select example">
+                                    <select class="form-select bg-danger" name="category" aria-label="Default select example">
                                         <option selected>Open this select menu</option>
                                         @foreach ($listCate as $cateList)
-                                            <option value="{{ $cateList->id }}">{{ $cateList->subcatagoryname }}</option>
+                                            <option value="{{ $cateList->id }}" >{{ $cateList->subcatagoryname }}</option>
                                        
                                         @endforeach
                                     </select>
@@ -57,7 +59,7 @@
                             <div class="row mb-3">
                                 <label for="inputNumber" class="col-sm-2 col-form-label">Blog Image</label>
                                 <div class="col-sm-10">
-                                    <input class="form-control" type="file" id="formFile">
+                                    <input class="form-control" name="blogImage" type="file" id="formFile">
                                 </div>
                             </div>
                             
@@ -66,20 +68,20 @@
                             <div class="row mb-3">
                                 <label for="inputText" class="col-sm-2 col-form-label">Description</label>
                                 <div class="col-sm-10 ">
-                                    <div class="form-control">
-                                    <textarea name="description" class="quill-editor-full" id="" cols="" rows=""></textarea>
+                                    <div class="">
+                                    <textarea name="description" name="description" id="summernote" class="form-control" cols="" rows=""></textarea>
                                 </div>
                                 </div>
                             </div>
                             
                             
 
-                            <div class="row mb-3">
+                            {{-- <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label">Disabled</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" value="Read only / Disabled" disabled>
                                 </div>
-                            </div>
+                            </div> --}}
 
                             {{-- <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label">Multi Select</label>
@@ -108,6 +110,15 @@
             </div>
         </div>
     </section>
+    <div id=""></div>
+    <script>
+      $('#summernote').summernote({
+        placeholder: 'Description...',
+        tabsize: 2,
+        height: 100
+      });
+    </script>
 
 
-        @endsection
+
+@endsection
