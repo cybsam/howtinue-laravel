@@ -92,7 +92,7 @@ class SupUserBlogController extends Controller
             $save = $insBlog->save();
 
             $uploadLocation = base_path('public/uploads/postimage/'.$newImageName);
-            Image::make($cataImage)->save($uploadLocation);
+            Image::make($cataImage)->resize(800,500)->save($uploadLocation);
 
             
             if ($save) {

@@ -8,13 +8,13 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="wrapp__list__article-responsive wrapp__list__article-responsive-carousel">
-                        @foreach($listBlog as $listBlogs)
+                        @foreach($listBlogFirst as $listBlogsFir)
                         <div class="item">
                             <!-- Post Article -->
                             <div class="card__post card__post-list">
                                 <div class="image-sm">
-                                    <a href="{{ route('blog.details', ['post_name' => $listBlogs->slug]) }}">
-                                        <img src="{{ asset('uploads/postimage/') }}/{{ $listBlogs->blog_image }}" class="img-fluid" alt="{{ $listBlogs->blog_meta }}" />
+                                    <a href="{{ route('blog.details', ['post_name' => $listBlogsFir->slug]) }}">
+                                        <img src="{{ asset('uploads/postimage/') }}/{{ $listBlogsFir->blog_image }}" class="img-fluid" alt="{{ $listBlogsFir->blog_meta }}" />
                                     </a>
                                 </div>
 
@@ -23,25 +23,22 @@
                                         <div class="card__post__author-info mb-2">
                                             <ul class="list-inline">
                                                 <li class="list-inline-item">
-                                                    <span class="text-primary"> by {{ $listBlogs->username }} </span>
+                                                    <span class="text-primary"> by {{ $listBlogsFir->username }} </span>
                                                 </li>
                                                 <li class="list-inline-item">
                                                     <span class="text-dark text-capitalize">
-                                                        {{ $listBlogs->updated_at->format('l, j F Y') }}
+                                                        {{ $listBlogsFir->updated_at->format('l, j F Y') }}
                                                     </span>
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="card__post__title">
                                             <h6>
-                                                <a href="{{ route('blog.details', ['post_name' => $listBlogs->slug]) }}">
-                                                    {{ $listBlogs->blog_short_desc }}
+                                                <a href="{{ route('blog.details', ['post_name' => $listBlogsFir->slug]) }}">
+                                                    {{ $listBlogsFir->blog_short_desc }}
                                                 </a>
                                             </h6>
-                                            <!-- <p class="d-none d-lg-block d-xl-block">
-                                  Maecenas accumsan tortor ut velit pharetra mollis. Proin eu nisl et arcu iaculis placerat
-                                  sollicitudin ut est. In fringilla dui dui.
-                              </p> -->
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -213,10 +210,8 @@
                                                                 6 Best Tips for Building a Good Shipping Boat
                                                             </a>
                                                         </h6>
-                                                        <!-- <p class="d-none d-lg-block d-xl-block">
-                          Maecenas accumsan tortor ut velit pharetra mollis. Proin eu nisl et arcu iaculis placerat
-                          sollicitudin ut est. In fringilla dui dui.
-                      </p> -->
+                                                        
+                          
                                                     </div>
                                                 </div>
                                             </div>
@@ -254,10 +249,7 @@
                                                                 6 Best Tips for Building a Good Shipping Boat
                                                             </a>
                                                         </h6>
-                                                        <!-- <p class="d-none d-lg-block d-xl-block">
-                          Maecenas accumsan tortor ut velit pharetra mollis. Proin eu nisl et arcu iaculis placerat
-                          sollicitudin ut est. In fringilla dui dui.
-                      </p> -->
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
@@ -356,102 +348,29 @@
 
                     <div class="col-md-12 col-lg-4">
                         <aside class="wrapper__list__article">
-                            <h4 class="border_section">popular post</h4>
+                            <h4 class="border_section">Category</h4>
                             <div class="wrapper__list-number">
                                 <!-- List Article -->
+                                @foreach ($randomCate as $randCate)
+                                    
+                                
                                 <div class="card__post__list">
                                     <div class="list-number">
                                         <span> 1 </span>
                                     </div>
-                                    <a href="#" class="category"> covid-19 </a>
+                                    <a href="#" class="category"> {{ $randCate->subcatagoryname }} </a>
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
                                             <h5>
-                                                <a href="#">
-                                                    Gegera Corona, Kekayaan Bos Zoom Nambah Rp 64 T
-                                                    dalam 3 Bulan - CNBC Indonesia
+                                                <a href="">
+                                                    {{ $randCate->subcatagorymetatag }}
                                                 </a>
                                             </h5>
                                         </li>
                                     </ul>
                                 </div>
-
-                                <div class="card__post__list">
-                                    <div class="list-number">
-                                        <span> 2 </span>
-                                    </div>
-                                    <a href="#" class="category"> Startup </a>
-                                    <ul class="list-inline">
-                                        <!-- <li class="list-inline-item">
-                  <a href="#" class="author-info">
-                      by david hall
-                  </a>
-      
-              </li>
-              <li class="list-inline-item">
-                  <span>
-                      <i class="fa fa-calendar"></i>
-                      march 01, 2020
-                  </span>
-      
-              </li> -->
-                                        <li class="list-inline-item">
-                                            <h5>
-                                                <a href="#">
-                                                    Gegera Corona, Kekayaan Bos Zoom Nambah Rp 64 T
-                                                    dalam 3 Bulan - CNBC Indonesia
-                                                </a>
-                                            </h5>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- List Article -->
-                                <div class="card__post__list">
-                                    <div class="list-number">
-                                        <span> 1 </span>
-                                    </div>
-                                    <a href="#" class="category"> covid-19 </a>
-                                    <ul class="list-inline">
-                                        <li class="list-inline-item">
-                                            <h5>
-                                                <a href="#">
-                                                    Gegera Corona, Kekayaan Bos Zoom Nambah Rp 64 T
-                                                    dalam 3 Bulan - CNBC Indonesia
-                                                </a>
-                                            </h5>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="card__post__list">
-                                    <div class="list-number">
-                                        <span> 2 </span>
-                                    </div>
-                                    <a href="#" class="category"> Startup </a>
-                                    <ul class="list-inline">
-                                        <!-- <li class="list-inline-item">
-                  <a href="#" class="author-info">
-                      by david hall
-                  </a>
-      
-              </li>
-              <li class="list-inline-item">
-                  <span>
-                      <i class="fa fa-calendar"></i>
-                      march 01, 2020
-                  </span>
-      
-              </li> -->
-                                        <li class="list-inline-item">
-                                            <h5>
-                                                <a href="#">
-                                                    Gegera Corona, Kekayaan Bos Zoom Nambah Rp 64 T
-                                                    dalam 3 Bulan - CNBC Indonesia
-                                                </a>
-                                            </h5>
-                                        </li>
-                                    </ul>
-                                </div>
+                                @endforeach
+                                
                             </div>
                         </aside>
                     </div>

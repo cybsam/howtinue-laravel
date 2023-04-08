@@ -37,7 +37,8 @@
                             <ul class="list-inline">
                                 <li class="list-inline-item">
                                     <figure class="image-profile">
-                                        <img src="{{ asset('SupUser/uploads/usersimage') }}/{{ $userDet->proimage }}" alt="" />
+                                        <img src="{{ asset('SupUser/uploads/usersimage') }}/{{ $userDet->proimage }}"
+                                            alt="" />
                                     </figure>
                                 </li>
                                 <li class="list-inline-item">
@@ -51,14 +52,15 @@
                                 </li>
                                 <li class="list-inline-item">
                                     <span class="text-dark text-capitalize"> in </span>
-                                    <a href="#"> business </a>
+                                    <a href="#"> {{ $post->sub_category_name }} </a>
                                 </li>
                             </ul>
                         </div>
 
                         <div class="wrap__article-detail-image mt-4">
                             <figure>
-                                <img src="{{ asset('uploads/postimage') }}/{{ $post->blog_image }}" alt="" class="img-fluid" />
+                                <img src="{{ asset('uploads/postimage') }}/{{ $post->blog_image }}" alt=""
+                                    class="img-fluid" />
                             </figure>
                         </div>
                         <div class="wrap__article-detail-content">
@@ -107,7 +109,7 @@
                                 {!! $post->description !!}
                             </p>
 
-                            
+
                         </div>
                     </div>
                     <!-- end content article detail -->
@@ -143,7 +145,7 @@
                     <div class="wrap__profile">
                         <div class="wrap__profile-author">
                             <figure>
-                                <img src="images/placeholder/80x80.jpg" alt="" class="img-fluid rounded-circle" />
+                                <img src="{{ asset('SupUser/uploads/usersimage') }}/{{ $userDet->proimage }}" alt="" class="img-fluid rounded-circle" />
                             </figure>
                             <div class="wrap__profile-author-detail">
                                 <div class="wrap__profile-author-detail-name">author</div>
@@ -155,27 +157,31 @@
                                 </p>
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
-                                        <a href="{{ $userDetSocial->facebook }}" class="btn btn-social btn-social-o facebook">
+                                        <a href="{{ $userDetSocial->facebook }}" target="blank"
+                                            class="btn btn-social btn-social-o facebook">
                                             <i class="fa fa-facebook"></i>
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
-                                        <a href="{{ $userDetSocial->twitter }}" class="btn btn-social btn-social-o twitter">
+                                        <a href="{{ $userDetSocial->twitter }}" target="blank"
+                                            class="btn btn-social btn-social-o twitter">
                                             <i class="fa fa-twitter"></i>
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
-                                        <a href="{{ $userDetSocial->instagram }}" class="btn btn-social btn-social-o instagram">
+                                        <a href="{{ $userDetSocial->instagram }}" target="blank"
+                                            class="btn btn-social btn-social-o instagram">
                                             <i class="fa fa-instagram"></i>
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
-                                        <a href="#" class="btn btn-social btn-social-o telegram">
+                                        <a href="#" class="btn btn-social btn-social-o telegram" target="blank">
                                             <i class="fa fa-telegram"></i>
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
-                                        <a href="{{ $userDetSocial->linkedin }}" class="btn btn-social btn-social-o linkedin">
+                                        <a href="{{ $userDetSocial->linkedin }}" target="blank"
+                                            class="btn btn-social btn-social-o linkedin">
                                             <i class="fa fa-linkedin"></i>
                                         </a>
                                     </li>
@@ -504,12 +510,15 @@
                                 </div>
                             </div>
                             <div class="wrapper__list__article-small">
+                                @foreach ($reletedIn as $relative)
+                                    
+                               
                                 <div class="mb-3">
                                     <!-- Post Article -->
                                     <div class="card__post card__post-list">
                                         <div class="image-sm">
-                                            <a href="./card-article-detail-v1.html">
-                                                <img src="images/placeholder/500x400.jpg" class="img-fluid"
+                                            <a href="{{ route('blog.details', ['post_name' => $relative->slug]) }}">
+                                                <img src="{{ asset('uploads/postimage') }}/{{ $relative->blog_image }}" class="img-fluid"
                                                     alt="" />
                                             </a>
                                         </div>
@@ -520,114 +529,31 @@
                                                     <ul class="list-inline">
                                                         <li class="list-inline-item">
                                                             <span class="text-primary">
-                                                                by david hall
+                                                                by {{ $relative->username }}
                                                             </span>
                                                         </li>
                                                         <li class="list-inline-item">
                                                             <span class="text-dark text-capitalize">
-                                                                descember 09, 2016
+                                                                {{ $relative->updated_at->format('l, j F Y') }}
                                                             </span>
                                                         </li>
                                                     </ul>
                                                 </div>
                                                 <div class="card__post__title">
                                                     <h6>
-                                                        <a href="./card-article-detail-v1.html">
-                                                            6 Best Tips for Building a Good Shipping Boat
+                                                        <a href="{{ route('blog.details', ['post_name' => $relative->slug]) }}">
+                                                            {{ $relative->blog_name }}-->
                                                         </a>
                                                     </h6>
-                                                    <!-- <p class="d-none d-lg-block d-xl-block">
-                      Maecenas accumsan tortor ut velit pharetra mollis. Proin eu nisl et arcu iaculis placerat
-                      sollicitudin ut est. In fringilla dui dui.
-                  </p> -->
+                                                    
+                      
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="mb-3">
-                                    <!-- Post Article -->
-                                    <div class="card__post card__post-list">
-                                        <div class="image-sm">
-                                            <a href="./card-article-detail-v1.html">
-                                                <img src="images/placeholder/500x400.jpg" class="img-fluid"
-                                                    alt="" />
-                                            </a>
-                                        </div>
-
-                                        <div class="card__post__body">
-                                            <div class="card__post__content">
-                                                <div class="card__post__author-info mb-2">
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item">
-                                                            <span class="text-primary">
-                                                                by david hall
-                                                            </span>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <span class="text-dark text-capitalize">
-                                                                descember 09, 2016
-                                                            </span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="card__post__title">
-                                                    <h6>
-                                                        <a href="./card-article-detail-v1.html">
-                                                            6 Best Tips for Building a Good Shipping Boat
-                                                        </a>
-                                                    </h6>
-                                                    <!-- <p class="d-none d-lg-block d-xl-block">
-                      Maecenas accumsan tortor ut velit pharetra mollis. Proin eu nisl et arcu iaculis placerat
-                      sollicitudin ut est. In fringilla dui dui.
-                  </p> -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mb-3">
-                                    <!-- Post Article -->
-                                    <div class="card__post card__post-list">
-                                        <div class="image-sm">
-                                            <a href="./card-article-detail-v1.html">
-                                                <img src="images/placeholder/500x400.jpg" class="img-fluid"
-                                                    alt="" />
-                                            </a>
-                                        </div>
-
-                                        <div class="card__post__body">
-                                            <div class="card__post__content">
-                                                <div class="card__post__author-info mb-2">
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item">
-                                                            <span class="text-primary">
-                                                                by david hall
-                                                            </span>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <span class="text-dark text-capitalize">
-                                                                descember 09, 2016
-                                                            </span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="card__post__title">
-                                                    <h6>
-                                                        <a href="./card-article-detail-v1.html">
-                                                            6 Best Tips for Building a Good Shipping Boat
-                                                        </a>
-                                                    </h6>
-                                                    <!-- <p class="d-none d-lg-block d-xl-block">
-                      Maecenas accumsan tortor ut velit pharetra mollis. Proin eu nisl et arcu iaculis placerat
-                      sollicitudin ut est. In fringilla dui dui.
-                  </p> -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
+                                @endforeach
+                                
                                 <!-- Post Article -->
                                 <div class="article__entry">
                                     <div class="article__image">

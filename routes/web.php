@@ -28,6 +28,8 @@ Route::prefix('en')->group(function () {
 
     //catagory
     Route::get('Category', [App\Http\Controllers\FrontEnd\catagory\CatagoryIndexController::class, 'index'])->name('frontEnd.catagory.show');
+    Route::get('Category/{post_list}/List', [App\Http\Controllers\FrontEnd\catagory\CatagoryIndexController::class, 'postList'])->name('frontEnd.catagory.post.list');
+    
     Route::get('Category/Parent', [App\Http\Controllers\FrontEnd\catagory\ParentCategoryController::class, 'index'])->name('frontEnd.catagory.parent');
 
     //frontPage post

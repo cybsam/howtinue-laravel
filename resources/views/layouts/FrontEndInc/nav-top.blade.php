@@ -4,10 +4,7 @@
         <div class="row">
             <div class="col-sm-12 col-md-5">
                 <div class="topbar-left">
-                    <div class="topbar-text"><script>
-                            $date = new Date();
-                            console.lot($date);
-                        </script></div>
+                    <div class="topbar-text">{{ now()->format('l, j F Y') }}</div>
                 </div>
             </div>
             <div class="col-sm-12 col-md-7">

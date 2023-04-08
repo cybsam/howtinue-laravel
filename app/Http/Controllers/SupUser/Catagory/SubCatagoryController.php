@@ -68,7 +68,9 @@ class SubCatagoryController extends Controller
         if ($checkCata == true) {
             return redirect()->back()->with('suberro','Catagory already available in our system, check now...');
         }else{
+            $slug = Str::slug($request->subcatagoryname);
             $subCataIns = new SubCatagory();
+            $subCataIns->slug = $slug;
             $subCataIns->supcataid = $supCataId;
             $subCataIns->supcataname = $supName;
             $subCataIns->subcatagoryname = $request->subcatagoryname;

@@ -51,7 +51,9 @@ class SupCatagoryController extends Controller
         if ($checkCata == true) {
             return redirect()->back()->with('erro','Super Catatory already available in our system, check now!');
         }else {
+            $slug = Str::slug($request->catagoryname);
             $insCatagory = new SuperCatagory();
+            $insCatagory->slug = $slug;
             $insCatagory->supcatagoryname = $request->catagoryname;
             $insCatagory->supcatagoryimage = $newImageName;
             $insCatagory->supcatagory_meta_tag = $request->catagorymeta;

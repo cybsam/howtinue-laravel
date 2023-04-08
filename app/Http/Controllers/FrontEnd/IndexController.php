@@ -15,9 +15,14 @@ use Image;
 class IndexController extends Controller
 {
     public function Index(){
-        $currentDate = Carbon::now()->format('l, j F Y');
-        $listBlog = SupUserBlog::where('post_status','0')->latest()->get();
-        return view('FrontEnd.index', compact('listBlog','currentDate'));
+        $listBlogFirst = SupUserBlog::where('post_status','0')->inRandomOrder()->get();
+        $listBlog = SupUserBlog::where('post_status','0')->inRandomOrder()->get();
+        $randomCate = SubCatagory::where('catagory_status',0)->inRandomOrder()->take(4)->get();
+        return view('FrontEnd.index',[
+            'listBlogFirst'=>$listBlogFirst,
+            'listBlog'=>$listBlog,
+            'randomCate'=>$randomCate
+        ]);
     }
 
     public function blank(){

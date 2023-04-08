@@ -41,7 +41,7 @@
                                 <div class="card__post card__post-list">
 
                                     <div class="image-sm">
-                                        <a href="#">
+                                        <a href="">
                                             <img src="{{ asset('SupUser/uploads/subCatagoryImages') }}/{{ $CateGor->subcataimage }}" class="img-fluid" alt="{{ $CateGor->subcatagorymetatag }}">
                                         </a>
                                     </div>

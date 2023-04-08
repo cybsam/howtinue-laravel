@@ -15,7 +15,7 @@ class CreateSuperCatagoriesTable extends Migration
     {
         Schema::create('super_catagories', function (Blueprint $table) {
             $table->id();
-            
+            $table->string('slug');
             $table->string('supcatagoryname')->unique();
             $table->string('supcatagoryimage');
             $table->string('supcatagory_meta_tag')->unique();
