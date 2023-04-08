@@ -1,5 +1,5 @@
 @extends('layouts.FrontEndMaster')
-@section('FrontTitle', 'Category - Howtinue')
+@section('FrontTitle', 'Category Post List - Health Botic')
 @section('FrontEnd')
 
     <section>
@@ -14,10 +14,15 @@
                         </li>
                         <li class="breadcrumbs__item">
                             <a href="{{ route('frontEnd.catagory.parent') }}" class="breadcrumbs__url">
-                                Parent Category
+                                 Parent Category</a>
                         </li>
+                        {{-- <li class="breadcrumbs__item">
+                            <a href="{{ route('frontEnd.catagory.show') }}" class="breadcrumbs__url">
+                                 Sub Category</a>
+                        </li> --}}
+
                         <li class="breadcrumbs__item breadcrumbs__item--current">
-                            Category
+                            Post list Category
                         </li>
                     </ul>
                 </div>
@@ -34,16 +39,16 @@
                         
                     
 
-                        <h3 class="border_section">Category</h3>
-                        @foreach ($listCata as $CateGor)
+                        <h3 class="border_section">Category List Fron main category</h3>
+                        @foreach ($allSubCate as $subCate)
                         <div class="row">
                             <div class="col-md-8">
                                 <div class="card__post card__post-list">
-                                    {{-- {{ route('frontEnd.catagory.postList', ['post_list' => $CateGor->slug ]) }} --}}
+
                                     <div class="image-sm">
-                                        <a href="{{ route('category.post', ['list_post' => $CateGor->slug]) }}">
-                                            <img src="{{ asset('SupUser/uploads/subCatagoryImages') }}/{{ $CateGor->subcataimage }}" class="img-fluid" alt="{{ $CateGor->subcatagorymetatag }}">
-                                        </a>
+                                        <a href="{{ route('category.post', ['list_post' => $subCate->slug]) }}">
+                                            <img src="{{ asset('SupUser/uploads/subCatagoryImages') }}/{{ $subCate->subcataimage }}" class="img-fluid" alt="{{ $subCate->subcatagorymetatag  }}">
+                                            </a>
                                     </div>
 
 
@@ -54,12 +59,12 @@
                                                 <ul class="list-inline">
                                                     <li class="list-inline-item">
                                                         <span class="text-primary">
-                                                            by {{ $CateGor->username }}
+                                                            by {{ $subCate->username }}
                                                         </span>
                                                     </li>
                                                     <li class="list-inline-item">
                                                         <span class="text-dark text-capitalize">
-                                                            {{ $CateGor->created_at }}
+                                                            {{ $subCate->updated_at->format('l, j F Y') }}
                                                         </span>
                                                     </li>
 
@@ -67,8 +72,8 @@
                                             </div>
                                             <div class="card__post__title">
                                                 <h4>
-                                                    <a href="{{ route('category.post', ['list_post' => $CateGor->slug]) }}">
-                                                        {{ $CateGor->subcatagoryname }}
+                                                    <a href="{{ route('category.post', ['list_post' => $subCate->slug]) }}">
+                                                        {{ $subCate->subcatagoryname  }}
                                                     </a>
                                                 </h4>
 

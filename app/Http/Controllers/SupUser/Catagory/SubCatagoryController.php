@@ -69,10 +69,12 @@ class SubCatagoryController extends Controller
             return redirect()->back()->with('suberro','Catagory already available in our system, check now...');
         }else{
             $slug = Str::slug($request->subcatagoryname);
+            $supCateSlug = Str::slug($supName);
             $subCataIns = new SubCatagory();
             $subCataIns->slug = $slug;
             $subCataIns->supcataid = $supCataId;
             $subCataIns->supcataname = $supName;
+            $subCataIns->supcatanameslug = $supCateSlug;
             $subCataIns->subcatagoryname = $request->subcatagoryname;
             $subCataIns->subcatagorymetatag = $request->catagorymeta;
             $subCataIns->subcataimage = $newImageName;

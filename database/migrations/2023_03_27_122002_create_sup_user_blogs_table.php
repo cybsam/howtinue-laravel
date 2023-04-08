@@ -21,6 +21,7 @@ class CreateSupUserBlogsTable extends Migration
             $table->string('blog_meta');
             $table->string('category');
             $table->string('sub_category_name');
+            $table->string('sub_category_slug');
             $table->string('blog_image');
             $table->string('super_category');
             $table->longText('description');

@@ -1,5 +1,5 @@
 @extends('layouts.FrontEndMaster')
-@section('FrontTitle', 'Category - Howtinue')
+@section('FrontTitle', 'Category Post List - Health Botic')
 @section('FrontEnd')
 
     <section>
@@ -14,10 +14,15 @@
                         </li>
                         <li class="breadcrumbs__item">
                             <a href="{{ route('frontEnd.catagory.parent') }}" class="breadcrumbs__url">
-                                Parent Category
+                                 Parent Category</a>
                         </li>
+                        <li class="breadcrumbs__item">
+                            <a href="{{ route('frontEnd.catagory.show') }}" class="breadcrumbs__url">
+                                 Sub Category</a>
+                        </li>
+
                         <li class="breadcrumbs__item breadcrumbs__item--current">
-                            Category
+                            Details Category
                         </li>
                     </ul>
                 </div>
@@ -34,16 +39,16 @@
                         
                     
 
-                        <h3 class="border_section">Category</h3>
-                        @foreach ($listCata as $CateGor)
+                        <h3 class="border_section">Category List Post</h3>
+                        @foreach ($categoryName as $postDetails)
                         <div class="row">
                             <div class="col-md-8">
                                 <div class="card__post card__post-list">
-                                    {{-- {{ route('frontEnd.catagory.postList', ['post_list' => $CateGor->slug ]) }} --}}
+
                                     <div class="image-sm">
-                                        <a href="{{ route('category.post', ['list_post' => $CateGor->slug]) }}">
-                                            <img src="{{ asset('SupUser/uploads/subCatagoryImages') }}/{{ $CateGor->subcataimage }}" class="img-fluid" alt="{{ $CateGor->subcatagorymetatag }}">
-                                        </a>
+                                        <a href="#">
+                                            <img src="{{ asset('uploads/postimage/') }}/{{ $postDetails->blog_image }}" class="img-fluid" alt="{{ $postDetails->blog_meta  }}">
+                                            </a>
                                     </div>
 
 
@@ -54,12 +59,12 @@
                                                 <ul class="list-inline">
                                                     <li class="list-inline-item">
                                                         <span class="text-primary">
-                                                            by {{ $CateGor->username }}
+                                                            by {{ $postDetails->username }}
                                                         </span>
                                                     </li>
                                                     <li class="list-inline-item">
                                                         <span class="text-dark text-capitalize">
-                                                            {{ $CateGor->created_at }}
+                                                            descember 09, 2016
                                                         </span>
                                                     </li>
 
@@ -67,8 +72,8 @@
                                             </div>
                                             <div class="card__post__title">
                                                 <h4>
-                                                    <a href="{{ route('category.post', ['list_post' => $CateGor->slug]) }}">
-                                                        {{ $CateGor->subcatagoryname }}
+                                                    <a href="{{ route('blog.details', ['post_name' => $postDetails->slug]) }}">
+                                                        {{ $postDetails->blog_name  }}
                                                     </a>
                                                 </h4>
 

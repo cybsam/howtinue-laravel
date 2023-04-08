@@ -30,6 +30,9 @@ class FrontBlogController extends Controller
         $userDet = User::where('id',$userid)->firstOrFail();
         $userDetSocial = UsersInfoAdmin::where('user_id',$userid)->firstOrFail();
 
+        $userAbout = UsersInfoAdmin::where('user_id',$userid)->firstOrFail();
+
+
         //releted
         $blogCateID = $listBlog->category;
         $reletedIn = SupUserBlog::where('category',$blogCateID)->limit(4)->get();
@@ -39,6 +42,7 @@ class FrontBlogController extends Controller
             'userDet'=>$userDet,
             'userDetSocial'=>$userDetSocial,
             'reletedIn'=>$reletedIn,
+            'userAbout'=>$userAbout
         ]);
     }
 }

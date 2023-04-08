@@ -19,6 +19,7 @@ class CreateSubCatagoriesTable extends Migration
             $table->integer('catagory_status')->default(0);
             $table->integer('supcataid');
             $table->string('supcataname');
+            $table->string('supcatanameslug');
             $table->string('subcatagoryname')->unique();
             $table->string('subcatagorymetatag');
             $table->string('subcataimage');

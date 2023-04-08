@@ -18,7 +18,7 @@ class CreateSuperCatagoriesTable extends Migration
             $table->string('slug');
             $table->string('supcatagoryname')->unique();
             $table->string('supcatagoryimage');
-            $table->string('supcatagory_meta_tag')->unique();
+            $table->string('supcatagory_meta_tag');
             $table->string('supcatagory_status')->default(1);
             $table->integer('userid');
             $table->string('username');

@@ -47,6 +47,7 @@ class SupCatagoryController extends Controller
         $newImageName = $catNam.'.'.$cataImage->getClientOriginalExtension();
 
         $checkCata = SuperCatagory::where('supcatagoryname',$catNam)->first();
+        
 
         if ($checkCata == true) {
             return redirect()->back()->with('erro','Super Catatory already available in our system, check now!');

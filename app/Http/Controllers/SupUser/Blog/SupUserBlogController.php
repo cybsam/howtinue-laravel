@@ -74,6 +74,7 @@ class SupUserBlogController extends Controller
             return redirect()->back()->with('blogInsFail','category not found...');
         }else{
             $slug = Str::slug($request->blogName);
+            $subCateSlag = Str::slug($sub_category_name);
             $insBlog = new SupUserBlog();
             $insBlog->blog_name = $request->blogName;
             $insBlog->slug = $slug;
@@ -82,6 +83,7 @@ class SupUserBlogController extends Controller
 
             $insBlog->category = $request->category;
             $insBlog->sub_category_name = $sub_category_name;
+            $insBlog->sub_category_slug = $subCateSlag;
             $insBlog->blog_image = $newImageName;
             $insBlog->super_category = $categoryName;
 

@@ -39,7 +39,7 @@
                                 <div class="card__post card__post-list">
 
                                     <div class="image-sm">
-                                        <a href="#">
+                                        <a href="{{ route('frontEnd.parentShow', ['list_cate' => $CateGor->slug]) }}">
                                             <img src="{{ asset('SupUser/uploads/superCatagoryImage') }}/{{ $CateGor->supcatagoryimage }}" class="img-fluid" alt="{{ $CateGor->supcatagory_meta_tag  }}">
                                             </a>
                                     </div>
@@ -57,7 +57,7 @@
                                                     </li>
                                                     <li class="list-inline-item">
                                                         <span class="text-dark text-capitalize">
-                                                            descember 09, 2016
+                                                            {{ $CateGor->updated_at->format('l, j F Y') }}
                                                         </span>
                                                     </li>
 
@@ -65,7 +65,7 @@
                                             </div>
                                             <div class="card__post__title">
                                                 <h4>
-                                                    <a href="">
+                                                    <a href="{{ route('frontEnd.parentShow', ['list_cate' => $CateGor->slug]) }}">
                                                         {{ $CateGor->supcatagoryname  }}
                                                     </a>
                                                 </h4>

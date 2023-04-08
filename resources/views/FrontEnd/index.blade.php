@@ -358,7 +358,7 @@
                                     <div class="list-number">
                                         <span> 1 </span>
                                     </div>
-                                    <a href="#" class="category"> {{ $randCate->subcatagoryname }} </a>
+                                    <a href="{{ route('category.post', ['list_post' => $randCate->slug]) }}" class="category"> {{ $randCate->subcatagoryname }} </a>
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
                                             <h5>

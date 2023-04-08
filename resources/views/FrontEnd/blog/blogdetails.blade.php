@@ -151,9 +151,7 @@
                                 <div class="wrap__profile-author-detail-name">author</div>
                                 <h4>{{ $userDet->username }}</h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Corporis laboriosam ad beatae itaque ea non placeat officia
-                                    ipsum praesentium! Ullam?
+                                    {{ $userAbout->about }}
                                 </p>
                                 <ul class="list-inline">
                                     <li class="list-inline-item">

@@ -28,9 +28,12 @@ Route::prefix('en')->group(function () {
 
     //catagory
     Route::get('Category', [App\Http\Controllers\FrontEnd\catagory\CatagoryIndexController::class, 'index'])->name('frontEnd.catagory.show');
-    Route::get('Category/{post_list}/List', [App\Http\Controllers\FrontEnd\catagory\CatagoryIndexController::class, 'postList'])->name('frontEnd.catagory.post.list');
+    Route::get('Category/Details/{list_post}', [App\Http\Controllers\FrontEnd\catagory\CatagoryIndexController::class, 'cateListShow'])->name('category.post');
     
+
     Route::get('Category/Parent', [App\Http\Controllers\FrontEnd\catagory\ParentCategoryController::class, 'index'])->name('frontEnd.catagory.parent');
+    Route::get('Category/Parent/{list_cate}', [App\Http\Controllers\FrontEnd\catagory\ParentCategoryController::class, 'listCate'])->name('frontEnd.parentShow');
+    
 
     //frontPage post
     Route::get('Blog/Details/{post_name}',[App\Http\Controllers\FrontEnd\Blog\FrontBlogController::class, 'ShowDetails'])->name('blog.details');
