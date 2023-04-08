@@ -14,6 +14,17 @@ class SupUserBlog extends Model
         'blogShortDesc',
         'blogMeta',
         'category',
-        'description'
+        'sub_category_name',
+        'blogImage',
+        'super_category',
+
+        'description',
+        'userid',
+        'username',
+
     ];
+
+    function relationshiptocategory(){
+        return $this->hasOne('App\Models\SubCatagory','id', 'id');
+    }
 }

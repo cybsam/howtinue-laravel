@@ -4,7 +4,10 @@
         <div class="row">
             <div class="col-sm-12 col-md-5">
                 <div class="topbar-left">
-                    <div class="topbar-text">Monday, March 22, 2020</div>
+                    <div class="topbar-text"><script>
+                            $date = new Date();
+                            console.lot($date);
+                        </script></div>
                 </div>
             </div>
             <div class="col-sm-12 col-md-7">

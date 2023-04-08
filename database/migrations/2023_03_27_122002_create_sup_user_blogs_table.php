@@ -16,12 +16,15 @@ class CreateSupUserBlogsTable extends Migration
         Schema::create('sup_user_blogs', function (Blueprint $table) {
             $table->id();
             $table->string('blog_name');
-            $table->string('blogShortDesc');
-            $table->string('blogMeta');
+            $table->string('slug');
+            $table->string('blog_short_desc');
+            $table->string('blog_meta');
             $table->string('category');
-            $table->string('blogImage');
-            
+            $table->string('sub_category_name');
+            $table->string('blog_image');
+            $table->string('super_category');
             $table->longText('description');
+            $table->integer('post_status')->default(0);
             $table->string('userid');
             $table->string('username');
             $table->timestamps();
