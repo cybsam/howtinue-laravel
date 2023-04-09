@@ -7,5 +7,7 @@ use Illuminate\Http\Request;
 
 class BeautyController extends Controller
 {
-    //
+    public function index(){
+        return redirect()->back();
+    }
 }

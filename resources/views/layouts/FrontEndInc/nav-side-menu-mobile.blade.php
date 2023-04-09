@@ -24,7 +24,8 @@
                 <nav class="list-group list-group-flush">
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
-                            <a class="nav-link active dropdown-toggle text-dark" href="#" data-toggle="dropdown">
+                            <a class="nav-link active dropdown-toggle text-dark" href="{{ route('FrontEnd.Index') }}"
+                                data-toggle="dropdown">
                                 Home
                             </a>
                             <ul class="dropdown-menu dropdown-menu-left">
@@ -33,26 +34,12 @@
                                         Home version one
                                     </a>
                                 </li>
-                                <li>
-                                    <a class="dropdown-item text-dark" href="">
-                                        Home version two
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item text-dark" href="">
-                                        Home version three
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item text-dark" href="">
-                                        Home version four
-                                    </a>
-                                </li>
+
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-dark" href="#" data-toggle="dropdown">
-                                Pages
+                                Beauty
                             </a>
                             <ul class="dropdown-menu animate fade-up">
                                 <li>
@@ -144,7 +131,7 @@
 
                         <li class="nav-item dropdown">
                             <a class="nav-link active dropdown-toggle text-dark" href="#" data-toggle="dropdown">
-                                About
+                                Body
                             </a>
                             <ul class="dropdown-menu dropdown-menu-left">
                                 <li>
@@ -160,23 +147,97 @@
                             </ul>
                         </li>
 
-                        <li class="nav-item">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle text-dark" href="#" data-toggle="dropdown">
+                                Mind
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-left">
+                                <li>
+                                    <a class="dropdown-item" href="/about-us.html">
+                                        Style 1
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/about-us-v1.html">
+                                        Style 2
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle text-dark" href="#" data-toggle="dropdown">
+                                Calculator
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-left">
+                                <li>
+                                    <a class="dropdown-item" href="/about-us.html">
+                                        Style 1
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/about-us-v1.html">
+                                        Style 2
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle text-dark" href="#" data-toggle="dropdown">
+                                Foods
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-left">
+                                <li>
+                                    <a class="dropdown-item" href="/about-us.html">
+                                        Style 1
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/about-us-v1.html">
+                                        Style 2
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle text-dark" href="#" data-toggle="dropdown">
+                                Login / Register
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-left">
+                                <li>
+                                    <a class="dropdown-item" href="/about-us.html">
+                                        Style 1
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/about-us-v1.html">
+                                        Style 2
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        {{-- <li class="nav-item">
                             <a class="nav-link text-dark" href="#"> Category </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" href="{{ route('frontend.contact') }}">
                                 contact
                             </a>
-                        </li>
+                        </li> --}}
                     </ul>
                 </nav>
             </div>
             <div class="modal-footer">
                 <p>
-                    © 2020
-                    <a href="http://retenvi.com" title="Premium WordPress news &amp; magazine theme">Magzrenvi</a>
-                    - Premium template news, blog & magazine &amp; magazine theme by
-                    <a href="http://retenvi.com" title="retenvi">RETENVI.COM</a>.
+                    &copy;
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script> <a href="{{ route('FrontEnd.Index') }}">HowTinue Inc</a> | All
+                    Rights Reserved - Designed by <a href="https://github.com/cybsam" target="_blank">CybSam</a>
+
                 </p>
             </div>
         </div>

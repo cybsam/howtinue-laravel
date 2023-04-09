@@ -41,6 +41,7 @@ Route::prefix('Administrator/Blogger')->middleware('auth:web','blogUser','PreBac
     // Route::get('/Dashboard/Users/Team/List/AddUser/{name_user}/UserList',[App\Http\Controllers\Blogger\AllPartUser\ListUserController::class, 'TeamAddUser'])->name('blogusr.users.allteam.users.add.userlist');
     
     
+    
 
 
 });

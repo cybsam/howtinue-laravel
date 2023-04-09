@@ -16,295 +16,236 @@
 
             <div class="collapse navbar-collapse justify-content-between" id="main_nav99">
                 <ul class="navbar-nav ml-auto">
+                    {{-- home page --}}
                     <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle" href="#" data-toggle="dropdown">
+                        <a class="nav-link active dropdown-toggle" href="{{ route('FrontEnd.Index') }}"
+                            data-toggle="dropdown">
                             Home
                         </a>
                         <ul class="dropdown-menu dropdown-menu-left">
-                            <li>
+                            {{-- <li>
                                 <a class="dropdown-item" href="{{ route('FrontEnd.Index') }}">
                                     Home version one
                                 </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="{{ route('FrontEnd.Index') }}">
-                                    Home version two
-                                </a>
-                            </li>
-                            
+                            </li> --}}
+
+
                         </ul>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
-                            Pages
-                        </a>
-                        <ul class="dropdown-menu animate fade-up">
-                            <li>
-                                <a class="dropdown-item icon-arrow" href="#"> Blog </a>
-                                <ul class="submenu dropdown-menu animate fade-up">
-                                    <li>
-                                        <a class="dropdown-item" href="/category-style-v1.html">Style 1</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="/category-style-v2.html">Style 2</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="/category-style-v3.html">Style 3</a>
-                                    </li>
+                    {{-- end home page --}}
 
-                                    <li>
-                                        <a class="dropdown-item icon-arrow" href="">Submenu item 3
-                                        </a>
-                                        <ul class="submenu dropdown-menu animate fade-up">
-                                            <li>
-                                                <a class="dropdown-item" href="">Multi level 1</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="">Multi level 2</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="">Submenu item 4</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="">Submenu item 5</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a class="dropdown-item icon-arrow" href="#">
-                                    Blog single detail
-                                </a>
-                                <ul class="submenu dropdown-menu animate fade-up">
-                                    <li>
-                                        <a class="dropdown-item" href="/article-detail-v1.html">Style 1</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="/article-detail-v2.html">Style 2</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="/article-detail-v3.html">Style 3</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item icon-arrow" href="#">
-                                    Search Result
-                                </a>
-                                <ul class="submenu dropdown-menu animate fade-up">
-                                    <li>
-                                        <a class="dropdown-item" href="/search-result.html">Style 1</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="/search-result-v1.html">Style 2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="/login.html">Login </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="/register.html">
-                                    Register
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="{{ route('frontend.contact') }}">
-                                    Contact
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="/404.html"> 404 Error </a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle" href="#" data-toggle="dropdown">
-                            About
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-left">
-                            <li>
-                                <a class="dropdown-item" href="">
-                                    Style 1
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="/about-us-v1.html">
-                                    Style 2
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
+                    {{-- beauty mega menu --}}
                     <li class="nav-item dropdown has-megamenu">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
-                            News
+                            Beauty
                         </a>
                         <div class="dropdown-menu animate fade-down megamenu mx-auto" role="menu">
                             <div class="container wrap__mobile-megamenu">
                                 <div class="col-megamenu">
-                                    <h5 class="title">Recent news</h5>
+                                    <h5 class="title">Beauty program will be: </h5>
                                     <hr />
-                                    <!-- Popular news carousel -->
-                                    <div class="popular__news-header-carousel">
-                                        <div class="top__news__slider">
-                                            <div class="item">
-                                                <!-- Post Article -->
-                                                <div class="article__entry">
-                                                    <div class="article__image">
-                                                        <a href="#">
-                                                            <img src="images/placeholder/500x400.jpg" alt=""
-                                                                class="img-fluid" />
-                                                        </a>
-                                                    </div>
-                                                    <div class="article__content">
-                                                        <ul class="list-inline">
-                                                            <li class="list-inline-item">
-                                                                <span class="text-primary">
-                                                                    by david hall </span>,
-                                                            </li>
 
-                                                            <li class="list-inline-item">
-                                                                <span> descember 09, 2016 </span>
-                                                            </li>
-                                                        </ul>
-                                                        <h5>
-                                                            <a href="#">
-                                                                Proin eu nisl et arcu iaculis placerat
-                                                                sollicitudin ut est.
-                                                            </a>
-                                                        </h5>
-                                                    </div>
+                                    <div class="">
+                                        <div class="row my-4">
+                                            <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                                                <div class="list-group list-group-flush">
+                                                    <a href="" class="list-group-item list-group-item-action">Body Care</a>
+                                                    <a href="" class="list-group-item list-group-item-action">Skin Care</a>
+                                                    
                                                 </div>
                                             </div>
-                                            <div class="item">
-                                                <!-- Post Article -->
-                                                <div class="article__entry">
-                                                    <div class="article__image">
-                                                        <a href="#">
-                                                            <img src="images/placeholder/500x400.jpg" alt=""
-                                                                class="img-fluid" />
-                                                        </a>
-                                                    </div>
-                                                    <div class="article__content">
-                                                        <ul class="list-inline">
-                                                            <li class="list-inline-item">
-                                                                <span class="text-primary">
-                                                                    by david hall </span>,
-                                                            </li>
-
-                                                            <li class="list-inline-item">
-                                                                <span> descember 09, 2016 </span>
-                                                            </li>
-                                                        </ul>
-                                                        <h5>
-                                                            <a href="#">
-                                                                Proin eu nisl et arcu iaculis placerat
-                                                                sollicitudin ut est.
-                                                            </a>
-                                                        </h5>
-                                                    </div>
+                                            <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                                                <div class="list-group list-group-flush">
+                                                    <a href="" class="list-group-item list-group-item-action">Oral Care</a>
+                                                    <a href="" class="list-group-item list-group-item-action">Makeup</a>
+                                                    
+                                                     
                                                 </div>
                                             </div>
-                                            <div class="item">
-                                                <!-- Post Article -->
-                                                <div class="article__entry">
-                                                    <div class="article__image">
-                                                        <a href="#">
-                                                            <img src="images/placeholder/500x400.jpg" alt=""
-                                                                class="img-fluid" />
-                                                        </a>
-                                                    </div>
-                                                    <div class="article__content">
-                                                        <ul class="list-inline">
-                                                            <li class="list-inline-item">
-                                                                <span class="text-primary">
-                                                                    by david hall </span>,
-                                                            </li>
+                                            <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+                                                <div class="list-group list-group-flush">
+                                                    <a href="" class="list-group-item list-group-item-action">Hair Care</a>
+                                                    <a href="" class="list-group-item list-group-item-action">Nail Care</a>
 
-                                                            <li class="list-inline-item">
-                                                                <span> descember 09, 2016 </span>
-                                                            </li>
-                                                        </ul>
-                                                        <h5>
-                                                            <a href="#">
-                                                                Proin eu nisl et arcu iaculis placerat
-                                                                sollicitudin ut est.
-                                                            </a>
-                                                        </h5>
-                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="item">
-                                                <!-- Post Article -->
-                                                <div class="article__entry">
-                                                    <div class="article__image">
-                                                        <a href="#">
-                                                            <img src="images/placeholder/500x400.jpg" alt=""
-                                                                class="img-fluid" />
-                                                        </a>
-                                                    </div>
-                                                    <div class="article__content">
-                                                        <ul class="list-inline">
-                                                            <li class="list-inline-item">
-                                                                <span class="text-primary">
-                                                                    by david hall </span>,
-                                                            </li>
-
-                                                            <li class="list-inline-item">
-                                                                <span> descember 09, 2016 </span>
-                                                            </li>
-                                                        </ul>
-                                                        <h5>
-                                                            <a href="#">
-                                                                Proin eu nisl et arcu iaculis placerat
-                                                                sollicitudin ut est.
-                                                            </a>
-                                                        </h5>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <!-- Post Article -->
-                                                <div class="article__entry">
-                                                    <div class="article__image">
-                                                        <a href="#">
-                                                            <img src="images/placeholder/500x400.jpg" alt=""
-                                                                class="img-fluid" />
-                                                        </a>
-                                                    </div>
-                                                    <div class="article__content">
-                                                        <ul class="list-inline">
-                                                            <li class="list-inline-item">
-                                                                <span class="text-primary">
-                                                                    by david hall </span>,
-                                                            </li>
-
-                                                            <li class="list-inline-item">
-                                                                <span> descember 09, 2016 </span>
-                                                            </li>
-                                                        </ul>
-                                                        <h5>
-                                                            <a href="#">
-                                                                Proin eu nisl et arcu iaculis placerat
-                                                                sollicitudin ut est.
-                                                            </a>
-                                                        </h5>
-                                                    </div>
+                                            <div class="col-md-6 col-lg-3">
+                                                <div class="list-group list-group-flush">
+                                                    <a href="" class="list-group-item list-group-item-action">Natural & Orginic Beauty</a>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+
+
+                                    <!-- Popular news carousel -->
+
                                 </div>
                                 <!-- col-megamenu.// -->
                             </div>
                         </div>
                         <!-- dropdown-mega-menu.// -->
                     </li>
-                    <li class="nav-item">
+                    {{-- end beauty mega menu --}}
+
+                    {{-- body mega menu --}}
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            Body
+                        </a>
+                        <div class="dropdown-menu animate fade-down megamenu mx-auto" role="menu">
+                            <div class="container wrap__mobile-megamenu">
+                                <div class="col-megamenu">
+                                    <h5 class="title">Body program will be: </h5>
+                                    <hr />
+
+                                    <div class="">
+                                        <div class="row my-4">
+                                            <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                                                <div class="list-group list-group-flush">
+                                                    <a href="" class="list-group-item list-group-item-action">Brain</a>
+                                                    <a href="" class="list-group-item list-group-item-action">Eyes</a>
+                                                    <a href="" class="list-group-item list-group-item-action">Kedney</a>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                                                <div class="list-group list-group-flush">
+                                                    <a href="" class="list-group-item list-group-item-action">Neek</a>
+                                                    <a href="" class="list-group-item list-group-item-action">Arms</a>
+                                                    <a href="" class="list-group-item list-group-item-action">Joints</a>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+                                                <div class="list-group list-group-flush">
+                                                    <a href="" class="list-group-item list-group-item-action">Heart</a>
+                                                    <a href="" class="list-group-item list-group-item-action">Liver</a>
+                                                    <a href="" class="list-group-item list-group-item-action">kedney</a>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-lg-3">
+                                                <div class="list-group list-group-flush">
+                                                    <a href="" class="list-group-item list-group-item-action">Hands</a>
+                                                    <a href="" class="list-group-item list-group-item-action">Abdomen</a>
+                                                    <a href="" class="list-group-item list-group-item-action">Nose</a>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Popular news carousel -->
+
+                                </div>
+                                <!-- col-megamenu.// -->
+                            </div>
+                        </div>
+                        <!-- dropdown-mega-menu.// -->
+                    </li>
+                    {{-- end body mega menu --}}
+
+                    {{-- mind mega menu --}}
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            Mind
+                        </a>
+                        <div class="dropdown-menu animate fade-down megamenu mx-auto" role="menu">
+                            <div class="container wrap__mobile-megamenu">
+                                <div class="col-megamenu">
+                                    <h5 class="title">Recent news</h5>
+                                    <hr />
+
+                                    <div class="">
+                                        <div class="row my-4">
+                                            <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                                                <div class="list-group list-group-flush">
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Lorem
+                                                        ipsum</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Dolor sit</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Amet
+                                                        consectetur</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Cras justo
+                                                        odio</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Adipisicing
+                                                        elit</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                                                <div class="list-group list-group-flush">
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Explicabo
+                                                        voluptas</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Perspiciatis
+                                                        quo</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Cras justo
+                                                        odio</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Laudantium
+                                                        maiores</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Provident
+                                                        dolor</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+                                                <div class="list-group list-group-flush">
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Iste
+                                                        quaerato</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Cras justo
+                                                        odio</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Est iure</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Praesentium</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Laboriosam</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-lg-3">
+                                                <div class="list-group list-group-flush">
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Cras justo
+                                                        odio</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Saepe</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Vel
+                                                        alias</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Sunt
+                                                        doloribus</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Cum
+                                                        dolores</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Popular news carousel -->
+
+                                </div>
+                                <!-- col-megamenu.// -->
+                            </div>
+                        </div>
+                        <!-- dropdown-mega-menu.// -->
+                    </li>
+                    {{-- end mind mega menu --}}
+                    {{-- <li class="nav-item">
                         <li class="nav-item dropdown">
                             <a class="nav-link active dropdown-toggle" href="#" data-toggle="dropdown">
                                 Category
@@ -323,10 +264,205 @@
                             </ul>
                         </li>
                         
+                    </li> --}}
+                    {{-- calculator mega menu --}}
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            Calculator
+                        </a>
+                        <div class="dropdown-menu animate fade-down megamenu mx-auto" role="menu">
+                            <div class="container wrap__mobile-megamenu">
+                                <div class="col-megamenu">
+                                    <h5 class="title">Recent news</h5>
+                                    <hr />
+
+                                    <div class="">
+                                        <div class="row my-4">
+                                            <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                                                <div class="list-group list-group-flush">
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Lorem
+                                                        ipsum</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Dolor sit</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Amet
+                                                        consectetur</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Cras justo
+                                                        odio</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Adipisicing
+                                                        elit</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                                                <div class="list-group list-group-flush">
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Explicabo
+                                                        voluptas</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Perspiciatis
+                                                        quo</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Cras justo
+                                                        odio</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Laudantium
+                                                        maiores</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Provident
+                                                        dolor</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+                                                <div class="list-group list-group-flush">
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Iste
+                                                        quaerato</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Cras justo
+                                                        odio</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Est iure</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Praesentium</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Laboriosam</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-lg-3">
+                                                <div class="list-group list-group-flush">
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Cras justo
+                                                        odio</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Saepe</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Vel
+                                                        alias</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Sunt
+                                                        doloribus</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Cum
+                                                        dolores</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Popular news carousel -->
+
+                                </div>
+                                <!-- col-megamenu.// -->
+                            </div>
+                        </div>
+                        <!-- dropdown-mega-menu.// -->
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('frontend.contact') }}"> contact </a>
+                    {{-- end calculator mega menu --}}
+
+                    {{-- foods mega menu --}}
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            Foods
+                        </a>
+                        <div class="dropdown-menu animate fade-down megamenu mx-auto" role="menu">
+                            <div class="container wrap__mobile-megamenu">
+                                <div class="col-megamenu">
+                                    <h5 class="title">Recent news</h5>
+                                    <hr />
+
+                                    <div class="">
+                                        <div class="row my-4">
+                                            <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                                                <div class="list-group list-group-flush">
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Lorem
+                                                        ipsum</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Dolor sit</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Amet
+                                                        consectetur</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Cras justo
+                                                        odio</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Adipisicing
+                                                        elit</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                                                <div class="list-group list-group-flush">
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Explicabo
+                                                        voluptas</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Perspiciatis
+                                                        quo</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Cras justo
+                                                        odio</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Laudantium
+                                                        maiores</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Provident
+                                                        dolor</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+                                                <div class="list-group list-group-flush">
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Iste
+                                                        quaerato</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Cras justo
+                                                        odio</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Est iure</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Praesentium</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Laboriosam</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-lg-3">
+                                                <div class="list-group list-group-flush">
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Cras justo
+                                                        odio</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Saepe</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Vel
+                                                        alias</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Sunt
+                                                        doloribus</a>
+                                                    <a href=""
+                                                        class="list-group-item list-group-item-action">Cum
+                                                        dolores</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Popular news carousel -->
+
+                                </div>
+                                <!-- col-megamenu.// -->
+                            </div>
+                        </div>
+                        <!-- dropdown-mega-menu.// -->
                     </li>
+                    {{-- end foods mega menu --}}
+
+
+
                 </ul>
 
                 <!-- Search bar.// -->

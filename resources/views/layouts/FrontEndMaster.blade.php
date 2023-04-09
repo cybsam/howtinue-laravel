@@ -20,7 +20,7 @@
         <header class="bg-light">
             @include('layouts.FrontEndInc.nav-top')
             @include('layouts.FrontEndInc.nav-menu')
-            @include('layouts.FrontEndInc.nav-side-menu')
+            @include('layouts.FrontEndInc.nav-side-menu-mobile')
         </header>
         <!-- End Header news -->
         {{-- @include('layouts.FrontEndInc.preload') --}}

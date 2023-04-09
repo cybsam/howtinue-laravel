@@ -44,13 +44,6 @@ Route::prefix('Administrator/SuperUser')->middleware('auth:web','supUser','PreBa
     Route::get('Dashboard/Blog/List',[App\Http\Controllers\SupUser\Blog\SupUserBlogController::class, 'index'])->name('supuser.blog');
     Route::get('Dashboard/Blog/Insert',[App\Http\Controllers\SupUser\Blog\SupUserBlogController::class, 'insert'])->name('supuser.blog.insert');
     Route::post('Dashboard/Blog/Insert/Save',[App\Http\Controllers\SupUser\Blog\SupUserBlogController::class, 'insertSave'])->name('supuser.blog.insert.save');
-    
-    
-    
-    
-    
-    
-    
 
     //sup catagory
     Route::get('Dashboard/Catagory/SuperCatagory', [App\Http\Controllers\SupUser\Catagory\SupCatagoryController::class, 'index'])->name('supuser.cata.super');
@@ -65,5 +58,5 @@ Route::prefix('Administrator/SuperUser')->middleware('auth:web','supUser','PreBa
     //blank
     Route::get('/BlankPage', [App\Http\Controllers\SupUser\SupUserDashController::class, 'blank'])->name('supuser.blank');
 
-
+    
 });

@@ -7,5 +7,7 @@ use Illuminate\Http\Request;
 
 class MindController extends Controller
 {
-    //
+    public function index(){
+        return redirect()->back();
+    }
 }
