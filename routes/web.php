@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\FrontEnd\catagory\CatagoryIndexController;
+use App\Http\Controllers\FrontEnd\Share\ShareController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +38,9 @@ Route::prefix('en')->group(function () {
 
     //frontPage post
     Route::get('Blog/Details/{post_name}',[App\Http\Controllers\FrontEnd\Blog\FrontBlogController::class, 'ShowDetails'])->name('blog.details');
+
+    //share
+    Route::get('Blog/Details/Share/', [App\Http\Controllers\FrontEnd\Share\ShareController::class, 'facebook'])->name('facebook.share');
 
     //contact
     Route::get('Contact', [App\Http\Controllers\FrontEnd\IndexController::class, 'contact'])->name('frontend.contact');

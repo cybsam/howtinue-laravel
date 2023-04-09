@@ -164,6 +164,8 @@ return [
 
         Intervention\Image\ImageServiceProvider::class,
 
+        Jorenvh\Share\Providers\ShareServiceProvider::class,
+
         // data tables
         // Yajra\DataTables\DataTablesServiceProvider::class,
 
@@ -236,6 +238,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Image' => Intervention\Image\Facades\Image::class,
+
+        'Share' => Jorenvh\Share\ShareFacade::class,
 
         // 'DataTables' => Yajra\DataTables\Facades\DataTables::class,
 

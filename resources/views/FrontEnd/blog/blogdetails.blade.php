@@ -72,11 +72,15 @@
 
                                 <ul class="list-inline">
                                     <span class="share">share on:</span>
+                                    @php
+                                        $curentUrl = URL::current();
+                                    @endphp
+                                    <form action="{{ route('facebook.share') }}" method="post"></form>
                                     <li class="list-inline-item">
-                                        <a class="btn btn-social-o facebook" href="#">
+                                        <button class="btn btn-social-o facebook" href="">
                                             <i class="fa fa-facebook-f"></i>
                                             <span>facebook</span>
-                                        </a>
+                                        </button>
                                     </li>
                                     <li class="list-inline-item">
                                         <a class="btn btn-social-o twitter" href="#">

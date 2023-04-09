@@ -8,9 +8,10 @@ use App\Models\SuperCatagory;
 use App\Models\SubCatagory;
 use App\Models\SupUserBlog;
 use App\Models\UsersInfoAdmin;
-
+use Share;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\URL;
 use Carbon\Carbon;
 use Image;
 class FrontBlogController extends Controller
