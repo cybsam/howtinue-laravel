@@ -15,7 +15,7 @@
                 </div>
             </li>
             <li>
-                <p>Loading</p>
+                <p>HealthyBotic</p>
             </li>
         </ul>
     </div>
