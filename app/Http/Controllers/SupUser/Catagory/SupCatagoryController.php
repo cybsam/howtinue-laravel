@@ -32,8 +32,8 @@ class SupCatagoryController extends Controller
         
 
         $request->validate([
-            'catagoryname' => ['required','string','min:3', 'max:20'],
-            'catagorymeta' => ['required', 'string', 'min:3', 'max:20'],
+            'catagoryname' => ['required','string',  'min:3', 'max:200'],
+            'catagorymeta' => ['required', 'string', 'min:3', 'max:200'],
             'image' => ['required','mimes:jpg,png,jpeg,gif','max:3000'],
         ],[
             'catagoryname.required' => 'Catagory name field can not be empty!',

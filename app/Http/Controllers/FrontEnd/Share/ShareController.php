@@ -19,5 +19,6 @@ class ShareController extends Controller
     public function facebook($sharelink){
         $link = $sharelink;
         echo $link;
+        
     }
 }

@@ -39,7 +39,7 @@
                         
                     
 
-                        <h3 class="border_section">Category List Fron main category</h3>
+                        <h3 class="border_section">Assistant Category:- </h3>
                         @foreach ($allSubCate as $subCate)
                         <div class="row">
                             <div class="col-md-8">

@@ -17,20 +17,11 @@
             <div class="collapse navbar-collapse justify-content-between" id="main_nav99">
                 <ul class="navbar-nav ml-auto">
                     {{-- home page --}}
-                    <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle" href="{{ route('FrontEnd.Index') }}"
-                            data-toggle="dropdown">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="{{ route('FrontEnd.Index') }}">
                             Home
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-left">
-                            {{-- <li>
-                                <a class="dropdown-item" href="{{ route('FrontEnd.Index') }}">
-                                    Home version one
-                                </a>
-                            </li> --}}
-
-
-                        </ul>
+                        
                     </li>
                     {{-- end home page --}}
 
@@ -156,80 +147,36 @@
                         <div class="dropdown-menu animate fade-down megamenu mx-auto" role="menu">
                             <div class="container wrap__mobile-megamenu">
                                 <div class="col-megamenu">
-                                    <h5 class="title">Recent news</h5>
+                                    <h5 class="title">Mind program will be: </h5>
                                     <hr />
 
                                     <div class="">
                                         <div class="row my-4">
                                             <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                                                 <div class="list-group list-group-flush">
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Lorem
-                                                        ipsum</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Dolor sit</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Amet
-                                                        consectetur</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Cras justo
-                                                        odio</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Adipisicing
-                                                        elit</a>
+                                                    <a href="" class="list-group-item list-group-item-action">Anxiety</a>
+                                                    <a href="" class="list-group-item list-group-item-action">Deepression</a>
+                                                    
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                                                 <div class="list-group list-group-flush">
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Explicabo
-                                                        voluptas</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Perspiciatis
-                                                        quo</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Cras justo
-                                                        odio</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Laudantium
-                                                        maiores</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Provident
-                                                        dolor</a>
+                                                    <a href="" class="list-group-item list-group-item-action">Stress Management</a>
+                                                    <a href="" class="list-group-item list-group-item-action">Self Care</a>
+                                                    
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
                                                 <div class="list-group list-group-flush">
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Iste
-                                                        quaerato</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Cras justo
-                                                        odio</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Est iure</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Praesentium</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Laboriosam</a>
+                                                    <a href="" class="list-group-item list-group-item-action">Mindfullness & Meadition</a>
+                                                    <a href="" class="list-group-item list-group-item-action">Mental Health Stigma</a>
+                                                    
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-3">
                                                 <div class="list-group list-group-flush">
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Cras justo
-                                                        odio</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Saepe</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Vel
-                                                        alias</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Sunt
-                                                        doloribus</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Cum
-                                                        dolores</a>
+                                                    <a href="" class="list-group-item list-group-item-action">Relationship & Commiunication</a>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -265,6 +212,63 @@
                         </li>
                         
                     </li> --}}
+
+                    {{-- foods mega menu --}}
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            Foods
+                        </a>
+                        <div class="dropdown-menu animate fade-down megamenu mx-auto" role="menu">
+                            <div class="container wrap__mobile-megamenu">
+                                <div class="col-megamenu">
+                                    <h5 class="title">Foods program will be: </h5>
+                                    <hr />
+
+                                    <div class="">
+                                        <div class="row my-4">
+                                            <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                                                <div class="list-group list-group-flush">
+                                                    <a href="" class="list-group-item list-group-item-action">Plant Based Food</a>
+                                                    <a href="" class="list-group-item list-group-item-action">Leans Protines</a>
+                                                    <a href="" class="list-group-item list-group-item-action">Whole Foods</a>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                                                <div class="list-group list-group-flush">
+                                                    <a href="" class="list-group-item list-group-item-action">Whole Grains</a>
+                                                    <a href="" class="list-group-item list-group-item-action">Low-Fat Dairy</a>
+                                                    <a href="" class="list-group-item list-group-item-action">Frouts And Vegitables</a>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+                                                <div class="list-group list-group-flush">
+                                                    <a href="" class="list-group-item list-group-item-action">Nutes & Seeds</a>
+                                                    <a href="" class="list-group-item list-group-item-action">Health Fats</a>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-lg-3">
+                                                <div class="list-group list-group-flush">
+                                                    <a href="" class="list-group-item list-group-item-action">Herbs & Spices</a>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Popular news carousel -->
+
+                                </div>
+                                <!-- col-megamenu.// -->
+                            </div>
+                        </div>
+                        <!-- dropdown-mega-menu.// -->
+                    </li>
+                    {{-- end foods mega menu --}}
+
                     {{-- calculator mega menu --}}
                     <li class="nav-item dropdown has-megamenu">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
@@ -273,80 +277,34 @@
                         <div class="dropdown-menu animate fade-down megamenu mx-auto" role="menu">
                             <div class="container wrap__mobile-megamenu">
                                 <div class="col-megamenu">
-                                    <h5 class="title">Recent news</h5>
+                                    <h5 class="title">Calculators:</h5>
                                     <hr />
 
                                     <div class="">
                                         <div class="row my-4">
                                             <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                                                 <div class="list-group list-group-flush">
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Lorem
-                                                        ipsum</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Dolor sit</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Amet
-                                                        consectetur</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Cras justo
-                                                        odio</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Adipisicing
-                                                        elit</a>
+                                                    <a href="" class="list-group-item list-group-item-action">Fitness Calculator</a>
+                                                    
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                                                 <div class="list-group list-group-flush">
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Explicabo
-                                                        voluptas</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Perspiciatis
-                                                        quo</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Cras justo
-                                                        odio</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Laudantium
-                                                        maiores</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Provident
-                                                        dolor</a>
+                                                    <a href="" class="list-group-item list-group-item-action">Pegnency Calculator</a>
+                                                    
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
                                                 <div class="list-group list-group-flush">
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Iste
-                                                        quaerato</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Cras justo
-                                                        odio</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Est iure</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Praesentium</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Laboriosam</a>
+                                                    <a href="" class="list-group-item list-group-item-action">Others Calculator</a>
+                                                    
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-3">
                                                 <div class="list-group list-group-flush">
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Cras justo
-                                                        odio</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Saepe</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Vel
-                                                        alias</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Sunt
-                                                        doloribus</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Cum
-                                                        dolores</a>
+                                                    <a href="" class="list-group-item list-group-item-action">BMI Calculator</a>
+                                                        
+                                                        
                                                 </div>
                                             </div>
                                         </div>
@@ -363,103 +321,7 @@
                     </li>
                     {{-- end calculator mega menu --}}
 
-                    {{-- foods mega menu --}}
-                    <li class="nav-item dropdown has-megamenu">
-                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
-                            Foods
-                        </a>
-                        <div class="dropdown-menu animate fade-down megamenu mx-auto" role="menu">
-                            <div class="container wrap__mobile-megamenu">
-                                <div class="col-megamenu">
-                                    <h5 class="title">Recent news</h5>
-                                    <hr />
-
-                                    <div class="">
-                                        <div class="row my-4">
-                                            <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-                                                <div class="list-group list-group-flush">
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Lorem
-                                                        ipsum</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Dolor sit</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Amet
-                                                        consectetur</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Cras justo
-                                                        odio</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Adipisicing
-                                                        elit</a>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-                                                <div class="list-group list-group-flush">
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Explicabo
-                                                        voluptas</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Perspiciatis
-                                                        quo</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Cras justo
-                                                        odio</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Laudantium
-                                                        maiores</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Provident
-                                                        dolor</a>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
-                                                <div class="list-group list-group-flush">
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Iste
-                                                        quaerato</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Cras justo
-                                                        odio</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Est iure</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Praesentium</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Laboriosam</a>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-lg-3">
-                                                <div class="list-group list-group-flush">
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Cras justo
-                                                        odio</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Saepe</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Vel
-                                                        alias</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Sunt
-                                                        doloribus</a>
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Cum
-                                                        dolores</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- Popular news carousel -->
-
-                                </div>
-                                <!-- col-megamenu.// -->
-                            </div>
-                        </div>
-                        <!-- dropdown-mega-menu.// -->
-                    </li>
-                    {{-- end foods mega menu --}}
+                    
 
 
 

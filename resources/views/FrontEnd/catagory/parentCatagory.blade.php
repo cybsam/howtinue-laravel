@@ -15,7 +15,7 @@
                         
 
                         <li class="breadcrumbs__item breadcrumbs__item--current">
-                            Pategory Category
+                            Lead Category
                         </li>
                     </ul>
                 </div>
@@ -32,7 +32,7 @@
                         
                     
 
-                        <h3 class="border_section">Category</h3>
+                        <h3 class="border_section">Lead Category:- </h3>
                         @foreach ($parent as $CateGor)
                         <div class="row">
                             <div class="col-md-8">

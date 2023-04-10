@@ -22,9 +22,11 @@ class FrontBlogController extends Controller
         //return view();
     }
 
-    public function ShowDetails($post_name){
+    //single blog show function
+    public function ShowDetails(Request $request, $post_name){
         //echo $post_name;
         $listBlog = SupUserBlog::where('slug',$post_name)->firstOrFail();
+        
 
         $userid = $listBlog->userid;
         
@@ -32,6 +34,22 @@ class FrontBlogController extends Controller
         $userDetSocial = UsersInfoAdmin::where('user_id',$userid)->firstOrFail();
 
         $userAbout = UsersInfoAdmin::where('user_id',$userid)->firstOrFail();
+
+        //share social media
+        $currentUrl = url()->current();
+        $postName = $listBlog->blog_name;
+        $socialShare = \Share::page(
+            $currentUrl,
+            $postName,
+        )
+        ->facebook()
+        ->twitter()
+        ->whatsapp()
+        ->reddit()
+        ->linkedin()
+        ->telegram();
+
+        //end social share
 
 
         //releted
@@ -43,7 +61,10 @@ class FrontBlogController extends Controller
             'userDet'=>$userDet,
             'userDetSocial'=>$userDetSocial,
             'reletedIn'=>$reletedIn,
-            'userAbout'=>$userAbout
+            'userAbout'=>$userAbout,
+            'socialShare'=>$socialShare
         ]);
     }
+    //end single blog function
+
 }

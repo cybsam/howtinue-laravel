@@ -14,10 +14,10 @@
                                 <i class="fa fa-home"></i> Home</a>
                         </li>
                         <li class="breadcrumbs__item">
-                            <a href="" class="breadcrumbs__url">List Blog</a>
+                            <a href="" class="breadcrumbs__url">Blog List</a>
                         </li>
                         <li class="breadcrumbs__item breadcrumbs__item--current">
-                            Post Details
+                            Blog Details
                         </li>
                     </ul>
                     <!-- end breadcrumb -->
@@ -75,38 +75,30 @@
                                     @php
                                         $curentUrl = URL::current();
                                     @endphp
-                                    <form action="{{ route('facebook.share') }}" method="post"></form>
-                                    <li class="list-inline-item">
-                                        <button class="btn btn-social-o facebook" href="">
-                                            <i class="fa fa-facebook-f"></i>
-                                            <span>facebook</span>
-                                        </button>
+                                    {{-- <script>
+                                        const CurrentProtocol = window.location.href;
+                                        window.location.href('/en/Blog/Details/'+ CurrentProtocol);
+                                    </script> --}}
+                                    
+                                    
+                                    <li class="list-inline-item" style="">
+                                        <style>
+                                            div#social-links ul li{
+                                                display: inline-block;
+                                            }
+                                            div#social-links ul li a{
+                                                padding: 10px;
+                                                margin: 1px;
+                                                font-size: 30px;
+                                                
+                                            }
+                                        </style>
+                                        <div class="social-share">
+                                            {!! $socialShare !!}
+                                        </div>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <a class="btn btn-social-o twitter" href="#">
-                                            <i class="fa fa-twitter"></i>
-                                            <span>twitter</span>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a class="btn btn-social-o whatsapp" href="#">
-                                            <i class="fa fa-whatsapp"></i>
-                                            <span>whatsapp</span>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a class="btn btn-social-o telegram" href="#">
-                                            <i class="fa fa-telegram"></i>
-                                            <span>telegram</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="list-inline-item">
-                                        <a class="btn btn-linkedin-o linkedin" href="#">
-                                            <i class="fa fa-linkedin"></i>
-                                            <span>linkedin</span>
-                                        </a>
-                                    </li>
+                                    
+                                    
                                 </ul>
                             </div>
                             <p class="has-drop-cap-fluid">

@@ -116,7 +116,7 @@
                                 <label for="inputText" class="col-sm-2 col-form-label">Description</label>
                                 <div class="col-sm-10 ">
                                     <div class="">
-                                    <textarea name="description" value="{{ old('description') }}" name="description" id="summernote" class="form-control @error('description') is-invalid @enderror"" cols="" rows=""></textarea>
+                                    <textarea name="description" value="{{ old('description') }}" name="description" id="summernote" class="form-control @error('description') is-invalid @enderror" cols="" rows=""></textarea>
                                 </div>
                                 <div class="">
                                     @error('description')

@@ -1,5 +1,5 @@
 @extends('layouts.FrontEndMaster')
-@section('FrontTitle', 'SignIn - Howtinue')
+@section('FrontTitle', 'Password Reset - Healthy Botic')
 @section('FrontEnd')
     <section class="wrap__section">
         <div class="container">

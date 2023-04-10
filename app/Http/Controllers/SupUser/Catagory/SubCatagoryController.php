@@ -38,8 +38,8 @@ class SubCatagoryController extends Controller
 
         $request->validate([
             'supCataId' => ['required'],
-            'subcatagoryname' => ['required','string','min:3', 'max:20'],
-            'catagorymeta' => ['required', 'string', 'min:3', 'max:20'],
+            'subcatagoryname' => ['required','string',  'min:3', 'max:200'],
+            'catagorymeta' => ['required', 'string', 'min:3', 'max:200'],
             'image' => ['required','mimes:jpg,png,jpeg,gif','max:3000'],
         ],[
             'supCataId.required' => 'Please Select Super/Main Catagory',

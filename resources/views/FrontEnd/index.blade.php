@@ -1,5 +1,5 @@
 @extends('layouts.FrontEndMaster')
-@section('FrontTitle', 'Howtinue')
+@section('FrontTitle', 'Healthy Botic')
 @section('FrontEnd')
 
     <!-- Tranding news  carousel-->

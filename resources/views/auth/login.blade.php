@@ -1,5 +1,5 @@
 @extends('layouts.FrontEndMaster')
-@section('FrontTitle', 'SignIn - Howtinue')
+@section('FrontTitle', 'SignIn - Healthy Botic')
 @section('FrontEnd')
     
 
