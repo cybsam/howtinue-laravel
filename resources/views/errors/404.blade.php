@@ -1,20 +1,20 @@
 @extends('layouts.FrontEndMaster')
-@section('FrontTitle', 'Howtinue')
+
+@section('FrontTitle', '404 - Healthy Botic')
 @section('FrontEnd')
-<main>
-  <div class="container">
 
-    <section class="section error-404 min-vh-100 d-flex flex-column align-items-center justify-content-center">
-      <h1>404</h1>
-      <h2>The page you are looking for doesn't exist.</h2>
-      <a class="btn" href="{{ URL::previous() }}">Return Back</a>
-      <img src="{{ asset('SupUser/assets/img/not-found.svg') }}" class="img-fluid py-5" alt="Page Not Found">
-
-    </section>
-
-  </div>
-</main>
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <div id="notfound">
+        <div class="notfound">
+            <div class="notfound-404">
+                <h1>404</h1>
+            </div>
+            <h2>Oops, The Page you are looking for can't be found!</h2>
+            <form class="notfound-search">
+                <input type="text" placeholder="Search...">
+                <button type="button">Search</button>
+            </form>
+            <a href="{{ URL::previous() }}"><span class="arrow"></span>Go Back</a>
+        </div>
+    </div>
+    @extends('layouts.errorCustomMaster')
 @endsection
-
-

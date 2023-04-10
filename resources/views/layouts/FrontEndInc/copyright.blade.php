@@ -34,7 +34,7 @@
                                 <script>
                                     document.write(new Date().getFullYear());
                                 </script> <a href="{{ route('FrontEnd.Index') }}">HowTinue Inc</a> | All
-                                Rights Reserved - Designed by <a href="https://github.com/cybsam" target="_blank">CybSam</a>
+                                Rights Reserved ~ Developed by <a href="https://github.com/cybsam" target="_blank">CybSam</a>
 
                             </span>
                         </li>

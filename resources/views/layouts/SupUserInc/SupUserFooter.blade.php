@@ -4,6 +4,6 @@
       &copy; Copyright <strong><span>HowTinue</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
-      Designed by <a href="#">CybSam</a>
+      Developed by <a href="#">CybSam</a>
     </div>
   </footer><!-- End Footer -->

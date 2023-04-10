@@ -48,9 +48,7 @@ class SupUserBlogController extends Controller
         ]);
         
        
-        // $insBlog = new SupUserBlog();
-        // $insBlog->blog_name = $request->blogName;
-
+        
         $catagory = $request->category;
         $subcagaCheck = SubCatagory::where('id', $catagory)->first();
         $sub_category_name = $subcagaCheck->subcatagoryname;
@@ -74,34 +72,41 @@ class SupUserBlogController extends Controller
             return redirect()->back()->with('blogInsFail','category not found...');
         }else{
             $slug = Str::slug($request->blogName);
-            $subCateSlag = Str::slug($sub_category_name);
-            $insBlog = new SupUserBlog();
-            $insBlog->blog_name = $request->blogName;
-            $insBlog->slug = $slug;
-            $insBlog->blog_short_desc = $request->blogShortDesc;
-            $insBlog->blog_meta = $request->blogMeta;
-
-            $insBlog->category = $request->category;
-            $insBlog->sub_category_name = $sub_category_name;
-            $insBlog->sub_category_slug = $subCateSlag;
-            $insBlog->blog_image = $newImageName;
-            $insBlog->super_category = $categoryName;
-
-            $insBlog->description = $request->description;
-            $insBlog->userid = $authId;
-            $insBlog->username = $UserName;
-            $insBlog->created_at = Carbon::now();
-            $save = $insBlog->save();
-
-            $uploadLocation = base_path('public/uploads/postimage/'.$newImageName);
-            Image::make($cataImage)->resize(800,500)->save($uploadLocation);
-
+            $checkPost = SupUserBlog::where('slug',$slug)->firstOrFail();
             
-            if ($save) {
-                return redirect()->back()->with('blogInsSucc','hurray, Post is now live. check it now!');
-            }else{
-                return redirect()->back()->with('blogInsFail','hmmm, Post insert failed, we got some error...');
+            $subCateSlag = Str::slug($sub_category_name);
+            if ($checkPost == true) {
+                return redirect()->back()->with('blogInsFail','Duplicate Post found change something...');
+            }else {
+                $insBlog = new SupUserBlog();
+                $insBlog->blog_name = $request->blogName;
+                $insBlog->slug = $slug;
+                $insBlog->blog_short_desc = $request->blogShortDesc;
+                $insBlog->blog_meta = $request->blogMeta;
+
+                $insBlog->category = $request->category;
+                $insBlog->sub_category_name = $sub_category_name;
+                $insBlog->sub_category_slug = $subCateSlag;
+                $insBlog->blog_image = $newImageName;
+                $insBlog->super_category = $categoryName;
+
+                $insBlog->description = $request->description;
+                $insBlog->userid = $authId;
+                $insBlog->username = $UserName;
+                $insBlog->created_at = Carbon::now();
+                $save = $insBlog->save();
+
+                $uploadLocation = base_path('public/uploads/postimage/'.$newImageName);
+                Image::make($cataImage)->resize(800,500)->save($uploadLocation);
+
+                
+                if ($save) {
+                    return redirect()->back()->with('blogInsSucc','hurray, Post is now live. check it now!');
+                }else{
+                    return redirect()->back()->with('blogInsFail','hmmm, Post insert failed, we got some error...');
+                }
             }
+            
         }
 
        

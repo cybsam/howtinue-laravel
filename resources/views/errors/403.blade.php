@@ -1,5 +1,22 @@
-@extends('errors::minimal')
 
-@section('title', __('Forbidden'))
-@section('code', '403')
-@section('message', __($exception->getMessage() ?: 'Forbidden'))
+@extends('layouts.FrontEndMaster')
+
+@section('FrontTitle', '403 - Healthy Botic')
+@section('FrontEnd')
+
+    <div id="notfound">
+        <div class="notfound">
+            <div class="notfound-404">
+                <h1>403</h1>
+            </div>
+            <h2>Oops, Forbidden!</h2>
+            <form class="notfound-search">
+                <input type="text" placeholder="Search...">
+                <button type="button">Search</button>
+            </form>
+            <a href="{{ URL::previous() }}"><span class="arrow"></span>Go Back</a>
+        </div>
+    </div>
+    @extends('layouts.errorCustomMaster')
+@endsection
+
