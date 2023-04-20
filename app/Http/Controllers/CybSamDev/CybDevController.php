@@ -12,4 +12,7 @@ class CybDevController extends Controller
         echo "<script>alert('Optimize Succesfully');</script>";
         // return back();
     }
+
+    
+    
 }
