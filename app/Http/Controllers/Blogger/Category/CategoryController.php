@@ -23,4 +23,16 @@ class CategoryController extends Controller
             'cateGory'=>$cateGory
         ]);
     }
+
+    //my category
+    public function myCategory(){
+
+        $authId = Auth::id();
+
+        $cateGory = SubCatagory::where('userid',$authId)->get();
+
+        return view('BlogUserDash.category.mycategory',[
+            'cateGory'=>$cateGory
+        ]);
+    }
 }

@@ -43,6 +43,7 @@ Route::prefix('Administrator/Blogger')->middleware('auth:web','blogUser','PreBac
 
     //category
     Route::get('Dashboard/Category',[App\Http\Controllers\Blogger\Category\CategoryController::class, 'index'])->name('bloggerCate.index');
+    Route::get('Dashboard/Category/MyCategory',[App\Http\Controllers\Blogger\Category\CategoryController::class, 'myCategory'])->name('bloggerCate.myCate');
     
     
 

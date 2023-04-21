@@ -3,13 +3,13 @@
 @section('BlogUserContent')
 
 <div class="pagetitle">
-    <h1>Catagory</h1>
+    <h1>Inserted Category</h1>
     <nav>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ route('blogusr.dashboard') }}">Home</a></li>
-            {{-- <li class="breadcrumb-item"><a href="{{ route('supuser.cata.super') }}">Super Category</a></li>
-            <li class="breadcrumb-item"><a href="{{ route('subcatagory.index') }}">Sub Category</a></li> --}}
-            <li class="breadcrumb-item active">Category Index</li>
+            <li class="breadcrumb-item"><a href="{{ route('bloggerCate.index') }}">Category</a></li>
+            {{-- <li class="breadcrumb-item"><a href="{{ route('subcatagory.index') }}">Sub Category</a></li> --}}
+            <li class="breadcrumb-item active">Inserted Category</li>
 
         </ol>
     </nav>
@@ -61,9 +61,10 @@
                 </td>
                 <td>
                   {{ $listCat->created_at->diffForHumans() }}</td>
-                {{-- <td>
-                    <a class="text-success" href=""><i class="bi bi-pencil-square"></i></a><span>&nbsp;&nbsp;</span><a class="text-danger" href="{{ route('subcatagoryIndex.archivedSoft',['cate_id'=>$listCat->id]) }}"><i class="bi bi-trash"></i></a>
-                </td> --}}
+                <td>
+                    <a class="text-success" href=""><i class="bi bi-pencil-square"></i></a><span>&nbsp;&nbsp;</span>
+                    {{-- <a class="text-danger" href="{{ route('subcatagoryIndex.archivedSoft',['cate_id'=>$listCat->id]) }}"><i class="bi bi-trash"></i></a> --}}
+                </td>
                 </tr>
             @endforeach
 
