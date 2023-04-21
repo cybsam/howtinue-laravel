@@ -11,7 +11,7 @@ use Illuminate\Support\Str;
 use Carbon\Carbon;
 use Image;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Validator;;
+use Illuminate\Support\Facades\Validator;
 
 class SubCatagoryController extends Controller
 {
@@ -94,9 +94,48 @@ class SubCatagoryController extends Controller
         }
 
     }
+    //archive
 
+    public function archivedSoft($cate_id){
+        $cate_id = $cate_id;
+        $resTore = 1;
+        $updateCate = SubCatagory::where('id',$cate_id)->update([
+            'catagory_status'=>$resTore
+        ]);
+
+        if ($updateCate) {
+            return redirect()->back()->with('success','Category Archive succesfully');
+        }else {
+            return redirect()->back()->with('fail','getting some issue!');
+        }
+    }
+    //archive index
     public function archived(){
-        return "ok";
+
+        $archiveCate = SubCatagory::where('catagory_status','1')->get();
+
+        return view('SupUserDash.catagory.catagorySub.archive',[
+            'archiveCate'=>$archiveCate,
+        ]);
+    }
+
+
+    //cate restore
+    public function restor($cate_id){
+        $cate_id = $cate_id;
+        $resTore = 0;
+        $updateCate = SubCatagory::where('id',$cate_id)->update([
+            'catagory_status'=>$resTore
+        ]);
+
+        if ($updateCate) {
+            return redirect()->back()->with('success','Category restore succesfully');
+        }else {
+            return redirect()->back()->with('fail','getting some issue!');
+        }
+        //echo $cate_id;
+
+
     }
 
 

@@ -140,7 +140,7 @@
                 </a>
             </li>
             <li>
-                <a href="{{ route('subcatagory.index.archived') }}">
+                <a href="{{ route('subcatagoryIndex.archived') }}">
                 <i class="bi bi-circle"></i><span>Archived</span>
                 </a>
             </li>

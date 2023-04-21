@@ -60,7 +60,7 @@ class SupUserBlogController extends Controller
         $authId = Auth::id();
         $UserName = Auth::user()->name;
 
-        $localTime = Carbon::now()->format('Y-m-d-H-i-s');
+        $localTime = Carbon::now()->format('Y-m-d-H-i-s-u');
         //$newTime = Carbon::createFromFormat('Y-m-d', $localTime)->format('d/m/Y');
         
 

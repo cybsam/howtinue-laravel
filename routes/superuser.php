@@ -38,7 +38,11 @@ Route::prefix('Administrator/SuperUser')->middleware('auth:web','supUser','PreBa
     Route::get('Dashboard/Catagory/SubCatagory',[App\Http\Controllers\SupUser\Catagory\SubCatagoryController::class, 'index'])->name('subcatagory.index');
     Route::get('Dashboard/Catagory/SubCatagory/Insert',[App\Http\Controllers\SupUser\Catagory\SubCatagoryController::class, 'Insert'])->name('subcatagory.insert');
     Route::post('Dashboard/Catagory/SubCatagory/Insert/Check',[App\Http\Controllers\SupUser\Catagory\SubCatagoryController::class, 'InsertCheck'])->name('subcatagory.insert.check');
-    Route::post('Dashboard/Catagory/SubCatagory/Archived',[App\Http\Controllers\SupUser\Catagory\SubCatagoryController::class, 'archived'])->name('subcatagory.index.archived');
+    Route::get('Dashboard/Catagory/SubCatagory/Archived',[App\Http\Controllers\SupUser\Catagory\SubCatagoryController::class, 'archived'])->name('subcatagoryIndex.archived');
+    Route::get('Dashboard/Catagory/SubCatagory/Archived/Soft/{cate_id}',[App\Http\Controllers\SupUser\Catagory\SubCatagoryController::class, 'archivedSoft'])->name('subcatagoryIndex.archivedSoft');
+    Route::get('Dashboard/Catagory/SubCatagory/Archived/Restore/{cate_id}',[App\Http\Controllers\SupUser\Catagory\SubCatagoryController::class, 'restor'])->name('subcatagory.Restor');
+    
+
 
     //blog
     Route::get('/Dashboard/Blog/List',[App\Http\Controllers\SupUser\Blog\SupUserBlogController::class, 'index'])->name('supuser.blog');

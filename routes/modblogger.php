@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Blogger\BloggerDashController;
 use App\Http\Controllers\Blogger\AllPartUser\ListUserController;
 use App\Http\Controllers\Blogger\AllPartUser\TeamUserController;
+use App\Http\Controllers\Blogger\Category\CategoryController;
 
 
 // use App\Http\Controllers\Blogger\Users\UsersTeamController;
@@ -32,14 +33,16 @@ Route::prefix('Administrator/Blogger')->middleware('auth:web','blogUser','PreBac
     Route::post('/Dashboard/Profile/Update',[App\Http\Controllers\Blogger\BloggerDashController::class, 'userProfileUpdate'])->name('blogusr.profile.update');
     Route::post('/Dashboard/Profile/Update/Pass',[App\Http\Controllers\Blogger\BloggerDashController::class,'userProfileUpdatePass'])->name('blogusr.profile.update.pass');
     //team sections
-    Route::get('/Dashboard/Users/Team',[App\Http\Controllers\Blogger\AllPartUser\TeamUserController::class, 'index'])->name('blogusr.users.allteam');
-    Route::get('/Dashboard/Users/Team/New',[App\Http\Controllers\Blogger\AllPartUser\TeamUserController::class, 'NewTeam'])->name('blogusr.users.allteam.newteam');
-    Route::post('/Dashboard/Users/Team/New/TeamInsert',[App\Http\Controllers\Blogger\AllPartUser\TeamUserController::class, 'NewTeamInsert'])->name('blogusr.users.allteam.newteam.insert');
-    Route::get('/Dashboard/Users/Team/List/{teamId}/{nameteam}',[App\Http\Controllers\Blogger\AllPartUser\ListUserController::class, 'TeamUserList'])->name('blogusr.users.allteam.users');
-    Route::get('/Dashboard/Users/Team/List/AddUser/v:{sepTeamName}/te:{teamId}/to:{rand}',[App\Http\Controllers\Blogger\AllPartUser\ListUserController::class, 'TeamAddUser'])->name('blogusr.users.allteam.users.add');
-    Route::get('/Dashboard/Users/Team/List/AddUser/tn:{sepTeamName}/ti:{teamId}/u:{username}/i:{user_id}/to:{rand}',[App\Http\Controllers\Blogger\AllPartUser\ListUserController::class, 'usersAddToTeam'])->name('blogusr.users.allteam.users.add.confirm');
+    // Route::get('/Dashboard/Users/Team',[App\Http\Controllers\Blogger\AllPartUser\TeamUserController::class, 'index'])->name('blogusr.users.allteam');
+    // Route::get('/Dashboard/Users/Team/New',[App\Http\Controllers\Blogger\AllPartUser\TeamUserController::class, 'NewTeam'])->name('blogusr.users.allteam.newteam');
+    // Route::post('/Dashboard/Users/Team/New/TeamInsert',[App\Http\Controllers\Blogger\AllPartUser\TeamUserController::class, 'NewTeamInsert'])->name('blogusr.users.allteam.newteam.insert');
+    // Route::get('/Dashboard/Users/Team/List/{teamId}/{nameteam}',[App\Http\Controllers\Blogger\AllPartUser\ListUserController::class, 'TeamUserList'])->name('blogusr.users.allteam.users');
+    // Route::get('/Dashboard/Users/Team/List/AddUser/v:{sepTeamName}/te:{teamId}/to:{rand}',[App\Http\Controllers\Blogger\AllPartUser\ListUserController::class, 'TeamAddUser'])->name('blogusr.users.allteam.users.add');
+    // Route::get('/Dashboard/Users/Team/List/AddUser/tn:{sepTeamName}/ti:{teamId}/u:{username}/i:{user_id}/to:{rand}',[App\Http\Controllers\Blogger\AllPartUser\ListUserController::class, 'usersAddToTeam'])->name('blogusr.users.allteam.users.add.confirm');
     // Route::get('/Dashboard/Users/Team/List/AddUser/{name_user}/UserList',[App\Http\Controllers\Blogger\AllPartUser\ListUserController::class, 'TeamAddUser'])->name('blogusr.users.allteam.users.add.userlist');
-    
+
+    //category
+    Route::get('Dashboard/Category',[App\Http\Controllers\Blogger\Category\CategoryController::class, 'index'])->name('bloggerCate.index');
     
     
 

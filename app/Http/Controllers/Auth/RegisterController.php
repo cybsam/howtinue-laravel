@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Mail\MailController;
+use Carbon\Carbon;
 use Mail;
 use App\Mail\EmailVerification;
 use Image;
@@ -106,7 +107,7 @@ class RegisterController extends Controller
         ]);
 
         $users_image = $request->file('proimage');
-        $randstr = Str::random('80');
+        $randstr = Carbon::now()->format('Y-m-d-H-i-s-u');
         $new_image_name = $randstr.'.'.$users_image->getClientOriginalExtension();
 
 
