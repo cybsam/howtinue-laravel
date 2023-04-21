@@ -36,7 +36,7 @@
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
     @endif
-                        <form action="{{ route('supuser.blog.insert.save') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('supuserBlog.insertSave') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="row mb-3">
                                 <label for="inputText" class="col-sm-2 col-form-label">Blog Name</label>
