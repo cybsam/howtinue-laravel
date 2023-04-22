@@ -27,23 +27,19 @@
             </a>
             <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
             <li>
-                <a href="components-alerts.html">
-                <i class="bi bi-circle"></i><span>Alerts</span>
+                <a href="{{ route('BlogUser.Insert') }}">
+                <i class="bi bi-circle"></i><span>Blog</span>
                 </a>
             </li>
             <li>
-                <a href="components-accordion.html">
-                <i class="bi bi-circle"></i><span>Accordion</span>
+                <a href="{{ route('BlogUser.MyBlogShow') }}">
+                <i class="bi bi-circle"></i><span>My Blog</span>
                 </a>
             </li>
+            
             <li>
-                <a href="components-badges.html">
-                <i class="bi bi-circle"></i><span>Badges</span>
-                </a>
-            </li>
-            <li>
-                <a href="components-breadcrumbs.html">
-                <i class="bi bi-circle"></i><span>Breadcrumbs</span>
+                <a href="{{ route('BlogUser.postInsert') }}">
+                <i class="bi bi-circle"></i><span>Insert Blog</span>
                 </a>
             
             </ul>

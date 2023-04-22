@@ -47,4 +47,13 @@ Route::prefix('Administrator/Blogger')->middleware('auth:web','blogUser','PreBac
     Route::get('Dashboard/Category/MyCategory',[App\Http\Controllers\Blogger\Category\CategoryController::class, 'myCategory'])->name('bloggerCate.myCate');
     Route::get('Dashboard/Category/Insert',[App\Http\Controllers\Blogger\Category\CategoryController::class, 'Insert'])->name('bloggerCate.insert');
     Route::post('Dashboard/Category/Insert/Save',[App\Http\Controllers\Blogger\Category\CategoryController::class, 'InsertSave'])->name('bloggerCate.insertSave');
+
+    //post
+    Route::get('Dashboard/Blog',[App\Http\Controllers\Blogger\Blog\BlogController::class, 'index'])->name('BlogUser.Insert');
+    Route::get('Dashboard/Blog/Insert',[App\Http\Controllers\Blogger\Blog\BlogController::class, 'BlogInsert'])->name('BlogUser.postInsert');
+    Route::post('Dashboard/Blog/Insert/Save',[App\Http\Controllers\Blogger\Blog\BlogController::class, 'BlogInsertSave'])->name('BlogUser.InsertSave');
+    Route::get('Dashboard/Blog/My-Blog/Show',[App\Http\Controllers\Blogger\Blog\BlogController::class, 'BlogMyShow'])->name('BlogUser.MyBlogShow');
+    
+
+
 });
