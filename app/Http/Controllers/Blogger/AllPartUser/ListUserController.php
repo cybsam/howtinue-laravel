@@ -15,9 +15,16 @@ use App\Models\TeamName;
 class ListUserController extends Controller
 {
     public function index(){
-        $basusers = User::where('role','0')->latest()->get();
-        $basUsrCount = $basusers->count();
-        return view('BlogUserDash.Users.ListUser',compact('basusers','basUsrCount'));
+        $SuperAdmin = User::where('role','1')->latest()->get();
+        $Blogger = User::where('role','2')->latest()->get();
+        $basicUser = User::where('role','0')->latest()->get();
+        
+        
+        return view('BlogUserDash.Users.ListUser',[
+            'SuperAdmin'=>$SuperAdmin,
+            'Blogger'=>$Blogger,
+            'basicUser'=>$basicUser
+        ]);
     }
 
     public function TeamUserList( $nameteam, $teamId){
