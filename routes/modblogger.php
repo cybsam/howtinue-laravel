@@ -29,6 +29,7 @@ Route::prefix('Administrator/Blogger')->middleware('auth:web','blogUser','PreBac
     //user
     Route::get('/Dashboard/Users',[App\Http\Controllers\Blogger\AllPartUser\ListUserController::class, 'index'])->name('blogusr.users');
     
+    
     Route::get('/Dashboard/Profile',[App\Http\Controllers\Blogger\BloggerDashController::class, 'userProfile'])->name('blogusr.profile.dash');
     Route::post('/Dashboard/Profile/Update',[App\Http\Controllers\Blogger\BloggerDashController::class, 'userProfileUpdate'])->name('blogusr.profile.update');
     Route::post('/Dashboard/Profile/Update/Pass',[App\Http\Controllers\Blogger\BloggerDashController::class,'userProfileUpdatePass'])->name('blogusr.profile.update.pass');
