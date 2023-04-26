@@ -28,6 +28,10 @@ Route::prefix('Administrator/Blogger')->middleware('auth:web','blogUser','PreBac
     Route::get('/Dashboard', [App\Http\Controllers\Blogger\BloggerDashController::class, 'index'])->name('blogusr.dashboard');
     //user
     Route::get('/Dashboard/Users',[App\Http\Controllers\Blogger\AllPartUser\ListUserController::class, 'index'])->name('blogusr.users');
+    Route::get('/Dashboard/Users/Archive',[App\Http\Controllers\Blogger\AllPartUser\ListUserController::class, 'archive'])->name('blogusr.archive');
+    Route::get('/Dashboard/Users/Archive/user/{user_id}',[App\Http\Controllers\Blogger\AllPartUser\ListUserController::class, 'archivePost'])->name('blogusr.archivePost');
+    Route::get('/Dashboard/Users/Archive/user/Restore/{user_id}',[App\Http\Controllers\Blogger\AllPartUser\ListUserController::class, 'archivePostRestore'])->name('restoreArchiveUser');
+    
     
     
     Route::get('/Dashboard/Profile',[App\Http\Controllers\Blogger\BloggerDashController::class, 'userProfile'])->name('blogusr.profile.dash');

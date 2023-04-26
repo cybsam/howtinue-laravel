@@ -68,11 +68,26 @@ class LoginController extends Controller
         // 'username'=>$input['username'],
         if(Auth()->attempt(array('email'=>$input['email'],'password'=>$input['password']))){
             if(Auth()->user()->role == 1){
-                return redirect()->route('supuser.dashboard');
+                if (Auth()->user()->block == 0) {
+                    return redirect()->route('supuser.dashboard');
+                }else {
+                    return redirect()->route('login')->with('logfaild','User Suspended by admin, contact admin to release!');
+                }
+                
             }elseif (Auth()->user()->role == 2) {
-                return redirect()->route('blogusr.dashboard');
+                if (Auth()->user()->block == 0) {
+                    return redirect()->route('blogusr.dashboard');
+                }else {
+                    return redirect()->route('login')->with('logfaild','User Suspended by admin, contact admin to release!');
+                }
+                
             }elseif (Auth()->user()->role == 0) {
-                return redirect()->route('basUser.dashboard');
+                if (Auth()->user()->block == 0) {
+                    return redirect()->route('basUser.dashboard');
+                }else {
+                    return redirect()->route('login')->with('logfaild','User Suspended by admin, contact admin to release!');
+                }
+                
             }
         }else {
             return redirect()->route('login')->with('logfaild','Wrong Credentials, try again...');

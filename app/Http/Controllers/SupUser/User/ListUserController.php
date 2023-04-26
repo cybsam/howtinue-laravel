@@ -102,6 +102,8 @@ class ListUserController extends Controller
         ]);
     }
 
+    
+
     public function BlockUserRestore($user_id){
         $user_id = $user_id;
         $block = 0;

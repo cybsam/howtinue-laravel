@@ -93,4 +93,40 @@ class ListUserController extends Controller
             return redirect()->back()->with('err','User or Team not matching our sustem, try again');
         }
     }
+
+    //archive user
+    public function archive(){
+        $userArchive = User::where('block','2')->get();
+        return view('BlogUserDash.Users.archiveUser',[
+            'userArchive'=>$userArchive
+        ]);
+    }
+
+    public function archivePost($user_id){
+        $user_id = $user_id;
+        $archiveNo = 2;
+        $userUpdate = User::where('id',$user_id)->update([
+            'block'=>$archiveNo
+        ]);
+
+        if($userUpdate){
+            return redirect()->back()->with('succ','User Archive Done!'); 
+        }else {
+            return redirect()->back()->with('err','we got some err to User Archive!'); 
+        }
+    }
+    //restore
+    public function archivePostRestore($user_id){
+        $user_id = $user_id;
+        $archiveNo = 0;
+        $userUpdate = User::where('id',$user_id)->update([
+            'block'=>$archiveNo
+        ]);
+
+        if($userUpdate){
+            return redirect()->back()->with('succ','User restore Done!'); 
+        }else {
+            return redirect()->back()->with('err','we got some err to User Restore!'); 
+        }
+    }
 }

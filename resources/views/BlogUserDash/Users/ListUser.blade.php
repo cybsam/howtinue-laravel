@@ -17,7 +17,18 @@
   <div class="card-body">
     <h5 class="card-title">Users List</h5>
 
-    <!-- Default Tabs -->
+    @if (Session::get('succ'))
+                  <div class="alert alert-primary bg-primary text-light border-0 alert-dismissible fade show" role="alert">
+                    {{ Session::get('succ') }}
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+                  @endif
+                  @if (Session::get('err'))
+                  <div class="alert alert-danger bg-danger text-light border-0 alert-dismissible fade show" role="alert">
+                    {{ Session::get('err') }}
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+                  @endif
     <ul class="nav nav-tabs d-flex" id="myTabjustified" role="tablist">
       <li class="nav-item flex-fill" role="presentation">
         <button class="nav-link text-center w-100 active" id="home-tab" href="" data-bs-toggle="tab" data-bs-target="#home-justified" type="button" role="tab" aria-controls="home" aria-selected="true">Users</button>
@@ -59,7 +70,13 @@
               <td>@if ($basicUser->email_verified == 1) <i class="bi bi-patch-check-fill text-primary"></i> @else <i class="bi bi-patch-exclamation text-danger"></i> @endif</td>
               
               <td><a href="" class="badge rounded-pill bg-{{ $basicUser->block == 0 ? 'success':'danger' }}"> @if ($basicUser->block == 0) <span class="text-white"><i class="bi bi-person-check-fill"></i></span> @else <span class="text-white"><i class="bi bi-person-x-fill"></i></span> @endif</a></td>
-              <td><a class="text-success" href=""><i class="bi bi-pencil-square"></i></a><span>&nbsp;&nbsp;</span><a class="text-danger" href=""><i class="bi bi-trash"></i></a></td>
+              <td>
+                <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                  <a href="" class="btn btn-success btn-sm">Update</a>
+                  <a href="{{ route('blogusr.archivePost',['user_id'=>$basicUser->id]) }}" class="btn btn-warning btn-sm">Archive</a>
+                  
+                </div>
+              </td>
             </tr>
             @endforeach
 
