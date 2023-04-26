@@ -42,6 +42,62 @@ class ListUserController extends Controller
 
     }
 
+    //update superuser
+    public function SupUserUpdate($user_id){
+        return view('SupUserDash.users.updateSup');
+    }
+
+    //archive users
+    public function ArchiveUserFrom($user_id){
+        $user_id = $user_id;
+        $role = 7;
+        $getUser = User::where('id',$user_id)->update([
+            'role'=>$role
+        ]);
+        if ($getUser) {
+            return redirect()->back()->with('succ','User archive done!');
+        }else {
+            return redirect()->back()->with('err','we got some error to archive user!');
+        }
+
+    }
+
+    public function ArchiveUser(){
+        $archiveUsers = User::where('role','7')->get();
+        return view('SupUserDash.users.archive',[
+            'archiveUsers'=>$archiveUsers
+        ]);
+    }
+
+    public function ArchiveUserRestore($user_id){
+        //copde
+    }
+
+    //block users
+    public function BlockUserFrom($user_id){
+        $user_id = $user_id;
+        $block = 1;
+        $getUserBlock = User::where('id',$user_id)->update([
+            'block'=>$block
+        ]);
+        if ($getUserBlock) {
+            return redirect()->back()->with('succ','User Block done!');
+        }else {
+            return redirect()->back()->with('err','we got some error to block user!');
+        }
+    }
+    public function BlockUser(){
+        $blockUsers = User::where('block','1')->get();
+        return view('SupUserDash.users.block',[
+            'blockUsers'=>$blockUsers
+        ]);
+    }
+
+    public function BlockUserRestore($user_id){
+        //cpode
+    }
+
+
 
     // public function SupUser(Request $request){
 

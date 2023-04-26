@@ -182,13 +182,13 @@
                 </a>
             </li>
             <li>
-                <a href="#">
-                <i class="bi bi-circle"></i><span>Remix Icons</span>
+                <a href="{{ route('supuser.archive') }}">
+                <i class="bi bi-circle"></i><span>Archive Users</span>
                 </a>
             </li>
             <li>
-                <a href="icons-boxicons.html">
-                <i class="bi bi-circle"></i><span>Boxicons</span>
+                <a href="{{ route('supuser.archiveBlock') }}">
+                <i class="bi bi-circle"></i><span>Block Users</span>
                 </a>
             </li>
             </ul>

@@ -92,6 +92,7 @@ class SupCatagoryController extends Controller
     }
 
     public function catagoryArchive($cataId){
+        
         $id = $cataId;
         return $id;
     }

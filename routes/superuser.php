@@ -30,6 +30,15 @@ Route::prefix('Administrator/SuperUser')->middleware('auth:web','supUser','PreBa
     Route::post('/Dashboard/Profile/Update/Pass', [App\Http\Controllers\SupUser\SupUserDashController::class, 'UserProfileUpdatePass'])->name('supuser.profileupdate.pass.dashboard');
 
     Route::get('Dashboard/Users', [App\Http\Controllers\SupUser\User\ListUserController::class, 'index'])->name('supuser.listuser');
+    Route::get('Dashboard/Users/Archive',[App\Http\Controllers\SupUser\User\ListUserController::class, 'ArchiveUser'])->name('supuser.archive');
+    Route::get('Dashboard/Users/Archive/Restore/{user_id}',[App\Http\Controllers\SupUser\User\ListUserController::class, 'ArchiveUserRestore'])->name('supuser.archiveRestore');
+    Route::get('Dashboard/Users/Archive/Block', [App\Http\Controllers\SupUser\User\ListUserController::class, 'BlockUser'])->name('supuser.archiveBlock');
+    Route::get('Dashboard/Users/Archive/Block/Restore/{user_id}', [App\Http\Controllers\SupUser\User\ListUserController::class, 'BlockUserRestore'])->name('supuser.archiveBlockRestore');
+    Route::get('Dashboard/Users/Update/User/{user_id}', [App\Http\Controllers\SupUser\User\ListUserController::class, 'SupUserUpdate'])->name('supuser.UpdateUser');
+    Route::get('Dashboard/Users/Archive/User/{user_id}', [App\Http\Controllers\SupUser\User\ListUserController::class, 'ArchiveUserFrom'])->name('supuser.archiveUser');
+    Route::get('Dashboard/Users/Block/User/{user_id}', [App\Http\Controllers\SupUser\User\ListUserController::class, 'BlockUserFrom'])->name('supuser.BlockUser');
+    
+    
     //team
     Route::get('Dashboard/Users/Team/List',[App\Http\Controllers\SupUser\Team\ListTeamController::class,'index'])->name('supuser.users.team');
 
