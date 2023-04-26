@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class frontsettings extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'websitename',
+        'websitefaviconicon',
+        'websitemainlogo',
+        'websitefooterlogo',
+        'userid',
+        'username'
+    ];
 }

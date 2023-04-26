@@ -68,6 +68,8 @@ Route::prefix('Administrator/SuperUser')->middleware('auth:web','supUser','PreBa
 
     //settings
     Route::get('Dashboard/Settings/Main', [App\Http\Controllers\SupUser\Settings\MainSettingsController::class, 'mainSett'])->name('supuser.settings.main');
+    Route::post('Dashboard/Settings/Main/Update', [App\Http\Controllers\SupUser\Settings\MainSettingsController::class, 'mainSetUpdate'])->name('supuser.settingsMainUpdate');
+    
     //blank
     Route::get('/BlankPage', [App\Http\Controllers\SupUser\SupUserDashController::class, 'blank'])->name('supuser.blank');
 

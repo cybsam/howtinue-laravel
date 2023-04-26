@@ -15,6 +15,13 @@ class CreateFrontsettingsTable extends Migration
     {
         Schema::create('frontsettings', function (Blueprint $table) {
             $table->id();
+            $table->string('websitename');
+            $table->string('slug');
+            $table->string('websitefaviconicon');
+            $table->string('websitemainlogo');
+            $table->string('websitefooterlogo');
+            $table->integer('userid');
+            $table->string('username');
             $table->timestamps();
         });
     }
