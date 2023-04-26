@@ -38,7 +38,7 @@
             <td>{{ $block->email }}</td>
             <td><a href="" class="badge rounded-pill bg-{{ $block->block == 1 ? 'danger':'success' }}"> @if ($archive->block == 1) <span class="text-white"><i class="bi bi-person-x-fill"></i></span> @else <span class="text-white"><i class="bi bi-person-check-fill"></i></span> @endif</a></td>
             <td>{{ $block->updated_at->diffForHumans() }}</td>
-            <td><a class="text-success" href=""><i class="bi bi-pencil-square"></i></a><span>&nbsp;&nbsp;</span><a class="text-danger" href=""><i class="bi bi-trash"></i></a></td>
+            <td><a class="btn btn-info btn-sm" href="{{ route('supuser.archiveBlockRestore',['user_id'=>$archive->id]) }}">Restore</a></td>
           </tr>
           @endforeach
         </tbody>

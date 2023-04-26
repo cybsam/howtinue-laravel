@@ -50,9 +50,9 @@ class ListUserController extends Controller
     //archive users
     public function ArchiveUserFrom($user_id){
         $user_id = $user_id;
-        $role = 7;
+        $block = 2;
         $getUser = User::where('id',$user_id)->update([
-            'role'=>$role
+            'block'=>$block
         ]);
         if ($getUser) {
             return redirect()->back()->with('succ','User archive done!');
@@ -63,14 +63,23 @@ class ListUserController extends Controller
     }
 
     public function ArchiveUser(){
-        $archiveUsers = User::where('role','7')->get();
+        $archiveUsers = User::where('block','2')->get();
         return view('SupUserDash.users.archive',[
             'archiveUsers'=>$archiveUsers
         ]);
     }
 
     public function ArchiveUserRestore($user_id){
-        //copde
+        $user_id = $user_id;
+        $block = 0;
+        $getUser = User::where('id',$user_id)->update([
+            'block'=>$block
+        ]);
+        if ($getUser) {
+            return redirect()->back()->with('succ','User Restore done!');
+        }else {
+            return redirect()->back()->with('err','we got some error to Restore user!');
+        }
     }
 
     //block users
@@ -94,7 +103,16 @@ class ListUserController extends Controller
     }
 
     public function BlockUserRestore($user_id){
-        //cpode
+        $user_id = $user_id;
+        $block = 0;
+        $getUser = User::where('id',$user_id)->update([
+            'block'=>$block
+        ]);
+        if ($getUser) {
+            return redirect()->back()->with('succ','User Restore done!');
+        }else {
+            return redirect()->back()->with('err','we got some error to Restore user!');
+        }
     }
 
 
