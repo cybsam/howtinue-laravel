@@ -26,6 +26,7 @@ use App\Http\Controllers\Blogger\Category\CategoryController;
 //blogger
 Route::prefix('Administrator/Blogger')->middleware('auth:web','blogUser','PreBackHistory','is_user_verify_email')->group(function(){
     Route::get('/Dashboard', [App\Http\Controllers\Blogger\BloggerDashController::class, 'index'])->name('blogusr.dashboard');
+    Route::get('Dashboard/Contact/Front/Page',[App\Http\Controllers\contact\ContactController::class, 'showBlogUser'])->name('blogusr.ShowContact');
     //user
     Route::get('/Dashboard/Users',[App\Http\Controllers\Blogger\AllPartUser\ListUserController::class, 'index'])->name('blogusr.users');
     Route::get('/Dashboard/Users/Archive',[App\Http\Controllers\Blogger\AllPartUser\ListUserController::class, 'archive'])->name('blogusr.archive');

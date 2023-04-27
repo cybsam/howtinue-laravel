@@ -42,4 +42,19 @@ class ContactController extends Controller
 
 
     }
+    //super suer
+    public function showSupUser(){
+        $showContact = Contact::latest()->get();
+        return view('SupUserDash.frontContact.frontCon',[
+            'showContact'=>$showContact
+        ]);
+    }
+    
+    //blogger
+    public function showBlogUser(){
+        $showContact = Contact::latest()->get();
+        return view('BlogUserDash.contact.frontContact',[
+            'showContact'=>$showContact
+        ]);
+    }
 }

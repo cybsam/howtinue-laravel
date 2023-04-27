@@ -8,6 +8,7 @@ use App\Http\Controllers\SupUser\Catagory\SubCatagoryController;
 use App\Http\Controllers\SupUser\Blog\SupUserBlogController;
 use App\Http\Controllers\SupUser\Team\ListTeamController;
 use App\Http\Controllers\SupUser\Settings\MainSettingsController;
+use App\Http\Controllers\contact\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,7 @@ use App\Http\Controllers\SupUser\Settings\MainSettingsController;
 Route::prefix('Administrator/SuperUser')->middleware('auth:web','supUser','PreBackHistory','is_user_verify_email')->group(function(){
     Route::get('/Dashboard', [App\Http\Controllers\SupUser\SupUserDashController::class, 'index'])->name('supuser.dashboard');
     // users
+    Route::get('Dashboard/FrontPage/Contact',[App\Http\Controllers\contact\ContactController::class, 'showSupUser'])->name('supuser.frontendcontact');
     Route::get('/Dashboard/Profile', [App\Http\Controllers\SupUser\SupUserDashController::class, 'UserProfile'])->name('supuser.profile.dashboard');
     Route::post('/Dashboard/Profile/Update', [App\Http\Controllers\SupUser\SupUserDashController::class, 'UserProfileUpdate'])->name('supuser.profileupdate.dashboard');
     Route::post('/Dashboard/Profile/Update/Pass', [App\Http\Controllers\SupUser\SupUserDashController::class, 'UserProfileUpdatePass'])->name('supuser.profileupdate.pass.dashboard');
