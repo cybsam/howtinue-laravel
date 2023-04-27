@@ -20,6 +20,7 @@ class CreateContactsTable extends Migration
             $table->string('anonymouse_website')->nullable();
             $table->string('anonymouse_subject');
             $table->longText('anonymouse_message');
+            $table->integer('seen')->default(0);
             $table->timestamps();
         });
     }

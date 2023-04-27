@@ -33,7 +33,7 @@
                                 &copy;
                                 <script>
                                     document.write(new Date().getFullYear());
-                                </script> <a href="{{ route('FrontEnd.Index') }}">HowTinue Inc</a> | All
+                                </script> <a href="{{ route('FrontEnd.Index') }}">Healthy Botic Inc</a> | All
                                 Rights Reserved ~ Developed by <a href="https://github.com/cybsam" target="_blank">CybSam</a>
 
                             </span>
