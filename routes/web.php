@@ -27,6 +27,8 @@ Route::prefix('en')->group(function () {
     // start main route
     Route::get('Index', [App\Http\Controllers\FrontEnd\IndexController::class, 'Index'])->name('FrontEnd.Index');
     Route::get('Blank', [App\Http\Controllers\FrontEnd\IndexController::class, 'blank'])->name('FrontEnd.blank');
+
+    //
     Route::get('Beauty', [App\Http\Controllers\FrontEnd\Beauty\BeautyController::class, 'index'])->name('Beauty.fr');
     Route::get('Body', [App\Http\Controllers\FrontEnd\Body\BodyController::class, 'index'])->name('Body.fr');
     Route::get('Mind', [App\Http\Controllers\FrontEnd\Mind\MindController::class, 'index'])->name('Mind.fr');
@@ -36,22 +38,23 @@ Route::prefix('en')->group(function () {
     // end main route
     
     //catagory
-    Route::get('Category', [App\Http\Controllers\FrontEnd\catagory\CatagoryIndexController::class, 'index'])->name('frontEnd.catagory.show');
-    Route::get('Category/Details/{list_post}', [App\Http\Controllers\FrontEnd\catagory\CatagoryIndexController::class, 'cateListShow'])->name('category.post');
+    Route::get('Articles/', [App\Http\Controllers\FrontEnd\catagory\CatagoryIndexController::class, 'index'])->name('frontEnd.catagory.show');
+    Route::get('Articles/Details/{list_post}', [App\Http\Controllers\FrontEnd\catagory\CatagoryIndexController::class, 'cateListShow'])->name('category.post');
     
 
-    Route::get('Category/Parent', [App\Http\Controllers\FrontEnd\catagory\ParentCategoryController::class, 'index'])->name('frontEnd.catagory.parent');
-    Route::get('Category/Parent/{list_cate}', [App\Http\Controllers\FrontEnd\catagory\ParentCategoryController::class, 'listCate'])->name('frontEnd.parentShow');
+    Route::get('Articles/Parent', [App\Http\Controllers\FrontEnd\catagory\ParentCategoryController::class, 'index'])->name('frontEnd.catagory.parent');
+    Route::get('Articles/Parent/{list_cate}', [App\Http\Controllers\FrontEnd\catagory\ParentCategoryController::class, 'listCate'])->name('frontEnd.parentShow');
     
 
     //frontPage post
-    Route::get('Blog/Details/{post_name}',[App\Http\Controllers\FrontEnd\Blog\FrontBlogController::class, 'ShowDetails'])->name('blog.details');
+    Route::get('Articles/Blog/Details/{post_name}',[App\Http\Controllers\FrontEnd\Blog\FrontBlogController::class, 'ShowDetails'])->name('blog.details');
 
     //share
-    Route::get('Blog/Details/Share/', [App\Http\Controllers\FrontEnd\Share\ShareController::class, 'facebook'])->name('facebook.share');
+    Route::get('Articles/Blog/Details/Share/', [App\Http\Controllers\FrontEnd\Share\ShareController::class, 'facebook'])->name('facebook.share');
 
     //contact
     Route::get('Contact', [App\Http\Controllers\FrontEnd\IndexController::class, 'contact'])->name('frontend.contact');
+    Route::post('Contact/Save', [App\Http\Controllers\contact\ContactController::class, 'contactSave'])->name('frontend.contactSave');
 });
 
 //End front end

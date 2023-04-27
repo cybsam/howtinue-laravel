@@ -8,46 +8,85 @@
             <div class="row">
                 <div class="col-md-8 mt-3">
                     <h5>contact us</h5>
+                    @if (Session::get('insFail'))
+                    <div class="alert alert-danger bg-danger text-light border-0 alert-dismissible fade show" role="alert">
+                        {{ Session::get('insFail') }}
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+                      </div>
+                    @endif
+                    @if ( Session::get('insSucc') )
+                    <div class="alert alert-primary bg-primary text-light border-0 alert-dismissible fade show" role="alert">
+                        {{ Session::get('insSucc') }}
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+                      </div>
+                    @endif
+                            
+                    <form action="{{ route('frontend.contactSave') }}" method="POST" enctype="multipart/form-data">
+                       @csrf 
                     <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group form-group-name">
-                                <label>Your name <span class="required"></span></label>
-                                <input type="text" class="form-control" name="name" required="">
+                        
+                            <div class="col-md-6">
+                                <div class="form-group form-group-name">
+                                    <label>Your name <span class="required"></span></label>
+                                    <input type="text" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" id="name" name="name">
+                                    @error('name')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-group-name">
+                                    <label>Your email <span class="required"></span></label>
+                                    <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" value="{{ old('email') }}" name="email" >
+                                    @error('email')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                </div>
+                            </div>
 
+                            <div class="col-md-6">
+                                <div class="form-group form-group-name">
+                                    <label>website <span class="required"></span></label>
+                                    <input type="text" class="form-control @error('website') is-invalid @enderror" value="{{ old('website') }}" id="website" name="website">
+                                    @error('website')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group form-group-name">
-                                <label>Your email <span class="required"></span></label>
-                                <input type="email" class="form-control" name="email" required="">
-
+                            <div class="col-md-6">
+                                <div class="form-group form-group-name">
+                                    <label>Subject <span class="required"></span></label>
+                                    <input type="text" class="form-control @error('subject') is-invalid @enderror" name="subject" value="{{ old('subject') }}" id="subject" >
+                                    @error('subject')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="form-group form-group-name">
-                                <label>website <span class="required"></span></label>
-                                <input type="text" class="form-control" name="website" required="">
-
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Your message </label>
+                                    <textarea class="form-control @error('message') is-invalid @enderror" rows="8" id="message" name="message"></textarea>
+                                    @error('message')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                </div>
+                                <div class="form-group float-right mb-4">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group form-group-name">
-                                <label>Subject <span class="required"></span></label>
-                                <input type="text" class="form-control" name="subject" required="">
-
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label>Your message </label>
-                                <textarea class="form-control" rows="8" name="message"></textarea>
-                            </div>
-                            <div class="form-group float-right mb-4">
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </div>
-                        </div>
+                        
                     </div>
+                </form>
                 </div>
 
 
