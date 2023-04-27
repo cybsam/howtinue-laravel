@@ -14,15 +14,15 @@
                         </li>
                         <li class="breadcrumbs__item">
                             <a href="{{ route('frontEnd.catagory.parent') }}" class="breadcrumbs__url">
-                                 Parent Category</a>
+                                 Parent Articles</a>
                         </li>
                         <li class="breadcrumbs__item">
                             <a href="{{ route('frontEnd.catagory.show') }}" class="breadcrumbs__url">
-                                 Sub Category</a>
+                                 Articles</a>
                         </li>
 
                         <li class="breadcrumbs__item breadcrumbs__item--current">
-                            Details Category
+                            Details Articles
                         </li>
                     </ul>
                 </div>
@@ -39,7 +39,7 @@
                         
                     
 
-                        <h3 class="border_section">Category List Post</h3>
+                        <h3 class="border_section">Articles List Blog</h3>
                         @foreach ($categoryName as $postDetails)
                         <div class="row">
                             <div class="col-md-8">

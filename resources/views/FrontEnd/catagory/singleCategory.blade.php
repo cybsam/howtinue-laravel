@@ -14,7 +14,7 @@
                         </li>
                         <li class="breadcrumbs__item">
                             <a href="{{ route('frontEnd.catagory.parent') }}" class="breadcrumbs__url">
-                                 Parent Category</a>
+                                 Articles Main</a>
                         </li>
                         {{-- <li class="breadcrumbs__item">
                             <a href="{{ route('frontEnd.catagory.show') }}" class="breadcrumbs__url">
@@ -22,7 +22,7 @@
                         </li> --}}
 
                         <li class="breadcrumbs__item breadcrumbs__item--current">
-                            Post list Category
+                            Articles Blog List
                         </li>
                     </ul>
                 </div>
@@ -39,7 +39,7 @@
                         
                     
 
-                        <h3 class="border_section">Assistant Category:- </h3>
+                        <h3 class="border_section">Articles:- </h3>
                         @foreach ($allSubCate as $subCate)
                         <div class="row">
                             <div class="col-md-8">
