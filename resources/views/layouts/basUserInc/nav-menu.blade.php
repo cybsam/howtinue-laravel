@@ -18,7 +18,7 @@
                 <ul class="navbar-nav ml-auto">
                     {{-- home page --}}
                     <li class="nav-item ">
-                        <a class="nav-link" href="{{ route('FrontEnd.Index') }}">
+                        <a class="nav-link" href="{{ route('basUser.dashboard') }}">
                             {{ __('Home') }}
                         </a>
                         
@@ -26,9 +26,9 @@
                     {{-- end home page --}}
 
                     <li class="nav-item"><a class="nav-link" href="{{ route('basUser.dashboardprofile') }}"> {{ __('Profile') }} </a></li>
-                    <li class="nav-item"><a class="nav-link" href=""> {{ __('My Activity') }} </a></li>
-                    <li class="nav-item"><a class="nav-link" href=""> {{ __('Become Blogger') }} </a></li>
-                    <li class="nav-item"><a class="nav-link" href=""> {{ __('Contact Admin') }} </a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('basUser.userActivity') }}"> {{ __('My Activity') }} </a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('basUser.becomeBlogger') }}" onclick="alert('Are you sure! your activity and data will review!')" > {{ __('Become Blogger') }} </a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('basUser.adminContactIndex') }}"> {{ __('Contact Admin') }} </a></li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();"> {{ __('Logout') }} 

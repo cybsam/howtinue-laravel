@@ -31,6 +31,18 @@ Route::prefix('User')->name('basUser.')->group(function(){
         Route::post('Dashboard/View/Profile/Update/Save', [App\Http\Controllers\BasUser\BasUsrDashController::class, 'ProfileUpdateSave'])->name('profileUpdateSave');
         Route::get('Dashboard/View/Profile/Update/Password', [App\Http\Controllers\BasUser\BasUsrDashController::class, 'ProfileUpdatePassword'])->name('profileUpdatePassword');
         Route::post('Dashboard/View/Profile/Update/Password/Update', [App\Http\Controllers\BasUser\BasUsrDashController::class, 'ProfileUpdatePasswordsave'])->name('profileUpdatePasswordSave');
+
+
+        //become blogger
+        Route::get('Dashboard/Become-Blogger=true&Insert-Article=true',[App\Http\Controllers\BasUser\Blog\BlogController::class, 'index'])->name('becomeBlogger');
+        Route::post('Dashboard/Become-Blogger/Insert-Article=true',[App\Http\Controllers\BasUser\Blog\BlogController::class, 'insertBlog'])->name('becomeBloggerInsertBlog');
+
+        //activity
+        Route::get('Dashboard/User-Activity/',[App\Http\Controllers\BasUser\Activity\ActivityController::class, 'UserActivity'])->name('userActivity'); 
+        Route::get('Dashboard/User-Activity/Article-Activity',[App\Http\Controllers\BasUser\Activity\ActivityController::class, 'ArticleActivity'])->name('articleActivity');
+        
+        //contact admin
+        Route::get('Dashboard/Contact/Admin', [App\Http\Controllers\BasUser\BasUsrDashController::class, 'adminContactIndex'])->name('adminContactIndex');
         
     });
 });

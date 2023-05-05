@@ -22,7 +22,7 @@
                         </li> --}}
 
                         <li class="breadcrumbs__item breadcrumbs__item--current">
-                            Articles Blog List
+                            Articles List
                         </li>
                     </ul>
                 </div>

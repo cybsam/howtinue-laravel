@@ -191,4 +191,11 @@ class BasUsrDashController extends Controller
         }
         return back()->with('success','Your Password Update Succesfully...');
     }
+
+    //contact admin page
+    public function adminContactIndex(){
+        return view('BasUsrDash.contactadmin');
+    }
+
+
 }

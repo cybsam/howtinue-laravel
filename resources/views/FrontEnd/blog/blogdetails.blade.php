@@ -14,10 +14,10 @@
                                 <i class="fa fa-home"></i> Home</a>
                         </li>
                         <li class="breadcrumbs__item">
-                            <a href="" class="breadcrumbs__url">Blog List</a>
+                            <a href="" class="breadcrumbs__url">Article List</a>
                         </li>
                         <li class="breadcrumbs__item breadcrumbs__item--current">
-                            Blog Details
+                            Article Details
                         </li>
                     </ul>
                     <!-- end breadcrumb -->

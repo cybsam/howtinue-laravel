@@ -41,6 +41,7 @@ Route::prefix('en')->group(function () {
     Route::get('Articles/', [App\Http\Controllers\FrontEnd\catagory\CatagoryIndexController::class, 'index'])->name('frontEnd.catagory.show');
     Route::get('Articles/Details/{list_post}', [App\Http\Controllers\FrontEnd\catagory\CatagoryIndexController::class, 'cateListShow'])->name('category.post');
     
+    
 
     Route::get('Articles/Parent', [App\Http\Controllers\FrontEnd\catagory\ParentCategoryController::class, 'index'])->name('frontEnd.catagory.parent');
     Route::get('Articles/Parent/{list_cate}', [App\Http\Controllers\FrontEnd\catagory\ParentCategoryController::class, 'listCate'])->name('frontEnd.parentShow');

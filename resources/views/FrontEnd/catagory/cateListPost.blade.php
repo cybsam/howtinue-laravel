@@ -39,14 +39,14 @@
                         
                     
 
-                        <h3 class="border_section">Articles List Blog</h3>
+                        <h3 class="border_section">Articles List</h3>
                         @foreach ($categoryName as $postDetails)
                         <div class="row">
                             <div class="col-md-8">
                                 <div class="card__post card__post-list">
 
                                     <div class="image-sm">
-                                        <a href="#">
+                                        <a href="{{ route('blog.details', ['post_name' => $postDetails->slug]) }}">
                                             <img src="{{ asset('uploads/postimage/') }}/{{ $postDetails->blog_image }}" class="img-fluid" alt="{{ $postDetails->blog_meta  }}">
                                             </a>
                                     </div>
@@ -64,7 +64,7 @@
                                                     </li>
                                                     <li class="list-inline-item">
                                                         <span class="text-dark text-capitalize">
-                                                            descember 09, 2016
+                                                            {{ $postDetails->updated_at->format('l, j F Y') }}
                                                         </span>
                                                     </li>
 

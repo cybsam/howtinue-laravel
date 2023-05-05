@@ -1,5 +1,5 @@
 @extends('layouts.BasUserMaster')
-@section('FrontTitle', 'Dashboard')
+@section('FrontTitle', 'User Activity - HealthyBotic')
 @section('basUser')
 
 
@@ -16,42 +16,17 @@
                     </li>
                     
                     <li class="breadcrumbs__item breadcrumbs__item--current">
-                        OverView
+                        Activity
                     </li>
                 </ul>
                 <!-- end breadcrumb -->
             </div>
 
-            <div class="col-md-8 m-auto">
-                <div class="card">
-                    <div class="card-header">{{ __('Basic User Dashboard') }}</div>
-    
-                    <div class="card-body">
-                        @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
-                        @endif
-    
-                        {{ __('You are logged in!') }}
-                    </div>
-                </div>
-            </div>
+            {{-- content will go here --}}
 
         </div>
     </div>
 </section>
 
 
-
-<div class="container">
-    <div class="row justify-content-center">
-        
-    </div>
-</div>
-
-
-
 @endsection
-
-

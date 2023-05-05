@@ -2,8 +2,27 @@
 @section('FrontTitle', 'User Profile - HealthyBotic')
 @section('basUser')
 
-    <section class="section profile">
+<section class="pb-80">
+    <div class="container">
         <div class="row">
+            <div class="col-md-12">
+                
+                <ul class="breadcrumbs bg-light mb-4">
+                    <li class="breadcrumbs__item">
+                        <a href="{{ route('basUser.dashboard') }}" class="breadcrumbs__url">
+                            <i class="fa fa-home"></i> Dashboard</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="{{ route('basUser.dashboardprofile') }}" class="breadcrumbs__url">
+                             Profile</a>
+                    </li>
+                    <li class="breadcrumbs__item breadcrumbs__item--current">
+                        Profile Update
+                    </li>
+                </ul>
+                <!-- end breadcrumb -->
+            </div>
+
             <div class="col-xl-4">
 
                 <div class="card">
@@ -347,22 +366,20 @@
                                     <div class="text-center">
                                         <button type="submit" class="btn btn-primary">Change Password</button>
                                     </div>
-                                </form><!-- End Change Password Form -->
+                                </form>
 
                             </div>
 
-                        </div><!-- End Bordered Tabs -->
+                        </div>
 
                     </div>
                 </div>
 
             </div>
+
         </div>
-    </section>
-
-
-
-
+    </div>
+</section>
 
 
 

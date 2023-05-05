@@ -18,8 +18,9 @@ class CatagoryIndexController extends Controller
     }
 
     public function cateListShow($list_post){
+
         $linkCate = $list_post;
-        $categoryName = SupUserBlog::where('slug',$linkCate)->get();
+        $categoryName = SupUserBlog::where('sub_category_slug',$linkCate)->get();
         return view('FrontEnd.catagory.cateListPost',[
             'categoryName'=>$categoryName
         ]);
