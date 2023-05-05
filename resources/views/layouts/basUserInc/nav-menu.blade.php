@@ -25,9 +25,9 @@
                     </li>
                     {{-- end home page --}}
 
-                    <li class="nav-item"><a class="nav-link" href="{{ route('dashboardprofile') }}"> {{ __('Profile') }} </a></li>
-                    <li class="nav-item"><a class="nav-link" href=""> {{ __('Become Blogger') }} </a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('basUser.dashboardprofile') }}"> {{ __('Profile') }} </a></li>
                     <li class="nav-item"><a class="nav-link" href=""> {{ __('My Activity') }} </a></li>
+                    <li class="nav-item"><a class="nav-link" href=""> {{ __('Become Blogger') }} </a></li>
                     <li class="nav-item"><a class="nav-link" href=""> {{ __('Contact Admin') }} </a></li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();

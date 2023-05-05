@@ -41,7 +41,7 @@
         <i class="fa fa-chevron-up"></i>
     </a>
     <script type="text/javascript" src="{{ asset('FrontEnd/js/index.bundle.js?537a1bbd0e5129401d28') }}"></script>
-  </body>
+    </body>
 </html>
 
 

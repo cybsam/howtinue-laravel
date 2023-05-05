@@ -85,20 +85,7 @@ class BloggerDashController extends Controller
                 'instagram' => $request->instagram,
                 'linkedin' => $request->linkedin,
             ]);
-            // $insertData = new UsersInfoAdmin();
-            // $insertData->user_id = $userId;
-            // $insertData->about = $request->UserAbout;
-            // $insertData->company = $request->company;
-            // $insertData->jobtitle = $request->jobTitle;
-            // $insertData->country = $request->country;
-            // $insertData->address = $request->address;
-            // $insertData->phone = $request->phone;
-            // $insertData->twitter = $request->twitter;
-            // $insertData->facebook = $request->facebook;
-            // $insertData->instagram = $request->instagram;
-            // $insertData->linkedin = $request->linkedin;
-            // $save = $insertData->save();
-
+            
 
             if ($updateInfo && $fullNameUpdate) {
                 return redirect()->back()->with('success','Your Profile update succesfully, thnaks for update.');
