@@ -26,6 +26,8 @@ class CreateUsersTable extends Migration
             $table->string('proimage');
             $table->integer('block')->default(0);
             $table->rememberToken();
+            $table->timestamp('last_seen')->nullable();
+            $table->string('updated_by')->nullable();
             $table->timestamps();
         });
     }

@@ -19,8 +19,10 @@ class SupUserBlogController extends Controller
 {
     //index/list
     public function index(){
-        
-        return view('SupUserDash.blog.index');
+        $articleShow = SupUserBlog::all();
+        return view('SupUserDash.blog.index',[
+            'articleShow'=>$articleShow
+        ]);
     }
 
     //insert Blog
@@ -68,13 +70,17 @@ class SupUserBlogController extends Controller
        
         $newImageName =$localTime.'.'.$cataImage->getClientOriginalExtension();
         $cateCheck = $request->category;
+
+        
+        $slug = Str::slug($request->blogName);
+            
         if($cateCheck == 0){
             return redirect()->back()->with('blogInsFail','category not found...');
         }else{
-            $slug = Str::slug($request->blogName);
-            $checkPost = SupUserBlog::where('slug',$slug)->firstOrFail();
+            $checkPost = SupUserBlog::where('slug',$slug)->first();
             
             $subCateSlag = Str::slug($sub_category_name);
+
             if ($checkPost == true) {
                 return redirect()->back()->with('blogInsFail','Duplicate Post found change something...');
             }else {
@@ -110,6 +116,24 @@ class SupUserBlogController extends Controller
         }
 
        
+    }
+
+    //
+    public function MyBlog(){
+        $userId = Auth::id();
+        $myArticle = SupUserBlog::where('userid',$userId)->get();
+        return view('SupUserDash.blog.my-blog',[
+            'myArticle' => $myArticle
+        ]);
+    }
+
+    //pending blog
+
+    public function PendingBlog(){
+        $penArticle = SupUserBlog::where('post_status','3')->get();
+        return view('SupUserDash.blog.pending',[
+            'penArticle' => $penArticle
+        ]);
     }
 
 

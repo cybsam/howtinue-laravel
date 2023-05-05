@@ -37,6 +37,8 @@ Route::prefix('Administrator/SuperUser')->middleware('auth:web','supUser','PreBa
     Route::get('Dashboard/Users/Archive/Block', [App\Http\Controllers\SupUser\User\ListUserController::class, 'BlockUser'])->name('supuser.archiveBlock');
     Route::get('Dashboard/Users/Archive/Block/Restore/{user_id}', [App\Http\Controllers\SupUser\User\ListUserController::class, 'BlockUserRestore'])->name('supuser.archiveBlockRestore');
     Route::get('Dashboard/Users/Update/User/{user_id}', [App\Http\Controllers\SupUser\User\ListUserController::class, 'SupUserUpdate'])->name('supuser.UpdateUser');
+    Route::post('Dashboard/Users/Update/User/Save', [App\Http\Controllers\SupUser\User\ListUserController::class, 'SupUserUpdateSave'])->name('supuser.UpdateUserSave');
+    
     Route::get('Dashboard/Users/Archive/User/{user_id}', [App\Http\Controllers\SupUser\User\ListUserController::class, 'ArchiveUserFrom'])->name('supuser.archiveUser');
     Route::get('Dashboard/Users/Block/User/{user_id}', [App\Http\Controllers\SupUser\User\ListUserController::class, 'BlockUserFrom'])->name('supuser.BlockUser');
     
@@ -52,13 +54,17 @@ Route::prefix('Administrator/SuperUser')->middleware('auth:web','supUser','PreBa
     Route::get('Dashboard/Catagory/SubCatagory/Archived',[App\Http\Controllers\SupUser\Catagory\SubCatagoryController::class, 'archived'])->name('subcatagoryIndex.archived');
     Route::get('Dashboard/Catagory/SubCatagory/Archived/Soft/{cate_id}',[App\Http\Controllers\SupUser\Catagory\SubCatagoryController::class, 'archivedSoft'])->name('subcatagoryIndex.archivedSoft');
     Route::get('Dashboard/Catagory/SubCatagory/Archived/Restore/{cate_id}',[App\Http\Controllers\SupUser\Catagory\SubCatagoryController::class, 'restor'])->name('subcatagory.Restor');
+    Route::get('Dashboard/Catagory/SubCatagory/My-Category',[App\Http\Controllers\SupUser\Catagory\SubCatagoryController::class, 'myCategory'])->name('subcatagory.mycategory');
+    
     
 
 
     //blog
-    Route::get('/Dashboard/Blog/List',[App\Http\Controllers\SupUser\Blog\SupUserBlogController::class, 'index'])->name('supuser.blog');
-    Route::get('/Dashboard/Blog/Insert',[App\Http\Controllers\SupUser\Blog\SupUserBlogController::class, 'insert'])->name('supuser.blog.insert');
-    Route::post('/Dashboard/Blog/Insert/Save',[App\Http\Controllers\SupUser\Blog\SupUserBlogController::class, 'insertSave'])->name('supuserBlog.insertSave');
+    Route::get('Dashboard/Article/List',[App\Http\Controllers\SupUser\Blog\SupUserBlogController::class, 'index'])->name('supuser.blog');
+    Route::get('Dashboard/Article/Insert',[App\Http\Controllers\SupUser\Blog\SupUserBlogController::class, 'insert'])->name('supuser.blog.insert');
+    Route::post('Dashboard/Article/Insert/Save',[App\Http\Controllers\SupUser\Blog\SupUserBlogController::class, 'insertSave'])->name('supuserBlog.insertSave');
+    Route::get('Dashboard/Article/My-Article',[App\Http\Controllers\SupUser\Blog\SupUserBlogController::class, 'MyBlog'])->name('supuserBlog.myBlog');
+    Route::get('Dashboard/Article/Pending/List',[App\Http\Controllers\SupUser\Blog\SupUserBlogController::class, 'PendingBlog'])->name('supuserBlog.pendingBlog');
 
     //sup catagory
     Route::get('Dashboard/Catagory/SuperCatagory', [App\Http\Controllers\SupUser\Catagory\SupCatagoryController::class, 'index'])->name('supuser.cata.super');
@@ -67,6 +73,8 @@ Route::prefix('Administrator/SuperUser')->middleware('auth:web','supUser','PreBa
     Route::get('Dashboard/Catagory/SuperCatagory/Update/{cataId}',[App\Http\Controllers\SupUser\Catagory\SupCatagoryController::class, 'catagoryUpdate'])->name('supuser.cata.super.update');
     Route::get('Dashboard/Catagory/SuperCatagory/Archive',[App\Http\Controllers\SupUser\Catagory\SupCatagoryController::class, 'Archive'])->name('supuser.cata.super.archive');
     Route::get('Dashboard/Catagory/SuperCatagory/Archive/{cataId}',[App\Http\Controllers\SupUser\Catagory\SupCatagoryController::class, 'catagoryArchive'])->name('supuser.cata.super.goarchive');
+    Route::get('Dashboard/Catagory/SuperCatagory/My-Category',[App\Http\Controllers\SupUser\Catagory\SupCatagoryController::class, 'MyCategory'])->name('supuser.MycategorySuper');
+    
 
     //settings
     Route::get('Dashboard/Settings/Main', [App\Http\Controllers\SupUser\Settings\MainSettingsController::class, 'mainSett'])->name('supuser.settings.main');

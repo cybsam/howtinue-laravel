@@ -56,39 +56,40 @@
         <li class="nav-heading">Blog</li>
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-            <i class="bi bi-menu-button-wide"></i><span>Post Blog</span><i class="bi bi-chevron-down ms-auto"></i>
+            <i class="bi bi-menu-button-wide"></i><span>Post Article</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="{{ route('supuserBlog.myBlog') }}">
+                    <i class="bi bi-circle"></i><span>My Article</span>
+                    </a>
+                </li>
             <li>
                 <a href="{{ route('supuser.blog') }}">
-                <i class="bi bi-circle"></i><span>List Blog</span>
+                <i class="bi bi-circle"></i><span>List Article</span>
                 </a>
             </li>
             <li>
                 <a href="{{ route('supuser.blog.insert') }}">
-                <i class="bi bi-circle"></i><span>Insert Blog</span>
+                <i class="bi bi-circle"></i><span>Insert Article</span>
                 </a>
             </li>
-            <li>
-                <a href="components-badges.html">
-                <i class="bi bi-circle"></i><span>Badges</span>
-                </a>
-            </li>
+            
             
             </ul>
         </li><!-- End Components Nav -->
 
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-            <i class="bi bi-journal-text"></i><span>Forms</span><i class="bi bi-chevron-down ms-auto"></i>
+            <i class="bi bi-journal-text"></i><span>Pending Article</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
             <li>
-                <a href="forms-elements.html">
-                <i class="bi bi-circle"></i><span>Form Elements</span>
+                <a href="{{ route('supuserBlog.pendingBlog') }}">
+                <i class="bi bi-circle"></i><span>Pending Blog</span>
                 </a>
             </li>
-            <li>
+            {{-- <li>
                 <a href="forms-layouts.html">
                 <i class="bi bi-circle"></i><span>Form Layouts</span>
                 </a>
@@ -102,11 +103,11 @@
                 <a href="forms-validation.html">
                 <i class="bi bi-circle"></i><span>Form Validation</span>
                 </a>
-            </li>
+            </li> --}}
             </ul>
         </li><!-- End Forms Nav -->
 
-        <li class="nav-item">
+        {{-- <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
             <i class="bi bi-layout-text-window-reverse"></i><span>Tables</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
@@ -122,7 +123,7 @@
                 </a>
             </li>
             </ul>
-        </li><!-- End Tables Nav -->
+        </li><!-- End Tables Nav --> --}}
 
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
@@ -131,7 +132,12 @@
             <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
             <li>
                 <a href="{{ route('subcatagory.index') }}">
-                <i class="bi bi-circle"></i><span>List Catagory</span>
+                <i class="bi bi-circle"></i><span>All Catagory</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('subcatagory.mycategory') }}">
+                <i class="bi bi-circle"></i><span>My Catagory</span>
                 </a>
             </li>
             <li>
@@ -155,6 +161,11 @@
             <li>
                 <a href="{{ route('supuser.cata.super') }}">
                 <i class="bi bi-circle"></i><span>Active Catagory</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('supuser.MycategorySuper') }}">
+                <i class="bi bi-circle"></i><span>My Catagory</span>
                 </a>
             </li>
             <li>

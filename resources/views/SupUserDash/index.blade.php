@@ -1,5 +1,5 @@
 @extends('layouts.SupUserMaster')
-@section('title', 'Super User - HowTinue')
+@section('title', 'Dashboard Super User - HealthyBotic')
 
 @section('SupUserContent')
 
@@ -38,14 +38,14 @@
                   </div>
   
                   <div class="card-body">
-                    <h5 class="card-title">Sales <span>| Today</span></h5>
+                    <h5 class="card-title">Active Article <span>| Today</span></h5>
   
                     <div class="d-flex align-items-center">
                       <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                         <i class="bi bi-cart"></i>
                       </div>
                       <div class="ps-3">
-                        <h6>145</h6>
+                        <h6>{{ $activeArticle }}</h6>
                         <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
   
                       </div>
@@ -109,14 +109,14 @@
                   </div>
   
                   <div class="card-body">
-                    <h5 class="card-title">Customers <span>| This Year</span></h5>
+                    <h5 class="card-title">Users <span>| This Year</span></h5>
   
                     <div class="d-flex align-items-center">
                       <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                         <i class="bi bi-people"></i>
                       </div>
                       <div class="ps-3">
-                        <h6>1244</h6>
+                        <h6>{{ $allUsers }}</h6>
                         <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>
   
                       </div>

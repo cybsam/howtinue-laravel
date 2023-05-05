@@ -72,7 +72,7 @@
               <td><a href="" class="badge rounded-pill bg-{{ $basicUser->block == 0 ? 'success':'danger' }}"> @if ($basicUser->block == 0) <span class="text-white"><i class="bi bi-person-check-fill"></i></span> @else <span class="text-white"><i class="bi bi-person-x-fill"></i></span> @endif</a></td>
               <td>
                 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                  <a href="" class="btn btn-success btn-sm">Update</a>
+                  <a href="{{ route('updateUserBlogger',['user_id'=>$basicUser->id]) }}" class="btn btn-success btn-sm">Update</a>
                   <a href="{{ route('blogusr.archivePost',['user_id'=>$basicUser->id]) }}" class="btn btn-warning btn-sm">Archive</a>
                   
                 </div>

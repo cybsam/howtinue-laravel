@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
 use App\Models\usersteam;
+use Illuminate\Support\Facades\Auth;
 
 
 
@@ -44,7 +45,40 @@ class ListUserController extends Controller
 
     //update superuser
     public function SupUserUpdate($user_id){
-        return view('SupUserDash.users.updateSup');
+        $user_id = $user_id;
+        $userInfo = User::where('id',$user_id)->first();
+        return view('SupUserDash.users.updateSup',[
+            'userInfo'=>$userInfo
+        ]);
+    }
+    //save update
+    public function SupUserUpdateSave(Request $request){
+        $userId = $request->__userid;
+        $userRole = $request->__userRole;
+        $activeStatus = $request->__userActivate;
+        $authId = Auth::id();
+        $userName = Auth::user()->name;
+        if($userRole == 0 || $userRole == 1 || $userRole == 2){
+            if ($activeStatus == 1 || $activeStatus == 2) {
+                $updateUser = User::where('id',$userId)->update([
+                    'role'=>$userRole,
+                    'updated_by'=>$userName,
+                    'email_verified'=>$activeStatus
+                ]);
+                if ($updateUser) {
+                    return redirect()->route('supuser.listuser')->with('succ','User update successfully...');
+                }else {
+                    return redirect()->back()->with('err','Failed to update user');
+                }
+            }else {
+                return redirect()->back()->with('err','Oversmart, ha ha ha');
+            }
+            
+        }else {
+            return redirect()->back()->with('err','Please select user role,');
+        }
+
+        
     }
 
     //archive users
@@ -171,5 +205,12 @@ class ListUserController extends Controller
     //     }
 
 
+    // }
+
+
+    //update user
+
+    // public function userUpdateSingle($user_id){
+    //     $user_id = $user_id;
     // }
 }

@@ -14,12 +14,13 @@
                         <li><a href="{{ route('frontend.contact') }}" title="">Contact Us</a></li>
                         <li>
                             @if (Auth::check())
-                                <a href="{{ route('login') }}" title="">{{ __('Dashboard') }}</a>
+                                <a href="{{ route('basUser.dashboard') }}" title="">{{ __('Dashboard') }}</a>
+                                
+
                             @else
                                 <a href="{{ route('login') }}" title="">{{ __('Login / Register') }}</a>
                             @endif
                             
-                        
                         </li>
                     </ul>
                     <ul class="topbar-sosmed">

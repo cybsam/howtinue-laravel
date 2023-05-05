@@ -1,31 +1,28 @@
-@extends('layouts.SupUserMaster')
-@section('title', 'Update User - Healthy Botic')
-@section('SupUserContent')
+@extends('layouts.BlogUserMaster')
+@section('title', 'Update User - HealthyBotic')
+@section('BlogUserContent')
+
+<div class="pagetitle">
+    <h1>{{ __('Update User') }}</h1>
+    <nav>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ route('blogusr.dashboard') }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('blogusr.users') }}">Users</a></li>
+        
+        <li class="breadcrumb-item active">Update User</li>
+    </ol>
+    </nav>
+</div>
 
 
-    <div class="pagetitle">
-        <h1>Update User</h1>
-        <nav>
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('supuser.dashboard') }}">Home</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('supuser.listuser') }}">Users</a></li>
-                <li class="breadcrumb-item active">Update User</li>
-            </ol>
-        </nav>
-    </div>
-    @if (Session::get('succ'))
-        <div class="alert alert-primary bg-primary text-light border-0 alert-dismissible fade show" role="alert">
-            {{ Session::get('succ') }}
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-    @endif
+
     @if (Session::get('err'))
         <div class="alert alert-danger bg-danger text-light border-0 alert-dismissible fade show" role="alert">
             {{ Session::get('err') }}
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
-    <form action="{{ route('supuser.UpdateUserSave') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('updateUserBloggerSave') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <input type="hidden" id="__userid" name="__userid" value="{{ $userInfo->id }}">
         <div class="row mb-3">
@@ -86,7 +83,7 @@
                     <option value="0" selected>Open this select user role</option>
                     <option value="0">User</option>
                     <option value="2">Blogger</option>
-                    <option value="1">Admin</option>
+                    
                 </select>
             </div>
         </div>
@@ -102,10 +99,6 @@
 
     </form>
 
-
-
-    </div>
-    </div>
 
 
 @endsection

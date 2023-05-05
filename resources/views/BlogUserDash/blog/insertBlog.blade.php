@@ -4,7 +4,7 @@
 @section('BlogUserContent')
 
 <div class="pagetitle">
-    <h1>Catagory</h1>
+    <h1>Insert Blog</h1>
     <nav>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ route('blogusr.dashboard') }}">Home</a></li>

@@ -32,6 +32,9 @@ Route::prefix('Administrator/Blogger')->middleware('auth:web','blogUser','PreBac
     Route::get('/Dashboard/Users/Archive',[App\Http\Controllers\Blogger\AllPartUser\ListUserController::class, 'archive'])->name('blogusr.archive');
     Route::get('/Dashboard/Users/Archive/user/{user_id}',[App\Http\Controllers\Blogger\AllPartUser\ListUserController::class, 'archivePost'])->name('blogusr.archivePost');
     Route::get('/Dashboard/Users/Archive/user/Restore/{user_id}',[App\Http\Controllers\Blogger\AllPartUser\ListUserController::class, 'archivePostRestore'])->name('restoreArchiveUser');
+    Route::get('/Dashboard/Users/Updata/User/{user_id}',[App\Http\Controllers\Blogger\AllPartUser\ListUserController::class, 'updateUserBas'])->name('updateUserBlogger');
+    Route::post('/Dashboard/Users/Updata/User/Save',[App\Http\Controllers\Blogger\AllPartUser\ListUserController::class, 'updateUserBasSave'])->name('updateUserBloggerSave');
+    
     
     
     

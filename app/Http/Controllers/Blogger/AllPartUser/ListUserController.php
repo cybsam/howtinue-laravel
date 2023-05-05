@@ -27,6 +27,44 @@ class ListUserController extends Controller
         ]);
     }
 
+    //update user
+
+    public function updateUserBas($user_id){
+        $user_id = $user_id;
+        $userInfo = User::where('id',$user_id)->first();
+        return view('BlogUserDash.Users.updateUser',[
+            'userInfo'=>$userInfo
+        ]);
+    }
+
+    //save
+    public function updateUserBasSave(Request $request){
+        $userId = $request->__userid;
+        $userRole = $request->__userRole;
+        $activeStatus = $request->__userActivate;
+        $authId = Auth::id();
+        $userName = Auth::user()->name;
+        if($userRole == 0 || $userRole == 2){
+            if ($activeStatus == 1 || $activeStatus == 2) {
+                $updateUser = User::where('id',$userId)->update([
+                    'role'=>$userRole,
+                    'updated_by'=>$userName,
+                    'email_verified'=>$activeStatus
+                ]);
+                if ($updateUser) {
+                    return redirect()->route('blogusr.users')->with('succ','User update successfully...');
+                }else {
+                    return redirect()->back()->with('err','Failed to update user');
+                }
+            }else {
+                return redirect()->back()->with('err','Oversmart, ha ha ha');
+            }
+            
+        }else {
+            return redirect()->back()->with('err','Please select user role,');
+        }
+    }
+
     public function TeamUserList( $nameteam, $teamId){
         // echo $team_name;
         $sepTeamName = $nameteam;

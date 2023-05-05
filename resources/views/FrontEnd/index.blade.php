@@ -348,7 +348,7 @@
 
                     <div class="col-md-12 col-lg-4">
                         <aside class="wrapper__list__article">
-                            <h4 class="border_section">Category</h4>
+                            <h4 class="border_section">Articles</h4>
                             <div class="wrapper__list-number">
                                 <!-- List Article -->
                                 @foreach ($randomCate as $randCate)

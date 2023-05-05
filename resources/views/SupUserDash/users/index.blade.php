@@ -74,8 +74,7 @@
                   {{-- <a class="text-success" href="{{ route('supuser.UpdateUser',['user_id'=>$SupUser->id]) }}"><i class="bi bi-pencil-square"></i></a><span>&nbsp;&nbsp;</span><a class="text-danger" href=""><i class="bi bi-trash"></i></a> --}}
                   <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                     <a href="{{ route('supuser.UpdateUser',['user_id'=>$SupUser->id]) }}" class="btn btn-success btn-sm">Update</a>
-                    <a href="{{ route('supuser.archiveUser',['user_id'=>$SupUser->id]) }}" class="btn btn-warning btn-sm">Archive</a>
-                    <a href="{{ route('supuser.BlockUser',['user_id'=>$SupUser->id]) }}" class="btn btn-danger btn-sm">Block</a>
+                    
                   </div>
                 </td>
               </tr>
@@ -116,6 +115,7 @@
                         <a href="{{ route('supuser.archiveUser',['user_id'=>$blogUser->id]) }}" class="btn btn-warning btn-sm">Archive</a>
                         <a href="{{ route('supuser.BlockUser',['user_id'=>$blogUser->id]) }}" class="btn btn-danger btn-sm">Block</a>
                       </div>
+
                     </td>
                   </tr>
                   @endforeach
@@ -150,7 +150,7 @@
                    
                     <td><a href="" class="badge rounded-pill bg-{{ $basuser->block == 0 ? 'success':'danger' }}"> @if ($basuser->block == 0) <span class="text-white"><i class="bi bi-person-check-fill"></i></span> @else <span class="text-white"><i class="bi bi-person-x-fill"></i></span>  @endif</a></td>
                     
-                    <td>{{ $basuser->created_at->diffForHumans() }}</td>
+                    <td>{{ $basuser->updated_at->diffForHumans() }}</td>
                     <td>
                       {{-- <a class="text-success" href=""><i class="bi bi-pencil-square"></i></a><span>&nbsp;&nbsp;</span><a class="text-danger" href=""><i class="bi bi-trash"></i></a> --}}
                       <div class="btn-group" role="group" aria-label="Basic mixed styles example">

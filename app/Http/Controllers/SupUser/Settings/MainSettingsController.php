@@ -48,9 +48,9 @@ class MainSettingsController extends Controller
         //check header
 
         if ($logoFaviconGet && $LogoIconGet && $logoIconFooterGet) {
-            $checkSiteName = frontsettings::where('slug',$Nameslug)->get();
+            $checkSiteName = frontsettings::where('slug',$Nameslug)->first();
 
-            if ($checkSiteName == false) {
+            if ($checkSiteName == true) {
                 return redirect()->back()->with('updateErr','Website Name already stored in our system, make sure you change something or you leave this page');
             }else{
 
@@ -58,8 +58,9 @@ class MainSettingsController extends Controller
                     'websitename'=>$siteName,
                     'slug'=>$Nameslug
                 ]);
-                $imageDB = frontsettings::where('slug',$Nameslug)->get();
-                $unlinkFavicon = public_path('FrontEnd/images/favicon/').$imageDB->websitefaviconicon;
+                $imageDB = frontsettings::where('slug',$Nameslug)->first()->get();
+                $faviconIcon = $imageDB->websitefaviconicon;
+                $unlinkFavicon = public_path('FrontEnd/images/favicon/').$faviconIcon;
                 $removeFaviconImg = unlink($unlinkFavicon);
                 $unlinkLogo = public_path('FrontEnd/images/icon/').$imageDB->websitemainlogo;
                 $removeLogoImg = unlink($unlinkLogo);
@@ -69,8 +70,9 @@ class MainSettingsController extends Controller
                 if ($updateValue && $removeFaviconImg && $removeLogoImg && $removeFooterImg) {
                     $userID = Auth::user()->id;
                     $userName = Auth::user()->name;
+
                     $updateImageLocDB = frontsettings::where('slug',$Nameslug)->update([
-                        'websitefaviconicon' => $newFaviconName,
+                        'websitefaviconicon'=>$newFaviconName,
                         'websitemainlogo'=>$newLogoName,
                         'websitefooterlogo'=>$newLogoFooterName,
                         'userid'=>$userID,

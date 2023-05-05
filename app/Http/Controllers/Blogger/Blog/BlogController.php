@@ -19,7 +19,10 @@ class BlogController extends Controller
 {
     //index
     public function index(){
-        return view('BlogUserDash.blog.index');
+        $listBlog = SupUserBlog::where('post_status','0')->get();
+        return view('BlogUserDash.blog.index',[
+            'listBlog'=>$listBlog
+        ]);
     }
 
 
@@ -74,7 +77,7 @@ class BlogController extends Controller
             return redirect()->back()->with('blogInsFail','category not found...');
         }else{
             $slug = Str::slug($request->blogName);
-            $checkPost = SupUserBlog::where('slug',$slug)->firstOrFail();
+            $checkPost = SupUserBlog::where('slug',$slug)->first();
             
             $subCateSlag = Str::slug($sub_category_name);
             if ($checkPost == true) {
@@ -112,6 +115,15 @@ class BlogController extends Controller
         }
 
        
+    }
+
+    //show my blog
+    public function BlogMyShow(){
+        $authId = Auth::id();
+        $myBlog = SupUserBlog::where('userid',$authId)->get();
+        return view('BlogUserDash.blog.myblog',[
+            'myBlog'=>$myBlog
+        ]);
     }
     
 }

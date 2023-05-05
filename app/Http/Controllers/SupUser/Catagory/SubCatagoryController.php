@@ -138,6 +138,16 @@ class SubCatagoryController extends Controller
 
     }
 
+    //my category
+
+    public function myCategory(){
+        $userId = Auth::id();
+        $myCategory = SubCatagory::where('userid',$userId)->get();
+        return view('SupUserDash.catagory.catagorySub.mycategory',[
+            'myCategory'=>$myCategory
+        ]);
+    }
+
 
 
 }

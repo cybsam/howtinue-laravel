@@ -30,6 +30,8 @@ Route::prefix('User')->name('basUser.')->group(function(){
     });
 
     Route::middleware(['auth:web','basUser','PreBackHistory','is_user_verify_email'])->group(function(){
-        Route::get('/Dashboard', [App\Http\Controllers\BasUser\BasUsrDashController::class, 'index'])->name('dashboard');
+        Route::get('Dashboard/View', [App\Http\Controllers\BasUser\BasUsrDashController::class, 'index'])->name('dashboard');
+        Route::get('Dashboard/View/Profile', [App\Http\Controllers\BasUser\BasUsrDashController::class, 'Profile'])->name('dashboardprofile');
+        
     });
 });

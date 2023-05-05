@@ -9,6 +9,7 @@ use App\Models\User;
 use App\Models\UsersInfoAdmin;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
+use App\Models\SupUserBlog;
 
 class SupUserDashController extends Controller
 {
@@ -16,8 +17,12 @@ class SupUserDashController extends Controller
         // $chkUsers = UsersInfoAdmin::where('user_id',Auth::id())->first();
         // $chkAbout = $chkUsers->about;
         // $chkCompany = $chkUsers->about;
-
-        return view('SupUserDash.index');
+        $allUsers = user::all()->count();
+        $activeArticle = SupUserBlog::where('post_status','0')->count();
+        return view('SupUserDash.index',[
+            'allUsers'=>$allUsers,
+            'activeArticle'=>$activeArticle
+        ]);
     }
 
     public function UserProfile(){

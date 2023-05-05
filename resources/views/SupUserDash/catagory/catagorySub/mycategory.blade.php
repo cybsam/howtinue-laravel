@@ -1,5 +1,5 @@
 @extends('layouts.SupUserMaster')
-@section('title', 'Super Catagory - HowTinue')
+@section('title', 'My category - HealthyBotic')
 @section('SupUserContent')
 
 
@@ -8,34 +8,20 @@
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('supuser.dashboard') }}">Home</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('supuser.cata.super') }}">Super Category</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('subcatagory.index') }}">Sub Category</a></li>
-                <li class="breadcrumb-item active">Sub Category Archive</li>
+                <li class="breadcrumb-item"><a href="{{ route('supuser.cata.super') }}">Super Catagory</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('subcatagory.index') }}">Sub Catagory</a></li>
+                <li class="breadcrumb-item active">My Catagory</li>
             </ol>
         </nav>
     </div>
 
     
-    
-    @if (Session::get('success'))
-    <div class="alert alert-primary bg-primary text-light border-0 alert-dismissible fade show" role="alert">
-        {{ Session::get('success') }}
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-    @endif
-    @if (Session::get('fail'))
-    <div class="alert alert-danger bg-danger text-light border-0 alert-dismissible fade show" role="alert">
-        {{ Session::get('fail') }}
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-    @endif
-    
     <table class="table table-hover datatable table-sm">
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Category Name</th>
-                <th scope="col">Category Mega</th>
+                <th scope="col">Name</th>
+                <th scope="col">Meta tag</th>
                 <th scope="col">Main Catagory</th>
                 <th scope="col">Status</th>
                 <th scope="col">Added By</th>
@@ -44,9 +30,8 @@
             </tr>
         </thead>
         <tbody>
-            
 
-            @foreach ($archiveCate as $listCat)
+            @foreach ($myCategory as $listCat)
                 <th scope="row"><a href="#">#{{ $listCat->id }}</a></td>
                 <td>{{ $listCat->subcatagoryname }}</td>
                 <td>{{ $listCat->subcatagorymetatag }}</td>
@@ -64,14 +49,12 @@
                 <td>
                   {{ $listCat->created_at->diffForHumans() }}</td>
                 <td>
-                  <a href=" {{ route('subcatagory.Restor',['cate_id'=>$listCat->id ]) }}" class="btn btn-danger">Restore</a>
+                    <a class="text-success" href=""><i class="bi bi-pencil-square"></i></a><span>&nbsp;&nbsp;</span><a class="text-danger" href="{{ route('subcatagoryIndex.archivedSoft',['cate_id'=>$listCat->id]) }}"><i class="bi bi-trash"></i></a>
                 </td>
                 </tr>
             @endforeach
 
         </tbody>
     </table>
-
-
 
 @endsection
