@@ -14,6 +14,8 @@ class FindUsController extends Controller
     // backend find
     public function SocialFind(){
         $id = 1;
+
+        //make this data in value html
         $socialBlog = FindUs::where('id',$id)->first();
         return view('SupUserDash.socialFind.findUsSocial',[
             'socialBlog'=>$socialBlog
