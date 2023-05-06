@@ -1,5 +1,9 @@
 @extends('layouts.FrontEndMaster')
 @section('FrontTitle', "$post->blog_name".' - '.'Healthy Botic')
+@section('MetaTitle', "$post->blog_meta_title")
+@section('description', "$post->blog_meta_description")
+@section('Keyword', "$post->blog_meta_keyword")
+@section('author', "$userDet->username")
 @section('FrontEnd')
 
     <section class="pb-80">

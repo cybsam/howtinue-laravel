@@ -5,7 +5,10 @@
 <head>
     <meta charset="utf-8">
     <title>@yield('FrontTitle')</title>
-    <meta name="description" content="">
+    <meta name="MetaTitle" content="@yield('MetaTitle')">
+    <meta name="description" content="@yield('description')">
+    <meta name="keyword" content="@yield('Keyword')">
+    <meta name="author" content="@yield('author')">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
     <!-- favicon.ico in the root directory -->

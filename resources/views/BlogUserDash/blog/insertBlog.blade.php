@@ -66,20 +66,39 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row mb-3">
-                            <label for="inputText" class="col-sm-2 col-form-label">Blog Meta</label>
-                            <div class="col-sm-10">
-                                <input type="text" id="blogMeta" class="form-control @error('blogMeta') is-invalid @enderror" value="{{ old('blogMeta') }}" name="blogMeta" placeholder="Blog Meta Tag">
-                                <span>Seperate by ( , )</span>
-                                <div class="">
-                                    @error('blogMeta')
-                                        <span class="text-danger">
-                                            {{ $message }}
-                                        </span>
-                                    @enderror
+                        <hr style="color:red;">
+                            <div class="row mb-3">
+                                <label for="inputText" class="col-sm-2 col-form-label">SEO Meta Title</label>
+                                <div class="col-sm-10">
+                                    <input type="text" id="blogMeta"
+                                        class="form-control @error('blogMeta') is-invalid @enderror"
+                                        value="{{ old('blogMeta') }}" name="blogMeta" placeholder="SEO Blog Meta Title">
+                                    
+                                    <div class="">
+                                        @error('blogMeta')
+                                            <span class="text-danger">
+                                                {{ $message }}
+                                            </span>
+                                        @enderror
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                            <div class="row mb-3">
+                                <label for="inputText" class="col-sm-2 col-form-label">SEO Meta Description</label>
+                                <div class="col-sm-10">
+                                    <textarea name="" placeholder="SEO Blog Meta Description" class="form-control @error('blogMetaDesc') is-invalid @enderror" name="blogMetaDesc" id="blogMetaDesc"></textarea>
+                                    
+                                    
+                                    <div class="">
+                                        @error('blogMetaDesc')
+                                            <span class="text-danger">
+                                                {{ $message }}
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+                            <hr style="color:red;">
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label">Category</label>
                             <div class="col-sm-10">

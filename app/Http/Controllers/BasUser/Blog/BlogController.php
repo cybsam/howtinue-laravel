@@ -30,15 +30,15 @@ class BlogController extends Controller
             'blogName' => ['required'],
             'blogShortDesc' => ['required'],
             'blogMeta' => ['required'],
-            
+            'blogMetaDesc' => ['required'],
             'image' => ['required','mimes:jpg,png,jpeg,gif','max:3000'],
             'description' => ['required']
         ],[
-            'blogName.required' => 'type your article name!',
-            'blogShortDesc.required' => 'type your article short description.',
-            'blogMeta.required' => 'article meta tag required.',
-            
-            'image.required' => 'article image require',
+            'blogName.required' => 'type your post name!',
+            'blogShortDesc.required' => 'type your Post short description.',
+            'blogMeta.required' => 'Post meta title required.',
+            'blogMetaDesc.required' => 'Post meta description required.',
+            'image.required' => 'blog image require',
             'description.required' => 'hmm, what do you thing',  
         ]);
         
@@ -67,7 +67,9 @@ class BlogController extends Controller
                 $insBlog->blog_name = $request->blogName;
                 $insBlog->slug = $slug;
                 $insBlog->blog_short_desc = $request->blogShortDesc;
-                $insBlog->blog_meta = $request->blogMeta;
+                $insBlog->blog_meta_title = $request->blogMeta;
+                $insBlog->blog_meta_description = $request->blogMetaDesc;
+                $insBlog->blog_meta_keyword = $request->blogMeta;
                 $insBlog->category = $request->category;
                 $insBlog->sub_category_name = $sub_category_name;
                 $insBlog->sub_category_slug = $subCateSlag;
