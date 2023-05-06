@@ -61,6 +61,9 @@ Route::prefix('Administrator/Blogger')->middleware('auth:web','blogUser','PreBac
     Route::get('Dashboard/Blog/Insert',[App\Http\Controllers\Blogger\Blog\BlogController::class, 'BlogInsert'])->name('BlogUser.postInsert');
     Route::post('Dashboard/Blog/Insert/Save',[App\Http\Controllers\Blogger\Blog\BlogController::class, 'BlogInsertSave'])->name('BlogUser.InsertSave');
     Route::get('Dashboard/Blog/My-Blog/Show',[App\Http\Controllers\Blogger\Blog\BlogController::class, 'BlogMyShow'])->name('BlogUser.MyBlogShow');
+    Route::get('Dashboard/Blog/Pending/',[App\Http\Controllers\Blogger\Blog\BlogController::class, 'pendingBlog'])->name('BlogUser.pendingBlog');
+    Route::get('Dashboard/Blog/Pending/{blog_id}/Show/',[App\Http\Controllers\Blogger\Blog\BlogController::class, 'pendingBlogShow'])->name('BlogUser.pendingBlogShow');
+    Route::post('Dashboard/Blog/Pending/Show/Update',[App\Http\Controllers\Blogger\Blog\BlogController::class, 'pendingBlogShowUpdate'])->name('BlogUser.pendingBlogShowUpdate');
     
 
 

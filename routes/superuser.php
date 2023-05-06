@@ -65,7 +65,10 @@ Route::prefix('Administrator/SuperUser')->middleware('auth:web','supUser','PreBa
     Route::post('Dashboard/Article/Insert/Save',[App\Http\Controllers\SupUser\Blog\SupUserBlogController::class, 'insertSave'])->name('supuserBlog.insertSave');
     Route::get('Dashboard/Article/My-Article',[App\Http\Controllers\SupUser\Blog\SupUserBlogController::class, 'MyBlog'])->name('supuserBlog.myBlog');
     Route::get('Dashboard/Article/Pending/List',[App\Http\Controllers\SupUser\Blog\SupUserBlogController::class, 'PendingBlog'])->name('supuserBlog.pendingBlog');
-
+    Route::get('Dashboard/Article/Pending/List/Show/{blog_id}/View=true',[App\Http\Controllers\SupUser\Blog\SupUserBlogController::class, 'PendingBlogShow'])->name('supuserBlog.pendingBlogShow');
+    Route::post('Dashboard/Article/Pending/List/Show/Pending/Active',[App\Http\Controllers\SupUser\Blog\SupUserBlogController::class, 'PendingBlogShowActive'])->name('supuserBlog.pendingBlogShowActive');
+    
+    
     //sup catagory
     Route::get('Dashboard/Catagory/SuperCatagory', [App\Http\Controllers\SupUser\Catagory\SupCatagoryController::class, 'index'])->name('supuser.cata.super');
     Route::get('Dashboard/Catagory/SuperCatagory/Insert', [App\Http\Controllers\SupUser\Catagory\SupCatagoryController::class, 'insert'])->name('supuser.cata.super.insert');
@@ -79,6 +82,8 @@ Route::prefix('Administrator/SuperUser')->middleware('auth:web','supUser','PreBa
     //settings
     Route::get('Dashboard/Settings/Main', [App\Http\Controllers\SupUser\Settings\MainSettingsController::class, 'mainSett'])->name('supuser.settings.main');
     Route::post('Dashboard/Settings/Main/Update', [App\Http\Controllers\SupUser\Settings\MainSettingsController::class, 'mainSetUpdate'])->name('supuser.settingsMainUpdate');
+    Route::get('Dashboard/Settings/FindUs/Social', [App\Http\Controllers\FindUs\FindUsController::class, 'SocialFind'])->name('supuser.FindUsBackend');
+    Route::post('Dashboard/Settings/FindUs/Social/Update', [App\Http\Controllers\FindUs\FindUsController::class, 'SocialFindUpdate'])->name('supuser.FindUsBackendUpdate');
     
     //blank
     Route::get('/BlankPage', [App\Http\Controllers\SupUser\SupUserDashController::class, 'blank'])->name('supuser.blank');

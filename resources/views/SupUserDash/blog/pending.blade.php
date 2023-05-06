@@ -35,11 +35,11 @@
             <td>{{ $myarticle->slug }}</td>
             <td>{{ $myarticle->sub_category_name }}</td>
 
-            <td><a href="" class="badge rounded-pill bg-{{ $myarticle->myarticle == 0 ? 'success' : 'danger' }}">
-                    @if ($myarticle->myarticle == 0)
-                        <span class="text-white"><i class="bi bi-person-check-fill"></i></span>
+            <td><a href="" class="badge rounded-pill bg-{{ $myarticle->post_status == 0 ? 'success' : 'danger' }}">
+                    @if ($myarticle->post_status == 0)
+                        <span class="text-white"><i class="bi bi-check-circle"></i></span>
                     @else
-                        <span class="text-white"><i class="bi bi-person-x-fill"></i></span>
+                        <span class="text-white"><i class="bi bi-exclamation-triangle-fill"></i></span>
                     @endif
                 </a></td>
             <td>
@@ -48,7 +48,7 @@
             <td>
               {{ $myarticle->created_at->diffForHumans() }}</td>
             <td>
-              <a href="">Active</a>
+              <a href="{{ route('supuserBlog.pendingBlogShow',['blog_id'=>$myarticle->id]) }}" class="btn btn-success btn-sm">View</a>
               
             </td>
             </tr>

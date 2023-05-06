@@ -59,7 +59,7 @@ class BlogController extends Controller
             $checkPost = SupUserBlog::where('slug',$slug)->first();
             
             $subCateSlag = Str::slug($sub_category_name);
-            $postStatus = 2;
+            $postStatus = 3;
             if ($checkPost == true) {
                 return redirect()->back()->with('blogInsFail','Duplicate Article found change something...');
             }else {

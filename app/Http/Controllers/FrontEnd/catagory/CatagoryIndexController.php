@@ -17,12 +17,20 @@ class CatagoryIndexController extends Controller
         ]);
     }
 
-    public function cateListShow($list_post){
 
+    //show article
+    public function cateListShow($list_post){
+        $activeValue = 0;
         $linkCate = $list_post;
-        $categoryName = SupUserBlog::where('sub_category_slug',$linkCate)->get();
+        $categoryName = SupUserBlog::where('sub_category_slug',$linkCate)->inRandomOrder()->get();
+        $randArticleCheck = SupUserBlog::where([
+            'sub_category_slug'=>$linkCate,
+            'post_status'=>$activeValue
+        ])->inRandomOrder()->take(5)->get();
+               
         return view('FrontEnd.catagory.cateListPost',[
-            'categoryName'=>$categoryName
+            'categoryName'=>$categoryName,
+            'randArticleCheck'=>$randArticleCheck
         ]);
     }
     

@@ -14,11 +14,11 @@
                         </li>
                         <li class="breadcrumbs__item">
                             <a href="{{ route('frontEnd.catagory.parent') }}" class="breadcrumbs__url">
-                                 Parent Articles</a>
+                                Parent Articles</a>
                         </li>
                         <li class="breadcrumbs__item">
                             <a href="{{ route('frontEnd.catagory.show') }}" class="breadcrumbs__url">
-                                 Articles</a>
+                                Articles</a>
                         </li>
 
                         <li class="breadcrumbs__item breadcrumbs__item--current">
@@ -33,76 +33,81 @@
             <div class="row">
                 <div class="col-md-8">
 
-                    
+
 
                     <aside class="wrapper__list__article ">
-                        
-                    
+
+
 
                         <h3 class="border_section">Articles List</h3>
                         @foreach ($categoryName as $postDetails)
-                        <div class="row">
-                            <div class="col-md-8">
-                                <div class="card__post card__post-list">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="card__post card__post-list">
 
-                                    <div class="image-sm">
-                                        <a href="{{ route('blog.details', ['post_name' => $postDetails->slug]) }}">
-                                            <img src="{{ asset('uploads/postimage/') }}/{{ $postDetails->blog_image }}" class="img-fluid" alt="{{ $postDetails->blog_meta  }}">
+                                        <div class="image-sm">
+                                            <a href="{{ route('blog.details', ['post_name' => $postDetails->slug]) }}">
+                                                <img src="{{ asset('uploads/postimage/') }}/{{ $postDetails->blog_image }}"
+                                                    class="img-fluid" alt="{{ $postDetails->blog_meta }}">
                                             </a>
-                                    </div>
+                                        </div>
 
 
-                                    <div class="card__post__body ">
-                                        <div class="card__post__content">
+                                        <div class="card__post__body ">
+                                            <div class="card__post__content">
 
-                                            <div class="card__post__author-info mb-2">
-                                                <ul class="list-inline">
-                                                    <li class="list-inline-item">
-                                                        <span class="text-primary">
-                                                            by {{ $postDetails->username }}
-                                                        </span>
-                                                    </li>
-                                                    <li class="list-inline-item">
-                                                        <span class="text-dark text-capitalize">
-                                                            {{ $postDetails->updated_at->format('l, j F Y') }}
-                                                        </span>
-                                                    </li>
+                                                <div class="card__post__author-info mb-2">
+                                                    <ul class="list-inline">
+                                                        <li class="list-inline-item">
+                                                            <span class="text-primary">
+                                                                by {{ $postDetails->username }}
+                                                            </span>
+                                                        </li>
+                                                        <li class="list-inline-item">
+                                                            <span class="text-dark text-capitalize">
+                                                                {{ $postDetails->updated_at->format('l, j F Y') }}
+                                                            </span>
+                                                        </li>
 
-                                                </ul>
+                                                    </ul>
+                                                </div>
+                                                <div class="card__post__title">
+                                                    <h4>
+                                                        <a
+                                                            href="{{ route('blog.details', ['post_name' => $postDetails->slug]) }}">
+                                                            {{ $postDetails->blog_name }}
+                                                        </a>
+                                                    </h4>
+
+
+                                                </div>
+
                                             </div>
-                                            <div class="card__post__title">
-                                                <h4>
-                                                    <a href="{{ route('blog.details', ['post_name' => $postDetails->slug]) }}">
-                                                        {{ $postDetails->blog_name  }}
-                                                    </a>
-                                                </h4>
-
-
-                                            </div>
-
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <br>
+                            <br>
                         @endforeach
-                        
-                        
-                        
+
+
+
                     </aside>
                 </div>
                 <div class="col-md-4">
                     <div class="sidebar-sticky">
                         <aside class="wrapper__list__article ">
-                            <h4 class="border_section">Sidebar</h4>
+                            <h4 class="border_section">Releted.</h4>
                             <div class="wrapper__list__article-small">
                                 <div class="mb-3">
                                     <!-- Post Article -->
+                                    @foreach ($randArticleCheck as $randArticle)
+                                        
+                                    
                                     <div class="card__post card__post-list">
                                         <div class="image-sm">
-                                            <a href="./card-article-detail-v1.html">
-                                                <img src="images/placeholder/500x400.jpg" class="img-fluid" alt="">
+                                            <a href="{{ route('blog.details', ['post_name' => $randArticle->slug]) }}">
+                                                <img src="{{ asset('uploads/postimage/') }}/{{ $randArticle->blog_image }}" class="img-fluid" alt="{{ $randArticle->blog_meta }}">
                                             </a>
                                         </div>
 
@@ -114,12 +119,12 @@
                                                     <ul class="list-inline">
                                                         <li class="list-inline-item">
                                                             <span class="text-primary">
-                                                                by david hall
+                                                                by {{ $randArticle->username }} 
                                                             </span>
                                                         </li>
                                                         <li class="list-inline-item">
                                                             <span class="text-dark text-capitalize">
-                                                                descember 09, 2016
+                                                                {{ $randArticle->updated_at->format('l, j F Y') }}
                                                             </span>
                                                         </li>
 
@@ -127,118 +132,17 @@
                                                 </div>
                                                 <div class="card__post__title">
                                                     <h6>
-                                                        <a href="./card-article-detail-v1.html">
-                                                            6 Best Tips for Building a Good Shipping Boat
+                                                        <a href="{{ route('blog.details', ['post_name' => $randArticle->slug]) }}">
+                                                            {{ $randArticle->blog_name }}
                                                         </a>
                                                     </h6>
-                                                    <!-- <p class="d-none d-lg-block d-xl-block">
-                                    Maecenas accumsan tortor ut velit pharetra mollis. Proin eu nisl et arcu iaculis placerat
-                                    sollicitudin ut est. In fringilla dui dui.
-                                </p> -->
-
                                                 </div>
-
                                             </div>
-
-
                                         </div>
                                     </div>
+                                    @endforeach
                                 </div>
-                                <div class="mb-3">
-                                    <!-- Post Article -->
-                                    <div class="card__post card__post-list">
-                                        <div class="image-sm">
-                                            <a href="./card-article-detail-v1.html">
-                                                <img src="images/placeholder/500x400.jpg" class="img-fluid" alt="">
-                                            </a>
-                                        </div>
-
-
-                                        <div class="card__post__body ">
-                                            <div class="card__post__content">
-
-                                                <div class="card__post__author-info mb-2">
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item">
-                                                            <span class="text-primary">
-                                                                by david hall
-                                                            </span>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <span class="text-dark text-capitalize">
-                                                                descember 09, 2016
-                                                            </span>
-                                                        </li>
-
-                                                    </ul>
-                                                </div>
-                                                <div class="card__post__title">
-                                                    <h6>
-                                                        <a href="./card-article-detail-v1.html">
-                                                            6 Best Tips for Building a Good Shipping Boat
-                                                        </a>
-                                                    </h6>
-                                                    <!-- <p class="d-none d-lg-block d-xl-block">
-                                    Maecenas accumsan tortor ut velit pharetra mollis. Proin eu nisl et arcu iaculis placerat
-                                    sollicitudin ut est. In fringilla dui dui.
-                                </p> -->
-
-                                                </div>
-
-                                            </div>
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mb-3">
-                                    <!-- Post Article -->
-                                    <div class="card__post card__post-list">
-                                        <div class="image-sm">
-                                            <a href="./card-article-detail-v1.html">
-                                                <img src="images/placeholder/500x400.jpg" class="img-fluid" alt="">
-                                            </a>
-                                        </div>
-
-
-                                        <div class="card__post__body ">
-                                            <div class="card__post__content">
-
-                                                <div class="card__post__author-info mb-2">
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item">
-                                                            <span class="text-primary">
-                                                                by david hall
-                                                            </span>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <span class="text-dark text-capitalize">
-                                                                descember 09, 2016
-                                                            </span>
-                                                        </li>
-
-                                                    </ul>
-                                                </div>
-                                                <div class="card__post__title">
-                                                    <h6>
-                                                        <a href="./card-article-detail-v1.html">
-                                                            6 Best Tips for Building a Good Shipping Boat
-                                                        </a>
-                                                    </h6>
-                                                    <!-- <p class="d-none d-lg-block d-xl-block">
-                                    Maecenas accumsan tortor ut velit pharetra mollis. Proin eu nisl et arcu iaculis placerat
-                                    sollicitudin ut est. In fringilla dui dui.
-                                </p> -->
-
-                                                </div>
-
-                                            </div>
-
-
-                                        </div>
-                                    </div>
-                                </div>
-
+                                
                                 <!-- Post Article -->
                                 <div class="article__entry">
                                     <div class="article__image">

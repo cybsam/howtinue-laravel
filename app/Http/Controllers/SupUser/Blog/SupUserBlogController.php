@@ -136,5 +136,37 @@ class SupUserBlogController extends Controller
         ]);
     }
 
+    //show blog
+    public function PendingBlogShow($blog_id){
+
+        $blog_id = $blog_id;
+        $showData = SupUserBlog::where('id',$blog_id)->first();
+        $PendingBlogCount= $showData->count();
+        return view('SupUserDash.blog.showPendingBlog',[
+            'showData'=>$showData,
+            'PendingBlogCount'=>$PendingBlogCount
+        ]);
+    }
+
+    //update article
+    public function PendingBlogShowActive(Request $request){
+        $id = $request->__articleid;
+        $activeArti = $request->__articleActivate;
+        if ($activeArti == 0) {
+            $updateStatus = SupUserBlog::where('id',$id)->update([
+                'post_status'=>$activeArti,
+                'updated_at'=>Carbon::now()
+            ]);
+            if ($updateStatus) {
+                return redirect()->route('supuser.blog')->with('succ','Article is live now, check it...');
+            }else {
+                return redirect()->back()->with('err','Article published failed to our system, try again');
+            }
+        }elseif($activeArti == 3){
+            return redirect()->back()->with('err','hmm, Article is already pending to review, please review and published it');
+        }else {
+            return redirect()->back()->with('err','hmm, you are so smart, but this tricks is not working. try again...');
+        }
+    }
 
 }
