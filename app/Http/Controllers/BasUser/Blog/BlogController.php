@@ -27,9 +27,9 @@ class BlogController extends Controller
     //save blog for pendind review
     public function insertBlog(Request $request){
         $request->validate([
-            'blogName' => ['required'],
-            'blogShortDesc' => ['required'],
-            'blogMeta' => ['required'],
+            'blogName' => ['required','max:255'],
+            'blogShortDesc' => ['required','max:255'],
+            'blogMeta' => ['required','max:255'],
             'blogMetaDesc' => ['required'],
             'image' => ['required','mimes:jpg,png,jpeg,gif','max:3000'],
             'description' => ['required']

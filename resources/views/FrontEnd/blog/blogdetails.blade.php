@@ -10,8 +10,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <!-- breaddcrumb -->
-                    <!-- Breadcrumb -->
+                    
                     <ul class="breadcrumbs bg-light mb-4">
                         <li class="breadcrumbs__item">
                             <a href="{{ route('FrontEnd.Index') }}" class="breadcrumbs__url">
@@ -24,11 +23,10 @@
                             Article Details
                         </li>
                     </ul>
-                    <!-- end breadcrumb -->
+                   
                 </div>
                 <div class="col-md-8">
-                    <!-- content article detail -->
-                    <!-- Article Detail -->
+                    
                     <div class="wrap__article-detail">
                         <div class="wrap__article-detail-title">
                             <h1>{{ $post->blog_name }}</h1>
@@ -79,10 +77,7 @@
                                     @php
                                         $curentUrl = URL::current();
                                     @endphp
-                                    {{-- <script>
-                                        const CurrentProtocol = window.location.href;
-                                        window.location.href('/en/Blog/Details/'+ CurrentProtocol);
-                                    </script> --}}
+                                    
                                     
                                     
                                     <li class="list-inline-item" style="">
@@ -138,10 +133,7 @@
                             </li>
                         </ul>
                     </div>
-                    <!-- end tags-->
-
-                    <!-- authors-->
-                    <!-- Profile author -->
+                    
                     <div class="wrap__profile">
                         <div class="wrap__profile-author">
                             <figure>
@@ -187,167 +179,46 @@
                             </div>
                         </div>
                     </div>
-                    <!-- end author-->
-
-                    <!-- comment -->
-                    <!-- Comment  -->
+                    
                     <div>
                         @comments(['model' => $post])
                     </div>
                    
-                    <!-- Comment -->
-                    <!-- end comment -->
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="single_navigation-prev">
-                                <a href="#">
-                                    <span>previous post</span>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                    Rem, similique.
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="single_navigation-next text-left text-md-right">
-                                <a href="#">
-                                    <span>next post</span>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                    Perferendis, nesciunt.
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    
+                    
                     <div class="clearfix"></div>
 
                     <div class="related-article">
                         <h4>you may also like</h4>
 
                         <div class="article__entry-carousel-three">
+                            @foreach ($youMayAlsoLike as $alsoLike)
                             <div class="item">
                                 <!-- Post Article -->
                                 <div class="article__entry">
                                     <div class="article__image">
-                                        <a href="#">
-                                            <img src="images/placeholder/500x400.jpg" alt="" class="img-fluid" />
+                                        <a href="{{ route('blog.details', ['post_name' => $alsoLike->slug]) }}">
+                                            <img src="{{ asset('uploads/postimage') }}/{{ $alsoLike->blog_image }}" alt="{{ $alsoLike->blog_meta_keyword }}" class="img-fluid" />
                                         </a>
                                     </div>
                                     <div class="article__content">
                                         <ul class="list-inline">
                                             <li class="list-inline-item">
-                                                <span class="text-primary"> by david hall </span>
+                                                <span class="text-primary"> by {{ $alsoLike->username }} </span>
                                             </li>
                                             <li class="list-inline-item">
-                                                <span> descember 09, 2016 </span>
+                                                <span> {{ $alsoLike->updated_at->format('l, j F Y') }} </span>
                                             </li>
                                         </ul>
                                         <h5>
-                                            <a href="#">
-                                                Maecenas accumsan tortor ut velit pharetra mollis.
+                                            <a href="{{ route('blog.details', ['post_name' => $alsoLike->slug]) }}">
+                                                {{ $alsoLike->blog_name }}.
                                             </a>
                                         </h5>
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <!-- Post Article -->
-                                <div class="article__entry">
-                                    <div class="article__image">
-                                        <a href="#">
-                                            <img src="images/placeholder/500x400.jpg" alt="" class="img-fluid" />
-                                        </a>
-                                    </div>
-                                    <div class="article__content">
-                                        <ul class="list-inline">
-                                            <li class="list-inline-item">
-                                                <span class="text-primary"> by david hall </span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span> descember 09, 2016 </span>
-                                            </li>
-                                        </ul>
-                                        <h5>
-                                            <a href="#">
-                                                Maecenas accumsan tortor ut velit pharetra mollis.
-                                            </a>
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <!-- Post Article -->
-                                <div class="article__entry">
-                                    <div class="article__image">
-                                        <a href="#">
-                                            <img src="images/placeholder/500x400.jpg" alt="" class="img-fluid" />
-                                        </a>
-                                    </div>
-                                    <div class="article__content">
-                                        <ul class="list-inline">
-                                            <li class="list-inline-item">
-                                                <span class="text-primary"> by david hall </span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span> descember 09, 2016 </span>
-                                            </li>
-                                        </ul>
-                                        <h5>
-                                            <a href="#">
-                                                Maecenas accumsan tortor ut velit pharetra mollis.
-                                            </a>
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <!-- Post Article -->
-                                <div class="article__entry">
-                                    <div class="article__image">
-                                        <a href="#">
-                                            <img src="images/placeholder/500x400.jpg" alt="" class="img-fluid" />
-                                        </a>
-                                    </div>
-                                    <div class="article__content">
-                                        <ul class="list-inline">
-                                            <li class="list-inline-item">
-                                                <span class="text-primary"> by david hall </span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span> descember 09, 2016 </span>
-                                            </li>
-                                        </ul>
-                                        <h5>
-                                            <a href="#">
-                                                Maecenas accumsan tortor ut velit pharetra mollis.
-                                            </a>
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <!-- Post Article -->
-                                <div class="article__entry">
-                                    <div class="article__image">
-                                        <a href="#">
-                                            <img src="images/placeholder/500x400.jpg" alt="" class="img-fluid" />
-                                        </a>
-                                    </div>
-                                    <div class="article__content">
-                                        <ul class="list-inline">
-                                            <li class="list-inline-item">
-                                                <span class="text-primary"> by david hall </span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span> descember 09, 2016 </span>
-                                            </li>
-                                        </ul>
-                                        <h5>
-                                            <a href="#">
-                                                Maecenas accumsan tortor ut velit pharetra mollis.
-                                            </a>
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>

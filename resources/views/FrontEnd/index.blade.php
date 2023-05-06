@@ -362,7 +362,7 @@
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
                                             <h5>
-                                                <a href="">
+                                                <a href="{{ route('category.post', ['list_post' => $randCate->slug]) }}">
                                                     {{ $randCate->subcatagorymetatag }}
                                                 </a>
                                             </h5>
@@ -384,7 +384,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <aside class="wrapper__list__article">
-                        <h4 class="border_section">technology</h4>
+                        <h4 class="border_section">Beauty</h4>
                     </aside>
                 </div>
                 <div class="col-md-12">

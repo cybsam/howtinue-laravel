@@ -100,7 +100,7 @@
                             <div class="row mb-3">
                                 <label for="inputText" class="col-sm-2 col-form-label">SEO Meta Description</label>
                                 <div class="col-sm-10">
-                                    <textarea name="" placeholder="SEO Blog Meta Description" class="form-control @error('blogMetaDesc') is-invalid @enderror" name="blogMetaDesc" id="blogMetaDesc"></textarea>
+                                    <textarea placeholder="SEO Blog Meta Description" class="form-control @error('blogMetaDesc') is-invalid @enderror" name="blogMetaDesc" id="blogMetaDesc"></textarea>
                                     
                                     
                                     <div class="">

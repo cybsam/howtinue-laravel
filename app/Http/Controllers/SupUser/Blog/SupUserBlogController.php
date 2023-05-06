@@ -34,9 +34,9 @@ class SupUserBlogController extends Controller
     public function insertSave(Request $request){
         
         $request->validate([
-            'blogName' => ['required'],
-            'blogShortDesc' => ['required'],
-            'blogMeta' => ['required'],
+            'blogName' => ['required','max:255'],
+            'blogShortDesc' => ['required','max:255'],
+            'blogMeta' => ['required','max:255'],
             'blogMetaDesc' => ['required'],
             'image' => ['required','mimes:jpg,png,jpeg,gif','max:3000'],
             'description' => ['required']
@@ -131,8 +131,10 @@ class SupUserBlogController extends Controller
 
     public function PendingBlog(){
         $penArticle = SupUserBlog::where('post_status','3')->get();
+        $penArticleCount = SupUserBlog::where('post_status','3')->count();
         return view('SupUserDash.blog.pending',[
-            'penArticle' => $penArticle
+            'penArticle' => $penArticle,
+            'penArticleCount'=>$penArticleCount
         ]);
     }
 

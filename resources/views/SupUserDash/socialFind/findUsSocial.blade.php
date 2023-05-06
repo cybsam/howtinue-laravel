@@ -31,7 +31,7 @@
         <div class="row mb-3">
             <label for="inputText" class="col-sm-2 col-form-label">Facebook</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control @error('__facebook') is-invalid @enderror" name="__facebook" value="{{ old('__facebook') }}" id="__facebook">
+                <input type="text" class="form-control @error('__facebook') is-invalid @enderror" name="__facebook" value="{{ $socialBlog->facebook }}" id="__facebook">
                 @error('__facebook')
                     <span class="invalid-feedback" role="alert">
                         <span>{{ $message }}</span>
@@ -42,7 +42,7 @@
         <div class="row mb-3">
             <label for="inputText" class="col-sm-2 col-form-label">Twitter</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control @error('__twitter') is-invalid @enderror" name="__twitter" value="{{ old('__twitter') }}" id="__twitter">
+                <input type="text" class="form-control @error('__twitter') is-invalid @enderror" name="__twitter" value="{{ $socialBlog->twitter }}" id="__twitter">
                 @error('__facebook')
                     <span class="invalid-feedback" role="alert">
                         <span>{{ $message }}</span>
@@ -53,7 +53,7 @@
         <div class="row mb-3">
             <label for="inputText" class="col-sm-2 col-form-label">WhatsApp</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control @error('__whatsapp') is-invalid @enderror" name="__whatsapp" value="{{ old('__whatsapp') }}" id="__whatsapp">
+                <input type="text" class="form-control @error('__whatsapp') is-invalid @enderror" name="__whatsapp" value="{{ $socialBlog->whatsapp }}" id="__whatsapp">
                 @error('__whatsapp')
                     <span class="invalid-feedback" role="alert">
                         <span>{{ $message }}</span>
@@ -64,7 +64,7 @@
         <div class="row mb-3">
             <label for="inputText" class="col-sm-2 col-form-label">Linkedin</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control @error('__linkedin') is-invalid @enderror" name="__linkedin" value="{{ old('__linkedin') }}" id="__linkedin">
+                <input type="text" class="form-control @error('__linkedin') is-invalid @enderror" name="__linkedin" value="{{ $socialBlog->linkedin }}" id="__linkedin">
                 @error('__linkedin')
                     <span class="invalid-feedback" role="alert">
                         <span>{{ $message }}</span>
@@ -75,7 +75,7 @@
         <div class="row mb-3">
             <label for="inputText" class="col-sm-2 col-form-label">Reddit</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control @error('__reddit') is-invalid @enderror" name="__reddit" value="{{ old('__reddit') }}" id="__reddit">
+                <input type="text" class="form-control @error('__reddit') is-invalid @enderror" name="__reddit" value="{{ $socialBlog->reddit }}" id="__reddit">
                 @error('__reddit')
                     <span class="invalid-feedback" role="alert">
                         <span>{{ $message }}</span>
@@ -86,7 +86,7 @@
         <div class="row mb-3">
             <label for="inputText" class="col-sm-2 col-form-label">Telegram</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control @error('__telegram') is-invalid @enderror" name="__telegram" value="{{ old('__telegram') }}" id="__telegram">
+                <input type="text" class="form-control @error('__telegram') is-invalid @enderror" name="__telegram" value="{{ $socialBlog->telegram }}" id="__telegram">
                 @error('__telegram')
                     <span class="invalid-feedback" role="alert">
                         <span>{{ $message }}</span>

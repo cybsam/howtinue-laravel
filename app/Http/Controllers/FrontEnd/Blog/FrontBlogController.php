@@ -24,7 +24,7 @@ class FrontBlogController extends Controller
 
     //single blog show function
     public function ShowDetails(Request $request, $post_name){
-        //echo $post_name;
+        
         $listBlog = SupUserBlog::where('slug',$post_name)->firstOrFail();
         
 
@@ -55,12 +55,13 @@ class FrontBlogController extends Controller
         //releted
         $blogCateID = $listBlog->category;
         $reletedIn = SupUserBlog::where('category',$blogCateID)->limit(4)->get();
-
+        $youMayAlsoLike = SupUserBlog::where('category',$blogCateID)->limit(10)->get();
         return view('FrontEnd.blog.blogdetails', [
             'post'=>$listBlog,
             'userDet'=>$userDet,
             'userDetSocial'=>$userDetSocial,
             'reletedIn'=>$reletedIn,
+            'youMayAlsoLike'=>$youMayAlsoLike,
             'userAbout'=>$userAbout,
             'socialShare'=>$socialShare
         ]);
