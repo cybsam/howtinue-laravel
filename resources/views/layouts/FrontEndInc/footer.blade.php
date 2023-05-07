@@ -128,31 +128,34 @@
                         <img src="{{ asset('FrontEnd/images/icon/logo-footer.png') }}" alt="" class="logo-footer" />
                     </figure>
                 </div>
+                @php
+                    $findUs = App\Models\FindUs::where('id',1)->first();
+                @endphp
                 <div class="col-md-8 my-auto">
                     <div class="social__media">
                         <ul class="list-inline">
                             <li class="list-inline-item">
-                                <a href="#" class="btn btn-social rounded text-white facebook">
+                                <a href="{{ $findUs->facebook }}" target="blank" class="btn btn-social rounded text-white facebook">
                                     <i class="fa fa-facebook"></i>
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#" class="btn btn-social rounded text-white twitter">
+                                <a href="{{ $findUs->twitter }}" target="blank" class="btn btn-social rounded text-white twitter">
                                     <i class="fa fa-twitter"></i>
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#" class="btn btn-social rounded text-white whatsapp">
+                                <a href="{{ $findUs->whatsapp }}" target="blank" class="btn btn-social rounded text-white whatsapp">
                                     <i class="fa fa-whatsapp"></i>
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#" class="btn btn-social rounded text-white telegram">
+                                <a href="{{ $findUs->telegram }}" target="blank" class="btn btn-social rounded text-white telegram">
                                     <i class="fa fa-telegram"></i>
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#" class="btn btn-social rounded text-white linkedin">
+                                <a href="{{ $findUs->linkedin }}" target="blank" class="btn btn-social rounded text-white linkedin">
                                     <i class="fa fa-linkedin"></i>
                                 </a>
                             </li>

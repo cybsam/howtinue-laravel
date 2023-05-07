@@ -41,6 +41,7 @@
 
                         <h3 class="border_section">Articles List</h3>
                         @foreach ($categoryName as $postDetails)
+                        
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="card__post card__post-list">

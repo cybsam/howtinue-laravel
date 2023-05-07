@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\FrontEnd\catagory\CatagoryIndexController;
 use App\Http\Controllers\FrontEnd\Share\ShareController;
+use App\Http\Controllers\FindUs\FindUsController;
+use App\Models\FindUs;
 
 /*
 |--------------------------------------------------------------------------

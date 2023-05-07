@@ -22,15 +22,18 @@
                         
                         </li>
                     </ul>
+                    @php
+                    $findUs = App\Models\FindUs::where('id',1)->first();
+                @endphp
                     <ul class="topbar-sosmed">
                         <li>
-                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="{{ $findUs->facebook }}" target="blank"><i class="fa fa-facebook"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="{{ $findUs->twitter }}"target="blank"><i class="fa fa-twitter"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="{{ $findUs->linkedin }}"target="blank"><i class="fa fa-linkedin"></i></a>
                         </li>
                     </ul>
                 </div>

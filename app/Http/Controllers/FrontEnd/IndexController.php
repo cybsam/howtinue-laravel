@@ -18,10 +18,13 @@ class IndexController extends Controller
         $listBlogFirst = SupUserBlog::where('post_status','0')->inRandomOrder()->get();
         $listBlog = SupUserBlog::where('post_status','0')->inRandomOrder()->get();
         $randomCate = SubCatagory::where('catagory_status',0)->inRandomOrder()->take(4)->get();
+
+
         return view('FrontEnd.index',[
             'listBlogFirst'=>$listBlogFirst,
             'listBlog'=>$listBlog,
-            'randomCate'=>$randomCate
+            'randomCate'=>$randomCate,
+            // 'postViewCountListBlog'=>$postViewCountListBlog
         ]);
     }
 

@@ -25,8 +25,12 @@
         <div class="card">
             <img src="{{ asset('uploads/postimage/') }}/{{ $myblog->blog_image }}" class="card-img-top" alt="{{ $myblog->blog_meta }}">
             <div class="card-img-overlay">
-                <a href="{{ route('blog.details', ['post_name' => $myblog->slug]) }}" class="card-title">{{ $myblog->blog_name }}</a>
+              <span>{{ views($myblog)->count() }} views</span>
+              <br>
+                <a href="{{ route('blog.details', ['post_name' => $myblog->slug]) }}" class="card-title">{{ Str::limit($myblog->blog_name, 18) }}</a>
                 <p class="card-text">{{ $myblog->blog_short_desc }}.</p>
+                
+  
             </div>
         </div>
     </div>

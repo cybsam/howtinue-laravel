@@ -9,6 +9,7 @@
                 <div class="col-md-12">
                     <div class="wrapp__list__article-responsive wrapp__list__article-responsive-carousel">
                         @foreach($listBlogFirst as $listBlogsFir)
+                        
                         <div class="item">
                             <!-- Post Article -->
                             <div class="card__post card__post-list">
@@ -62,7 +63,7 @@
                     <div class="col-lg-12">
                         <div class="top__news__slider">
                             @foreach($listBlog as $listBlogs)
-                                
+                            
                             
                             <div class="item">
                                 <!-- Post Article -->
@@ -352,11 +353,13 @@
                             <div class="wrapper__list-number">
                                 <!-- List Article -->
                                 @foreach ($randomCate as $randCate)
-                                    
+                                    @php
+                                        $countCatePOst = App\Models\SupUserBlog::where('category',$randCate->id)->where('post_status',0)->count();
+                                    @endphp
                                 
                                 <div class="card__post__list">
                                     <div class="list-number">
-                                        <span> 1 </span>
+                                        <span> {{ $countCatePOst }} </span>
                                     </div>
                                     <a href="{{ route('category.post', ['list_post' => $randCate->slug]) }}" class="category"> {{ $randCate->subcatagoryname }} </a>
                                     <ul class="list-inline">

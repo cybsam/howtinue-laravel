@@ -41,6 +41,22 @@
               >
       </div>
   </div>
+  <hr style="color:red;">
+  <div class="row mb-3">
+    <label for="inputText" class="col-sm-2 col-form-label">SEO Meta Title</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" name="__postname" value="{{ $showData->blog_meta_title }}"
+            >
+    </div>
+</div>
+<div class="row mb-3">
+    <label for="inputText" class="col-sm-2 col-form-label">SEO Meta Description</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" name="__postname" value="{{ $showData->blog_meta_description }}"
+            >
+    </div>
+</div>
+<hr style="color:red;">
   <div class="row mb-3">
       <label for="inputText" class="col-sm-2 col-form-label">Category</label>
       <div class="col-sm-10">

@@ -15,13 +15,22 @@ use Image;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
+use CyrildeWit\EloquentViewable\Contracts\Viewable;
+use CyrildeWit\EloquentViewable\InteractsWithViews;
+
 class SupUserBlogController extends Controller
 {
     //index/list
     public function index(){
         $articleShow = SupUserBlog::all();
+        // foreach ($articleShow as $singleArticle) {
+        //     $countView = views($singleArticle)->count();
+        // }
+
+        
         return view('SupUserDash.blog.index',[
-            'articleShow'=>$articleShow
+            'articleShow'=>$articleShow,
+            
         ]);
     }
 

@@ -170,8 +170,9 @@ return [
         // Yajra\DataTables\DataTablesServiceProvider::class,
 
         /*
-         * Package Service Providers...
+         * Package Service Providers view...
          */
+        CyrildeWit\EloquentViewable\EloquentViewableServiceProvider::class,
 
         /*
          * Application Service Providers...

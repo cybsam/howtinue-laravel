@@ -17,6 +17,7 @@ class SupUserDashController extends Controller
         // $chkUsers = UsersInfoAdmin::where('user_id',Auth::id())->first();
         // $chkAbout = $chkUsers->about;
         // $chkCompany = $chkUsers->about;
+        // $postViewCount = views($post)->count();
         $allUsers = user::all()->count();
         $activeArticle = SupUserBlog::where('post_status','0')->count();
         return view('SupUserDash.index',[

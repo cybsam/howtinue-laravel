@@ -54,7 +54,7 @@
                                 </li>
                                 <li class="list-inline-item">
                                     <span class="text-dark text-capitalize"> in </span>
-                                    <a href="#"> {{ $post->sub_category_name }} </a>
+                                    <a href="{{ route('category.post', ['list_post' => $post->sub_category_slug]) }}"> {{ $post->sub_category_name }} </a>
                                 </li>
                             </ul>
                         </div>
@@ -68,7 +68,7 @@
                         <div class="wrap__article-detail-content">
                             <div class="total-views">
                                 <div class="total-views-read">
-                                    15.k
+                                    {{ $postViewCount }}
                                     <span> views </span>
                                 </div>
 
@@ -184,7 +184,8 @@
                         @comments(['model' => $post])
                     </div>
                    
-                    
+                    <br>
+                    <br>
                     
                     <div class="clearfix"></div>
 

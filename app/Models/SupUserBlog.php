@@ -5,11 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Laravelista\Comments\Commentable;
+use CyrildeWit\EloquentViewable\Contracts\Viewable;
+use  CyrildeWit\EloquentViewable\InteractsWithViews;
 
-class SupUserBlog extends Model
+class SupUserBlog extends Model implements Viewable
 {
     use HasFactory;
     use Commentable;
+    use InteractsWithViews;
 
     protected $fillable = [
         'blog_name',
