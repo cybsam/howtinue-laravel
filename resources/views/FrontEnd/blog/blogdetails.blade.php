@@ -19,8 +19,11 @@
                         <li class="breadcrumbs__item">
                             <a href="" class="breadcrumbs__url">Article List</a>
                         </li>
-                        <li class="breadcrumbs__item breadcrumbs__item--current">
+                        <li class="breadcrumbs__item">
                             Article Details
+                        </li>
+                        <li class="breadcrumbs__item breadcrumbs__item--current">
+                            {{ $post->blog_name }}
                         </li>
                     </ul>
                    

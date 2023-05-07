@@ -55,6 +55,9 @@ Route::prefix('en')->group(function () {
     //share
     Route::get('Articles/Blog/Details/Share/', [App\Http\Controllers\FrontEnd\Share\ShareController::class, 'facebook'])->name('facebook.share');
 
+    //search
+    Route::post('Search/Result',[App\Http\Controllers\FrontEnd\search\searchController::class, 'searchIndex'])->name('frontEnd.SearchIndex');
+
     //contact
     Route::get('Contact', [App\Http\Controllers\FrontEnd\IndexController::class, 'contact'])->name('frontend.contact');
     Route::post('Contact/Save', [App\Http\Controllers\contact\ContactController::class, 'contactSave'])->name('frontend.contactSave');

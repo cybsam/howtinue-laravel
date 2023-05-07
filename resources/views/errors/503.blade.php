@@ -1,24 +1,25 @@
-
 @extends('layouts.FrontEndMaster')
 @section('FrontTitle', '503 - Healthy Botic')
 @section('FrontEnd')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 m-auto">
+                <div id="notfound">
+                    <div class="notfound">
+                        <div class="notfound-404">
+                            <h1>503</h1>
+                        </div>
+                        <h2>Oops, Service Unavailable!</h2>
+                        <form class="notfound-search">
+                            <input type="text" placeholder="Search...">
+                            <button type="button">Search</button>
+                        </form>
 
-    <div id="notfound">
-        <div class="notfound">
-            <div class="notfound-404">
-                <h1>503</h1>
+                        <a href="{{ URL::previous() }}"><span class="arrow"></span>Go Back</a>
+                    </div>
+                </div>
             </div>
-            <h2>Oops, Service Unavailable!</h2>
-            <form class="notfound-search">
-                <input type="text" placeholder="Search...">
-                <button type="button">Search</button>
-            </form>
-            
-            <a href="{{ URL::previous() }}"><span class="arrow"></span>Go Back</a>
         </div>
     </div>
     @extends('layouts.errorCustomMaster')
 @endsection
-
-
-

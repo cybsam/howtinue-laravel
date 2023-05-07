@@ -30,6 +30,17 @@ class SupUserBlog extends Model implements Viewable
 
     ];
 
+    // public function getSearchResult(): SearchResult
+    //  {
+    //     $url = route('blog.details', $this->slug);
+
+    //      return new \Spatie\Searchable\SearchResult(
+    //         $this,
+    //         $this->title,
+    //         $url
+    //      );
+    //  }
+
     function relationshiptocategory(){
         return $this->hasOne('App\Models\SubCatagory','id', 'id');
     }
