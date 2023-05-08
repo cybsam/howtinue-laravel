@@ -10,9 +10,10 @@
                             <h1>503</h1>
                         </div>
                         <h2>Oops, Service Unavailable!</h2>
-                        <form class="notfound-search">
-                            <input type="text" placeholder="Search...">
-                            <button type="button">Search</button>
+                        <form class="notfound-search" action="{{ route('frontEnd.SearchIndex') }}" method="POST">
+                            @csrf
+                            <input type="text" name="__search" id="__search" placeholder="Search...">
+                            <button type="submit">Search</button>
                         </form>
 
                         <a href="{{ URL::previous() }}"><span class="arrow"></span>Go Back</a>

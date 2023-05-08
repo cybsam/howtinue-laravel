@@ -38,6 +38,10 @@ class searchController extends Controller
                             ->latest()
                             ->get();
 
+        $commntsGetFromDatabase = DB::table('comments')->where('comment','LIKE','%'.$searchQueryValue.'%')->latest()->get();
+
+        // dd($commntsGetFromDatabase);
+        // die();
         // $paginate = $searchQuery->paginate(2);
 
         // $searchResults = (new Search())
@@ -51,6 +55,7 @@ class searchController extends Controller
         return view('FrontEnd.search.search',[
             'searchQuery'=>$searchQuery,
             'searchQueryValue'=>$searchQueryValue,
+            'commntsGetFromDatabase'=>$commntsGetFromDatabase
             // 'paginate'=>$paginate
         ]);
     }

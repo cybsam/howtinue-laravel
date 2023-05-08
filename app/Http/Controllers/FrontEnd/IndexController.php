@@ -35,4 +35,14 @@ class IndexController extends Controller
     public function contact(){
         return view('FrontEnd.contact.contact');
     }
+
+    public function AboutUs(){
+        return view('FrontEnd.pages.about-us');
+    }
+    public function SiteMap(){
+        return view('FrontEnd.pages.sitemap');
+    }
+    public function termsofuse(){
+        return view('FrontEnd.pages.terms-of-use');
+    }
 }

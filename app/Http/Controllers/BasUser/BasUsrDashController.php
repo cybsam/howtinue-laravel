@@ -9,11 +9,23 @@ use App\Models\User;
 use App\Models\UsersInfoAdmin;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
+
 
 class BasUsrDashController extends Controller
 {
     public function index(){
-        return view('BasUsrDash.index');
+        $AuthId = Auth::id();
+        $blog = DB::table('sup_user_blogs')->where('userid',$AuthId)->latest()->get();
+
+        $comments = DB::table('comments')->where('commenter_id',$AuthId)->latest()->get();
+
+
+        return view('BasUsrDash.index',[
+            'blog'=>$blog,
+            'comments'=>$comments
+        ]);
     }
 
     //profile
@@ -167,7 +179,7 @@ class BasUsrDashController extends Controller
             'dbInstagram'=>$dbInstagram,
             'dbLinkedin'=>$dbLinkedin
         ]);
-        
+
     }
 
     //save

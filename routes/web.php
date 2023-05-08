@@ -61,6 +61,12 @@ Route::prefix('en')->group(function () {
     //contact
     Route::get('Contact', [App\Http\Controllers\FrontEnd\IndexController::class, 'contact'])->name('frontend.contact');
     Route::post('Contact/Save', [App\Http\Controllers\contact\ContactController::class, 'contactSave'])->name('frontend.contactSave');
+    Route::get('AboutUs/Show', [App\Http\Controllers\FrontEnd\IndexController::class, 'AboutUs'])->name('frontend.AboutUs');
+    Route::get('SiteMap', [App\Http\Controllers\FrontEnd\IndexController::class, 'SiteMap'])->name('frontend.SiteMap');
+    Route::get('Terms-Of-Use', [App\Http\Controllers\FrontEnd\IndexController::class, 'termsofuse'])->name('frontend.termsofuse');
+
+
+
 });
 
 //End front end

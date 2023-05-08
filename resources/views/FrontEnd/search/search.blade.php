@@ -84,16 +84,73 @@ There are {{ $searchResults->count() }} results.
 
                                 </div>
                             </div>
-
                         @endforeach
                     </div>
+                    <div class="mt-2">
+                        <h5>Search results for keyword: <span class="text-primary"> "{{ $searchQueryValue }}" </span>
+                            found in {{ $commntsGetFromDatabase->count() }} comments. </h5>
+
+                        <div class="card__post card__post-list">
+
+                            @foreach ($commntsGetFromDatabase as $comments)
 
 
-                    <div class="mt-4">
+                            <div class="card__post__body ">
+                                <div class="card__post__content">
 
-                        {{-- {{ $searchQuery->links() }} --}}
+                                    <div class="card__post__author-info mb-2">
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <span class="text-primary">
+                                                    by @php
+                                                        $id = $comments->commenter_id;
+                                                        $name = DB::table('users')->where('id',$id)->first();
 
-                        {{-- <div class="pagination-area">
+                                                    @endphp
+                                                    {{ $name->username }}
+                                                </span>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <span class="text-dark text-capitalize">
+                                                    {{-- {{ $comments->created_at->format('l, j F Y') }} --}}
+                                                </span>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                    <div class="card__post__title">
+                                        <h6>
+                                            @php
+                                                $blogId = $comments->commentable_id;
+                                                $findSlag = DB::table('sup_user_blogs')->where('id',$blogId)->first();
+                                                $slub = $findSlag->slug;
+                                            @endphp
+                                            <a href="{{ route('blog.details', ['post_name' => $slub]) }}">
+
+                                                {{ $comments->comment }}
+                                            </a>
+                                        </h6>
+                                        <!-- <p class="d-none d-lg-block d-xl-block">
+                                                Maecenas accumsan tortor ut velit pharetra mollis. Proin eu nisl et arcu iaculis placerat
+                                                sollicitudin ut est. In fringilla dui dui.
+                                            </p> -->
+
+                                    </div>
+
+                                </div>
+
+                                @endforeach
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+
+                    {{-- {{ $searchQuery->links() }} --}}
+
+                    {{-- <div class="pagination-area">
                             <div class="pagination wow fadeIn animated" data-wow-duration="2s" data-wow-delay="0.5s"
                                 style="visibility: visible; animation-duration: 2s; animation-delay: 0.5s; animation-name: fadeIn;">
 
@@ -109,11 +166,11 @@ There are {{ $searchResults->count() }} results.
                         </div> --}}
 
 
-                    </div>
-
                 </div>
 
             </div>
+
+        </div>
         </div>
     </section>
 

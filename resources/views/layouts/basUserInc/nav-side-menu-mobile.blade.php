@@ -3,10 +3,12 @@
     <div class="modal-dialog modal-dialog-aside" role="document">
         <div class="modal-content">
             <div class="modal-header">
+                <form action="{{ route('frontEnd.SearchIndex') }}" method="POST" >
+                    @csrf
                 <div class="widget__form-search-bar">
                     <div class="row no-gutters">
                         <div class="col">
-                            <input class="form-control border-secondary border-right-0 rounded-0" value=""
+                            <input class="form-control border-secondary border-right-0 rounded-0" name="__search" id="__search" value=""
                                 placeholder="Search" />
                         </div>
                         <div class="col-auto">
@@ -19,6 +21,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
+                </form>
             </div>
             <div class="modal-body">
                 <nav class="list-group list-group-flush">

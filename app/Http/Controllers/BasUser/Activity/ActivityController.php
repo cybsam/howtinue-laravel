@@ -13,11 +13,20 @@ use Carbon\Carbon;
 use Image;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\DB;
 
 class ActivityController extends Controller
 {
     public function UserActivity(){
-        return view('BasUsrDash.activity.activity');
+        $AuthId = Auth::id();
+        $blog = DB::table('sup_user_blogs')->where('userid',$AuthId)->latest()->get();
+
+        $comments = DB::table('comments')->where('commenter_id',$AuthId)->latest()->get();
+
+        return view('BasUsrDash.activity.activity',[
+            'blog'=>$blog,
+            'comments'=>$comments
+        ]);
     }
 
     public function ArticleActivity(){
