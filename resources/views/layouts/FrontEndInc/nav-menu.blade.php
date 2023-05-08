@@ -21,7 +21,7 @@
                         <a class="nav-link" href="{{ route('FrontEnd.Index') }}">
                             Home
                         </a>
-                        
+
                     </li>
                     {{-- end home page --}}
 
@@ -42,15 +42,15 @@
                                                 <div class="list-group list-group-flush">
                                                     <a href="" class="list-group-item list-group-item-action">Body Care</a>
                                                     <a href="" class="list-group-item list-group-item-action">Skin Care</a>
-                                                    
+
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                                                 <div class="list-group list-group-flush">
                                                     <a href="" class="list-group-item list-group-item-action">Oral Care</a>
                                                     <a href="" class="list-group-item list-group-item-action">Makeup</a>
-                                                    
-                                                     
+
+
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
@@ -63,7 +63,7 @@
                                             <div class="col-md-6 col-lg-3">
                                                 <div class="list-group list-group-flush">
                                                     <a href="" class="list-group-item list-group-item-action">Natural & Orginic Beauty</a>
-                                                    
+
                                                 </div>
                                             </div>
                                         </div>
@@ -98,7 +98,7 @@
                                                     <a href="" class="list-group-item list-group-item-action">Brain</a>
                                                     <a href="" class="list-group-item list-group-item-action">Eyes</a>
                                                     <a href="" class="list-group-item list-group-item-action">Kedney</a>
-                                                    
+
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
@@ -106,7 +106,7 @@
                                                     <a href="" class="list-group-item list-group-item-action">Neek</a>
                                                     <a href="" class="list-group-item list-group-item-action">Arms</a>
                                                     <a href="" class="list-group-item list-group-item-action">Joints</a>
-                                                    
+
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
@@ -114,7 +114,7 @@
                                                     <a href="" class="list-group-item list-group-item-action">Heart</a>
                                                     <a href="" class="list-group-item list-group-item-action">Liver</a>
                                                     <a href="" class="list-group-item list-group-item-action">kedney</a>
-                                                    
+
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-3">
@@ -122,7 +122,7 @@
                                                     <a href="" class="list-group-item list-group-item-action">Hands</a>
                                                     <a href="" class="list-group-item list-group-item-action">Abdomen</a>
                                                     <a href="" class="list-group-item list-group-item-action">Nose</a>
-                                                    
+
                                                 </div>
                                             </div>
                                         </div>
@@ -156,27 +156,27 @@
                                                 <div class="list-group list-group-flush">
                                                     <a href="" class="list-group-item list-group-item-action">Anxiety</a>
                                                     <a href="" class="list-group-item list-group-item-action">Deepression</a>
-                                                    
+
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                                                 <div class="list-group list-group-flush">
                                                     <a href="" class="list-group-item list-group-item-action">Stress Management</a>
                                                     <a href="" class="list-group-item list-group-item-action">Self Care</a>
-                                                    
+
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
                                                 <div class="list-group list-group-flush">
                                                     <a href="" class="list-group-item list-group-item-action">Mindfullness & Meadition</a>
                                                     <a href="" class="list-group-item list-group-item-action">Mental Health Stigma</a>
-                                                    
+
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-3">
                                                 <div class="list-group list-group-flush">
                                                     <a href="" class="list-group-item list-group-item-action">Relationship & Commiunication</a>
-                                                    
+
                                                 </div>
                                             </div>
                                         </div>
@@ -210,7 +210,7 @@
                                 </li>
                             </ul>
                         </li>
-                        
+
                     </li> --}}
 
                     {{-- foods mega menu --}}
@@ -231,7 +231,7 @@
                                                     <a href="" class="list-group-item list-group-item-action">Plant Based Food</a>
                                                     <a href="" class="list-group-item list-group-item-action">Leans Protines</a>
                                                     <a href="" class="list-group-item list-group-item-action">Whole Foods</a>
-                                                    
+
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
@@ -239,20 +239,20 @@
                                                     <a href="" class="list-group-item list-group-item-action">Whole Grains</a>
                                                     <a href="" class="list-group-item list-group-item-action">Low-Fat Dairy</a>
                                                     <a href="" class="list-group-item list-group-item-action">Frouts And Vegitables</a>
-                                                    
+
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
                                                 <div class="list-group list-group-flush">
                                                     <a href="" class="list-group-item list-group-item-action">Nutes & Seeds</a>
                                                     <a href="" class="list-group-item list-group-item-action">Health Fats</a>
-                                                    
+
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-3">
                                                 <div class="list-group list-group-flush">
                                                     <a href="" class="list-group-item list-group-item-action">Herbs & Spices</a>
-                                                    
+
                                                 </div>
                                             </div>
                                         </div>
@@ -285,26 +285,26 @@
                                             <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                                                 <div class="list-group list-group-flush">
                                                     <a href="" class="list-group-item list-group-item-action">Fitness Calculator</a>
-                                                    
+
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                                                 <div class="list-group list-group-flush">
                                                     <a href="" class="list-group-item list-group-item-action">Pegnency Calculator</a>
-                                                    
+
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
                                                 <div class="list-group list-group-flush">
                                                     <a href="" class="list-group-item list-group-item-action">Others Calculator</a>
-                                                    
+
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-3">
                                                 <div class="list-group list-group-flush">
                                                     <a href="" class="list-group-item list-group-item-action">BMI Calculator</a>
-                                                        
-                                                        
+
+
                                                 </div>
                                             </div>
                                         </div>
@@ -321,7 +321,7 @@
                     </li>
                     {{-- end calculator mega menu --}}
 
-                    
+
 
 
 
@@ -340,7 +340,7 @@
                 <div class="top-search navigation-shadow">
                     <div class="container">
                         <div class="input-group">
-                            <form action="{{ route('frontEnd.SearchIndex') }}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('frontEnd.SearchIndex') }}" method="POST">
                                 @csrf
                                 <div class="row no-gutters mt-3">
                                     <div class="col">

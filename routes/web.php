@@ -38,16 +38,16 @@ Route::prefix('en')->group(function () {
     Route::get('Foods', [App\Http\Controllers\FrontEnd\Foods\FoodsController::class, 'index'])->name('Foods.fr');
 
     // end main route
-    
+
     //catagory
     Route::get('Articles/', [App\Http\Controllers\FrontEnd\catagory\CatagoryIndexController::class, 'index'])->name('frontEnd.catagory.show');
     Route::get('Articles/Details/{list_post}', [App\Http\Controllers\FrontEnd\catagory\CatagoryIndexController::class, 'cateListShow'])->name('category.post');
-    
-    
+
+
 
     Route::get('Articles/Parent', [App\Http\Controllers\FrontEnd\catagory\ParentCategoryController::class, 'index'])->name('frontEnd.catagory.parent');
     Route::get('Articles/Parent/{list_cate}', [App\Http\Controllers\FrontEnd\catagory\ParentCategoryController::class, 'listCate'])->name('frontEnd.parentShow');
-    
+
 
     //frontPage post
     Route::get('Articles/Blog/Details/{post_name}',[App\Http\Controllers\FrontEnd\Blog\FrontBlogController::class, 'ShowDetails'])->name('blog.details');
@@ -57,7 +57,7 @@ Route::prefix('en')->group(function () {
 
     //search
     Route::post('Search/Result',[App\Http\Controllers\FrontEnd\search\searchController::class, 'searchIndex'])->name('frontEnd.SearchIndex');
-
+    // Route::get('Search',[App\Http\Controllers\FrontEnd\search\searchController::class, 'searchIndex'])->name('frontEnd.SearchIndex');
     //contact
     Route::get('Contact', [App\Http\Controllers\FrontEnd\IndexController::class, 'contact'])->name('frontend.contact');
     Route::post('Contact/Save', [App\Http\Controllers\contact\ContactController::class, 'contactSave'])->name('frontend.contactSave');

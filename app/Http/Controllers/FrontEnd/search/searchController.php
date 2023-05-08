@@ -14,7 +14,9 @@ use Carbon\Carbon;
 use Image;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Contracts\Pagination\Paginator;
+// use Illuminate\Contracts\Pagination\Paginator;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\DB;
 // use ProtoneMedia\LaravelCrossEloquentSearch\Search;
 use Spatie\Searchable\Searchable;
 use Spatie\Searchable\SearchResult;
@@ -24,10 +26,17 @@ class searchController extends Controller
     public function searchIndex(Request $request){
         $searchQueryValue = $request->__search;
 
+        // $searchQueryValue = $_GET('__search');
+        // dd($searchQueryValue);
+        // die();
+
+
         $searchQuery = SupUserBlog::where('blog_name','LIKE','%'.$searchQueryValue.'%')
                             ->orWhere('blog_short_desc','LIKE','%'.$searchQueryValue.'%')
                             ->orWhere('sub_category_name','LIKE','%'.$searchQueryValue.'%')
-                            ->paginate(2);
+                            // ->paginate(1);
+                            ->latest()
+                            ->get();
 
         // $paginate = $searchQuery->paginate(2);
 

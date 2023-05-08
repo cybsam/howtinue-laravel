@@ -3,7 +3,7 @@
     <div class="modal-dialog modal-dialog-aside" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <form action="{{ route('frontEnd.SearchIndex') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('frontEnd.SearchIndex') }}" method="POST" >
                     @csrf
                 <div class="widget__form-search-bar">
                     <div class="row no-gutters">
@@ -23,7 +23,7 @@
                 </button>
                 </form>
             </div>
-        
+
             <div class="modal-body">
                 <nav class="list-group list-group-flush">
                     <ul class="navbar-nav">

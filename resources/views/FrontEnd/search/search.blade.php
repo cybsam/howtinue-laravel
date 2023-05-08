@@ -32,97 +32,83 @@ There are {{ $searchResults->count() }} results.
                         </div>
 
                         <!-- Post Article List -->
-                        @foreach ( $searchQuery as $search )
-
-
-                        <div class="card__post card__post-list card__post__transition mt-30">
-                            <div class="row ">
-                                <div class="col-md-5">
-                                    <div class="card__post__transition">
-                                        <a href="{{ route('blog.details', ['post_name' => $search->slug]) }}">
-                                            <img src="{{ asset('uploads/postimage/') }}/{{ $search->blog_image }}" class="img-fluid w-100"
-                                                alt="{{ $search->blog_meta_keyword }}">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-7 my-auto pl-0">
-                                    <div class="card__post__body ">
-                                        <div class="card__post__content  ">
-                                            <div class="card__post__category ">
-                                                <a href="{{ route('category.post', ['list_post' => $search->sub_category_slug]) }}">{{ $search->sub_category_name }}</a>
-                                            </div>
-                                            <div class="card__post__author-info mb-2">
-                                                <ul class="list-inline">
-                                                    <li class="list-inline-item">
-                                                        <span class="text-primary">
-                                                            by  {{ $search->username }}
-                                                        </span>
-                                                    </li>
-                                                    <li class="list-inline-item">
-                                                        <span class="text-dark text-capitalize">
-                                                            {{ $search->updated_at->format('l, j F Y') }}
-                                                        </span>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-                                            <div class="card__post__title">
-                                                <h5>
-                                                    <a href="{{ route('blog.details', ['post_name' => $search->slug]) }}">
-                                                        {{ $search->blog_name }}
-                                                    </a>
-                                                </h5>
-                                                <p class="d-none d-lg-block d-xl-block mb-0">
-                                                    {{ $search->blog_short_desc }}
-                                                </p>
-
-                                            </div>
-
+                        @foreach ($searchQuery as $search)
+                            <div class="card__post card__post-list card__post__transition mt-30">
+                                <div class="row ">
+                                    <div class="col-md-5">
+                                        <div class="card__post__transition">
+                                            <a href="{{ route('blog.details', ['post_name' => $search->slug]) }}">
+                                                <img src="{{ asset('uploads/postimage/') }}/{{ $search->blog_image }}"
+                                                    class="img-fluid w-100" alt="{{ $search->blog_meta_keyword }}">
+                                            </a>
                                         </div>
                                     </div>
-                                </div>
+                                    <div class="col-md-7 my-auto pl-0">
+                                        <div class="card__post__body ">
+                                            <div class="card__post__content  ">
+                                                <div class="card__post__category ">
+                                                    <a
+                                                        href="{{ route('category.post', ['list_post' => $search->sub_category_slug]) }}">{{ $search->sub_category_name }}</a>
+                                                </div>
+                                                <div class="card__post__author-info mb-2">
+                                                    <ul class="list-inline">
+                                                        <li class="list-inline-item">
+                                                            <span class="text-primary">
+                                                                by {{ $search->username }}
+                                                            </span>
+                                                        </li>
+                                                        <li class="list-inline-item">
+                                                            <span class="text-dark text-capitalize">
+                                                                {{ $search->updated_at->format('l, j F Y') }}
+                                                            </span>
+                                                        </li>
 
+                                                    </ul>
+                                                </div>
+                                                <div class="card__post__title">
+                                                    <h5>
+                                                        <a
+                                                            href="{{ route('blog.details', ['post_name' => $search->slug]) }}">
+                                                            {{ $search->blog_name }}
+                                                        </a>
+                                                    </h5>
+                                                    <p class="d-none d-lg-block d-xl-block mb-0">
+                                                        {{ $search->blog_short_desc }}
+                                                    </p>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
-                        </div>
-                        <!-- Post Article List -->
 
                         @endforeach
                     </div>
 
-                    <!-- pagination -->
+
                     <div class="mt-4">
-                        <!-- Pagination -->
-                        {{-- {{ $searchQuery->link() }} --}}
-                        {{-- @php
-                            $searchQuery->link()
-                        @endphp --}}
-                        <div class="pagination-area">
+
+                        {{-- {{ $searchQuery->links() }} --}}
+
+                        {{-- <div class="pagination-area">
                             <div class="pagination wow fadeIn animated" data-wow-duration="2s" data-wow-delay="0.5s"
                                 style="visibility: visible; animation-duration: 2s; animation-delay: 0.5s; animation-name: fadeIn;">
-                                <a href="#">
-                                    «
-                                </a>
-                                <a href="#">
-                                    1
-                                </a>
-                                <a class="active" href="#">
-                                    2
-                                </a>
-                                <a href="#">
-                                    3
-                                </a>
-                                <a href="#">
-                                    4
-                                </a>
-                                <a href="#">
-                                    5
-                                </a>
 
-                                <a href="#">
-                                    »
-                                </a>
+                                <a href="#">«</a>
+                                <a href="#">1</a>
+                                <a class="active" href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+
+                                <a href="#">»</a>
                             </div>
-                        </div>
+                        </div> --}}
+
+
                     </div>
 
                 </div>
