@@ -41,7 +41,7 @@
 
                         <h3 class="border_section">Articles List</h3>
                         @foreach ($categoryName as $postDetails)
-                        
+
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="card__post card__post-list">
@@ -97,93 +97,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="sidebar-sticky">
-                        <aside class="wrapper__list__article ">
-                            <h4 class="border_section">Releted.</h4>
-                            <div class="wrapper__list__article-small">
-                                <div class="mb-3">
-                                    <!-- Post Article -->
-                                    @foreach ($randArticleCheck as $randArticle)
-                                        
-                                    
-                                    <div class="card__post card__post-list">
-                                        <div class="image-sm">
-                                            <a href="{{ route('blog.details', ['post_name' => $randArticle->slug]) }}">
-                                                <img src="{{ asset('uploads/postimage/') }}/{{ $randArticle->blog_image }}" class="img-fluid" alt="{{ $randArticle->blog_meta }}">
-                                            </a>
-                                        </div>
 
-
-                                        <div class="card__post__body ">
-                                            <div class="card__post__content">
-
-                                                <div class="card__post__author-info mb-2">
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item">
-                                                            <span class="text-primary">
-                                                                by {{ $randArticle->username }} 
-                                                            </span>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <span class="text-dark text-capitalize">
-                                                                {{ $randArticle->updated_at->format('l, j F Y') }}
-                                                            </span>
-                                                        </li>
-
-                                                    </ul>
-                                                </div>
-                                                <div class="card__post__title">
-                                                    <h6>
-                                                        <a href="{{ route('blog.details', ['post_name' => $randArticle->slug]) }}">
-                                                            {{ $randArticle->blog_name }}
-                                                        </a>
-                                                    </h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    @endforeach
-                                </div>
-                                
-                                <!-- Post Article -->
-                                <div class="article__entry">
-                                    <div class="article__image">
-                                        <a href="#">
-                                            <img src="images/placeholder/500x400.jpg" alt="" class="img-fluid">
-                                        </a>
-                                    </div>
-                                    <div class="article__content">
-                                        <div class="article__category">
-                                            travel
-                                        </div>
-                                        <ul class="list-inline">
-                                            <li class="list-inline-item">
-                                                <span class="text-primary">
-                                                    by david hall
-                                                </span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span class="text-dark text-capitalize">
-                                                    descember 09, 2016
-                                                </span>
-                                            </li>
-
-                                        </ul>
-                                        <h5>
-                                            <a href="#">
-                                                Proin eu nisl et arcu iaculis placerat sollicitudin ut est
-                                            </a>
-                                        </h5>
-                                        <p>
-                                            Maecenas accumsan tortor ut velit pharetra mollis. Proin eu nisl et arcu iaculis
-                                            placerat sollicitudin ut
-                                            est. In fringilla dui dui.
-                                        </p>
-                                        <a href="#" class="btn btn-outline-primary mb-4 text-capitalize"> read
-                                            more</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </aside>
 
                         <aside class="wrapper__list__article">
                             <h4 class="border_section">tags</h4>

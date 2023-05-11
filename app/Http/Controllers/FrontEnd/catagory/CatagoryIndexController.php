@@ -23,15 +23,15 @@ class CatagoryIndexController extends Controller
         $activeValue = 0;
         $linkCate = $list_post;
         $categoryName = SupUserBlog::where('sub_category_slug',$linkCate)->inRandomOrder()->get();
-        $randArticleCheck = SupUserBlog::where([
-            'sub_category_slug'=>$linkCate,
-            'post_status'=>$activeValue
-        ])->inRandomOrder()->take(5)->get();
-               
+        // $randArticleCheck = SupUserBlog::where([
+        //     'sub_category_slug'=>$linkCate,
+        //     'post_status'=>$activeValue
+        // ])->inRandomOrder()->take(5)->get();
+
         return view('FrontEnd.catagory.cateListPost',[
             'categoryName'=>$categoryName,
-            'randArticleCheck'=>$randArticleCheck
+            // 'randArticleCheck'=>$randArticleCheck
         ]);
     }
-    
+
 }

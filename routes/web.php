@@ -31,11 +31,6 @@ Route::prefix('en')->group(function () {
     Route::get('Blank', [App\Http\Controllers\FrontEnd\IndexController::class, 'blank'])->name('FrontEnd.blank');
 
     //
-    Route::get('Beauty', [App\Http\Controllers\FrontEnd\Beauty\BeautyController::class, 'index'])->name('Beauty.fr');
-    Route::get('Body', [App\Http\Controllers\FrontEnd\Body\BodyController::class, 'index'])->name('Body.fr');
-    Route::get('Mind', [App\Http\Controllers\FrontEnd\Mind\MindController::class, 'index'])->name('Mind.fr');
-    Route::get('Calculator', [App\Http\Controllers\FrontEnd\Mind\MindController::class, 'index'])->name('calculator.fr');
-    Route::get('Foods', [App\Http\Controllers\FrontEnd\Foods\FoodsController::class, 'index'])->name('Foods.fr');
 
     // end main route
 

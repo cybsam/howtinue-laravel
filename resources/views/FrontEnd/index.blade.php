@@ -36,7 +36,7 @@
                                         <div class="card__post__title">
                                             <h6>
                                                 <a href="{{ route('blog.details', ['post_name' => $listBlogsFir->slug]) }}">
-                                                    {{ $listBlogsFir->blog_short_desc }}
+                                                    {{ $listBlogsFir->blog_name }}
                                                 </a>
                                             </h6>
 

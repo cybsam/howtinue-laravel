@@ -5,29 +5,37 @@
                 <div class="widget__footer">
                     <div class="dropdown-footer">
                         <h4 class="footer-title">
-                            world
+                            Beauty
                             <span class="fa fa-angle-down"></span>
                         </h4>
                     </div>
-
+                                    @php
+                                        $bodyCare = 'body-care';
+                                        $skinCare = 'skin-care';
+                                        $oralCare = 'oral-care';
+                                        $makeup = 'makeup';
+                                        $heirCare = 'hair-care';
+                                        $nailCare = 'nail-care';
+                                        $naturalOrganic = 'natural-and-organic';
+                                    @endphp
                     <ul class="list-unstyled option-content is-hidden">
                         <li>
-                            <a href="#">global economy</a>
+                            <a href="{{ route('category.post', ['list_post' => $bodyCare]) }}">Body Care</a>
                         </li>
                         <li>
-                            <a href="#">religion</a>
+                            <a href="{{ route('category.post', ['list_post' => $skinCare]) }}">Skin Care</a>
                         </li>
                         <li>
-                            <a href="#">bitcoin</a>
+                            <a href="{{ route('category.post', ['list_post' => $oralCare]) }}">Oral Care</a>
                         </li>
                         <li>
-                            <a href="#">conflict</a>
+                            <a href="{{ route('category.post', ['list_post' => $makeup]) }}">Makeup</a>
                         </li>
                         <li>
-                            <a href="#">sports</a>
+                            <a href="{{ route('category.post', ['list_post' => $heirCare]) }}">Heir Care</a>
                         </li>
                         <li>
-                            <a href="#">scandals</a>
+                            <a href="{{ route('category.post', ['list_post' => $naturalOrganic]) }}">Natural Organic</a>
                         </li>
                     </ul>
                 </div>
@@ -36,29 +44,41 @@
                 <div class="widget__footer">
                     <div class="dropdown-footer">
                         <h4 class="footer-title">
-                            entertainment
+                            Body
                             <span class="fa fa-angle-down"></span>
                         </h4>
                     </div>
-
+                    @php
+                        $brain = 'brain';
+                        $eye = 'eye';
+                        $kidney = 'kidney';
+                        $neck = 'neck';
+                        $arms = 'arms';
+                        $joints = 'joints';
+                        $heart = 'heart';
+                        $liver = 'liver';
+                        $hands = 'hands';
+                        $nose = 'nose';
+                        $abdomen = 'abdomen';
+                    @endphp
                     <ul class="list-unstyled option-content is-hidden">
                         <li>
-                            <a href="#">celebity news</a>
+                            <a href="{{ route('category.post', ['list_post' => $kidney]) }}">Kidney</a>
                         </li>
                         <li>
-                            <a href="#">movies</a>
+                            <a href="{{ route('category.post', ['list_post' => $eye]) }}">Eye</a>
                         </li>
                         <li>
-                            <a href="#">tv news</a>
+                            <a href="{{ route('category.post', ['list_post' => $neck]) }}">Neck</a>
                         </li>
                         <li>
-                            <a href="#">music news</a>
+                            <a href="{{ route('category.post', ['list_post' => $arms]) }}">Arms</a>
                         </li>
                         <li>
-                            <a href="#">life style</a>
+                            <a href="{{ route('category.post', ['list_post' => $joints]) }}">Joints</a>
                         </li>
                         <li>
-                            <a href="#">entertainment video</a>
+                            <a href="{{ route('category.post', ['list_post' => $liver]) }}">Liver</a>
                         </li>
                     </ul>
                 </div>
@@ -67,25 +87,37 @@
                 <div class="widget__footer">
                     <div class="dropdown-footer">
                         <h4 class="footer-title">
-                            health
+                            Mind
                             <span class="fa fa-angle-down"></span>
                         </h4>
                     </div>
+                                    @php
+                                        $anxiety = 'anxiety';
+                                        $depression = 'depression';
+                                        $stressManagement = 'stress-management';
+                                        $selfCare = 'self-care';
+                                        $mindfulnessMeditation = 'mindfulness-meditation';
+                                        $mentalHealthStigma = 'mental-health-stigma';
+                                        $relationshipAndCommunication = 'relationship-and-communication';
+                                    @endphp
                     <ul class="list-unstyled option-content is-hidden">
                         <li>
-                            <a href="#">medical research</a>
+                            <a href="{{ route('category.post', ['list_post' => $anxiety]) }}">Anxiety</a>
                         </li>
                         <li>
-                            <a href="#">healthy living</a>
+                            <a href="{{ route('category.post', ['list_post' => $depression]) }}">Depression</a>
                         </li>
                         <li>
-                            <a href="#">mental health</a>
+                            <a href="{{ route('category.post', ['list_post' => $stressManagement]) }}">Stress Management</a>
                         </li>
                         <li>
-                            <a href="#">virus corona</a>
+                            <a href="{{ route('category.post', ['list_post' => $selfCare]) }}">Self Care</a>
                         </li>
                         <li>
-                            <a href="#">children's health</a>
+                            <a href="{{ route('category.post', ['list_post' => $mindfulnessMeditation]) }}">Mindfulness Meditation</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('category.post', ['list_post' => $mentalHealthStigma]) }}">Mental Health Stigma</a>
                         </li>
                     </ul>
                 </div>
@@ -94,27 +126,41 @@
                 <div class="widget__footer">
                     <div class="dropdown-footer">
                         <h4 class="footer-title">
-                            business
+                            Foods
                             <span class="fa fa-angle-down"></span>
                         </h4>
                     </div>
-
+                    @php
+                        $plantBasedFood = 'plant-based-food';
+                        $wholeGrains = 'whole-grains';
+                        $leanProtein = 'lean-protein';
+                        $wholeFoods = 'whole-foods';
+                        $lowFatDiet = 'low-fat-diet';
+                        $fruitsAndVegetables = 'fruits-and-vegetables';
+                        $nutsAndSeeds = 'nuts-and-seeds';
+                        $healthyFats = 'healthy-fats';
+                        $herbsAndSpices = 'herbs-and-spices';
+                    @endphp
                     <ul class="list-unstyled option-content is-hidden">
                         <li>
-                            <a href="#">merkets</a>
+                            <a href="{{ route('category.post', ['list_post' => $plantBasedFood]) }}">Plant Based Food</a>
                         </li>
                         <li>
-                            <a href="#">technology</a>
+                            <a href="{{ route('category.post', ['list_post' => $wholeGrains]) }}">Whole Grains</a>
                         </li>
                         <li>
-                            <a href="#">features</a>
+                            <a href="{{ route('category.post', ['list_post' => $leanProtein]) }}">Lean Protein</a>
                         </li>
                         <li>
-                            <a href="#">property</a>
+                            <a href="{{ route('category.post', ['list_post' => $fruitsAndVegetables]) }}">Fruits & Vegetables</a>
                         </li>
                         <li>
-                            <a href="#">business leaders</a>
+                            <a href="{{ route('category.post', ['list_post' => $nutsAndSeeds]) }}">Nuts & Seeds</a>
                         </li>
+                        <li>
+                            <a href="{{ route('category.post', ['list_post' => $herbsAndSpices]) }}">Herbs & Spices</a>
+                        </li>
+
                     </ul>
                 </div>
             </div>
