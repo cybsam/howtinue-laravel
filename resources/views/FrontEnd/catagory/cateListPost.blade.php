@@ -1,5 +1,9 @@
 @extends('layouts.FrontEndMaster')
 @section('FrontTitle', 'Category Post List - Health Botic')
+@section('title', "Article List")
+@section('description', "Article List")
+@section('Keyword', "")
+@section('author', "cybsam")
 @section('FrontEnd')
 
     <section>

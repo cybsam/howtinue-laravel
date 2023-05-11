@@ -1,5 +1,9 @@
 @extends('layouts.FrontEndMaster')
 @section('FrontTitle', 'Category Post List - Health Botic')
+@section('title', "Category Article list")
+@section('description', "healthybotic is a website to help to your daily work")
+@section('Keyword', "healthybotic is a website to help to your daily work")
+@section('author', "cybsam")
 @section('FrontEnd')
 
     <section>
@@ -33,11 +37,11 @@
             <div class="row">
                 <div class="col-md-8">
 
-                    
+
 
                     <aside class="wrapper__list__article ">
-                        
-                    
+
+
 
                         <h3 class="border_section">Articles:- </h3>
                         @foreach ($allSubCate as $subCate)
@@ -87,9 +91,9 @@
                         </div>
                         <br>
                         @endforeach
-                        
-                        
-                        
+
+
+
                     </aside>
                 </div>
                 <div class="col-md-4">

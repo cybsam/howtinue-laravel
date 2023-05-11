@@ -1,5 +1,9 @@
 @extends('layouts.FrontEndMaster')
-@section('FrontTitle', ' Parent Catagory - Howtinue')
+@section('FrontTitle', ' Article - Howtinue')
+@section('title', "Article Main")
+@section('description', "this article  and healthybotic is a website to help to your daily work")
+@section('Keyword', "healthybotic is a website to help to your daily work")
+@section('author', "cybsam")
 @section('FrontEnd')
 
     <section>
@@ -12,7 +16,7 @@
                             <a href="{{ route('FrontEnd.Index') }}" class="breadcrumbs__url">
                                 <i class="fa fa-home"></i> Home</a>
                         </li>
-                        
+
 
                         <li class="breadcrumbs__item breadcrumbs__item--current">
                             Articles Main
@@ -26,11 +30,11 @@
             <div class="row">
                 <div class="col-md-8">
 
-                    
+
 
                     <aside class="wrapper__list__article ">
-                        
-                    
+
+
 
                         <h3 class="border_section">Articles Main:- </h3>
                         @foreach ($parent as $CateGor)
@@ -80,9 +84,9 @@
                         </div>
                         <br>
                         @endforeach
-                        
-                        
-                        
+
+
+
                     </aside>
                 </div>
                 <div class="col-md-4">
