@@ -1,6 +1,6 @@
 @extends('layouts.FrontEndMaster')
 @section('FrontTitle', "$post->blog_name".' - '.'Healthy Botic')
-@section('MetaTitle', "$post->blog_meta_title")
+@section('title', "$post->blog_meta_title")
 @section('description', "$post->blog_meta_description")
 @section('Keyword', "$post->blog_meta_keyword")
 @section('author', "$userDet->username")
@@ -10,7 +10,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    
+
                     <ul class="breadcrumbs bg-light mb-4">
                         <li class="breadcrumbs__item">
                             <a href="{{ route('FrontEnd.Index') }}" class="breadcrumbs__url">
@@ -26,10 +26,10 @@
                             {{ $post->blog_name }}
                         </li>
                     </ul>
-                   
+
                 </div>
                 <div class="col-md-8">
-                    
+
                     <div class="wrap__article-detail">
                         <div class="wrap__article-detail-title">
                             <h1>{{ $post->blog_name }}</h1>
@@ -80,9 +80,9 @@
                                     @php
                                         $curentUrl = URL::current();
                                     @endphp
-                                    
-                                    
-                                    
+
+
+
                                     <li class="list-inline-item" style="">
                                         <style>
                                             div#social-links ul li{
@@ -92,15 +92,15 @@
                                                 padding: 10px;
                                                 margin: 1px;
                                                 font-size: 30px;
-                                                
+
                                             }
                                         </style>
                                         <div class="social-share">
                                             {!! $socialShare !!}
                                         </div>
                                     </li>
-                                    
-                                    
+
+
                                 </ul>
                             </div>
                             <p class="has-drop-cap-fluid">
@@ -136,7 +136,7 @@
                             </li>
                         </ul>
                     </div>
-                    
+
                     <div class="wrap__profile">
                         <div class="wrap__profile-author">
                             <figure>
@@ -182,14 +182,14 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div>
                         @comments(['model' => $post])
                     </div>
-                   
+
                     <br>
                     <br>
-                    
+
                     <div class="clearfix"></div>
 
                     <div class="related-article">
@@ -230,11 +230,13 @@
                     <div class="sticky-top">
                         <aside class="wrapper__list__article">
                             <!-- <h4 class="border_section">Sidebar</h4> -->
+                            <form action="{{ route('frontEnd.SearchIndex') }}" method="POST">
+                                @csrf
                             <div class="mb-4">
                                 <div class="widget__form-search-bar">
                                     <div class="row no-gutters">
                                         <div class="col">
-                                            <input class="form-control border-secondary border-right-0 rounded-0"
+                                            <input class="form-control border-secondary border-right-0 rounded-0" name="__search" id="__search"
                                                 value="" placeholder="Search" />
                                         </div>
                                         <div class="col-auto">
@@ -246,10 +248,11 @@
                                     </div>
                                 </div>
                             </div>
+                        </form>
                             <div class="wrapper__list__article-small">
                                 @foreach ($reletedIn as $relative)
-                                    
-                               
+
+
                                 <div class="mb-3">
                                     <!-- Post Article -->
                                     <div class="card__post card__post-list">
@@ -282,47 +285,44 @@
                                                             {{ $relative->blog_name }}-->
                                                         </a>
                                                     </h6>
-                                                    
-                      
+
+
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 @endforeach
-                                
+
                                 <!-- Post Article -->
                                 <div class="article__entry">
                                     <div class="article__image">
-                                        <a href="#">
-                                            <img src="images/placeholder/500x400.jpg" alt="" class="img-fluid" />
+                                        <a href="{{ route('blog.details', ['post_name' => $singleArticleView->slug]) }}">
+                                            <img src="{{ asset('uploads/postimage') }}/{{ $singleArticleView->blog_image }}" alt="" class="img-fluid" />
                                         </a>
                                     </div>
                                     <div class="article__content">
-                                        <div class="article__category">travel</div>
+                                        <div class="article__category">{{ $singleArticleView->sub_category_name }}</div>
                                         <ul class="list-inline">
                                             <li class="list-inline-item">
-                                                <span class="text-primary"> by david hall </span>
+                                                <span class="text-primary"> by {{ $singleArticleView->username }} </span>
                                             </li>
                                             <li class="list-inline-item">
                                                 <span class="text-dark text-capitalize">
-                                                    descember 09, 2016
+                                                    {{ $singleArticleView->updated_at->format('l, j F Y') }}
                                                 </span>
                                             </li>
                                         </ul>
                                         <h5>
-                                            <a href="#">
-                                                Proin eu nisl et arcu iaculis placerat sollicitudin ut
-                                                est
+                                            <a href="{{ route('blog.details', ['post_name' => $singleArticleView->slug]) }}">
+                                                {{ $singleArticleView->blog_name }}
                                             </a>
                                         </h5>
                                         <p>
-                                            Maecenas accumsan tortor ut velit pharetra mollis. Proin
-                                            eu nisl et arcu iaculis placerat sollicitudin ut est. In
-                                            fringilla dui dui.
+                                            {{ $singleArticleView->blog_short_desc }}.
                                         </p>
-                                        <a href="#" class="btn btn-outline-primary mb-4 text-capitalize">
-                                            read more</a>
+                                        <a href="{{ route('category.post', ['list_post' => $singleArticleView->sub_category_slug]) }}" class="btn btn-outline-primary mb-4 text-capitalize">
+                                            Load more</a>
                                     </div>
                                 </div>
                             </div>

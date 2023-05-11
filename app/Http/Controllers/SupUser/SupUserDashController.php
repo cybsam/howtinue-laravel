@@ -10,19 +10,22 @@ use App\Models\UsersInfoAdmin;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
 use App\Models\SupUserBlog;
+use Illuminate\Support\Facades\DB;
 
 class SupUserDashController extends Controller
 {
     public function index(){
-        // $chkUsers = UsersInfoAdmin::where('user_id',Auth::id())->first();
-        // $chkAbout = $chkUsers->about;
-        // $chkCompany = $chkUsers->about;
-        // $postViewCount = views($post)->count();
+
         $allUsers = user::all()->count();
         $activeArticle = SupUserBlog::where('post_status','0')->count();
+        $listAllArticle = SupUserBlog::all();
+
+        $listComment = DB::table('comments')->latest()->take(10)->get();
         return view('SupUserDash.index',[
             'allUsers'=>$allUsers,
-            'activeArticle'=>$activeArticle
+            'activeArticle'=>$activeArticle,
+            'listAllArticle'=>$listAllArticle,
+            'listComment'=>$listComment
         ]);
     }
 
@@ -95,7 +98,7 @@ class SupUserDashController extends Controller
                 'instagram' => $request->instagram,
                 'linkedin' => $request->linkedin,
             ]);
-            
+
 
 
             if ($updateInfo && $fullNameUpdate) {

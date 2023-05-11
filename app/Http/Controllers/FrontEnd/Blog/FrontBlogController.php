@@ -24,12 +24,12 @@ class FrontBlogController extends Controller
 
     //single blog show function
     public function ShowDetails(Request $request, $post_name){
-        
+
         $listBlog = SupUserBlog::where('slug',$post_name)->where('post_status',0)->firstOrFail();
-        
+
 
         $userid = $listBlog->userid;
-        
+
         $userDet = User::where('id',$userid)->firstOrFail();
         $userDetSocial = UsersInfoAdmin::where('user_id',$userid)->firstOrFail();
 
@@ -57,14 +57,18 @@ class FrontBlogController extends Controller
 
         //releted
         $blogCateID = $listBlog->category;
-        $reletedIn = SupUserBlog::where('category',$blogCateID)->where('post_status',0)->limit(4)->get();
-        $youMayAlsoLike = SupUserBlog::where('category',$blogCateID)->where('post_status',0)->limit(10)->get();
+        $reletedIn = SupUserBlog::where('category',$blogCateID)->where('post_status',0)->inRandomOrder()->take(4)->get();
+        $youMayAlsoLike = SupUserBlog::where('category',$blogCateID)->where('post_status',0)->inRandomOrder()->take(10)->get();
+        $singleArticleView = SupUserBlog::where('category',$blogCateID)->where('post_status',0)->latest()->first();
+
+
         return view('FrontEnd.blog.blogdetails', [
             'post'=>$listBlog,
             'userDet'=>$userDet,
             'userDetSocial'=>$userDetSocial,
             'reletedIn'=>$reletedIn,
             'youMayAlsoLike'=>$youMayAlsoLike,
+            'singleArticleView'=>$singleArticleView,
             'userAbout'=>$userAbout,
             'socialShare'=>$socialShare,
             'postViewCount'=>$postViewCount

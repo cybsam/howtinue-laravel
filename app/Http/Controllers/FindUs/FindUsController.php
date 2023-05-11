@@ -32,6 +32,7 @@ class FindUsController extends Controller
             '__linkedin'=>['required'],
             '__reddit'=>['required'],
             '__telegram'=>['required'],
+            '__youtube'=>['required']
         ],[
             '__facebook.required' => 'leave it blank then type ( # )',
             '__twitter.required' => 'leave it blank then type ( # )',
@@ -39,6 +40,7 @@ class FindUsController extends Controller
             '__linkedin.required' => 'leave it blank then type ( # )',
             '__reddit.required' => 'leave it blank then type ( # )',
             '__telegram.required' => 'leave it blank then type ( # )',
+            '__youtube.required' => 'leave it blank then type ( # )'
         ]);
         $id = 1;
         $updateSocial = FindUs::where('id',$id)->update([
@@ -48,6 +50,7 @@ class FindUsController extends Controller
             'linkedin'=>$request->__linkedin,
             'reddit'=>$request->__reddit,
             'telegram'=>$request->__telegram,
+            'youtube'=>$request->__youtube,
             'updated_at'=>Carbon::now()
         ]);
 

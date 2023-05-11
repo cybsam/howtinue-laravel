@@ -27,10 +27,10 @@ class SupUserBlogController extends Controller
         //     $countView = views($singleArticle)->count();
         // }
 
-        
+
         return view('SupUserDash.blog.index',[
             'articleShow'=>$articleShow,
-            
+
         ]);
     }
 
@@ -41,7 +41,7 @@ class SupUserBlogController extends Controller
     }
 
     public function insertSave(Request $request){
-        
+
         $request->validate([
             'blogName' => ['required','max:255'],
             'blogShortDesc' => ['required','max:255'],
@@ -55,43 +55,41 @@ class SupUserBlogController extends Controller
             'blogMeta.required' => 'Post meta title required.',
             'blogMetaDesc.required' => 'Post meta description required.',
             'image.required' => 'blog image require',
-            'description.required' => 'hmm, what do you thing',  
+            'description.required' => 'hmm, what do you thing',
         ]);
-        
-       
-        
+
+
+
         $catagory = $request->category;
         $subcagaCheck = SubCatagory::where('id', $catagory)->first();
         $sub_category_name = $subcagaCheck->subcatagoryname;
-        $categoryName = $subcagaCheck->supcataname;
-        // $super category->
-        // $SuperCategoryNameId = SuperCatagory::where('supcatagoryname',$categoryName)->first();
-        // $SuperCategoryName = $SuperCategoryNameId->
-        
+        $categoryName = $subcagaCheck->supcatanameslug;
+
+
         $authId = Auth::id();
         $UserName = Auth::user()->name;
 
         $localTime = Carbon::now()->format('Y-m-d-H-i-s-u');
-        //$newTime = Carbon::createFromFormat('Y-m-d', $localTime)->format('d/m/Y');
-        
+
+
 
         $cataImage = $request->file('image');
-       
+
         $newImageName =$localTime.'.'.$cataImage->getClientOriginalExtension();
         $cateCheck = $request->category;
 
-        
+
         $slug = Str::slug($request->blogName);
-            
+
         if($cateCheck == 0){
             return redirect()->back()->with('blogInsFail','category not found...');
         }else{
             $checkPost = SupUserBlog::where('slug',$slug)->first();
-            
+
             $subCateSlag = Str::slug($sub_category_name);
 
             if ($checkPost == true) {
-                return redirect()->back()->with('blogInsFail','Duplicate Post found change something...');
+                return redirect()->back()->with('blogInsFail','Duplicate Article found change something...');
             }else {
                 $insBlog = new SupUserBlog();
                 $insBlog->blog_name = $request->blogName;
@@ -114,17 +112,17 @@ class SupUserBlogController extends Controller
                 $uploadLocation = base_path('public/uploads/postimage/'.$newImageName);
                 Image::make($cataImage)->resize(800,500)->save($uploadLocation);
 
-                
+
                 if ($save) {
-                    return redirect()->back()->with('blogInsSucc','hurray, Post is now live. check it now!');
+                    return redirect()->back()->with('blogInsSucc','hurray, Article is now live. check it now!');
                 }else{
-                    return redirect()->back()->with('blogInsFail','hmmm, Post insert failed, we got some error...');
+                    return redirect()->back()->with('blogInsFail','hmmm, Article insert failed, we got some error...');
                 }
             }
-            
+
         }
 
-       
+
     }
 
     //
@@ -174,7 +172,16 @@ class SupUserBlogController extends Controller
                 return redirect()->back()->with('err','Article published failed to our system, try again');
             }
         }elseif($activeArti == 3){
-            return redirect()->back()->with('err','hmm, Article is already pending to review, please review and published it');
+            $updateStatus = SupUserBlog::where('id',$id)->update([
+                'post_status'=>$activeArti,
+                'updated_at'=>Carbon::now()
+            ]);
+            if ($updateStatus) {
+                return redirect()->back()->with('err','Article is now blocked...');
+            }else {
+                return redirect()->back()->with('err','Article published failed to our system, try again');
+            }
+
         }else {
             return redirect()->back()->with('err','hmm, you are so smart, but this tricks is not working. try again...');
         }

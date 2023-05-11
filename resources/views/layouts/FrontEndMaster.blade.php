@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <title>@yield('FrontTitle')</title>
-    <meta name="MetaTitle" content="@yield('MetaTitle')">
+    <meta name="title" content="@yield('title')">
     <meta name="description" content="@yield('description')">
     <meta name="keyword" content="@yield('Keyword')">
     <meta name="author" content="@yield('author')">
@@ -39,7 +39,7 @@
                 </footer>
             </div>
           </section>
- 
+
     <a href="javascript:" id="return-to-top">
         <i class="fa fa-chevron-up"></i>
     </a>

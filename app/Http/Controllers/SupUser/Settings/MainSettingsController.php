@@ -25,7 +25,7 @@ class MainSettingsController extends Controller
             'logoFooter'=>['required','mimes:jpg,png,jpeg,gif,ico']
         ],[
             'websitename.required' => 'Website name is required please enter valid name, its not change many times',
-            
+
             'faviconicon.mimes' => 'We accept: JPG, JPEG, PNG, GIF, ICO. Please Upload again',
             'logoIcon.mimes' => 'We accept: JPG, JPEG, PNG, GIF, ICO. Please Upload again',
             'logoFooter.mimes' => 'We accept: JPG, JPEG, PNG, GIF, ICO. Please Upload again',
@@ -58,7 +58,7 @@ class MainSettingsController extends Controller
                     'websitename'=>$siteName,
                     'slug'=>$Nameslug
                 ]);
-                $imageDB = frontsettings::where('slug',$Nameslug)->first()->get();
+                $imageDB = frontsettings::where('slug',$Nameslug)->first();
                 $faviconIcon = $imageDB->websitefaviconicon;
                 $unlinkFavicon = public_path('FrontEnd/images/favicon/').$faviconIcon;
                 $removeFaviconImg = unlink($unlinkFavicon);
@@ -97,7 +97,7 @@ class MainSettingsController extends Controller
         }else {
             return redirect()->back()->with('updateErr','image not uploaded properly, make sure you check it');
         }
-        
+
 
 
     }

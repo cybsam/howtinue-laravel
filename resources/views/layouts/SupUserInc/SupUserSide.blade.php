@@ -74,8 +74,8 @@
                 <i class="bi bi-circle"></i><span>Insert Article</span>
                 </a>
             </li>
-            
-            
+
+
             </ul>
         </li><!-- End Components Nav -->
             @php
@@ -91,7 +91,7 @@
                 <i class="bi bi-circle"></i><span>Pending Article <b style="color:red;">{{ $pendingPost }}</b> </span>
                 </a>
             </li>
-            
+
             </ul>
         </li>
         <li class="nav-item">
@@ -196,11 +196,13 @@
             <span>F.A.Q</span>
             </a>
         </li><!-- End F.A.Q Page Nav -->
-
+        @php
+                $countContact = App\Models\Contact::where('seen',0)->count();
+            @endphp
         <li class="nav-item">
             <a class="nav-link collapsed" href="{{ route('supuser.frontendcontact') }}">
             <i class="bi bi-envelope"></i>
-            <span>Contact</span>
+            <span>Contact Message <span style="color:red;">{{ $countContact }}</span></span>
             </a>
         </li><!-- End Contact Page Nav -->
 

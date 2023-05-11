@@ -39,13 +39,13 @@ class BlogController extends Controller
             'blogMeta.required' => 'Post meta title required.',
             'blogMetaDesc.required' => 'Post meta description required.',
             'image.required' => 'blog image require',
-            'description.required' => 'hmm, what do you thing',  
+            'description.required' => 'hmm, what do you thing',
         ]);
-        
+
         $catagory = $request->category;
         $subcagaCheck = SubCatagory::where('id', $catagory)->first();
         $sub_category_name = $subcagaCheck->subcatagoryname;
-        $categoryName = $subcagaCheck->supcataname;
+        $categoryName = $subcagaCheck->supcatanameslug;
         $authId = Auth::id();
         $UserName = Auth::user()->name;
         $localTime = Carbon::now()->format('Y-m-d-H-i-s-u');
@@ -57,7 +57,7 @@ class BlogController extends Controller
             return redirect()->back()->with('blogInsFail','article category not found...');
         }else{
             $checkPost = SupUserBlog::where('slug',$slug)->first();
-            
+
             $subCateSlag = Str::slug($sub_category_name);
             $postStatus = 3;
             if ($checkPost == true) {
@@ -85,14 +85,14 @@ class BlogController extends Controller
                 $uploadLocation = base_path('public/uploads/postimage/'.$newImageName);
                 Image::make($cataImage)->resize(800,500)->save($uploadLocation);
 
-                
+
                 if ($save) {
                     return redirect()->back()->with('blogInsSucc','hurray, Article is now live, just admin review it, good luck.');
                 }else{
                     return redirect()->back()->with('blogInsFail','hmmm, Article insert failed, we got some error...');
                 }
             }
-            
+
         }
     }
 

@@ -21,6 +21,7 @@ class CreateFindUsTable extends Migration
             $table->longText('linkedin')->nullable();
             $table->longText('reddit')->nullable();
             $table->longText('telegram')->nullable();
+            $table->longText('youtube')->nullable();
             $table->timestamps();
         });
     }

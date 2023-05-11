@@ -28,7 +28,7 @@ There are {{ $searchResults->count() }} results.
                     <div class="wrap__search-result">
                         <div class="wrap__search-result-keyword">
                             <h5>Search results for keyword: <span class="text-primary"> "{{ $searchQueryValue }}" </span>
-                                found in {{ $searchQuery->count() }} posts. </h5>
+                                found in <span class="text-primary">{{ $searchQuery->count() }}</span> posts and  <span class="text-primary">{{ $commntsGetFromDatabase->count() }}</span> comments. </h5>
                         </div>
 
                         <!-- Post Article List -->
@@ -48,7 +48,7 @@ There are {{ $searchResults->count() }} results.
                                             <div class="card__post__content  ">
                                                 <div class="card__post__category ">
                                                     <a
-                                                        href="{{ route('category.post', ['list_post' => $search->sub_category_slug]) }}">{{ $search->sub_category_name }}</a>
+                                                        href="{{ route('category.post', ['list_post' => $search->sub_category_slug]) }}" style="color:#fff;">{{ $search->sub_category_name }}</a>
                                                 </div>
                                                 <div class="card__post__author-info mb-2">
                                                     <ul class="list-inline">
@@ -86,7 +86,8 @@ There are {{ $searchResults->count() }} results.
                             </div>
                         @endforeach
                     </div>
-                    <div class="mt-2">
+                    <hr>
+                    <div class="mt-5">
                         <h5>Search results for keyword: <span class="text-primary"> "{{ $searchQueryValue }}" </span>
                             found in {{ $commntsGetFromDatabase->count() }} comments. </h5>
 
@@ -112,7 +113,7 @@ There are {{ $searchResults->count() }} results.
                                             </li>
                                             <li class="list-inline-item">
                                                 <span class="text-dark text-capitalize">
-                                                    {{-- {{ $comments->created_at->format('l, j F Y') }} --}}
+                                                    {{ $comments->updated_at }}
                                                 </span>
                                             </li>
 
@@ -138,6 +139,7 @@ There are {{ $searchResults->count() }} results.
                                     </div>
 
                                 </div>
+                                <hr>
 
                                 @endforeach
 

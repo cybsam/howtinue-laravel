@@ -27,7 +27,7 @@
     @endif
     <form action="{{ route('supuser.FindUsBackendUpdate') }}" method="POST" enctype="multipart/form-data">
         @csrf
-        
+
         <div class="row mb-3">
             <label for="inputText" class="col-sm-2 col-form-label">Facebook</label>
             <div class="col-sm-10">
@@ -94,7 +94,18 @@
                 @enderror
             </div>
         </div>
-        
+        <div class="row mb-3">
+            <label for="inputText" class="col-sm-2 col-form-label">Youtube </label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control @error('__youtube') is-invalid @enderror" name="__youtube" value="{{ $socialBlog->telegram }}" id="__youtube">
+                @error('__youtube')
+                    <span class="invalid-feedback" role="alert">
+                        <span>{{ $message }}</span>
+                    </span>
+                @enderror
+            </div>
+        </div>
+
 
         <div class="row mb-3">
             <label class="col-sm-2 col-form-label">Update Social</label>

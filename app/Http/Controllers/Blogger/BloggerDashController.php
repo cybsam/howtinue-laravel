@@ -9,11 +9,20 @@ use App\Models\User;
 use App\Models\UsersInfoAdmin;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
+use App\Models\SupUserBlog;
+use Illuminate\Support\Facades\DB;
 
 class BloggerDashController extends Controller
 {
     public function index(){
-        return view('BlogUserDash.index');
+
+        $listAllArticle = SupUserBlog::all();
+        $listComment = DB::table('comments')->latest()->take(10)->get();
+
+        return view('BlogUserDash.index',[
+            'listAllArticle'=>$listAllArticle,
+            'listComment'=>$listComment
+        ]);
     }
 
     public function userProfile(){
@@ -37,7 +46,7 @@ class BloggerDashController extends Controller
 
         }
         return view('BlogUserDash.profile', compact('aboutUser','company','jobtitle','dbCountry','dbAddress','dbPhone','dbTwitter','dbFacebook','dbInstagram','dbLinkedin'));
-    
+
     }
 
     public function userProfileUpdate(Request $request){
@@ -85,7 +94,7 @@ class BloggerDashController extends Controller
                 'instagram' => $request->instagram,
                 'linkedin' => $request->linkedin,
             ]);
-            
+
 
             if ($updateInfo && $fullNameUpdate) {
                 return redirect()->back()->with('success','Your Profile update succesfully, thnaks for update.');

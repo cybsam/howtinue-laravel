@@ -24,7 +24,7 @@ use App\Http\Controllers\Blogger\Category\CategoryController;
 
 
 //blogger
-Route::prefix('Administrator/Blogger')->middleware('auth:web','blogUser','PreBackHistory','is_user_verify_email')->group(function(){
+Route::prefix('Administrator/Moderator')->middleware('auth:web','blogUser','PreBackHistory','is_user_verify_email')->group(function(){
     Route::get('/Dashboard', [App\Http\Controllers\Blogger\BloggerDashController::class, 'index'])->name('blogusr.dashboard');
     Route::get('Dashboard/Contact/Front/Page',[App\Http\Controllers\contact\ContactController::class, 'showBlogUser'])->name('blogusr.ShowContact');
     //user
@@ -34,10 +34,10 @@ Route::prefix('Administrator/Blogger')->middleware('auth:web','blogUser','PreBac
     Route::get('/Dashboard/Users/Archive/user/Restore/{user_id}',[App\Http\Controllers\Blogger\AllPartUser\ListUserController::class, 'archivePostRestore'])->name('restoreArchiveUser');
     Route::get('/Dashboard/Users/Updata/User/{user_id}',[App\Http\Controllers\Blogger\AllPartUser\ListUserController::class, 'updateUserBas'])->name('updateUserBlogger');
     Route::post('/Dashboard/Users/Updata/User/Save',[App\Http\Controllers\Blogger\AllPartUser\ListUserController::class, 'updateUserBasSave'])->name('updateUserBloggerSave');
-    
-    
-    
-    
+
+
+
+
     Route::get('/Dashboard/Profile',[App\Http\Controllers\Blogger\BloggerDashController::class, 'userProfile'])->name('blogusr.profile.dash');
     Route::post('/Dashboard/Profile/Update',[App\Http\Controllers\Blogger\BloggerDashController::class, 'userProfileUpdate'])->name('blogusr.profile.update');
     Route::post('/Dashboard/Profile/Update/Pass',[App\Http\Controllers\Blogger\BloggerDashController::class,'userProfileUpdatePass'])->name('blogusr.profile.update.pass');
@@ -64,7 +64,7 @@ Route::prefix('Administrator/Blogger')->middleware('auth:web','blogUser','PreBac
     Route::get('Dashboard/Blog/Pending/',[App\Http\Controllers\Blogger\Blog\BlogController::class, 'pendingBlog'])->name('BlogUser.pendingBlog');
     Route::get('Dashboard/Blog/Pending/{blog_id}/Show/',[App\Http\Controllers\Blogger\Blog\BlogController::class, 'pendingBlogShow'])->name('BlogUser.pendingBlogShow');
     Route::post('Dashboard/Blog/Pending/Show/Update',[App\Http\Controllers\Blogger\Blog\BlogController::class, 'pendingBlogShowUpdate'])->name('BlogUser.pendingBlogShowUpdate');
-    
+
 
 
 });

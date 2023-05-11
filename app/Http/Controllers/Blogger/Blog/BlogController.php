@@ -49,28 +49,28 @@ class BlogController extends Controller
             'blogMeta.required' => 'Post meta title required.',
             'blogMetaDesc.required' => 'Post meta description required.',
             'image.required' => 'blog image require',
-            'description.required' => 'hmm, what do you thing',  
+            'description.required' => 'hmm, what do you thing',
         ]);
-        
-       
-        
+
+
+
         $catagory = $request->category;
         $subcagaCheck = SubCatagory::where('id', $catagory)->first();
         $sub_category_name = $subcagaCheck->subcatagoryname;
-        $categoryName = $subcagaCheck->supcataname;
+        $categoryName = $subcagaCheck->supcatanameslug;
         // $super category->
         // $SuperCategoryNameId = SuperCatagory::where('supcatagoryname',$categoryName)->first();
         // $SuperCategoryName = $SuperCategoryNameId->
-        
+
         $authId = Auth::id();
         $UserName = Auth::user()->name;
 
         $localTime = Carbon::now()->format('Y-m-d-H-i-s-u');
         //$newTime = Carbon::createFromFormat('Y-m-d', $localTime)->format('d/m/Y');
-        
+
 
         $cataImage = $request->file('image');
-       
+
         $newImageName =$localTime.'.'.$cataImage->getClientOriginalExtension();
         $cateCheck = $request->category;
         if($cateCheck == 0){
@@ -78,7 +78,7 @@ class BlogController extends Controller
         }else{
             $slug = Str::slug($request->blogName);
             $checkPost = SupUserBlog::where('slug',$slug)->first();
-            
+
             $subCateSlag = Str::slug($sub_category_name);
             if ($checkPost == true) {
                 return redirect()->back()->with('blogInsFail','Duplicate Post found change something...');
@@ -104,17 +104,17 @@ class BlogController extends Controller
                 $uploadLocation = base_path('public/uploads/postimage/'.$newImageName);
                 Image::make($cataImage)->resize(800,500)->save($uploadLocation);
 
-                
+
                 if ($save) {
                     return redirect()->back()->with('blogInsSucc','hurray, Post is now live. check it now!');
                 }else{
                     return redirect()->back()->with('blogInsFail','hmmm, Post insert failed, we got some error...');
                 }
             }
-            
+
         }
 
-       
+
     }
 
     //show my blog
@@ -158,10 +158,10 @@ class BlogController extends Controller
             }
         }elseif($activeArti == 3){
             return redirect()->back()->with('err','Article already pending for review, please check and published or delete');
-        
+
         }else {
             return redirect()->back()->with('err','hmm, you are so smart, but this tricks is not working. try again...');
         }
     }
-    
+
 }

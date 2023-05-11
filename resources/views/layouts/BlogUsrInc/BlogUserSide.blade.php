@@ -6,7 +6,7 @@
             <li class="nav-item">
                 <a class="nav-link " href="{{ route('blogusr.dashboard') }}">
                     <i class="bi bi-grid"></i>
-                    <span>Blogger Dashboard</span>
+                    <span>Moderator Dashboard</span>
                 </a>
             </li><!-- End Dashboard Nav -->
 
@@ -59,7 +59,7 @@
                             <i class="bi bi-circle"></i><span>Pending Article <b style="color:red;">{{ $pendingPost }}</b></span>
                         </a>
                     </li>
-                     
+
                 </ul>
             </li><!-- End Forms Nav -->
 
@@ -122,27 +122,16 @@
                 </a>
             </li><!-- End F.A.Q Page Nav -->
 
+            @php
+                $countContact = App\Models\Contact::where('seen',0)->count();
+            @endphp
+
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{ route('blogusr.ShowContact') }}">
                     <i class="bi bi-envelope"></i>
-                    <span>Contact Message</span>
+                    <span>Contact Message <span style="color:red;">{{ $countContact }}</span></span>
                 </a>
-            </li><!-- End Contact Page Nav -->
-            {{-- 
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="pages-register.html">
-            <i class="bi bi-card-list"></i>
-            <span>Register</span>
-            </a>
-        </li>
-
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="pages-login.html">
-            <i class="bi bi-box-arrow-in-right"></i>
-            <span>Login</span>
-            </a>
-        </li> --}}
-
+            </li>
 
         </ul>
-    </aside><!-- End Sidebar-->
+    </aside>
