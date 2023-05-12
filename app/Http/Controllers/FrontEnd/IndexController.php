@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\SuperCatagory;
 use App\Models\SubCatagory;
 use App\Models\SupUserBlog;
-
+use App\Models\TermsOfCondition;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
 use Image;
@@ -72,6 +72,9 @@ class IndexController extends Controller
         return view('FrontEnd.pages.sitemap');
     }
     public function termsofuse(){
-        return view('FrontEnd.pages.terms-of-use');
+        $fetchTermsOfCondition = TermsOfCondition::where('id',1)->first();
+        return view('FrontEnd.pages.terms-of-use',[
+            'fetchTermsOfCondition'=>$fetchTermsOfCondition
+        ]);
     }
 }

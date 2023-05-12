@@ -43,7 +43,7 @@
 
 
 
-                        <h3 class="border_section">Articles List</h3>
+                        <h3 class="border_section">Articles</h3>
                         @foreach ($categoryName as $postDetails)
 
                             <div class="row">

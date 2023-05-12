@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Laravelista\Comments\Commentable;
 use CyrildeWit\EloquentViewable\Contracts\Viewable;
-use  CyrildeWit\EloquentViewable\InteractsWithViews;
+use CyrildeWit\EloquentViewable\InteractsWithViews;
+use \Conner\Tagging\Taggable;
 
 class SupUserBlog extends Model implements Viewable
 {

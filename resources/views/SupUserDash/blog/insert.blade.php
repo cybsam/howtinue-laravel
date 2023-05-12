@@ -79,7 +79,7 @@
                                     <input type="text" id="blogMeta"
                                         class="form-control @error('blogMeta') is-invalid @enderror"
                                         value="{{ old('blogMeta') }}" name="blogMeta" placeholder="SEO Blog Meta Title">
-                                    
+
                                     <div class="">
                                         @error('blogMeta')
                                             <span class="text-danger">
@@ -93,8 +93,8 @@
                                 <label for="inputText" class="col-sm-2 col-form-label">SEO Meta Description</label>
                                 <div class="col-sm-10">
                                     <textarea placeholder="SEO Blog Meta Description" class="form-control @error('blogMetaDesc') is-invalid @enderror" name="blogMetaDesc" id="blogMetaDesc"></textarea>
-                                    
-                                    
+
+
                                     <div class="">
                                         @error('blogMetaDesc')
                                             <span class="text-danger">
@@ -158,26 +158,6 @@
                             </div>
 
 
-
-                            {{-- <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label">Disabled</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" value="Read only / Disabled" disabled>
-                                </div>
-                            </div> --}}
-
-                            {{-- <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label">Multi Select</label>
-                                <div class="col-sm-10">
-                                    <select class="form-select" multiple aria-label="multiple select example">
-                                        <option selected>Open this select menu</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                    </select>
-                                </div>
-                            </div> --}}
-
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label"></label>
                                 <div class="col-sm-10">
@@ -198,7 +178,7 @@
         $('#summernote').summernote({
             placeholder: 'Description...',
             tabsize: 2,
-            height: 100
+            height: 200
         });
     </script>
 

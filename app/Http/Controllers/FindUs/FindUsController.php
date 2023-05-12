@@ -8,6 +8,7 @@ use Illuminate\Support\Str;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Validator;
 use App\Models\FindUs;
+use Illuminate\Support\Facades\DB;
 
 class FindUsController extends Controller
 {

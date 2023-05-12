@@ -7,7 +7,7 @@
     <title>@yield('FrontTitle')</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="manifest" href="{{ asset('FrontEnd/site.webmanifest') }}">
     <!-- favicon.ico in the root directory -->
     <link rel="apple-touch-icon" href="icon.png">
     <meta name="theme-color" content="#030303">
@@ -36,7 +36,7 @@
                 </footer>
             </div>
           </section>
- 
+
     <a href="javascript:" id="return-to-top">
         <i class="fa fa-chevron-up"></i>
     </a>

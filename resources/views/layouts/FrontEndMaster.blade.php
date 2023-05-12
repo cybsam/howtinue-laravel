@@ -10,7 +10,7 @@
     <meta name="keyword" content="@yield('Keyword')">
     <meta name="author" content="@yield('author')">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="manifest" href="{{ asset('FrontEnd/site.webmanifest') }}">
     <!-- favicon.ico in the root directory -->
     <link rel="apple-touch-icon" href="icon.png">
     <meta name="theme-color" content="#030303">

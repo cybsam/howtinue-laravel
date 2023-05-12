@@ -174,22 +174,39 @@
             </ul>
         </li>
 
+
+
+
+        <li class="nav-heading">Settings</li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#settings-nav" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-gear"></i><span>Settings</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="settings-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <li>
+                <a href="{{ route('supuser.settings.main') }}" >
+                <i class="bi bi-circle"></i><span>Main Settings</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('supuser.FindUsBackend') }}">
+                <i class="bi bi-circle"></i><span>Find Us</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('supuser.settingsAboutUs') }}">
+                <i class="bi bi-circle"></i><span>About Us</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('supuser.termsOfCondition') }}">
+                <i class="bi bi-circle"></i><span>Terms Of Condition</span>
+                </a>
+            </li>
+
+            </ul>
+        </li>
         <li class="nav-heading">Pages</li>
-
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="{{ route('supuser.settings.main') }}">
-            <i class="bi bi-gear"></i>
-            <span>Settings</span>
-            </a>
-        </li>
-
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="{{ route('supuser.FindUsBackend') }}">
-            <i class="bi bi-gear"></i>
-            <span>Find Us</span>
-            </a>
-        </li>
-
         <li class="nav-item">
             <a class="nav-link collapsed" href="pages-faq.html">
             <i class="bi bi-question-circle"></i>

@@ -38,11 +38,11 @@ Route::prefix('Administrator/SuperUser')->middleware('auth:web','supUser','PreBa
     Route::get('Dashboard/Users/Archive/Block/Restore/{user_id}', [App\Http\Controllers\SupUser\User\ListUserController::class, 'BlockUserRestore'])->name('supuser.archiveBlockRestore');
     Route::get('Dashboard/Users/Update/User/{user_id}', [App\Http\Controllers\SupUser\User\ListUserController::class, 'SupUserUpdate'])->name('supuser.UpdateUser');
     Route::post('Dashboard/Users/Update/User/Save', [App\Http\Controllers\SupUser\User\ListUserController::class, 'SupUserUpdateSave'])->name('supuser.UpdateUserSave');
-    
+
     Route::get('Dashboard/Users/Archive/User/{user_id}', [App\Http\Controllers\SupUser\User\ListUserController::class, 'ArchiveUserFrom'])->name('supuser.archiveUser');
     Route::get('Dashboard/Users/Block/User/{user_id}', [App\Http\Controllers\SupUser\User\ListUserController::class, 'BlockUserFrom'])->name('supuser.BlockUser');
-    
-    
+
+
     //team
     Route::get('Dashboard/Users/Team/List',[App\Http\Controllers\SupUser\Team\ListTeamController::class,'index'])->name('supuser.users.team');
 
@@ -55,8 +55,8 @@ Route::prefix('Administrator/SuperUser')->middleware('auth:web','supUser','PreBa
     Route::get('Dashboard/Catagory/SubCatagory/Archived/Soft/{cate_id}',[App\Http\Controllers\SupUser\Catagory\SubCatagoryController::class, 'archivedSoft'])->name('subcatagoryIndex.archivedSoft');
     Route::get('Dashboard/Catagory/SubCatagory/Archived/Restore/{cate_id}',[App\Http\Controllers\SupUser\Catagory\SubCatagoryController::class, 'restor'])->name('subcatagory.Restor');
     Route::get('Dashboard/Catagory/SubCatagory/My-Category',[App\Http\Controllers\SupUser\Catagory\SubCatagoryController::class, 'myCategory'])->name('subcatagory.mycategory');
-    
-    
+
+
 
 
     //blog
@@ -67,8 +67,8 @@ Route::prefix('Administrator/SuperUser')->middleware('auth:web','supUser','PreBa
     Route::get('Dashboard/Article/Pending/List',[App\Http\Controllers\SupUser\Blog\SupUserBlogController::class, 'PendingBlog'])->name('supuserBlog.pendingBlog');
     Route::get('Dashboard/Article/Pending/List/Show/{blog_id}/View=true',[App\Http\Controllers\SupUser\Blog\SupUserBlogController::class, 'PendingBlogShow'])->name('supuserBlog.pendingBlogShow');
     Route::post('Dashboard/Article/Pending/List/Show/Pending/Active',[App\Http\Controllers\SupUser\Blog\SupUserBlogController::class, 'PendingBlogShowActive'])->name('supuserBlog.pendingBlogShowActive');
-    
-    
+
+
     //sup catagory
     Route::get('Dashboard/Catagory/SuperCatagory', [App\Http\Controllers\SupUser\Catagory\SupCatagoryController::class, 'index'])->name('supuser.cata.super');
     Route::get('Dashboard/Catagory/SuperCatagory/Insert', [App\Http\Controllers\SupUser\Catagory\SupCatagoryController::class, 'insert'])->name('supuser.cata.super.insert');
@@ -77,16 +77,24 @@ Route::prefix('Administrator/SuperUser')->middleware('auth:web','supUser','PreBa
     Route::get('Dashboard/Catagory/SuperCatagory/Archive',[App\Http\Controllers\SupUser\Catagory\SupCatagoryController::class, 'Archive'])->name('supuser.cata.super.archive');
     Route::get('Dashboard/Catagory/SuperCatagory/Archive/{cataId}',[App\Http\Controllers\SupUser\Catagory\SupCatagoryController::class, 'catagoryArchive'])->name('supuser.cata.super.goarchive');
     Route::get('Dashboard/Catagory/SuperCatagory/My-Category',[App\Http\Controllers\SupUser\Catagory\SupCatagoryController::class, 'MyCategory'])->name('supuser.MycategorySuper');
-    
+
 
     //settings
     Route::get('Dashboard/Settings/Main', [App\Http\Controllers\SupUser\Settings\MainSettingsController::class, 'mainSett'])->name('supuser.settings.main');
     Route::post('Dashboard/Settings/Main/Update', [App\Http\Controllers\SupUser\Settings\MainSettingsController::class, 'mainSetUpdate'])->name('supuser.settingsMainUpdate');
     Route::get('Dashboard/Settings/FindUs/Social', [App\Http\Controllers\FindUs\FindUsController::class, 'SocialFind'])->name('supuser.FindUsBackend');
     Route::post('Dashboard/Settings/FindUs/Social/Update', [App\Http\Controllers\FindUs\FindUsController::class, 'SocialFindUpdate'])->name('supuser.FindUsBackendUpdate');
-    
+
+
+    Route::get('Dashboard/Settings/AboutUs',[App\Http\Controllers\AboutUs\AboutUsController::class, 'backEndIndex'])->name('supuser.settingsAboutUs');
+    Route::post('Dashboard/Settings/AboutUs/Update=true',[App\Http\Controllers\AboutUs\AboutUsController::class, 'backEndAboutUpdate'])->name('supuser.settingsAboutUsUpdate');
+
+    Route::get('Dashboard/Settings/TermsOfCondition',[App\Http\Controllers\SupUser\Settings\TermsOfConditionController::class, 'showViewDeteils'])->name('supuser.termsOfCondition');
+    Route::post('Dashboard/Settings/TermsOfCondition/update=true',[App\Http\Controllers\SupUser\Settings\TermsOfConditionController::class, 'showViewDeteilsUpdate'])->name('supuser.termsOfConditionUpdate');
+
+
     //blank
     Route::get('/BlankPage', [App\Http\Controllers\SupUser\SupUserDashController::class, 'blank'])->name('supuser.blank');
 
-    
+
 });

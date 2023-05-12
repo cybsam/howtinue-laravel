@@ -16,6 +16,7 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.4",
         "laravelista/comments": "^4.5",
+        "rtconner/laravel-tagging": "^4.1",
         "spatie/laravel-searchable": "^1.11"
     },
     "require-dev": {
