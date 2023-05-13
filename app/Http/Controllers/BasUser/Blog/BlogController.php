@@ -29,6 +29,7 @@ class BlogController extends Controller
         $request->validate([
             'blogName' => ['required','max:255'],
             'blogShortDesc' => ['required','max:255'],
+            'blogTags' => ['required', 'min:3'],
             'blogMeta' => ['required','max:255'],
             'blogMetaDesc' => ['required'],
             'image' => ['required','mimes:jpg,png,jpeg,gif','max:3000'],
@@ -36,6 +37,7 @@ class BlogController extends Controller
         ],[
             'blogName.required' => 'type your post name!',
             'blogShortDesc.required' => 'type your Post short description.',
+            'blogTags.required' => 'Article tags required',
             'blogMeta.required' => 'Post meta title required.',
             'blogMetaDesc.required' => 'Post meta description required.',
             'image.required' => 'blog image require',
@@ -53,6 +55,7 @@ class BlogController extends Controller
         $newImageName =$localTime.'.'.$cataImage->getClientOriginalExtension();
         $cateCheck = $request->category;
         $slug = Str::slug($request->blogName);
+        $tags = explode(',',$request->blogTags);
         if($cateCheck == 0){
             return redirect()->back()->with('blogInsFail','article category not found...');
         }else{
@@ -79,6 +82,7 @@ class BlogController extends Controller
                 $insBlog->post_status = $postStatus;
                 $insBlog->userid = $authId;
                 $insBlog->username = $UserName;
+                $insBlog->tag($tags);
                 $insBlog->created_at = Carbon::now();
                 $save = $insBlog->save();
 

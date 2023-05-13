@@ -14,6 +14,19 @@
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,700;1,300;1,500&family=Poppins:ital,wght@0,300;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
     <link href="{{ asset('FrontEnd/css/styles.css?537a1bbd0e5129401d28') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput-typeahead.css"/>
+    <style>
+        .bootstrap-tagsinput .tag{
+            margin-right: 2px;
+            color: #fff;
+            background: #2196f3;
+            padding: 3px 7px;
+            border-radius: 3px;
+        }
+        .bootstrap-tagsinput{
+            width: 100%;
+        }
+    </style>
 </head>
     <body>
         @include('layouts.basUserInc.preload')
@@ -41,6 +54,8 @@
         <i class="fa fa-chevron-up"></i>
     </a>
     <script type="text/javascript" src="{{ asset('FrontEnd/js/index.bundle.js?537a1bbd0e5129401d28') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js" integrity="sha512-9UR1ynHntZdqHnwXKTaOm1s6V9fExqejKvg5XMawEMToW4sSw+3jtLrYfZPijvnwnnE8Uol1O9BcAskoxgec+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     </body>
 </html>
 

@@ -13,19 +13,14 @@
         <li class="nav-heading">Apps</li>
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#">
+            <a class="nav-link collapsed" href="{{ route('supuser.chat') }}">
             <i class="bi bi-chat-text"></i>
             <span>Chat</span>
             </a>
         </li>
 
+
         {{-- <li class="nav-item">
-            <a class="nav-link collapsed" href="{{ route('supuser.users.team') }}">
-            <i class="bi bi-people-fill"></i>
-            <span>Team</span>
-            </a>
-        </li> --}}
-        <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#email-nav" data-bs-toggle="collapse" href="#">
             <i class="bi bi-envelope"></i><span>Emails</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
@@ -51,7 +46,7 @@
                 </a>
             </li>
             </ul>
-        </li>
+        </li> --}}
 
         <li class="nav-heading">Blog</li>
         <li class="nav-item">

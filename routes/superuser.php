@@ -92,6 +92,11 @@ Route::prefix('Administrator/SuperUser')->middleware('auth:web','supUser','PreBa
     Route::get('Dashboard/Settings/TermsOfCondition',[App\Http\Controllers\SupUser\Settings\TermsOfConditionController::class, 'showViewDeteils'])->name('supuser.termsOfCondition');
     Route::post('Dashboard/Settings/TermsOfCondition/update=true',[App\Http\Controllers\SupUser\Settings\TermsOfConditionController::class, 'showViewDeteilsUpdate'])->name('supuser.termsOfConditionUpdate');
 
+    //chat
+    Route::get('Dashboard/Chat',[App\Http\Controllers\Chat\ChatController::class, 'supUserChat'])->name('supuser.chat');
+    Route::get('Dashboard/Chat/Show/{user_id}',[App\Http\Controllers\Chat\ChatController::class, 'supUserChatShow'])->name('supuser.chatshow');
+
+
 
     //blank
     Route::get('/BlankPage', [App\Http\Controllers\SupUser\SupUserDashController::class, 'blank'])->name('supuser.blank');

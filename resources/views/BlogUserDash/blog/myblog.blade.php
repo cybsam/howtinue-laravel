@@ -15,19 +15,32 @@
             </ol>
         </nav>
     </div>
+    <div class="container">
+        <div class="row">
+            @foreach ($myBlog as $myblog)
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
 
-<div>
-    @foreach ($myBlog as $myblog)
-    <div class="col-lg-3">
-        <div class="card">
-            <img src="{{ asset('uploads/postimage/') }}/{{ $myblog->blog_image }}" class="card-img-top" alt="{{ $myblog->blog_meta }}">
-            <div class="card-img-overlay">
-                <a href="{{ route('blog.details', ['post_name' => $myblog->slug]) }}" class="card-title">{{ $myblog->blog_name }}</a>
-                <p class="card-text">{{ $myblog->blog_short_desc }}.</p>
-            </div>
+                            <img src="{{ asset('uploads/postimage/') }}/{{ $myblog->blog_image }}" class="card-img-top"
+                                alt="{{ $myblog->blog_meta }}">
+                            <div class="card-img-overlay">
+                                <span>{{ views($myblog)->count() }} views</span>
+                                <br>
+                                <a href="{{ route('blog.details', ['post_name' => $myblog->slug]) }}"
+                                    class="card-title">{{ Str::limit($myblog->blog_name, 18) }}</a>
+                                <p class="card-text">{{ Str::limit($myblog->blog_short_desc, 20) }}.</p>
+                                <a href="" class="card-link btn btn-success">Update</a>
+                                <a href="" class="card-link btn btn-warning">Archive</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+
         </div>
     </div>
-    @endforeach
 </div>
+
 
 @endsection

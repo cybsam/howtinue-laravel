@@ -36,8 +36,21 @@
     <link href="{{ asset('SupUser/assets/vendor/quill/quill.bubble.css') }}" rel="stylesheet">
     <link href="{{ asset('SupUser/assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
     <link href="{{ asset('SupUser/assets/vendor/simple-datatables/style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput-typeahead.css"/>
 
     <link href="{{ asset('SupUser/assets/css/style.css') }}" rel="stylesheet">
+    <style>
+        .bootstrap-tagsinput .tag{
+            margin-right: 2px;
+            color: #fff;
+            background: #2196f3;
+            padding: 3px 7px;
+            border-radius: 3px;
+        }
+        .bootstrap-tagsinput{
+            width: 100%;
+        }
+    </style>
     {{-- end super-user --}}
 </head>
 <body>
@@ -64,7 +77,7 @@
     <script src="{{ asset('SupUser/assets/vendor/php-email-form/validate.js') }}"></script>
     <!-- Template Main JS File -->
     <script src="{{ asset('SupUser/assets/js/main.js') }}"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js" integrity="sha512-9UR1ynHntZdqHnwXKTaOm1s6V9fExqejKvg5XMawEMToW4sSw+3jtLrYfZPijvnwnnE8Uol1O9BcAskoxgec+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>

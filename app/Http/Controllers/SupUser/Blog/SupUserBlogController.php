@@ -14,15 +14,19 @@ use Carbon\Carbon;
 use Image;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
-
+use App\Models\Tag;
 use CyrildeWit\EloquentViewable\Contracts\Viewable;
 use CyrildeWit\EloquentViewable\InteractsWithViews;
+
 
 class SupUserBlogController extends Controller
 {
     //index/list
     public function index(){
         $articleShow = SupUserBlog::all();
+
+        // $tags = Tag::all();
+        // $eploidTag = explode(',',$tags);
         // foreach ($articleShow as $singleArticle) {
         //     $countView = views($singleArticle)->count();
         // }
@@ -30,6 +34,7 @@ class SupUserBlogController extends Controller
 
         return view('SupUserDash.blog.index',[
             'articleShow'=>$articleShow,
+            // 'eploidTag',$eploidTag,
 
         ]);
     }
@@ -45,18 +50,22 @@ class SupUserBlogController extends Controller
         $request->validate([
             'blogName' => ['required','max:255'],
             'blogShortDesc' => ['required','max:255'],
+            'blogTags' => ['required', 'min:3'],
             'blogMeta' => ['required','max:255'],
             'blogMetaDesc' => ['required'],
             'image' => ['required','mimes:jpg,png,jpeg,gif','max:3000'],
             'description' => ['required']
         ],[
-            'blogName.required' => 'type your post name!',
-            'blogShortDesc.required' => 'type your Post short description.',
-            'blogMeta.required' => 'Post meta title required.',
-            'blogMetaDesc.required' => 'Post meta description required.',
-            'image.required' => 'blog image require',
-            'description.required' => 'hmm, what do you thing',
+            'blogName.required' => 'type your article name!',
+            'blogShortDesc.required' => 'type your article short description.',
+            'blogTags.required' => 'Article tags required',
+            'blogMeta.required' => 'Article meta title required.',
+            'blogMetaDesc.required' => 'article meta description required.',
+            'image.required' => 'Article image require',
+            'description.required' => 'hmm, what do you think',
         ]);
+
+
 
 
 
@@ -78,10 +87,20 @@ class SupUserBlogController extends Controller
         $newImageName =$localTime.'.'.$cataImage->getClientOriginalExtension();
         $cateCheck = $request->category;
 
+        // $inputtag = $request->blogTags;
+        // $tags = explode(',',$request->blogTags);
+        // $tagsRaw = $request->blogTags;
+
+        // $insTag = new Tag;
+        // $insTag->taggable_id = 1;
+        // $insTag->tag = $tagsRaw;
+        // $insTag->save();
+        // die();
+
 
         $slug = Str::slug($request->blogName);
 
-        if($cateCheck == 0){
+        if($cateCheck == '0'){
             return redirect()->back()->with('blogInsFail','category not found...');
         }else{
             $checkPost = SupUserBlog::where('slug',$slug)->first();
@@ -108,6 +127,11 @@ class SupUserBlogController extends Controller
                 $insBlog->username = $UserName;
                 $insBlog->created_at = Carbon::now();
                 $save = $insBlog->save();
+
+
+                // $lastId = $insBlog->id;
+                // $save->tag($tags);
+
 
                 $uploadLocation = base_path('public/uploads/postimage/'.$newImageName);
                 Image::make($cataImage)->resize(800,500)->save($uploadLocation);

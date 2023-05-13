@@ -40,6 +40,19 @@
     <link href="{{ asset('SupUser/assets/css/style.css') }}" rel="stylesheet">
     {{-- <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"> --}}
     {{-- end super-user --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput-typeahead.css"/>
+    <style>
+        .bootstrap-tagsinput .tag{
+            margin-right: 2px;
+            color: #fff;
+            background: #2196f3;
+            padding: 3px 7px;
+            border-radius: 3px;
+        }
+        .bootstrap-tagsinput{
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     @include('layouts.SupUserInc.SupUserNav')
@@ -74,6 +87,8 @@
             $('#myDataTable').DataTable();
         } );
     </script> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js" integrity="sha512-9UR1ynHntZdqHnwXKTaOm1s6V9fExqejKvg5XMawEMToW4sSw+3jtLrYfZPijvnwnnE8Uol1O9BcAskoxgec+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
 </body>
 

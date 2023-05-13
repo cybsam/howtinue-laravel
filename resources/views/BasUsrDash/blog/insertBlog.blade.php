@@ -7,7 +7,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                
+
                 <ul class="breadcrumbs bg-light mb-4">
                     <li class="breadcrumbs__item">
                         <a href="{{ route('basUser.dashboard') }}" class="breadcrumbs__url">
@@ -29,7 +29,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Press key fell free :)</h5>
 
-                    
+
                     @if (Session::get('blogInsSucc'))
                         <div class="alert alert-primary bg-primary text-light border-0 alert-dismissible fade show"
                             role="alert">
@@ -67,8 +67,7 @@
                         <div class="row mb-3">
                             <label for="inputText" class="col-sm-2 col-form-label">Article Short desc</label>
                             <div class="col-sm-10">
-                                <input type="text"
-                                    class="form-control @error('blogShortDesc') is-invalid @enderror"
+                                <input type="text" class="form-control @error('blogShortDesc') is-invalid @enderror"
                                     value="{{ old('blogShortDesc') }}" placeholder="short description"
                                     name="blogShortDesc" id="blogShortDesc">
                                 <div class="">
@@ -80,48 +79,63 @@
                                 </div>
                             </div>
                         </div>
-                        <hr style="color:red;">
-                            <div class="row mb-3">
-                                <label for="inputText" class="col-sm-2 col-form-label">SEO Meta Title</label>
-                                <div class="col-sm-10">
-                                    <input type="text" id="blogMeta"
-                                        class="form-control @error('blogMeta') is-invalid @enderror"
-                                        value="{{ old('blogMeta') }}" name="blogMeta" placeholder="SEO Blog Meta Title">
-                                    
-                                    <div class="">
-                                        @error('blogMeta')
-                                            <span class="text-danger">
-                                                {{ $message }}
-                                            </span>
-                                        @enderror
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <label for="inputText" class="col-sm-2 col-form-label">SEO Meta Description</label>
-                                <div class="col-sm-10">
-                                    <textarea placeholder="SEO Blog Meta Description" class="form-control @error('blogMetaDesc') is-invalid @enderror" name="blogMetaDesc" id="blogMetaDesc"></textarea>
-                                    
-                                    
-                                    <div class="">
-                                        @error('blogMetaDesc')
-                                            <span class="text-danger">
-                                                {{ $message }}
-                                            </span>
-                                        @enderror
-                                    </div>
-                                </div>
-                            </div>
-                            <hr style="color:red;">
                         <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label">Article Category</label>
+                            <label for="inputText" class="col-sm-2 col-form-label">Article Tags</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control @error('blogTags') is-invalid @enderror"
+                                    value="{{ old('blogTags') }}" data-role="tagsinput" placeholder="Tags, seperate by ( , )"
+                                    name="blogTags" id="blogTags">
+                                    <span style="color:red;">seperate by comma ( , )</span>
+                                <div class="">
+                                    @error('blogTags')
+                                        <span class="text-danger">
+                                            {{ $message }}
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+                        <hr style="color:red;">
+                        <div class="row mb-3">
+                            <label for="inputText" class="col-sm-2 col-form-label">SEO Meta Title</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="blogMeta"
+                                    class="form-control @error('blogMeta') is-invalid @enderror"
+                                    value="{{ old('blogMeta') }}" name="blogMeta" placeholder="SEO Blog Meta Title">
+
+                                <div class="">
+                                    @error('blogMeta')
+                                        <span class="text-danger">
+                                            {{ $message }}
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputText" class="col-sm-2 col-form-label">SEO Meta Description</label>
+                            <div class="col-sm-10">
+                                <textarea placeholder="SEO Blog Meta Description" class="form-control @error('blogMetaDesc') is-invalid @enderror" name="blogMetaDesc" id="blogMetaDesc"></textarea>
+
+
+                                <div class="">
+                                    @error('blogMetaDesc')
+                                        <span class="text-danger">
+                                            {{ $message }}
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+                        <hr style="color:red;">
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label">Category</label>
                             <div class="col-sm-10">
                                 <select class="form-select bg-danger @error('category') is-invalid @enderror"
                                     name="category" aria-label="Default select example">
                                     <option selected value="0">Open this select menu</option>
                                     @foreach ($listCate as $cateList)
-                                        <option value="{{ $cateList->id }}">{{ $cateList->subcatagoryname }}
-                                        </option>
+                                        <option value="{{ $cateList->id }}">{{ $cateList->subcatagoryname }}</option>
                                     @endforeach
                                 </select>
                                 <div class="">
@@ -150,7 +164,7 @@
 
 
                         <div class="row mb-3">
-                            <label for="inputText" class="col-sm-2 col-form-label">Article Description</label>
+                            <label for="inputText" class="col-sm-2 col-form-label">Description</label>
                             <div class="col-sm-10 ">
                                 <div class="">
                                     <textarea name="description" value="{{ old('description') }}" name="description" id="summernote"
@@ -168,9 +182,9 @@
 
 
                         <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label">Article</label>
+                            <label class="col-sm-2 col-form-label"></label>
                             <div class="col-sm-10">
-                                <button type="submit" class="btn btn-primary">Publish Article</button>
+                                <button type="submit" class="btn btn-primary">Insert Article</button>
                             </div>
                         </div>
 
@@ -187,7 +201,7 @@
     $('#summernote').summernote({
         placeholder: 'Description...',
         tabsize: 2,
-        height: 100
+        height: 200
     });
 </script>
 

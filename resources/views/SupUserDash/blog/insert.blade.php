@@ -40,10 +40,11 @@
                                     aria-label="Close"></button>
                             </div>
                         @endif
+
                         <form action="{{ route('supuserBlog.insertSave') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="row mb-3">
-                                <label for="inputText" class="col-sm-2 col-form-label">Blog Name</label>
+                                <label for="inputText" class="col-sm-2 col-form-label">Article Name</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control  @error('blogName') is-invalid @enderror"
                                         value="{{ old('blogName') }}" placeholder="Type Your Blog Name." name="blogName"
@@ -58,13 +59,29 @@
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <label for="inputText" class="col-sm-2 col-form-label">Blog Short desc</label>
+                                <label for="inputText" class="col-sm-2 col-form-label">Article Short desc</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control @error('blogShortDesc') is-invalid @enderror"
                                         value="{{ old('blogShortDesc') }}" placeholder="short description"
                                         name="blogShortDesc" id="blogShortDesc">
                                     <div class="">
                                         @error('blogShortDesc')
+                                            <span class="text-danger">
+                                                {{ $message }}
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="inputText" class="col-sm-2 col-form-label">Article Tags</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control @error('blogTags') is-invalid @enderror"
+                                        value="{{ old('blogTags') }}" data-role="tagsinput" placeholder="Tags, seperate by ( , )"
+                                        name="blogTags" id="blogTags">
+                                        <span style="color:red;">seperate by comma ( , )</span>
+                                    <div class="">
+                                        @error('blogTags')
                                             <span class="text-danger">
                                                 {{ $message }}
                                             </span>
@@ -125,7 +142,7 @@
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <label for="inputNumber" class="col-sm-2 col-form-label">Blog Image</label>
+                                <label for="inputNumber" class="col-sm-2 col-form-label">Article Image</label>
                                 <div class="col-sm-10">
                                     <input class="form-control @error('image') is-invalid @enderror" name="image"
                                         type="file">
@@ -161,11 +178,11 @@
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label"></label>
                                 <div class="col-sm-10">
-                                    <button type="submit" class="btn btn-primary">Insert Post</button>
+                                    <button type="submit" class="btn btn-primary">Insert Article</button>
                                 </div>
                             </div>
 
-                        </form><!-- End General Form Elements -->
+                        </form>
 
                     </div>
                 </div>
