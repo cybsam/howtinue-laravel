@@ -27,6 +27,8 @@ Route::prefix('Administrator/SuperUser')->middleware('auth:web','supUser','PreBa
     Route::get('/Dashboard', [App\Http\Controllers\SupUser\SupUserDashController::class, 'index'])->name('supuser.dashboard');
     // users
     Route::get('Dashboard/FrontPage/Contact',[App\Http\Controllers\contact\ContactController::class, 'showSupUser'])->name('supuser.frontendcontact');
+    Route::get('Dashboard/FrontPage/Contact/Show/{message_id}',[App\Http\Controllers\contact\ContactController::class, 'showSupUserMsgShow'])->name('supuser.frontendcontactMsgShow');
+
     Route::get('/Dashboard/Profile', [App\Http\Controllers\SupUser\SupUserDashController::class, 'UserProfile'])->name('supuser.profile.dashboard');
     Route::post('/Dashboard/Profile/Update', [App\Http\Controllers\SupUser\SupUserDashController::class, 'UserProfileUpdate'])->name('supuser.profileupdate.dashboard');
     Route::post('/Dashboard/Profile/Update/Pass', [App\Http\Controllers\SupUser\SupUserDashController::class, 'UserProfileUpdatePass'])->name('supuser.profileupdate.pass.dashboard');
@@ -93,8 +95,8 @@ Route::prefix('Administrator/SuperUser')->middleware('auth:web','supUser','PreBa
     Route::post('Dashboard/Settings/TermsOfCondition/update=true',[App\Http\Controllers\SupUser\Settings\TermsOfConditionController::class, 'showViewDeteilsUpdate'])->name('supuser.termsOfConditionUpdate');
 
     //chat
-    Route::get('Dashboard/Chat',[App\Http\Controllers\Chat\ChatController::class, 'supUserChat'])->name('supuser.chat');
-    Route::get('Dashboard/Chat/Show/{user_id}',[App\Http\Controllers\Chat\ChatController::class, 'supUserChatShow'])->name('supuser.chatshow');
+    // Route::get('Dashboard/Contact',[App\Http\Controllers\Chat\ChatController::class, 'supUserChat'])->name('supuser.chat');
+    // Route::get('Dashboard/Contact/Show/{user_id}',[App\Http\Controllers\Chat\ChatController::class, 'supUserChatShow'])->name('supuser.chatshow');
 
 
 

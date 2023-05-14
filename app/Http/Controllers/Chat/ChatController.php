@@ -25,6 +25,11 @@ class ChatController extends Controller
 
     //chat show
     public function supUserChatShow($user_id){
-        return view('SupUserDash.chat.replay');
+        $fromUserId = $user_id;
+        $myId = Auth::id();
+        $fetchData = Chat::where('from_user_id',$fromUserId)->where('to_user_id',$myId)->get();
+        return view('SupUserDash.chat.replay',[
+            'fetchData'=>$fetchData
+        ]);
     }
 }

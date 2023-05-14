@@ -18,9 +18,9 @@
             <th scope="col"> Name</th>
             <th scope="col">Email</th>
 
-            <th scope="col">Website</th>
+
             <th scope="col">Subject</th>
-            <th scope="col">Message</th>
+
             <th scope="col">Time</th>
             <th scope="col">Action</th>
         </tr>
@@ -32,18 +32,16 @@
             <td>{{ $ShowMsg->anonymouse_name }}</td>
             <td>{{ $ShowMsg->anonymouse_email }}</td>
 
-            <td>{{ $ShowMsg->anonymouse_website }}</td>
+
             <td>
                {{ $ShowMsg->anonymouse_subject }}
             </td>
-            <td>
-                {{ $ShowMsg->anonymouse_message }}
-             </td>
+
             <td>
               {{ $ShowMsg->created_at->diffForHumans() }}</td>
             <td>
-              <a href="" >Show</a>
-              
+              <a href="{{ route('blogusr.ShowContactShow',['message_id'=>$ShowMsg->id]) }}" class="btn btn-success" >Show</a>
+
             </td>
             </tr>
         @endforeach

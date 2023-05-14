@@ -12,12 +12,7 @@
 
             <li class="nav-heading">Apps</li>
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#">
-                    <i class="bi bi-chat-text"></i>
-                    <span>Chat</span>
-                </a>
-            </li>
+
 
 
             <li class="nav-heading">Blog</li>

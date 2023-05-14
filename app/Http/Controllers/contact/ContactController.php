@@ -15,7 +15,7 @@ class ContactController extends Controller
         $request->validate([
             'name' => ['required'],
             'email'=> ['required'],
-            
+
             'subject'=> ['required'],
             'message'=> ['required'],
         ],[
@@ -23,7 +23,7 @@ class ContactController extends Controller
             'email.required'=> 'Email address please!',
             'subject.required'=> 'tell us something what do you want',
             'message.required'=> 'hmm, Describe your opinion',
-            
+
         ]);
 
         $insContact = new Contact();
@@ -49,12 +49,36 @@ class ContactController extends Controller
             'showContact'=>$showContact
         ]);
     }
-    
+
+    //show msg
+    public function showSupUserMsgShow($message_id){
+        $message_id = $message_id;
+        $fetchData = Contact::where('id',$message_id)->firstOrFail();
+        $updMsg = Contact::where('id',$message_id)->update([
+            'seen'=>1
+        ]);
+        return view('SupUserDash.frontContact.showmessage',[
+            'fetchData'=>$fetchData
+        ]);
+    }
+
     //blogger
     public function showBlogUser(){
         $showContact = Contact::latest()->get();
         return view('BlogUserDash.contact.frontContact',[
             'showContact'=>$showContact
+        ]);
+    }
+
+    // show blog msg
+    public function showBlogUserShow($message_id){
+        $message_id = $message_id;
+        $fetchData = Contact::where('id',$message_id)->firstOrFail();
+        $updMsg = Contact::where('id',$message_id)->update([
+            'seen'=>1
+        ]);
+        return view('BlogUserDash.contact.showmessage',[
+            'fetchData'=>$fetchData
         ]);
     }
 }

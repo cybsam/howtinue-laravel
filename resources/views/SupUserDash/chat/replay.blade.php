@@ -1,5 +1,5 @@
 @extends('layouts.SupUserMaster')
-@section('title', 'Super Catagory - HowTinue')
+@section('title', 'Replay Chat - HealthyBotic')
 @section('SupUserContent')
 
 
@@ -14,101 +14,86 @@
         </nav>
     </div>
 
-<div class="row">
-    <div class="col-12">
-      <div class="card">
-        <div class="card-body">
-          <h4 class="card-title">Chat Option</h4>
-          <div class="chat-box scrollable" style="height: 475px">
-            <!--chat Row -->
-            <ul class="chat-list">
-              <!--chat Row -->
-              <li class="chat-item">
-                <div class="chat-img">
-                  <img src="../assets/images/users/1.jpg" alt="user" />
-                </div>
-                <div class="chat-content">
-                  <h6 class="font-medium">James Anderson</h6>
-                  <div class="box bg-light-info">
-                    Lorem Ipsum is simply dummy text of the printing
-                    &amp; type setting industry.
-                  </div>
-                </div>
-                <div class="chat-time">10:56 am</div>
-              </li>
-              <!--chat Row -->
-              <li class="chat-item">
-                <div class="chat-img">
-                  <img src="../assets/images/users/2.jpg" alt="user" />
-                </div>
-                <div class="chat-content">
-                  <h6 class="font-medium">Bianca Doe</h6>
-                  <div class="box bg-light-info">
-                    It’s Great opportunity to work.
-                  </div>
-                </div>
-                <div class="chat-time">10:57 am</div>
-              </li>
-              <!--chat Row -->
-              <li class="odd chat-item">
-                <div class="chat-content">
-                  <div class="box bg-light-inverse">
-                    I would love to join the team.
-                  </div>
-                  <br />
-                </div>
-              </li>
-              <!--chat Row -->
-              <li class="odd chat-item">
-                <div class="chat-content">
-                  <div class="box bg-light-inverse">
-                    Whats budget of the new project.
-                  </div>
-                  <br />
-                </div>
-                <div class="chat-time">10:59 am</div>
-              </li>
-              <!--chat Row -->
-              <li class="chat-item">
-                <div class="chat-img">
-                  <img src="../assets/images/users/3.jpg" alt="user" />
-                </div>
-                <div class="chat-content">
-                  <h6 class="font-medium">Angelina Rhodes</h6>
-                  <div class="box bg-light-info">
-                    Well we have good budget for the project
-                  </div>
-                </div>
-                <div class="chat-time">11:00 am</div>
-              </li>
-              <!--chat Row -->
-            </ul>
-          </div>
-        </div>
-        <div class="card-body border-top">
-          <div class="row">
-            <div class="col-9">
-              <div class="input-field mt-0 mb-0">
-                <textarea
-                  id="textarea1"
-                  placeholder="Type and enter"
-                  class="form-control border-0"
-                ></textarea>
-              </div>
-            </div>
-            <div class="col-3">
-              <a
-                class="btn-circle btn-lg btn-cyan float-end text-white"
-                href="javascript:void(0)"
-                ><i class="mdi mdi-send fs-3"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    <section style="background-color: #ffffff;">
+        <div class="container py-5">
 
+            <div class="row">
 
+                <div class="col-md-6 col-lg-5 col-xl-4 mb-4 mb-md-0">
+
+                    <h5 class="font-weight-bold mb-3 text-center text-lg-start">Member</h5>
+
+                    <div class="card">
+                        <div class="card-body">
+
+                            <ul class="list-unstyled mb-0">
+                                {{-- @foreach ($userShowAll as $showUser) --}}
+                                {{-- {{ route('supuser.chatshow', ['user_id' => $showUser->id]) }} --}}
+                                    <li class="p-2 border-bottom">
+                                        <a href=""
+                                            class="d-flex justify-content-between">
+                                            <div class="d-flex flex-row">
+                                                <img src="{{ asset('SupUser/uploads/usersimage') }}/"
+                                                    alt="avatar"
+                                                    class="rounded-circle d-flex align-self-center me-3 shadow-1-strong"
+                                                    width="60">
+                                                <div class="pt-1">
+                                                    <p class="fw-bold mb-0">fsda dsffsdf</p>
+
+                                                </div>
+                                            </div>
+                                            <div class="pt-1">
+                                                <p class="small text-muted mb-1">Just now</p>
+                                                <span class="badge bg-danger float-end">1</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                {{-- @endforeach --}}
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-lg-7 col-xl-8">
+
+                    <ul class="list-unstyled">
+                        @foreach ($fetchData as $fetchData)
+                        <li class="d-flex justify-content-between mb-4">
+                            <div class="card">
+                                <div class="card-header d-flex justify-content-between p-3">
+                                    @php
+                                        $fetchData->from_user_id;
+                                        $userFrom = DB::table('users')->where('id',$userFrom)->get();
+                                    @endphp
+                                    <p class="fw-bold mb-0">{{ $userFrom->name }}</p>
+                                    <p class="text-muted small mb-0"><i class="far fa-clock"></i> 12 mins ago</p>
+                                </div>
+                                <div class="card-body">
+                                    <p class="mb-0">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut
+                                        labore et dolore magna aliqua.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        @endforeach
+                        <li class="bg-white mb-3">
+                            <div class="form-outline">
+                                <textarea class="form-control" id="textAreaExample2" rows="4"></textarea>
+                                <label class="form-label" for="textAreaExample2">Message</label>
+                            </div>
+                        </li>
+                        <button type="button" class="btn btn-info btn-rounded float-end">Send</button>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
 
   @endsection

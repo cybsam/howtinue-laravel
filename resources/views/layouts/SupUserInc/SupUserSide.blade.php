@@ -12,15 +12,10 @@
 
         <li class="nav-heading">Apps</li>
 
+
+
+
         <li class="nav-item">
-            <a class="nav-link collapsed" href="{{ route('supuser.chat') }}">
-            <i class="bi bi-chat-text"></i>
-            <span>Chat</span>
-            </a>
-        </li>
-
-
-        {{-- <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#email-nav" data-bs-toggle="collapse" href="#">
             <i class="bi bi-envelope"></i><span>Emails</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
@@ -46,7 +41,7 @@
                 </a>
             </li>
             </ul>
-        </li> --}}
+        </li>
 
         <li class="nav-heading">Blog</li>
         <li class="nav-item">
@@ -216,21 +211,7 @@
             <i class="bi bi-envelope"></i>
             <span>Contact Message <span style="color:red;">{{ $countContact }}</span></span>
             </a>
-        </li><!-- End Contact Page Nav -->
-
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="pages-register.html">
-            <i class="bi bi-card-list"></i>
-            <span>Register</span>
-            </a>
-        </li><!-- End Register Page Nav -->
-
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="pages-login.html">
-            <i class="bi bi-box-arrow-in-right"></i>
-            <span>Login</span>
-            </a>
-        </li><!-- End Login Page Nav -->
+        </li>
 
         <li class="nav-item">
             <a class="nav-link collapsed" target="blank" href="{{ route('FrontEnd.Index') }}">
