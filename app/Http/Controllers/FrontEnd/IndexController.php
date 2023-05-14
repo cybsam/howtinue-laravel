@@ -34,7 +34,7 @@ class IndexController extends Controller
         //end
 
         //body article
-        $bodyCategory = 'bodys';
+        $bodyCategory = 'body';
         $bodyArticleRandom = SupUserBlog::where('super_category',$bodyCategory)->where('post_status',0)->inRandomOrder()->paginate(6);
 
         //recent post
@@ -54,6 +54,7 @@ class IndexController extends Controller
             'recentArticle'=>$recentArticle,
             'recentArticleFour'=>$recentArticleFour
             // 'postViewCountListBlog'=>$postViewCountListBlog
+
         ]);
     }
 
