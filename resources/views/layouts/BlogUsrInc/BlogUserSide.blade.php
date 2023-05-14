@@ -37,6 +37,12 @@
                         <a href="{{ route('BlogUser.postInsert') }}">
                             <i class="bi bi-circle"></i><span>Insert Blog</span>
                         </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('BlogUser.blogArchive') }}">
+                            <i class="bi bi-circle"></i><span>Archived</span>
+                        </a>
+                    </li>
 
                 </ul>
             </li><!-- End Components Nav -->

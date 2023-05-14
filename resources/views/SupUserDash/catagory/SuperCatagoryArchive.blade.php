@@ -47,8 +47,8 @@
                 <td>
                   {{ $listCat->created_at->diffForHumans() }}</td>
                 <td>
-                  {{-- <a href="{{ route('supuser.cata.super.update') }}/{{ $listCat->id }}">Update</a>
-                  <a href="{{ route('supuser.cata.super.archive') }}/{{ $listCat->id }}">Archive</a> --}}
+                  <a href="{{ route('supuser.cata.super.update') }}/{{ $listCat->id }}">Update</a>
+                  <a href="{{ route('supuser.cata.super.archive') }}/{{ $listCat->id }}">Archive</a>
                 </td>
                 </tr>
             @endforeach --}}

@@ -59,6 +59,13 @@ Route::prefix('Administrator/Moderator')->middleware('auth:web','blogUser','PreB
     Route::get('Dashboard/Blog/Pending/{blog_id}/Show/',[App\Http\Controllers\Blogger\Blog\BlogController::class, 'pendingBlogShow'])->name('BlogUser.pendingBlogShow');
     Route::post('Dashboard/Blog/Pending/Show/Update',[App\Http\Controllers\Blogger\Blog\BlogController::class, 'pendingBlogShowUpdate'])->name('BlogUser.pendingBlogShowUpdate');
 
+    Route::get('Dashboard/Blog/Archive/Soft/{blog_id}',[App\Http\Controllers\Blogger\Blog\BlogController::class, 'BlogArchiveSoft'])->name('BlogUser.blogArchiveSoft');
+    Route::get('Dashboard/Blog/Archive/',[App\Http\Controllers\Blogger\Blog\BlogController::class, 'BlogArchive'])->name('BlogUser.blogArchive');
+    Route::get('Dashboard/Blog/Archive/Restore/{blog_id}',[App\Http\Controllers\Blogger\Blog\BlogController::class, 'BlogArchiveRestore'])->name('BlogUser.blogArchiveRestore');
+    // Route::get('Dashboard/Blog/Archive/Delete/{blog_id}',[App\Http\Controllers\Blogger\Blog\BlogController::class, 'BlogArchiveHardDelete'])->name('BlogUser.blogArchiveHardDelete');
+
+
+
 
 
 });

@@ -211,4 +211,36 @@ class SupUserBlogController extends Controller
         }
     }
 
+    // archive
+    public function SupUserArchiveList(){
+        $archiveArticle = SupUserBlog::where('post_status',1)->get();
+
+        return view('SupUserDash.blog.archive',[
+            'archiveArticle'=>$archiveArticle
+        ]);
+    }
+
+    public function SupUserArchiveSoft($blog_id){
+        $blog_id = $blog_id;
+        $archiveBlog = SupUserBlog::where('id',$blog_id)->update([
+            'post_status'=>1
+        ]);
+        return redirect()->route('supuser.blogArchive')->with('restore','Article archive successfully');
+    }
+
+    public function SupUserArchiveRestore($blog_id){
+        $blog_id = $blog_id;
+        $restore = SupUserBlog::where('id',$blog_id)->update([
+            'post_status'=>0
+        ]);
+
+        return redirect()->back()->with('restore','Article Restore complete!');
+    }
+
+    public function SupUserArchiveDelete($blog_id){
+        $blog_id = $blog_id;
+        $restore = SupUserBlog::where('id',$blog_id)->delete();
+        return redirect()->back()->with('delete','Article Delete complete!');
+    }
+
 }

@@ -70,6 +70,13 @@ Route::prefix('Administrator/SuperUser')->middleware('auth:web','supUser','PreBa
     Route::get('Dashboard/Article/Pending/List/Show/{blog_id}/View=true',[App\Http\Controllers\SupUser\Blog\SupUserBlogController::class, 'PendingBlogShow'])->name('supuserBlog.pendingBlogShow');
     Route::post('Dashboard/Article/Pending/List/Show/Pending/Active',[App\Http\Controllers\SupUser\Blog\SupUserBlogController::class, 'PendingBlogShowActive'])->name('supuserBlog.pendingBlogShowActive');
 
+    Route::get('Dashboard/Article/Archive',[App\Http\Controllers\SupUser\Blog\SupUserBlogController::class, 'SupUserArchiveList'])->name('supuser.blogArchive');
+    Route::get('Dashboard/Article/Archive/Soft/{blog_id}',[App\Http\Controllers\SupUser\Blog\SupUserBlogController::class, 'SupUserArchiveSoft'])->name('supuser.blogArchiveSoft');
+    Route::get('Dashboard/Article/Archive/Restore/{blog_id}',[App\Http\Controllers\SupUser\Blog\SupUserBlogController::class, 'SupUserArchiveRestore'])->name('supuser.blogArchiveRestore');
+    Route::get('Dashboard/Article/Archive/Delete/{blog_id}',[App\Http\Controllers\SupUser\Blog\SupUserBlogController::class, 'SupUserArchiveDelete'])->name('supuser.blogArchiveDelete');
+
+
+
 
     //sup catagory
     Route::get('Dashboard/Catagory/SuperCatagory', [App\Http\Controllers\SupUser\Catagory\SupCatagoryController::class, 'index'])->name('supuser.cata.super');

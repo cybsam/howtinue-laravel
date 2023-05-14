@@ -7,7 +7,7 @@
     <h1>Pending Articles</h1>
     <nav>
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{{ route('supuser.dashboard') }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('supuser.dashboard') }}">Dashboard</a></li>
         <li class="breadcrumb-item"><a href="{{ route('supuser.blog') }}">Articles</a></li>
         <li class="breadcrumb-item"><a href="{{ route('supuserBlog.myBlog') }}">My Articles</a></li>
         <li class="breadcrumb-item"><a href="{{ route('supuserBlog.pendingBlog') }}">Pending Articles</a></li>
@@ -15,8 +15,8 @@
       </ol>
     </nav>
   </div>
-  
-  
+
+
 
 @if (Session::get('err'))
   <div class="alert alert-danger bg-danger text-light border-0 alert-dismissible fade show" role="alert">
@@ -90,7 +90,7 @@
         </div>
     </div>
     <div>
-    
+
   </div>
   <fieldset class="row mb-3">
       <legend class="col-form-label col-sm-2 pt-0">Active Article</legend>
@@ -108,10 +108,10 @@
                   Block Article
               </label>
           </div>
-          
+
       </div>
   </fieldset>
-  
+
 
   <div class="row mb-3">
       <label class="col-sm-2 col-form-label">Save Article</label>

@@ -7,7 +7,7 @@
         <h1>Update User</h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('supuser.dashboard') }}">Home</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('supuser.dashboard') }}">Dashboard</a></li>
                 <li class="breadcrumb-item"><a href="{{ route('supuser.listuser') }}">Users</a></li>
                 <li class="breadcrumb-item active">Update User</li>
             </ol>
@@ -71,10 +71,10 @@
                         Block User
                     </label>
                 </div>
-                
+
             </div>
         </fieldset>
-        
+
 
 
 

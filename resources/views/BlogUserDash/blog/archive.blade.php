@@ -1,20 +1,26 @@
 @extends('layouts.BlogUserMaster')
 @extends('summernote.summernote')
-@section('title', 'Insert Blog - Healthy Botic')
+@section('title', 'Archive Article - Healthy Botic')
 @section('BlogUserContent')
 
     <div class="pagetitle">
-        <h1>Pending Article</h1>
+        <h1>Archive Article</h1>
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('blogusr.dashboard') }}">Dashboard</a></li>
                 <li class="breadcrumb-item"><a href="{{ route('BlogUser.Insert') }}">Article List</a></li>
 
-                <li class="breadcrumb-item active">Pending Article</li>
+                <li class="breadcrumb-item active">Archive Article</li>
 
             </ol>
         </nav>
     </div>
+    @if (Session::get('Succ'))
+        <div class="alert alert-primary bg-primary text-light border-0 alert-dismissible fade show" role="alert">
+            {{ Session::get('Succ') }}
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
 
 
     <table class="table table-hover datatable table-sm">
@@ -32,12 +38,13 @@
         </thead>
         <tbody>
 
-            @foreach ($penArticle as $myarticle)
+            @foreach ($archiveBlog as $myarticle)
                 <th scope="row"><a href="#">#{{ $myarticle->id }}</a></td>
                 <td>{{ $myarticle->slug }}</td>
                 <td>{{ $myarticle->sub_category_name }}</td>
 
-                <td><a href="" class="badge rounded-pill bg-{{ $myarticle->post_status == 0 ? 'success' : 'danger' }}">
+                <td><a href=""
+                        class="badge rounded-pill bg-{{ $myarticle->post_status == 0 ? 'success' : 'danger' }}">
                         @if ($myarticle->post_status == 0)
                             <span class="text-white"><i class="bi bi-check-circle"></i></span>
                         @else
@@ -45,12 +52,14 @@
                         @endif
                     </a></td>
                 <td>
-                   {{ $myarticle->username }}
+                    {{ $myarticle->username }}
                 </td>
                 <td>
-                  {{ $myarticle->created_at->diffForHumans() }}</td>
+                    {{ $myarticle->created_at->diffForHumans() }}</td>
                 <td>
-                  <a href="{{ route('BlogUser.pendingBlogShow',['blog_id'=>$myarticle->id]) }}" class="btn btn-success btn-sm">View</a>
+                    <a href="{{ route('BlogUser.blogArchiveRestore', ['blog_id' => $myarticle->id]) }}"
+                        class="btn btn-success btn-sm">Restore</a>
+                    {{-- <a href="{{ route('BlogUser.blogArchiveHardDelete',['blog_id'=>$myarticle->id]) }}" class="btn btn-danger btn-sm">Delete</a> --}}
 
                 </td>
                 </tr>

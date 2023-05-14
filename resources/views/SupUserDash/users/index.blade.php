@@ -1,5 +1,5 @@
 @extends('layouts.SupUserMaster')
-@section('title', 'Users - HowTinue')
+@section('title', 'Users - Healthybotic')
 @section('SupUserContent')
 <link rel="stylesheet" href="{{ asset('datatables/dataTables.min.css') }}">
 
@@ -7,7 +7,7 @@
     <h1>Users Page</h1>
     <nav>
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{{ route('supuser.dashboard') }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('supuser.dashboard') }}">Dashboard</a></li>
 
         <li class="breadcrumb-item active">List Users</li>
       </ol>
@@ -53,7 +53,7 @@
                 <th scope="col">Username</th>
                 <th scope="col">Email</th>
                 <th scope="col">Verified</th>
-                
+
                 <th scope="col">Status</th>
                 <th scope="col">Action</th>
               </tr>
@@ -68,13 +68,13 @@
                 <td><a class="" href=""><span>@</span>{{ $SupUser->username }}</a></td>
                 <td>{{ $SupUser->email }}</td>
                 <td>@if ($SupUser->email_verified == 1) <i class="bi bi-patch-check-fill text-primary"></i> @else <i class="bi bi-patch-exclamation text-danger"></i> @endif</td>
-                
+
                 <td><a href="" class="badge rounded-pill bg-{{ $SupUser->block == 0 ? 'success':'danger' }}"> @if ($SupUser->block == 0) <span class="text-white"><i class="bi bi-person-check-fill"></i></span> @else <span class="text-white"><i class="bi bi-person-x-fill"></i></span> @endif</a></td>
                 <td>
                   {{-- <a class="text-success" href="{{ route('supuser.UpdateUser',['user_id'=>$SupUser->id]) }}"><i class="bi bi-pencil-square"></i></a><span>&nbsp;&nbsp;</span><a class="text-danger" href=""><i class="bi bi-trash"></i></a> --}}
                   <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                     <a href="{{ route('supuser.UpdateUser',['user_id'=>$SupUser->id]) }}" class="btn btn-success btn-sm">Update</a>
-                    
+
                   </div>
                 </td>
               </tr>
@@ -92,7 +92,7 @@
                     <th scope="col">Username</th>
                     <th scope="col">Email</th>
                     <th scope="col">Verified</th>
-                    
+
                     <th scope="col">Status</th>
                     <th scope="col">Action</th>
                   </tr>
@@ -106,7 +106,7 @@
                     <td><a class="" href=""><span>@</span>{{ $blogUser->username }}</a></td>
                     <td>{{ Str::limit($blogUser->email, 6) }}</td>
                     <td>@if ($blogUser->email_verified == 1) <i class="bi bi-patch-check-fill text-primary"></i> @else <i class="bi bi-patch-exclamation text-danger"></i> @endif</td>
-                    
+
                     <td><a href="" class="badge rounded-pill bg-{{ $blogUser->block == 0 ? 'success':'danger' }}"> @if ($blogUser->block == 0) <span class="text-white"><i class="bi bi-person-check-fill"></i></span> @else <span class="text-white"><i class="bi bi-person-x-fill"></i></span> @endif</a></td>
                     <td>
                       {{-- <a class="text-success" href=""><i class="bi bi-pencil-square"></i></a><span>&nbsp;&nbsp;</span><a class="text-danger" href=""><i class="bi bi-trash"></i></a> --}}
@@ -132,7 +132,7 @@
                     <th scope="col">Username</th>
                     <th scope="col">Email</th>
                     <th scope="col">Verified</th>
-                   
+
                     <th scope="col">Status</th>
                     <th >Register</th>
                     <th scope="col">Action</th>
@@ -147,9 +147,9 @@
                     <td><a class="" href=""><span>@</span>{{ $basuser->username }}</a></td>
                     <td>{{ Str::limit($basuser->email, 6) }}</td>
                     <td>@if ($basuser->email_verified == 1) <i class="bi bi-patch-check-fill text-primary"></i> @else <i class="bi bi-patch-exclamation text-danger"></i> @endif</td>
-                   
+
                     <td><a href="" class="badge rounded-pill bg-{{ $basuser->block == 0 ? 'success':'danger' }}"> @if ($basuser->block == 0) <span class="text-white"><i class="bi bi-person-check-fill"></i></span> @else <span class="text-white"><i class="bi bi-person-x-fill"></i></span>  @endif</a></td>
-                    
+
                     <td>{{ $basuser->updated_at->diffForHumans() }}</td>
                     <td>
                       {{-- <a class="text-success" href=""><i class="bi bi-pencil-square"></i></a><span>&nbsp;&nbsp;</span><a class="text-danger" href=""><i class="bi bi-trash"></i></a> --}}

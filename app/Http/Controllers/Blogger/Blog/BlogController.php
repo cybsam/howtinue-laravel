@@ -101,7 +101,7 @@ class BlogController extends Controller
                 $insBlog->description = $request->description;
                 $insBlog->userid = $authId;
                 $insBlog->username = $UserName;
-                $insBlog->tag($tags);
+
                 $insBlog->created_at = Carbon::now();
                 $save = $insBlog->save();
 
@@ -166,6 +166,36 @@ class BlogController extends Controller
         }else {
             return redirect()->back()->with('err','hmm, you are so smart, but this tricks is not working. try again...');
         }
+    }
+
+    //archive blog
+    public function BlogArchiveSoft($blog_id){
+        $blog_id = $blog_id;
+        $archiveBlog = SupUserBlog::where('id',$blog_id)->update([
+            'post_status'=>1
+        ]);
+        return redirect()->back()->with('succ','Article Archive Successfully. Check it now!');
+    }
+
+    public function BlogArchive(){
+        $archiveBlog = SupUserBlog::where('post_status',1)->get();
+        return view('BlogUserDash.blog.archive',[
+            'archiveBlog'=>$archiveBlog
+        ]);
+    }
+
+    public function BlogArchiveRestore($blog_id){
+        $blog_id = $blog_id;
+        $restore = SupUserBlog::where('id',$blog_id)->update([
+            'post_status'=>0
+        ]);
+
+        return redirect()->back()->with('Succ','Article Restore complete!');
+    }
+    public function BlogArchiveHardDelete($blog_id){
+        $blog_id = $blog_id;
+        $restore = SupUserBlog::where('id',$blog_id)->delete();
+        return redirect()->back()->with('Succ','Article Delete complete!');
     }
 
 }

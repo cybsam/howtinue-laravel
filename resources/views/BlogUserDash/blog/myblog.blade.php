@@ -4,13 +4,13 @@
 @section('BlogUserContent')
 
     <div class="pagetitle">
-        <h1>My All Blog</h1>
+        <h1>My All Article</h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('blogusr.dashboard') }}">Home</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('BlogUser.Insert') }}">Blog List</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('blogusr.dashboard') }}">Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('BlogUser.Insert') }}">Article List</a></li>
                 {{-- <li class="breadcrumb-item"><a href="{{ route('subcatagory.index') }}">Sub Category</a></li> --}}
-                <li class="breadcrumb-item active">My Blog</li>
+                <li class="breadcrumb-item active">My Article</li>
 
             </ol>
         </nav>
@@ -31,7 +31,7 @@
                                     class="card-title">{{ Str::limit($myblog->blog_name, 18) }}</a>
                                 <p class="card-text">{{ Str::limit($myblog->blog_short_desc, 20) }}.</p>
                                 <a href="" class="card-link btn btn-success">Update</a>
-                                <a href="" class="card-link btn btn-warning">Archive</a>
+                                <a href="{{ route('BlogUser.blogArchiveSoft',['blog_id'=>$myblog->id]) }}" class="card-link btn btn-warning">Archive</a>
                             </div>
                         </div>
                     </div>

@@ -30,6 +30,7 @@ class CreateSupUserBlogsTable extends Migration
             $table->integer('post_status')->default(0);
             $table->string('userid');
             $table->string('username');
+
             $table->timestamps();
         });
     }

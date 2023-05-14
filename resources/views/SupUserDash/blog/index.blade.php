@@ -1,12 +1,12 @@
 @extends('layouts.SupUserMaster')
-@section('title', 'List Blog - HowTinue')
+@section('title', 'List Article - HealthyBotic')
 @section('SupUserContent')
 
     <div class="pagetitle">
         <h1>List Articles</h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('supuser.dashboard') }}">Home</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('supuser.dashboard') }}">Dashboard</a></li>
 
                 <li class="breadcrumb-item active">Article</li>
             </ol>
@@ -30,11 +30,11 @@
                             <div class="card-img-overlay">
                                 <span>{{ views($myblog)->count() }} views</span>
                                 <br>
-                                <a href="{{ route('blog.details', ['post_name' => $myblog->slug]) }}"
+                                <a href="{{ route('blog.details', ['post_name' => $myblog->slug]) }}" target="__blank"
                                     class="card-title">{{ Str::limit($myblog->blog_name, 18) }}</a>
                                 <p class="card-text">{{ Str::limit($myblog->blog_short_desc, 20) }}.</p>
-                                <a href="" class="card-link btn btn-outline-success">Update</a>
-                                <a href="" class="card-link btn btn-outline-warning">Archive</a>
+
+                                <a href="{{ route('supuser.blogArchiveSoft',['blog_id'=>$myblog->id]) }}" class="card-link btn btn-danger">Archive</a>
                             </div>
                         </div>
                     </div>
@@ -45,14 +45,6 @@
     </div>
 </div>
 
-
-
-    {{-- <br><br>
-<div>
-    @foreach ($eploidTag as $tags)
-        {{ $tags->tag }}
-    @endforeach
-</div> --}}
 
 
 @endsection

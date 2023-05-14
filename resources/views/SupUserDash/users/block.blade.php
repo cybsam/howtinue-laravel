@@ -1,5 +1,5 @@
 @extends('layouts.SupUserMaster')
-@section('title', 'Users - HowTinue')
+@section('title', 'Users - Healthybotic')
 @section('SupUserContent')
 <link rel="stylesheet" href="{{ asset('datatables/dataTables.min.css') }}">
 
@@ -7,18 +7,18 @@
     <h1>Users Page</h1>
     <nav>
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{{ route('supuser.dashboard') }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('supuser.dashboard') }}">Dashboard</a></li>
         <li class="breadcrumb-item"><a href="{{ route('supuser.listuser') }}">Users</a></li>
         <li class="breadcrumb-item"><a href="{{ route('supuser.archive') }}">Archive Users</a></li>
         <li class="breadcrumb-item active">Block Users</li>
       </ol>
     </nav>
-    
+
   </div><!-- End Page Title -->
   <div class="card">
     <div class="card-body">
       <h5 class="card-title">Block Users</h5>
-      
+
       <table class="table table-sm">
         <thead>
           <tr>
@@ -43,7 +43,7 @@
           @endforeach
         </tbody>
       </table>
-     
+
 
     </div>
   </div>

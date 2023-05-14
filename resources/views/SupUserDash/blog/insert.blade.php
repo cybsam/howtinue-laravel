@@ -1,13 +1,13 @@
 @extends('layouts.SupUserMaster')
 @extends('summernote.summernote')
-@section('title', 'Insert Blog - HowTinue')
+@section('title', 'Insert Blog - HealthyBotic')
 @section('SupUserContent')
 
     <div class="pagetitle">
         <h1>Insert Blog</h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('supuser.dashboard') }}">Home</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('supuser.dashboard') }}">Dashboard</a></li>
                 <li class="breadcrumb-item"><a href="{{ route('supuser.blog') }}">List Blog</a></li>
                 <li class="breadcrumb-item active">Insert Blog</li>
             </ol>

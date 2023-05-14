@@ -9,19 +9,19 @@
                             <a href="{{ route('frontend.contact') }}"> contact us </a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#"> terms of use</a>
+                            <a href="{{ route('frontend.termsofuse') }}"> terms of use</a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#"> adchoice </a>
+                            <a href="#"> F.A.Q </a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="/about-us.html"> about us </a>
+                            <a href="{{ route('frontend.AboutUs') }}"> about us </a>
                         </li>
                         <li class="list-inline-item">
                             <a href="#"> newsletters </a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#"> sitemap </a>
+                            <a href="{{ route('frontend.SiteMap') }}"> sitemap </a>
                         </li>
                         <li class="list-inline-item">
                             <a href="#"> magrenvi store </a>

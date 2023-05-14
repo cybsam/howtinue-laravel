@@ -7,7 +7,7 @@
         <h1>Update Pending Article</h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('blogusr.dashboard') }}">Home</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('blogusr.dashboard') }}">Dashboard</a></li>
                 <li class="breadcrumb-item"><a href="{{ route('BlogUser.Insert') }}">Article List</a></li>
                 <li class="breadcrumb-item"><a href="{{ route('BlogUser.pendingBlog') }}">Pending Article</a></li>
                 <li class="breadcrumb-item active">Update Pending Article</li>
@@ -75,7 +75,7 @@
         </div>
     </div>
     <div>
-    
+
   </div>
   <fieldset class="row mb-3">
       <legend class="col-form-label col-sm-2 pt-0">Active Article</legend>
@@ -93,10 +93,10 @@
                   Block Article
               </label>
           </div>
-          
+
       </div>
   </fieldset>
-  
+
 
   <div class="row mb-3">
       <label class="col-sm-2 col-form-label">Save Article</label>

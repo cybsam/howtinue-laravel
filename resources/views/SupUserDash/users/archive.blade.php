@@ -7,7 +7,7 @@
     <h1>Archive Users</h1>
     <nav>
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{{ route('supuser.dashboard') }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('supuser.dashboard') }}">Dashboard</a></li>
         <li class="breadcrumb-item"><a href="{{ route('supuser.listuser') }}">Users</a></li>
         <li class="breadcrumb-item active">Archive Users</li>
       </ol>
@@ -16,7 +16,7 @@
   <div class="card">
     <div class="card-body">
       <h5 class="card-title">Archive Users</h5>
-      
+
       <table class="table table-sm">
         <thead>
           <tr>
@@ -41,7 +41,7 @@
           @endforeach
         </tbody>
       </table>
-      
+
 
     </div>
   </div>

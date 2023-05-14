@@ -16,10 +16,11 @@ class SupUserBlog extends Model implements Viewable
     use InteractsWithViews;
 
 
+
     protected $fillable = [
         'blog_name',
+        'slug',
         'blogShortDesc',
-
         'blog_meta_title',
         'blog_meta_description',
         'blog_meta_keyword',

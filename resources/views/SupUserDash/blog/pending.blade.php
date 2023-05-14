@@ -1,19 +1,19 @@
 @extends('layouts.SupUserMaster')
-@section('title', 'List Blog - HowTinue')
+@section('title', 'pending Article - Healthybotic')
 @section('SupUserContent')
 
 <div class="pagetitle">
     <h1>Pending Articles</h1>
     <nav>
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{{ route('supuser.dashboard') }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('supuser.dashboard') }}">Dashboard</a></li>
         <li class="breadcrumb-item"><a href="{{ route('supuser.blog') }}">Articles</a></li>
         <li class="breadcrumb-item"><a href="{{ route('supuserBlog.myBlog') }}">My Articles</a></li>
         <li class="breadcrumb-item active">Pending Articles</li>
       </ol>
     </nav>
   </div>
-  
+
 
   <table class="table table-hover datatable table-sm">
     <thead>
@@ -49,7 +49,7 @@
               {{ $myarticle->created_at->diffForHumans() }}</td>
             <td>
               <a href="{{ route('supuserBlog.pendingBlogShow',['blog_id'=>$myarticle->id]) }}" class="btn btn-success btn-sm">View</a>
-              
+
             </td>
             </tr>
         @endforeach
@@ -57,7 +57,7 @@
     </tbody>
 </table>
 
-  
 
-  
+
+
 @endsection

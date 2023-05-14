@@ -1,13 +1,13 @@
 @extends('layouts.BlogUserMaster')
-@section('title', 'Blog List - Healthy Botic')
+@section('title', 'Article List - Healthy Botic')
 @section('BlogUserContent')
 
     <div class="pagetitle">
-        <h1>Catagory</h1>
+        <h1>Article List</h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('blogusr.dashboard') }}">Home</a></li>
-                <li class="breadcrumb-item active">Blog List</li>
+                <li class="breadcrumb-item"><a href="{{ route('blogusr.dashboard') }}">Dashboard</a></li>
+                <li class="breadcrumb-item active">Article List</li>
             </ol>
         </nav>
     </div>
@@ -31,11 +31,11 @@
                             <div class="card-img-overlay">
                                 <span>{{ views($myblog)->count() }} views</span>
                                 <br>
-                                <a href="{{ route('blog.details', ['post_name' => $myblog->slug]) }}"
+                                <a href="{{ route('blog.details', ['post_name' => $myblog->slug]) }}" target="__blank"
                                     class="card-title">{{ Str::limit($myblog->blog_name, 18) }}</a>
                                 <p class="card-text">{{ Str::limit($myblog->blog_short_desc, 20) }}.</p>
-                                <a href="" class="card-link btn btn-success">Update</a>
-                                <a href="" class="card-link btn btn-warning">Archive</a>
+
+                                <a href="{{ route('BlogUser.blogArchiveSoft',['blog_id'=>$myblog->id]) }}" class="card-link btn btn-danger">Archive</a>
                             </div>
                         </div>
                     </div>

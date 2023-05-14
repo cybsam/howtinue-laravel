@@ -19,7 +19,7 @@
                     {{-- home page --}}
                     <li class="nav-item ">
                         <a class="nav-link" href="{{ route('basUser.dashboard') }}">
-                            {{ __('Home') }}
+                            {{ __('Dashboard') }}
                         </a>
 
                     </li>
@@ -28,7 +28,7 @@
                     <li class="nav-item"><a class="nav-link" href="{{ route('basUser.dashboardprofile') }}"> {{ __('Profile') }} </a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('basUser.userActivity') }}"> {{ __('My Activity') }} </a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('basUser.becomeBlogger') }}" onclick="alert('Are you sure! your activity and data will review!')" > {{ __('Become Blogger') }} </a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('basUser.adminContactIndex') }}"> {{ __('Contact Admin') }} </a></li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();"> {{ __('Logout') }}

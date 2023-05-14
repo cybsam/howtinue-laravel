@@ -1,12 +1,12 @@
 @extends('layouts.SupUserMaster')
 @section('title', 'Front Settings - HealthyBotic')
 @section('SupUserContent')
-    
+
 <div class="pagetitle">
     <h1>Settings update</h1>
     <nav>
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{{ route('supuser.dashboard') }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('supuser.dashboard') }}">Dashboard</a></li>
         {{-- <li class="breadcrumb-item">Pages</li> --}}
         <li class="breadcrumb-item active">Main Settings</li>
       </ol>
@@ -45,10 +45,10 @@
               @enderror
           </div>
           </div>
-          
+
         </div>
-        
-        
+
+
         <div class="row mb-3">
           <label for="inputNumber" class="col-sm-2 col-form-label">Favicon Icon</label>
           <div class="col-sm-4">
@@ -99,7 +99,7 @@
           </div>
           </div>
         </div>
-        
+
         <fieldset class="row mb-3">
           <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
           <div class="col-sm-10">
@@ -115,10 +115,10 @@
                 inactive or test
               </label>
             </div>
-            
+
           </div>
         </fieldset>
-        
+
         <div class="row mb-3">
           <label class="col-sm-2 col-form-label">Save</label>
           <div class="col-sm-10">

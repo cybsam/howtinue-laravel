@@ -1,5 +1,5 @@
 @extends('layouts.SupUserMaster')
-@section('title', 'Blank Page - HowTinue')
+@section('title', 'Blank Page - HealthyBotic')
 @section('SupUserContent')
 
 <div class="pagetitle">
@@ -13,7 +13,7 @@
     </nav>
   </div><!-- End Page Title -->
 
-  
 
-  
+
+
 @endsection

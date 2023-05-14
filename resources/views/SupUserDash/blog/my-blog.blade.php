@@ -1,12 +1,12 @@
 @extends('layouts.SupUserMaster')
-@section('title', 'List Blog - HowTinue')
+@section('title', 'My article - HealthyBotic')
 @section('SupUserContent')
 
     <div class="pagetitle">
         <h1>My Article</h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('supuser.dashboard') }}">Home</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('supuser.dashboard') }}">Dashboard</a></li>
                 <li class="breadcrumb-item"><a href="{{ route('supuser.blog') }}">Articles</a></li>
 
                 <li class="breadcrumb-item active">My Articles</li>
@@ -29,7 +29,7 @@
                                     class="card-title">{{ Str::limit($myblog->blog_name, 18) }}</a>
                                 <p class="card-text">{{ Str::limit($myblog->blog_short_desc, 30, '...') }}.</p>
                                 <a href="" class="card-link btn btn-success">Update</a>
-                                <a href="" class="card-link btn btn-warning">Archive</a>
+                                <a href="{{ route('supuser.blogArchiveSoft',['blog_id'=>$myblog->id]) }}" class="card-link btn btn-warning">Archive</a>
                             </div>
                         </div>
                     </div>

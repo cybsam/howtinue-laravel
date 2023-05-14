@@ -12,7 +12,7 @@
                             <a href="{{ route('frontend.termsofuse') }}"> terms of use</a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#"> adchoice </a>
+                            <a href="#"> F.A.Q </a>
                         </li>
                         <li class="list-inline-item">
                             <a href="{{ route('frontend.AboutUs') }}"> about us </a>
