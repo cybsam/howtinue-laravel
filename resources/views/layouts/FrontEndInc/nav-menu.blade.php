@@ -330,7 +330,7 @@
                                         <div class="row my-4">
                                             <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                                                 <div class="list-group list-group-flush">
-                                                    <a href=""
+                                                    <a href="{{ route('FrontEndCalculator.Fitness') }}"
                                                         class="list-group-item list-group-item-action">Fitness
                                                         Calculator</a>
 
@@ -338,15 +338,15 @@
                                             </div>
                                             <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                                                 <div class="list-group list-group-flush">
-                                                    <a href=""
-                                                        class="list-group-item list-group-item-action">Pegnency
+                                                    <a href="{{ route('FrontEndCalculator.Pregnancy') }}"
+                                                        class="list-group-item list-group-item-action">Pregnancy
                                                         Calculator</a>
 
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
                                                 <div class="list-group list-group-flush">
-                                                    <a href=""
+                                                    <a href="{{ route('FrontEndCalculator.Others') }}"
                                                         class="list-group-item list-group-item-action">Others
                                                         Calculator</a>
 
@@ -354,7 +354,7 @@
                                             </div>
                                             <div class="col-md-6 col-lg-3">
                                                 <div class="list-group list-group-flush">
-                                                    <a href=""
+                                                    <a href="{{ route('FrontEndCalculator.BMI') }}"
                                                         class="list-group-item list-group-item-action">BMI
                                                         Calculator</a>
 

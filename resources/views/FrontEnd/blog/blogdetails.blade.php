@@ -332,8 +332,11 @@
                         <aside class="wrapper__list__article">
                             <h4 class="border_section">stay conected</h4>
                             <!-- widget Social media -->
+                            @php
+                    $findUs = App\Models\FindUs::where('id',1)->first();
+                @endphp
                             <div class="wrap__social__media">
-                                <a href="#" target="_blank">
+                                <a href="{{ $findUs->facebook }}" target="_blank">
                                     <div class="social__media__widget facebook">
                                         <span class="social__media__widget-icon">
                                             <i class="fa fa-facebook"></i>
@@ -344,7 +347,7 @@
                                         <span class="social__media__widget-name"> like </span>
                                     </div>
                                 </a>
-                                <a href="#" target="_blank">
+                                <a href="{{ $findUs->twitter }}" target="_blank">
                                     <div class="social__media__widget twitter">
                                         <span class="social__media__widget-icon">
                                             <i class="fa fa-twitter"></i>
@@ -355,7 +358,7 @@
                                         <span class="social__media__widget-name"> follow </span>
                                     </div>
                                 </a>
-                                <a href="#" target="_blank">
+                                <a href="{{ $findUs->youtube }}" target="_blank">
                                     <div class="social__media__widget youtube">
                                         <span class="social__media__widget-icon">
                                             <i class="fa fa-youtube"></i>

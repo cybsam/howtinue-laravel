@@ -283,13 +283,23 @@
                             </a>
                             <ul class="dropdown-menu dropdown-menu-left">
                                 <li>
-                                    <a class="dropdown-item" href="/about-us.html">
-                                        Style 1
+                                    <a class="dropdown-item" href="{{ route('FrontEndCalculator.Fitness') }}">
+                                        Fitness Calculator
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="/about-us-v1.html">
-                                        Style 2
+                                    <a class="dropdown-item" href="{{ route('FrontEndCalculator.Pregnancy') }}">
+                                        Pregnancy Calculator
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('FrontEndCalculator.Others') }}">
+                                        Others Calculator
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('FrontEndCalculator.BMI') }}">
+                                        BMI Calculator
                                     </a>
                                 </li>
                             </ul>

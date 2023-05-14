@@ -30,7 +30,15 @@ Route::prefix('en')->group(function () {
     Route::get('Index', [App\Http\Controllers\FrontEnd\IndexController::class, 'Index'])->name('FrontEnd.Index');
     Route::get('Blank', [App\Http\Controllers\FrontEnd\IndexController::class, 'blank'])->name('FrontEnd.blank');
 
-    //
+    //calculator
+
+    Route::get('Calculator/Fitness',[App\Http\Controllers\Calculator\CalculatorController::class, 'FitnessCalculator'])->name('FrontEndCalculator.Fitness');
+    Route::post('Calculator/Fitness/Calculate',[App\Http\Controllers\Calculator\CalculatorController::class, 'FitnessCalculatorCalcu'])->name('FrontEndCalculator.FitnessCal');
+
+    Route::get('Calculator/Pregnancy',[App\Http\Controllers\Calculator\CalculatorController::class, 'PregnancyCalculator'])->name('FrontEndCalculator.Pregnancy');
+    Route::get('Calculator/Others',[App\Http\Controllers\Calculator\CalculatorController::class, 'OthersCalculator'])->name('FrontEndCalculator.Others');
+    Route::get('Calculator/BMI',[App\Http\Controllers\Calculator\CalculatorController::class, 'BMICaltulator'])->name('FrontEndCalculator.BMI');
+
 
     // end main route
 
